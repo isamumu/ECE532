@@ -31,23 +31,6 @@ void strconcat(char* str, char* parentcode, char add)
     else
         str[i] = '\0'; 
 } 
-
-// function to find fibonacci number  
-int fib(int n) 
-{ 
-    if (n <= 1) 
-        return n; 
-    return fib(n - 1) + fib(n - 2); 
-} 
-
-// Defining Structures pixfreq 
-struct pixfreq 
-{ 
-	int pix, larrloc, rarrloc; 
-	float freq; 
-	struct pixfreq *left, *right; 
-	char code[maxcodelen]; 
-}; 
 	
 // Defining Structures 
 // huffcode 
@@ -156,6 +139,23 @@ int main()
     while ((1 / p) > fib(i)) 
         i++; 
     int maxcodelen = i - 3; 
+
+	// Defining Structures pixfreq 
+    struct pixfreq 
+    { 
+        int pix, larrloc, rarrloc; 
+        float freq; 
+        struct pixfreq *left, *right; 
+        char code[maxcodelen]; 
+    }; 
+      
+    // Defining Structures 
+    // huffcode 
+    struct huffcode  
+    { 
+        int pix, arrloc; 
+        float freq; 
+    }; 
       
     // Declaring structs 
     struct pixfreq* pix_freq; 
