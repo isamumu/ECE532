@@ -290,6 +290,7 @@ int main()
 				// For inserting the new node 
 				// at the updated position k 
 				huffcodes[k] = huffcodes[k - 1]; 
+				printf("%d", huffcodes[k]);
 			
 		} 
 		n += 1; 
