@@ -60,6 +60,7 @@ int main()
 	else
 	{ 
 		
+		printf("Success opening file"); 
 		// Set file position of the 
 		// stream to the beginning 
 		// Contains file signature 
