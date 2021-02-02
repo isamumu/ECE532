@@ -1,344 +1,237 @@
-// C Code for 
-// Image Compression 
-#include <stdio.h> 
-#include <stdlib.h> 
-
-// function to calculate word length 
-int codelen(char* code) 
-{ 
-	int l = 0; 
-	while (*(code + l) != '\0') 
-		l++; 
-	return l; 
-} 
-
-// function to concatenate the words 
-void strconcat(char* str, char* parentcode, char add) 
-{ 
-	int i = 0; 
-	while (*(parentcode + i) != '\0') 
-	{ 
-		*(str + i) = *(parentcode + i); 
-		i++; 
-	} 
-	if (add != '2') 
-	{ 
-		str[i] = add; 
-		str[i + 1] = '\0'; 
-	} 
-	else
-		str[i] = '\0'; 
-} 
-
-// function to find fibonacci number 
-int fib(int n) 
-{ 
-	if (n <= 1) 
-		return n; 
-	return fib(n - 1) + fib(n - 2); 
-} 
-
-// Driver code 
-int main() 
-{ 
-	int i, j; 
-	char filename[] = "lena.bmp"; 
-	int data = 0, offset, bpp = 0, width, height; 
-	long bmpsize = 0, bmpdataoff = 0; 
-	int** image; 
-	int temp = 0; 
-
-	// Reading the BMP File 
-	FILE* image_file; 
-	
-	image_file = fopen(filename, "rb"); 
-	if (image_file == NULL) 
-	{ 
-		printf("Error Opening File!!"); 
-		exit(1); 
-	} 
-	else
-	{ 
-		
-		printf("Success opening file"); 
-		// Set file position of the 
-		// stream to the beginning 
-		// Contains file signature 
-		// or ID "BM" 
-		offset = 0; 
-		
-		// Set offset to 2, which 
-		// contains size of BMP File 
-		offset = 2; 
-		
-		fseek(image_file, offset, SEEK_SET); 
-		
-		// Getting size of BMP File 
-		fread(&bmpsize, 4, 1, image_file); 
-		
-		// Getting offset where the 
-		// pixel array starts 
-		// Since the information is 
-		// at offset 10 from the start, 
-		// as given in BMP Header 
-		offset = 10; 
-		
-		fseek(image_file, offset, SEEK_SET); 
-		
-		// Bitmap data offset 
-		fread(&bmpdataoff, 4, 1, image_file); 
-		
-		// Getting height and width of the image 
-		// Width is stored at offset 18 and 
-		// height at offset 22, each of 4 bytes 
-		fseek(image_file, 18, SEEK_SET); 
-		
-		fread(&width, 4, 1, image_file); 
-		
-		fread(&height, 4, 1, image_file); 
-		
-		// Number of bits per pixel 
-		fseek(image_file, 2, SEEK_CUR); 
-		
-		fread(&bpp, 2, 1, image_file); 
-		
-		// Setting offset to start of pixel data 
-		fseek(image_file, bmpdataoff, SEEK_SET); 
-		
-		// Creating Image array 
-		image = (int**)malloc(height * sizeof(int*)); 
-		
-		for (i = 0; i < height; i++) 
-		{ 
-			image[i] = (int*)malloc(width * sizeof(int)); 
-		} 
-		
-		// int image[height][width] 
-		// can also be done 
-		// Number of bytes in 
-		// the Image pixel array 
-		int numbytes = (bmpsize - bmpdataoff) / 3; 
-		
-		// Reading the BMP File 
-		// into Image Array 
-		for (i = 0; i < height; i++) 
-		{ 
-			for (j = 0; j < width; j++) 
-			{ 
-				fread(&temp, 3, 1, image_file); 
-				
-				// the Image is a 
-				// 24-bit BMP Image 
-				temp = temp & 0x0000FF; 
-				image[i][j] = temp; 
-			} 
-		} 
-	} 
-	
-	// Finding the probability 
-	// of occurrence 
-	int hist[256]; 
-	for (i = 0; i < 256; i++) 
-		hist[i] = 0; 
-	for (i = 0; i < height; i++) 
-		for (j = 0; j < width; j++) 
-			hist[image[i][j]] += 1; 
-			
-	// Finding number of 
-	// non-zero occurrences 
-	int nodes = 0; 
-	for (i = 0; i < 256; i++) 
-		if (hist[i] != 0) 
-			nodes += 1; 
-			
-	// Calculating minimum probability 
-	float p = 1.0, ptemp; 
-	for (i = 0; i < 256; i++) 
-	{ 
-		ptemp = (hist[i] / (float)(height * width)); 
-		if (ptemp > 0 && ptemp <= p) 
-			p = ptemp; 
-	} 
-	
-	// Calculating max length 
-	// of code word 
-	i = 0; 
-	while ((1 / p) > fib(i)) 
-		i++; 
-	int maxcodelen = i - 3; 
-	
-	// Defining Structures pixfreq 
-	struct pixfreq 
-	{ 
-		int pix, larrloc, rarrloc; 
-		float freq; 
-		struct pixfreq *left, *right; 
-		char code[maxcodelen]; 
-	}; 
-	
-	// Defining Structures 
-	// huffcode 
-	struct huffcode 
-	{ 
-		int pix, arrloc; 
-		float freq; 
-	}; 
-	
-	// Declaring structs 
-	struct pixfreq* pix_freq; 
-	struct huffcode* huffcodes; 
-	int totalnodes = 2 * nodes - 1; 
-	pix_freq = (struct pixfreq*)malloc(sizeof(struct pixfreq) * totalnodes); 
-	huffcodes = (struct huffcode*)malloc(sizeof(struct huffcode) * nodes); 
-	
-	// Initializing 
-	j = 0; 
-	int totpix = height * width; 
-	float tempprob; 
-	for (i = 0; i < 256; i++) 
-	{ 
-		if (hist[i] != 0) 
-		{ 
-			
-			// pixel intensity value 
-			huffcodes[j].pix = i; 
-			pix_freq[j].pix = i; 
-			
-			// location of the node 
-			// in the pix_freq array 
-			huffcodes[j].arrloc = j; 
-			
-			// probability of occurrence 
-			tempprob = (float)hist[i] / (float)totpix; 
-			pix_freq[j].freq = tempprob; 
-			huffcodes[j].freq = tempprob; 
-			
-			// Declaring the child of leaf 
-			// node as NULL pointer 
-			pix_freq[j].left = NULL; 
-			pix_freq[j].right = NULL; 
-			
-			// initializing the code 
-			// word as end of line 
-			pix_freq[j].code[0] = '\0'; 
-			j++; 
-		} 
-	} 
-	
-	// Sorting the histogram 
-	struct huffcode temphuff; 
-	
-	// Sorting w.r.t probability 
-	// of occurrence 
-	for (i = 0; i < nodes; i++) 
-	{ 
-		for (j = i + 1; j < nodes; j++) 
-		{ 
-			if (huffcodes[i].freq < huffcodes[j].freq) 
-			{ 
-				temphuff = huffcodes[i]; 
-				huffcodes[i] = huffcodes[j]; 
-				huffcodes[j] = temphuff; 
-			} 
-		} 
-	} 
-	
-	// Building Huffman Tree 
-	float sumprob; 
-	int sumpix; 
-	int n = 0, k = 0; 
-	int nextnode = nodes; 
-	
-	// Since total number of 
-	// nodes in Huffman Tree 
-	// is 2*nodes-1 
-	while (n < nodes - 1) 
-	{ 
-		
-		// Adding the lowest two probabilities 
-		sumprob = huffcodes[nodes - n - 1].freq + huffcodes[nodes - n - 2].freq; 
-		sumpix = huffcodes[nodes - n - 1].pix + huffcodes[nodes - n - 2].pix; 
-		
-		// Appending to the pix_freq Array 
-		pix_freq[nextnode].pix = sumpix; 
-		pix_freq[nextnode].freq = sumprob; 
-		pix_freq[nextnode].left = &pix_freq[huffcodes[nodes - n - 2].arrloc]; 
-		pix_freq[nextnode].right = &pix_freq[huffcodes[nodes - n - 1].arrloc]; 
-		pix_freq[nextnode].code[0] = '\0'; 
-		i = 0; 
-		
-		// Sorting and Updating the 
-		// huffcodes array simultaneously 
-		// New position of the combined node 
-		while (sumprob <= huffcodes[i].freq) 
-			i++; 
-			
-		// Inserting the new node 
-		// in the huffcodes array 
-		for (k = nodes; k >= 0; k--) 
-		{ 
-			if (k == i) 
-			{ 
-				huffcodes[k].pix = sumpix; 
-				huffcodes[k].freq = sumprob; 
-				huffcodes[k].arrloc = nextnode; 
-			} 
-			else if (k > i) 
-			
-				// Shifting the nodes below 
-				// the new node by 1 
-				// For inserting the new node 
-				// at the updated position k 
-				huffcodes[k] = huffcodes[k - 1]; 
-				printf("%d", huffcodes[k]);
-			
-		} 
-		n += 1; 
-		nextnode += 1; 
-	} 
-	
-	// Assigning Code through 
-	// backtracking 
-	char left = '0'; 
-	char right = '1'; 
-	int index; 
-	for (i = totalnodes - 1; i >= nodes; i--) 
-	{ 
-		if (pix_freq[i].left != NULL) 
-			strconcat(pix_freq[i].left->code, pix_freq[i].code, left); 
-		if (pix_freq[i].right != NULL) 
-			strconcat(pix_freq[i].right->code, pix_freq[i].code, right); 
-	} 
-	
-	// Encode the Image 
-	int pix_val; 
-	int l; 
-	
-	// Writing the Huffman encoded 
-	// Image into a text file 
-	FILE* imagehuff = fopen("encoded_image.txt", "wb"); 
-	for (i = 0; i < height; i++) 
-		for (j = 0; j < width; j++) 
-		{ 
-			pix_val = image[i][j]; 
-			for (l = 0; l < nodes; l++) 
-				if (pix_val == pix_freq[l].pix) 
-					fprintf(imagehuff, "%s", pix_freq[l].code); 
-		} 
-		
-	// Printing Huffman Codes 
-	printf("Huffmann Codes::\n\n"); 
-	printf("pixel values -> Code\n\n"); 
-	for (i = 0; i < nodes; i++) { 
-		if (snprintf(NULL, 0, "%d", pix_freq[i].pix) == 2) 
-			printf("	 %d	 -> %s\n", pix_freq[i].pix, pix_freq[i].code); 
-		else
-			printf(" %d	 -> %s\n", pix_freq[i].pix, pix_freq[i].code); 
-	} 
-	
-	// Calculating Average Bit Length 
-	float avgbitnum = 0; 
-	for (i = 0; i < nodes; i++) 
-		avgbitnum += pix_freq[i].freq * codelen(pix_freq[i].code); 
-	printf("Average number of bits:: %f", avgbitnum); 
-} 
+// C program for Huffman Coding
+#include <stdio.h>
+#include <stdlib.h>
+ 
+// This constant can be avoided by explicitly calculating height of Huffman Tree
+#define MAX_TREE_HT 100
+ 
+// A Huffman tree node
+struct MinHeapNode
+{
+    int data;  // One of the input characters
+    unsigned freq;  // Frequency of the character
+    struct MinHeapNode *left, *right; // Left and right child of this node
+};
+ 
+// A Min Heap:  Collection of min heap (or Hufmman tree) nodes
+struct MinHeap
+{
+    unsigned size;    // Current size of min heap
+    unsigned capacity;   // capacity of min heap
+    struct MinHeapNode **array;  // Attay of minheap node pointers
+};
+// new trial
+// A utility function allocate a new min heap node with given character
+// and frequency of the character
+struct MinHeapNode* newNode(int data, unsigned freq)
+{
+    struct MinHeapNode* temp =
+          (struct MinHeapNode*) malloc(sizeof(struct MinHeapNode));
+    temp->left = temp->right = NULL;
+    temp->data = data;
+    temp->freq = freq;
+    return temp;
+}
+ 
+// A utility function to create a min heap of given capacity
+struct MinHeap* createMinHeap(unsigned capacity)
+{
+    struct MinHeap* minHeap =
+         (struct MinHeap*) malloc(sizeof(struct MinHeap));
+    minHeap->size = 0;  // current size is 0
+    minHeap->capacity = capacity;
+    minHeap->array =
+     (struct MinHeapNode**)malloc(minHeap->capacity * sizeof(struct MinHeapNode*));
+    return minHeap;
+}
+ 
+// A utility function to swap two min heap nodes
+void swapMinHeapNode(struct MinHeapNode** a, struct MinHeapNode** b)
+{
+    struct MinHeapNode* t = *a;
+    *a = *b;
+    *b = t;
+}
+ 
+// The standard minHeapify function.
+void minHeapify(struct MinHeap* minHeap, int idx)
+{
+    int smallest = idx;
+    int left = 2 * idx + 1;
+    int right = 2 * idx + 2;
+ 
+    if (left < minHeap->size &&
+        minHeap->array[left]->freq < minHeap->array[smallest]->freq)
+      smallest = left;
+ 
+    if (right < minHeap->size &&
+        minHeap->array[right]->freq < minHeap->array[smallest]->freq)
+      smallest = right;
+ 
+    if (smallest != idx)
+    {
+        swapMinHeapNode(&minHeap->array[smallest], &minHeap->array[idx]);
+        minHeapify(minHeap, smallest);
+    }
+}
+ 
+// A utility function to check if size of heap is 1 or not
+int isSizeOne(struct MinHeap* minHeap)
+{
+    return (minHeap->size == 1);
+}
+ 
+// A standard function to extract minimum value node from heap
+struct MinHeapNode* extractMin(struct MinHeap* minHeap)
+{
+    struct MinHeapNode* temp = minHeap->array[0];
+    minHeap->array[0] = minHeap->array[minHeap->size - 1];
+    --minHeap->size;
+    minHeapify(minHeap, 0);
+    return temp;
+}
+ 
+// A utility function to insert a new node to Min Heap
+void insertMinHeap(struct MinHeap* minHeap, struct MinHeapNode* minHeapNode)
+{
+    ++minHeap->size;
+    int i = minHeap->size - 1;
+    while (i && minHeapNode->freq < minHeap->array[(i - 1)/2]->freq)
+    {
+        minHeap->array[i] = minHeap->array[(i - 1)/2];
+        i = (i - 1)/2;
+    }
+    minHeap->array[i] = minHeapNode;
+}
+ 
+// A standard funvtion to build min heap
+void buildMinHeap(struct MinHeap* minHeap)
+{
+    int n = minHeap->size - 1;
+    int i;
+    for (i = (n - 1) / 2; i >= 0; --i)
+        minHeapify(minHeap, i);
+}
+ 
+// A utility function to print an array of size n
+void printArr(int arr[], int n)
+{
+    int i;
+    for (i = 0; i < n; ++i)
+        printf("%d", arr[i]);
+    printf("\n");
+}
+ 
+// Utility function to check if this node is leaf
+int isLeaf(struct MinHeapNode* root)
+{
+    return !(root->left) && !(root->right) ;
+}
+ 
+// Creates a min heap of capacity equal to size and inserts all character of 
+// data[] in min heap. Initially size of min heap is equal to capacity
+struct MinHeap* createAndBuildMinHeap(int data[], int freq[], int size)
+{
+    struct MinHeap* minHeap = createMinHeap(size);
+    for (int i = 0; i < size; ++i)
+        minHeap->array[i] = newNode(data[i], freq[i]);
+    minHeap->size = size;
+    buildMinHeap(minHeap);
+    return minHeap;
+}
+ 
+// The main function that builds Huffman tree
+struct MinHeapNode* buildHuffmanTree(int data[], int freq[], int size)
+{
+    struct MinHeapNode *left, *right, *top;
+ 
+    // Step 1: Create a min heap of capacity equal to size.  Initially, there are
+    // modes equal to size.
+    struct MinHeap* minHeap = createAndBuildMinHeap(data, freq, size);
+ 
+    // Iterate while size of heap doesn't become 1
+    while (!isSizeOne(minHeap))
+    {
+        // Step 2: Extract the two minimum freq items from min heap
+        left = extractMin(minHeap);
+        right = extractMin(minHeap);
+ 
+        // Step 3:  Create a new internal node with frequency equal to the
+        // sum of the two nodes frequencies. Make the two extracted node as
+        // left and right children of this new node. Add this node to the min heap
+        // '$' is a special value for internal nodes, not used
+        top = newNode('$', left->freq + right->freq);
+        top->left = left;
+        top->right = right;
+        insertMinHeap(minHeap, top);
+    }
+ 
+    // Step 4: The remaining node is the root node and the tree is complete.
+    return extractMin(minHeap);
+}
+ 
+// Prints huffman codes from the root of Huffman Tree.  It uses arr[] to
+// store codes
+void printCodes(struct MinHeapNode* root, int arr[], int top)
+{
+    // Assign 0 to left edge and recur
+    if (root->left)
+    {
+        arr[top] = 0;
+        printCodes(root->left, arr, top + 1);
+    }
+ 
+    // Assign 1 to right edge and recur
+    if (root->right)
+    {
+        arr[top] = 1;
+        printCodes(root->right, arr, top + 1);
+    }
+ 
+    // If this is a leaf node, then it contains one of the input
+    // characters, print the character and its code from arr[]
+    if (isLeaf(root))
+    {
+        printf("%d: ", root->data);
+        printArr(arr, top);
+    }
+}
+ 
+// The main function that builds a Huffman Tree and print codes by traversing
+// the built Huffman Tree
+void HuffmanCodes(int data[], int freq[], int size)
+{
+   //  Construct Huffman Tree
+   struct MinHeapNode* root = buildHuffmanTree(data, freq, size);
+ 
+   // Print Huffman codes using the Huffman tree built above
+   int arr[MAX_TREE_HT], top = 0;
+   printCodes(root, arr, top);
+}
+ 
+// Driver program to test above functions
+int main()
+{
+    int r,i=0;
+    int arr1[1000],freq1[1000];
+    FILE *fp;
+    fp=fopen("lena.bmp","rb");
+    r=fscanf(fp,"%d,%d\n",&arr1[i],&freq1[i]);
+    while(r!=EOF){
+        i++;
+        r=fscanf(fp,"%d,%d\n",&arr1[i],&freq1[i]);
+    }
+    int k;
+    /*for(k=0;k<i;k++)
+    	printf("%d,%d\n",arr1[k],freq1[k]);*/
+    int arr[i],freq[i];
+    for(k=0;k<i;k++)
+    	arr[k]=arr1[k];
+   	for(k=0;k<i;k++)
+   		freq[k]=freq1[k];
+    /*int arr[] = {1,2,3,4,5,6};
+    int freq[] = {5, 9, 12, 13, 16, 45};*/
+    int size = sizeof(arr)/sizeof(arr[0]);
+    HuffmanCodes(arr, freq, size);
+    return 0;
+}
