@@ -2,7 +2,6 @@
 using namespace std;
 
 
-
 int main()
 {
     int dim_x = 192;
