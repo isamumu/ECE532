@@ -12,7 +12,9 @@ def split(array, nrows, ncols):
                  
 image = cv2.imread("cat.jpeg", 0)
 print(image.shape)
-arr = split(image,8,8)
+
+# arr = split(image,8,8)
+# print(arr)
 
 a_file = open("test.txt", "w")
 for row in image:
