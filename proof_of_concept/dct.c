@@ -172,7 +172,7 @@ struct Tuple compute_inverse_dct_coeff(int l, float* ym_values)
         v += al_values_odd[m] * ym_values[2*m + 1];
     }
     // 3. Compute coefficients
-    int correction_value = 2;
+    int correction_value = 1;
     double x_l = correction_value * (u + v);
     double x_l_other_end = correction_value * (u - v);
     // printf("x_l: %.2f\n", x_l);

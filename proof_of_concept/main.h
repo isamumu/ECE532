@@ -33,4 +33,14 @@ void transpose_stage_two(float** matrix);
 void transpose_stage_three(float** matrix);
 void transpose_matrix(float* matrix);
 
+// quantization.c
+void bitwise_multiplier(float* dct_coeffs, float* quant_table);
+void clipper(float* dct_coeffs);
+void quantizer(float* dct_coeffs, float* inverse_quant_table);
+void dequantizer(float*dct_coeffs, float* quant_table);
+
+// encoder.c
+void zig_zag(float* dct_coeffs, float* bitstream);
+void test_zig_zag();
+
 #endif

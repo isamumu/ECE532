@@ -32,6 +32,43 @@ int main (void)
             printf ("DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
         }
     }
+
+    // Quantize DCT Coeff's
+    float* quantization_table = (float*) malloc( PICTURE_SIZE * PICTURE_SIZE * sizeof(float));
+    for (i = 0; i < PICTURE_SIZE; i++)
+    {
+        for (j = 0; j < PICTURE_SIZE; j++)
+        {    
+            quantization_table[8*i + j] = 2;
+        }
+    }
+    float* inverse_quantization_table = (float*) malloc( PICTURE_SIZE * PICTURE_SIZE * sizeof(float));
+    for (i = 0; i < PICTURE_SIZE; i++)
+    {
+        for (j = 0; j < PICTURE_SIZE; j++)
+        {    
+            inverse_quantization_table[8*i + j] = 0.5;
+        }
+    }
+    quantizer(output_dct_coeffs, inverse_quantization_table);
+    for (i = 0; i < PICTURE_SIZE; i++)
+    {
+        for (j = 0; j < PICTURE_SIZE; j++)
+        {    
+            printf ("Quantized DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
+        }
+    }
+
+    // De-Quantize the coefficients
+    dequantizer(output_dct_coeffs, quantization_table);
+    for (i = 0; i < PICTURE_SIZE; i++)
+    {
+        for (j = 0; j < PICTURE_SIZE; j++)
+        {    
+            printf ("Dequantized DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
+        }
+    }
+
     // Compute inverse DCT Coeffs
     float* inverted_pixels = (float*) malloc( PICTURE_SIZE * PICTURE_SIZE * sizeof(float));
     compute_inverse_dct(output_dct_coeffs, inverted_pixels);
@@ -42,9 +79,13 @@ int main (void)
             printf ("Inverted Pixel %d %d: %.3f\n", i, j, inverted_pixels[8*i + j]);
         }
     }
+
+    test_zig_zag();
     
     free(input_image);
     free(output_dct_coeffs);
+    free(quantization_table);
+    free(inverse_quantization_table);
     free(inverted_pixels);
     // float* output_dct_coeffs = (float*) malloc( PICTURE_SIZE * sizeof(float));
     // int l;
