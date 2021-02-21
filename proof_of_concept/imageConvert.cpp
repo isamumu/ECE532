@@ -2,7 +2,6 @@
 using namespace std;
 
 
-
 int main()
 {
     int dim_x = 192;
@@ -51,17 +50,15 @@ int main()
         }
     }
 
-    int block [8][8];
-    for (int j = 0; j < c_size; j++) {
-        for (int k = 0; k < c_size; k++) {
-            block[j][k] = (int) chunks[0][j][k];
-            printf("%d ", block[j][k]);
+    for (int i = 0; i < num_chunks; i++) {
+        for (int j = 0; j < c_size; j++) {
+            for (int k = 0; k < c_size; k++) {
+                printf("%3d ", (int) chunks[i][j][k]);
+            }
+            printf("\n");
         }
-        printf("\n");
+        printf("\n\n\n");
     }
-    printf("\n\n\n");
-   
-     
     
 
     return 0;

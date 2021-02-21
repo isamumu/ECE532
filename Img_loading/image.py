@@ -1,6 +1,9 @@
 import cv2
 import numpy as np
 import os.path
+import sys
+
+np.set_printoptions(threshold=sys.maxsize)
 
 def split(array, nrows, ncols):
     """Split a matrix into sub-matrices."""
@@ -11,7 +14,7 @@ def split(array, nrows, ncols):
                  .reshape(-1, nrows, ncols))
                  
 image = cv2.imread("cat.jpeg", 0)
-print(image.shape)
+print(image)
 
 # arr = split(image,8,8)
 # print(arr)
