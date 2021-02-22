@@ -136,16 +136,28 @@ int main (void)
         printf(" ###################### n = %d ###################### \n", n);
     }
 
-    for(int i = 0; i < num_chunks; i++){
-        for (int j = 0; j < c_size; j++) {
-            for (int k = 0; k < c_size; k++) {
-                printf("%d ", result_blks[i][j][k]);
-            }
-            printf("\n");
+    int newblk [dim_x][dim_y];
+    
+    for(int j = 0; j < dim_y; j++){
+        for(int k = 0; k < dim_x; k++){
+            newblk[j][k] = result_blks[j/c_size][j][k];
         }
-
-    printf("\n\n");
     }
+
+    for(int j = 0; j < dim_y; j++){
+        for(int k = 0; k < dim_x; k++){
+            printf("%d ", newblk[j][k]);
+        }
+        printf("\n");
+    }
+
+    FILE *f = fopen("coeffs.txt", "w");
+     for(int j = 0; j < dim_y; j++){
+        for(int k = 0; k < dim_x; k++){
+            fprintf(fp, "%d\n", newblk[j][k]);
+        }
+    }
+    fclose(fp);
 
 
     // // De-Quantize the coefficients
