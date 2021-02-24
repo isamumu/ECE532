@@ -1,13 +1,13 @@
 #include "main.h"
 
 // Modes for Zig-Zag
-#define MODE_DIAGONAL 0
-#define MODE_VERTICAL 1 // zig-zag is currently located at a vertical wall (eg. j = 0 or j = BLOCK_SIZE - 1) and therefore the next move must be down
-#define MODE_HORIZONTAL 2 // zig-zag is currently located at a horizontal wall (eg. i = 0 or i = BLOCK_SIZE - 1) and therefore the next move must be to the right
+#define MODE_ZZ_DIAGONAL 0
+#define MODE_ZZ_VERTICAL 1 // zig-zag is currently located at a vertical wall (eg. j = 0 or j = BLOCK_SIZE - 1) and therefore the next move must be down
+#define MODE_ZZ_HORIZONTAL 2 // zig-zag is currently located at a horizontal wall (eg. i = 0 or i = BLOCK_SIZE - 1) and therefore the next move must be to the right
 
 // Modes for Run-Length Encoder
-#define MODE_INITIAL 0 // encoder is currently waiting for the next block of 64 values
-#define MODE_ENCODE 1 // encoder expects 1 value input per cycle, and will enter MODE_INITIAL the cycle 
+#define MODE_RLE_INITIAL 0 // encoder is currently waiting for the next block of 64 values
+#define MODE_RLE_ENCODE 1 // encoder expects 1 value input per cycle, and will enter MODE_RLE_INITIAL the cycle after BLOCK_SIZE * BLOCK_SIZE read
 
 
 void zig_zag(float* dct_coeffs, float* bitstream)
@@ -19,7 +19,7 @@ void zig_zag(float* dct_coeffs, float* bitstream)
     int i = 0;
     int j = 0;
     int k = 0;
-    int mode = MODE_HORIZONTAL;
+    int mode = MODE_ZZ_HORIZONTAL;
     /*
         Direction:
         | 1 2 3 4 |
@@ -40,19 +40,19 @@ void zig_zag(float* dct_coeffs, float* bitstream)
         }
         switch(mode)
         {
-            case MODE_DIAGONAL:
+            case MODE_ZZ_DIAGONAL:
                 i -= direction;
                 j += direction;
                 if (i == 0 || i == BLOCK_SIZE-1) // Prioritize horizontal mode first, because at all corners we want to move horizontally
                 {
-                    mode = MODE_HORIZONTAL;
+                    mode = MODE_ZZ_HORIZONTAL;
                 }
                 else if (j == 0 || j == BLOCK_SIZE-1)
                 {
-                    mode = MODE_VERTICAL;
+                    mode = MODE_ZZ_VERTICAL;
                 }
                 break;
-            case MODE_VERTICAL:
+            case MODE_ZZ_VERTICAL:
                 /*
                     Vertical wall:
                     | 1 2 3 4 |
@@ -63,9 +63,9 @@ void zig_zag(float* dct_coeffs, float* bitstream)
                 */
                 i += 1;
                 direction = direction * -1;
-                mode = MODE_DIAGONAL;
+                mode = MODE_ZZ_DIAGONAL;
                 break;
-            case MODE_HORIZONTAL:
+            case MODE_ZZ_HORIZONTAL:
                 /*
                     Horizontal wall:
                     | 1 2 3 4 |
@@ -76,7 +76,79 @@ void zig_zag(float* dct_coeffs, float* bitstream)
                 */
                 j += 1;
                 direction = direction * -1;
-                mode = MODE_DIAGONAL;
+                mode = MODE_ZZ_DIAGONAL;
+                break;
+        }
+    }
+}
+
+void de_zig_zag(float* bitstream, float* dct_coeffs)
+{
+    /*
+        Zigzagging implemented using an FSM
+
+    */
+    int i = 0;
+    int j = 0;
+    int k = 0;
+    int mode = MODE_ZZ_HORIZONTAL;
+    /*
+        Direction:
+        | 1 2 3 4 |
+        | 5 6 7 8 |
+        | 9 A B C |
+        | D E F 0 |
+        1 represents moving in direction towards top right (eg. 6->3)
+        -1 represents moving in direction towards bottom left (eg. 6->9)
+    */
+    int direction = 1;
+    while (1)
+    {
+        dct_coeffs[8*i + j] = bitstream[k];
+        k += 1;
+        if (i == BLOCK_SIZE-1 && j == BLOCK_SIZE-1)
+        {
+            break;
+        }
+        switch(mode)
+        {
+            case MODE_ZZ_DIAGONAL:
+                i -= direction;
+                j += direction;
+                if (i == 0 || i == BLOCK_SIZE-1) // Prioritize horizontal mode first, because at all corners we want to move horizontally
+                {
+                    mode = MODE_ZZ_HORIZONTAL;
+                }
+                else if (j == 0 || j == BLOCK_SIZE-1)
+                {
+                    mode = MODE_ZZ_VERTICAL;
+                }
+                break;
+            case MODE_ZZ_VERTICAL:
+                /*
+                    Vertical wall:
+                    | 1 2 3 4 |
+                    | 5 6 7 8 |
+                    | 9 A B C |
+                    | D E F 0 |
+                    For instance, when 2 -> 5, we hit a vertical wall. In this case, we must then transition down to 9 and reverse the diagonal direction, before proceeding diagonally again
+                */
+                i += 1;
+                direction = direction * -1;
+                mode = MODE_ZZ_DIAGONAL;
+                break;
+            case MODE_ZZ_HORIZONTAL:
+                /*
+                    Horizontal wall:
+                    | 1 2 3 4 |
+                    | 5 6 7 8 |
+                    | 9 A B C |
+                    | D E F 0 |
+                    For instance, when 6 -> 3, we hit a vertical wall. In this case, we must then transition right to 4 and reverse the diagonal direction, before proceeding diagonally again
+                */
+                j += 1;
+                direction = direction * -1;
+                mode = MODE_ZZ_DIAGONAL;
                 break;
         }
     }
@@ -157,6 +229,11 @@ void test_zig_zag()
     correct_pixels[61] = 56;
     correct_pixels[62] = 63;
     correct_pixels[63] = 64;
+    float* output_pixels = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+    for (i = 0; i < BLOCK_SIZE * BLOCK_SIZE; i++)
+    {
+        output_pixels[i] = -1;
+    }   
     zig_zag(original_pixels, zig_zagged_pixels);
     for (i = 0; i < BLOCK_SIZE * BLOCK_SIZE; i++)
     {
@@ -166,6 +243,18 @@ void test_zig_zag()
             test_failed = 1;
         }
     }
+
+    de_zig_zag(zig_zagged_pixels, output_pixels);
+    for (i = 0; i < BLOCK_SIZE * BLOCK_SIZE; i++)
+    {
+        if (output_pixels[i] != original_pixels[i])
+        {
+            printf("Error at output %d: expected: %.2f, received: %.2f\n", i, original_pixels[i], output_pixels[i]);
+            test_failed = 1;
+        }
+        printf("De-zig-zagged pixel %d: %.2f\n", i, output_pixels[i]);
+    }
+
     if (test_failed == 0)
     {
         printf("Zig-zag Test Passed\n");
@@ -177,6 +266,7 @@ void test_zig_zag()
     free(original_pixels);
     free(zig_zagged_pixels);
     free(correct_pixels);
+    free(output_pixels);
 }
 
 // Cycle-accurate simulation of a run-length encoder
@@ -185,7 +275,7 @@ void run_length_encoder(float* bitstream, float* encoded_bitstream)
     int i = 0;
     int j = 0;
 
-    int mode = MODE_INITIAL;
+    int mode = MODE_RLE_INITIAL;
     int data_read = 0;
     float threshold;
     float input;
@@ -197,7 +287,7 @@ void run_length_encoder(float* bitstream, float* encoded_bitstream)
     int o_valid;
 
     // Initial values (reset)
-    mode = MODE_INITIAL;
+    mode = MODE_RLE_INITIAL;
     data_read = 0;
     threshold = 0.0001;
     i_temp = 0;
@@ -216,24 +306,24 @@ void run_length_encoder(float* bitstream, float* encoded_bitstream)
         // Each iteration of this while loop acts like a clock cycle
         switch(mode)
         {
-            case MODE_INITIAL:
+            case MODE_RLE_INITIAL:
                 if (i_start == 1)
                 {
                     i_temp = input;
                     i_counter = 1;
                     data_read = 1;
-                    mode = MODE_ENCODE;
+                    mode = MODE_RLE_ENCODE;
                 }
                 else
                 {
                     i_temp = 0;
                     i_counter = 0;
                     data_read = 0;
-                    mode = MODE_INITIAL;
+                    mode = MODE_RLE_INITIAL;
                 }
                 break;
 
-            case MODE_ENCODE:
+            case MODE_RLE_ENCODE:
                 // Case 1: Need to send output (output and input differ, input is same but counter is already 7, data_read is 64)
                 if ((fabs(input - i_temp) >= threshold) || (fabs(input - i_temp) < threshold && i_counter == 7) || (data_read == BLOCK_SIZE * BLOCK_SIZE))
                 {
@@ -252,7 +342,7 @@ void run_length_encoder(float* bitstream, float* encoded_bitstream)
                     o_valid = 0;
                     i_counter = i_counter + 1;
                 }
-                mode = (data_read == 64) ? MODE_INITIAL : MODE_ENCODE;
+                mode = (data_read == 64) ? MODE_RLE_INITIAL : MODE_RLE_ENCODE;
                 data_read += 1;
                 break;
         }
@@ -266,6 +356,23 @@ void run_length_encoder(float* bitstream, float* encoded_bitstream)
         input = bitstream[i];
         i += 1;
         i_start = 0;
+    }
+}
+
+void run_length_decoder(float* encoded_bitstream, float* bitstream)
+{
+    int i;
+    int j;
+    int curr_pos_bitstream = 0;
+    int value_frequency;
+    for (i = 0; i < BLOCK_SIZE * BLOCK_SIZE; i += 2)
+    {
+        value_frequency = encoded_bitstream[i + 1];
+        for (j = 0; j < value_frequency; j++)
+        {
+            bitstream[curr_pos_bitstream + j] = encoded_bitstream[i];
+        }
+        curr_pos_bitstream += value_frequency;
     }
 }
 
@@ -294,6 +401,16 @@ void test_run_length_encoder()
     for (i = 0; i < BLOCK_SIZE * BLOCK_SIZE; i+=2)
     {
         printf("Output Value: %.2f, Output frequency: %.2f\n", output_bitstream[i], output_bitstream[i+1]);
+    }
+
+    for (i = 0; i < BLOCK_SIZE * BLOCK_SIZE; i++)
+    {
+        input_bitstream [i] = -1;
+    }
+    run_length_decoder(output_bitstream, input_bitstream);
+    for (i = 0; i < BLOCK_SIZE * BLOCK_SIZE; i++)
+    {
+        printf("Decoded Value %d: %.2f\n", i, input_bitstream[i]);
     }
 
     free(input_bitstream);
