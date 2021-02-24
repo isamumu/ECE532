@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define PICTURE_SIZE 8
+#define BLOCK_SIZE 8
 #define PIXEL_WIDTH 12
 #define PI 3.1415926
 
@@ -42,5 +42,8 @@ void dequantizer(float*dct_coeffs, float* quant_table);
 // encoder.c
 void zig_zag(float* dct_coeffs, float* bitstream);
 void test_zig_zag();
+// void run_length_encoder_single_cycle(float input, float* i_temp, int* i_counter, float* output, int* o_counter, int* o_valid);
+void run_length_encoder(float* bitstream, float* encoded_bitstream);
+void test_run_length_encoder();
 
 #endif

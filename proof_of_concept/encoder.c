@@ -1,8 +1,14 @@
 #include "main.h"
 
+// Modes for Zig-Zag
 #define MODE_DIAGONAL 0
-#define MODE_VERTICAL 1 // zig-zag is currently located at a vertical wall (eg. j = 0 or j = PICTURE_SIZE - 1) and therefore the next move must be down
-#define MODE_HORIZONTAL 2 // zig-zag is currently located at a horizontal wall (eg. i = 0 or i = PICTURE_SIZE - 1) and therefore the next move must be to the right
+#define MODE_VERTICAL 1 // zig-zag is currently located at a vertical wall (eg. j = 0 or j = BLOCK_SIZE - 1) and therefore the next move must be down
+#define MODE_HORIZONTAL 2 // zig-zag is currently located at a horizontal wall (eg. i = 0 or i = BLOCK_SIZE - 1) and therefore the next move must be to the right
+
+// Modes for Run-Length Encoder
+#define MODE_INITIAL 0 // encoder is currently waiting for the next block of 64 values
+#define MODE_ENCODE 1 // encoder expects 1 value input per cycle, and will enter MODE_INITIAL the cycle 
+
 
 void zig_zag(float* dct_coeffs, float* bitstream)
 {
@@ -28,7 +34,7 @@ void zig_zag(float* dct_coeffs, float* bitstream)
     {
         bitstream[k] = dct_coeffs[8*i + j];
         k += 1;
-        if (i == PICTURE_SIZE-1 && j == PICTURE_SIZE-1)
+        if (i == BLOCK_SIZE-1 && j == BLOCK_SIZE-1)
         {
             break;
         }
@@ -37,11 +43,11 @@ void zig_zag(float* dct_coeffs, float* bitstream)
             case MODE_DIAGONAL:
                 i -= direction;
                 j += direction;
-                if (i == 0 || i == PICTURE_SIZE-1) // Prioritize horizontal mode first, because at all corners we want to move horizontally
+                if (i == 0 || i == BLOCK_SIZE-1) // Prioritize horizontal mode first, because at all corners we want to move horizontally
                 {
                     mode = MODE_HORIZONTAL;
                 }
-                else if (j == 0 || j == PICTURE_SIZE-1)
+                else if (j == 0 || j == BLOCK_SIZE-1)
                 {
                     mode = MODE_VERTICAL;
                 }
@@ -80,13 +86,13 @@ void test_zig_zag()
 {   
     int i;
     int test_failed = 0;
-    float* original_pixels = (float*) malloc( PICTURE_SIZE * PICTURE_SIZE * sizeof(float));
-    for (i = 0; i < PICTURE_SIZE * PICTURE_SIZE; i++)
+    float* original_pixels = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+    for (i = 0; i < BLOCK_SIZE * BLOCK_SIZE; i++)
     {
         original_pixels[i] = i + 1;
     }    
-    float* zig_zagged_pixels = (float*) malloc( PICTURE_SIZE * PICTURE_SIZE * sizeof(float));
-    float* correct_pixels = (float*) malloc( PICTURE_SIZE * PICTURE_SIZE * sizeof(float));
+    float* zig_zagged_pixels = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+    float* correct_pixels = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
     correct_pixels[0] = 1;
     correct_pixels[1] = 2;
     correct_pixels[2] = 9;
@@ -152,7 +158,7 @@ void test_zig_zag()
     correct_pixels[62] = 63;
     correct_pixels[63] = 64;
     zig_zag(original_pixels, zig_zagged_pixels);
-    for (i = 0; i < PICTURE_SIZE * PICTURE_SIZE; i++)
+    for (i = 0; i < BLOCK_SIZE * BLOCK_SIZE; i++)
     {
         if (zig_zagged_pixels[i] != correct_pixels[i])
         {
@@ -172,3 +178,170 @@ void test_zig_zag()
     free(zig_zagged_pixels);
     free(correct_pixels);
 }
+
+// Cycle-accurate simulation of a run-length encoder
+void run_length_encoder(float* bitstream, float* encoded_bitstream)
+{
+    int i = 0;
+    int j = 0;
+
+    int mode = MODE_INITIAL;
+    int data_read = 0;
+    float threshold;
+    float input;
+    float i_temp;
+    int i_counter;
+    int i_start;
+    float output;
+    int o_counter;
+    int o_valid;
+
+    // Initial values (reset)
+    mode = MODE_INITIAL;
+    data_read = 0;
+    threshold = 0.0001;
+    i_temp = 0;
+    i_counter = 0;
+    output = 0;
+    o_counter = 0;
+    o_valid = 0;
+
+    // First input
+    input = bitstream[0];
+    i = 1;
+    i_start = 1;
+
+    while(data_read <= 64)
+    {
+        // Each iteration of this while loop acts like a clock cycle
+        switch(mode)
+        {
+            case MODE_INITIAL:
+                if (i_start == 1)
+                {
+                    i_temp = input;
+                    i_counter = 1;
+                    data_read = 1;
+                    mode = MODE_ENCODE;
+                }
+                else
+                {
+                    i_temp = 0;
+                    i_counter = 0;
+                    data_read = 0;
+                    mode = MODE_INITIAL;
+                }
+                break;
+
+            case MODE_ENCODE:
+                // Case 1: Need to send output (output and input differ, input is same but counter is already 7, data_read is 64)
+                if ((fabs(input - i_temp) >= threshold) || (fabs(input - i_temp) < threshold && i_counter == 7) || (data_read == BLOCK_SIZE * BLOCK_SIZE))
+                {
+                    // Output value and its frequency
+                    output = i_temp;
+                    o_counter = i_counter;
+                    o_valid = 1;
+                    // Reset counter
+                    i_temp = input;
+                    i_counter = 1;
+                }
+                else
+                {
+                    output = 0;
+                    o_counter = 0;
+                    o_valid = 0;
+                    i_counter = i_counter + 1;
+                }
+                mode = (data_read == 64) ? MODE_INITIAL : MODE_ENCODE;
+                data_read += 1;
+                break;
+        }
+        printf("Cycle %d: input=%.2f, i_temp=%.2f, i_counter=%d, output=%.2f, o_counter=%d, o_valid=%d\n", data_read, input, i_temp, i_counter, output, o_counter, o_valid);
+        if (o_valid == 1)
+        {
+            encoded_bitstream[j] = output;
+            encoded_bitstream[j+1] = o_counter;
+            j += 2;
+        }
+        input = bitstream[i];
+        i += 1;
+        i_start = 0;
+    }
+}
+
+void test_run_length_encoder()
+{
+    int i;
+    float* input_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+    float* output_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+    for (i = 0; i < BLOCK_SIZE * BLOCK_SIZE; i++)
+    {
+        if (i >=0 && i < 10)
+        {
+            input_bitstream[i] = 5;
+        }
+        else if (i >= 10 && i < 12)
+        {
+            input_bitstream[i] = 3;
+        }
+        else
+        {
+            input_bitstream[i] = 0;
+        }
+        output_bitstream[i] = -1;
+    }
+    run_length_encoder(input_bitstream, output_bitstream);
+    for (i = 0; i < BLOCK_SIZE * BLOCK_SIZE; i+=2)
+    {
+        printf("Output Value: %.2f, Output frequency: %.2f\n", output_bitstream[i], output_bitstream[i+1]);
+    }
+
+    free(input_bitstream);
+    free(output_bitstream);
+}
+
+
+// // The following functionality is meant to run in a single cycle
+// void run_length_encoder_single_cycle(float input, float* i_temp, int* i_counter, int* i_data_read, float* output, int* o_counter, int* o_valid)
+// {
+//     float threshold = 0.0001;
+//     // Case 0: Reached the last value (64th value)
+//     if (*i_data_read == BLOCK_SIZE * BLOCK_SIZE)
+//     {
+//         *output = *i_temp;
+//         *o_counter = *i_counter;
+//         *o_valid = 1;
+//         *i_counter = 0;
+//     }
+//     // Case 1: input = stored input
+//     if (fabs(input - *i_temp) < threshold)
+//     {
+//         // Counter saturates at 7, so we need to send it when it reaches 7
+//         if (*i_counter == 7)
+//         {
+//             *output = *i_temp;
+//             *o_counter = *i_counter;
+//             *o_valid = 1;
+//             *i_counter = 1;
+//         }
+//         else
+//         {
+//             // Won't be necessary in Verilog because these will be different registers (updated on different clock cycles)
+//             *output = 0;
+//             *o_counter = 0;
+//             *o_valid = 0;
+//             *i_counter = *i_counter + 1;
+//         }
+//     }
+//     // Case 2: input is different from stored input
+//     else
+//     {
+//         // Output value and its frequency
+//         *output = *i_temp;
+//         *o_counter = *i_counter;
+//         *o_valid = 1;
+//         // Reset counter
+//         *i_temp = input;
+//         *i_counter = 1;
+//     }
+// }

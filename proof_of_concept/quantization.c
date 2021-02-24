@@ -4,7 +4,7 @@ void bitwise_multiplier(float* dct_coeffs, float* quant_table)
 {
     int i;
     // Perform entire row's worth of division at a time
-    for (i = 0; i < PICTURE_SIZE; i++)
+    for (i = 0; i < BLOCK_SIZE; i++)
     {
         dct_coeffs[8*i] = dct_coeffs[8*i] * quant_table[8*i];
         dct_coeffs[8*i + 1] = dct_coeffs[8*i + 1] * quant_table[8*i + 1];
@@ -21,7 +21,7 @@ void clipper(float* dct_coeffs)
 {
     int i;
     // Perform entire row's worth of clipping at a time
-    for (i = 0; i < PICTURE_SIZE; i++)
+    for (i = 0; i < BLOCK_SIZE; i++)
     {
         dct_coeffs[8*i] = roundf(dct_coeffs[8*i]);
         dct_coeffs[8*i + 1] = roundf(dct_coeffs[8*i + 1]);
