@@ -88,15 +88,17 @@ int main (void)
             }
         }
 
+        free(input_image);
+
         // Quantize DCT Coeff's
-        float* quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
-        for (i = 0; i < BLOCK_SIZE; i++)
-        {
-            for (j = 0; j < BLOCK_SIZE; j++)
-            {    
-                quantization_table[8*i + j] = 2;
-            }
-        }
+        //float* quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+        // for (i = 0; i < BLOCK_SIZE; i++)
+        // {
+        //     for (j = 0; j < BLOCK_SIZE; j++)
+        //     {    
+        //         quantization_table[8*i + j] = 2;
+        //     }
+        // }
         float* inverse_quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         for (i = 0; i < BLOCK_SIZE; i++)
         {
@@ -114,6 +116,9 @@ int main (void)
             }
         }
 
+        free(inverse_quantization_table);
+        printf("check 5 =======================================\n");
+
         zig_zag(output_dct_coeffs, output_bitstream);
         printf("zigzag results =======================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
@@ -124,7 +129,7 @@ int main (void)
         printf("\n");
         printf("crash here:\n");
         free(output_dct_coeffs);
-        
+
         printf("check 2 =======================================\n");
         run_length_encoder(output_bitstream, encoded_bitstream);
         printf("encoded results =======================================\n");
@@ -142,14 +147,12 @@ int main (void)
             }
         }
         
-        printf("check 4 =======================================\n");
-            
-        free(input_image);
-        free(inverse_quantization_table);
-        printf("check 5 =======================================\n");
+        
+        
+        
         
         printf("check 6 =======================================\n");
-        free(quantization_table);
+        //free(quantization_table);
 
         
         printf("check 7 =======================================\n");
