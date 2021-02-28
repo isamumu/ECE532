@@ -162,10 +162,10 @@ int main (void)
         
         
         printf("crash here:\n");
-        //free(output_dct_coeffs);
+        free(output_dct_coeffs);
         printf("check 6 =======================================\n");
         //free(quantization_table);
-        //free(input_image);
+        free(input_image);
         
         printf("check 7 =======================================\n");
         free(encoded_bitstream);
@@ -199,9 +199,7 @@ int main (void)
 
     // Dequantization followed by inverse DCT
     float results[num_chunks][8][8];
-    float* quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
-    float* output_bitstream = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
-    float* zigzagged = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+    
 
     for (int i = 0; i < BLOCK_SIZE; i++)
     {
@@ -213,7 +211,10 @@ int main (void)
 
     for(int n = 0; n < num_chunks; n++){
         float* input_image = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
-
+        float* quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+        float* output_bitstream = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+        float* zigzagged = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+        
         for (int j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
                 input_image[8*j+k] = result_blks[n][j][k];
