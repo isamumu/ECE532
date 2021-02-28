@@ -124,11 +124,9 @@ int main (void)
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(j = 0; j < BLOCK_SIZE; j++){
                 result_blks[n][i][j] = encoded_bitstream[8*i + j];
-                printf("boop\n");
             }
         }
-        printf("crash here:\n");
-        free(output_dct_coeffs);
+        
         printf("check 4 =======================================\n");
             
         free(input_image);
@@ -137,6 +135,9 @@ int main (void)
         
         printf("check 6 =======================================\n");
         free(quantization_table);
+
+        printf("crash here:\n");
+        free(output_dct_coeffs);
         printf("check 7 =======================================\n");
         free(encoded_bitstream);
         printf("check 8 =======================================\n");
