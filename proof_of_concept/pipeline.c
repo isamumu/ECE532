@@ -118,7 +118,7 @@ int main (void)
         printf("zigzag results =======================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(j = 0; j < BLOCK_SIZE; j++){
-                printf("%f", output_bitstream[8*i + j]);
+                printf("%f ", output_bitstream[8*i + j]);
             }
         }
         printf("\n");
@@ -127,7 +127,7 @@ int main (void)
         printf("encoded results =======================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(j = 0; j < BLOCK_SIZE; j++){
-                printf("%f", encoded_bitstream[8*i + j]);
+                printf("%f ", encoded_bitstream[8*i + j]);
             }
         }
         printf("\n");
