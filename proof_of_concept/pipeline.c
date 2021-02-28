@@ -63,7 +63,7 @@ int main (void)
     // ====================================================================
     
     for (int n = 0; n < num_chunks; n++){
-        float* input_image = (int*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+        int* input_image = (int*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
         int i;
         int j;
 
@@ -73,7 +73,7 @@ int main (void)
         // store the pixel values
         for (j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
-                input_image[8*j+k] = chunks[n][j][k];
+                input_image[8*j+k] = (int) chunks[n][j][k];
                 //printf("%d ", input_image[8*j+k]);
             }
         }
