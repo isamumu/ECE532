@@ -115,10 +115,20 @@ int main (void)
         }
 
         zig_zag(output_dct_coeffs, output_bitstream);
-        printf("check 1 =======================================\n");
-        
+        printf("zigzag results =======================================\n");
+        for(int i = 0; i < BLOCK_SIZE; i++){
+            for(j = 0; j < BLOCK_SIZE; j++){
+                printf("%f", output_bitstream[8*i + j]);
+            }
+        }
         printf("check 2 =======================================\n");
         run_length_encoder(output_bitstream, encoded_bitstream);
+        printf("encoded results =======================================\n");
+        for(int i = 0; i < BLOCK_SIZE; i++){
+            for(j = 0; j < BLOCK_SIZE; j++){
+                printf("%f", encoded_bitstream[8*i + j]);
+            }
+        }
 
         printf("check 3 =======================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
