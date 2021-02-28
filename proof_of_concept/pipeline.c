@@ -171,9 +171,9 @@ int main (void)
         free(input_image);
         
         printf("check 7 =======================================\n");
-        free(encoded_bitstream);
+        // free(encoded_bitstream);
         printf("check 8 =======================================\n");
-        free(output_bitstream);
+        // free(output_bitstream);
       
         //free(inverse_quantization_table);
         //free(inverted_pixels);
