@@ -126,7 +126,8 @@ int main (void)
                 result_blks[n][i][j] = encoded_bitstream[8*i + j];
             }
         }
-
+        printf("crash here:");
+        free(output_dct_coeffs);
         printf("check 4 =======================================\n");
             
         free(input_image);
@@ -139,7 +140,6 @@ int main (void)
         free(encoded_bitstream);
         printf("check 8 =======================================\n");
         free(output_bitstream);
-        free(output_dct_coeffs);
       
         //free(inverse_quantization_table);
         //free(inverted_pixels);
