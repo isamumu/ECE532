@@ -97,10 +97,9 @@ void compute_dct(int* image, float* dct_coeffs)
     int i;
     int j;
     // 1. Perform 1-D DCT on the rows of the image
-    printf("here?\n");
     int* xm_values = (int*) malloc(BLOCK_SIZE * sizeof(int));
     float* yl_values = (float*) malloc(BLOCK_SIZE * sizeof(float));
-    printf("here?\n");
+    
     for (i = 0; i < BLOCK_SIZE; i++)
     {
         for (j = 0; j < BLOCK_SIZE; j++)
@@ -115,7 +114,6 @@ void compute_dct(int* image, float* dct_coeffs)
             // printf("dct_value %d: %.3f\n", j, yl_values[j]);
         }
     }
-    printf("here?\n");
     // 2. Transpose the coefficients
     transpose_matrix(dct_coeffs);
     // 3. Perform the 1-D DCT again

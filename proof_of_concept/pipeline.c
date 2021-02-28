@@ -98,10 +98,9 @@ int main (void)
             {    
                 printf ("DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
             }
-            printf("%d\n", i);
+            
         }
 
-        
 
         // Quantize DCT Coeff's
         //float* quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
@@ -163,10 +162,10 @@ int main (void)
         
         
         printf("crash here:\n");
-        free(output_dct_coeffs);
+        //free(output_dct_coeffs);
         printf("check 6 =======================================\n");
         //free(quantization_table);
-        free(input_image);
+        //free(input_image);
         
         printf("check 7 =======================================\n");
         free(encoded_bitstream);
