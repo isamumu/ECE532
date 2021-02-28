@@ -68,7 +68,8 @@ int main (void)
         int j;
 
         float* output_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
-
+        float* encoded_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+        
         // store the pixel values
         for (j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
@@ -115,7 +116,7 @@ int main (void)
 
         zig_zag(output_dct_coeffs, output_bitstream);
         printf("check 1 =======================================\n");
-        float* encoded_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+        
         printf("check 2 =======================================\n");
         run_length_encoder(output_bitstream, encoded_bitstream);
 
