@@ -73,7 +73,7 @@ int main (void)
     
     for (int n = 0; n < num_chunks; n++){
         printf("fault?\n");
-        float* input_image = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+        int* input_image = (int*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
         int i;
         int j;
 
@@ -85,8 +85,8 @@ int main (void)
         for (j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
                 printf("fault?\n");
-                input_image[8*j+k] = chunks[n][j][k];
-                printf("%f ", input_image[8*j+k]);
+                input_image[8*j+k] = (int) chunks[n][j][k];
+                printf("%d ", input_image[8*j+k]);
             }
         }
 
