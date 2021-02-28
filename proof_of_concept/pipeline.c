@@ -109,7 +109,7 @@ int main (void)
         {
             for (j = 0; j < BLOCK_SIZE; j++)
             {    
-                printf ("Quantized DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
+                // printf ("Quantized DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
             }
         }
 
@@ -192,6 +192,8 @@ int main (void)
             }
         }
 
+        free(zigzagged);
+        free(output_bitstream);
         free(input_image);
     }
 
