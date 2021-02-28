@@ -100,7 +100,7 @@ int main (void)
             }
         }
 
-        free(input_image);
+        
 
         // Quantize DCT Coeff's
         //float* quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
@@ -168,7 +168,7 @@ int main (void)
         
         printf("check 6 =======================================\n");
         //free(quantization_table);
-
+        free(input_image);
         
         printf("check 7 =======================================\n");
         free(encoded_bitstream);
