@@ -114,17 +114,7 @@ int main (void)
             }
         }
 
-        float* inputStream = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
-
-        for (i = 0; i < BLOCK_SIZE; i++)
-        {
-            for (j = 0; j < BLOCK_SIZE; j++)
-            {    
-               inputStream[8*i + j] = output_dct_coeffs[8*i + j];
-            }
-        }
-
-        zig_zag(inputStream, output_bitstream);
+        zig_zag(output_dct_coeffs, output_bitstream);
         printf("check 1 =======================================\n");
         
         printf("check 2 =======================================\n");
@@ -149,9 +139,8 @@ int main (void)
         free(encoded_bitstream);
         printf("check 8 =======================================\n");
         free(output_bitstream);
-        free(output_dct_coeffs);
-        printf("check 9 =======================================\n");
-        free(inputStream);
+        //free(output_dct_coeffs);
+      
         //free(inverse_quantization_table);
         //free(inverted_pixels);
         printf(" ###################### n = %d ###################### \n", n);
