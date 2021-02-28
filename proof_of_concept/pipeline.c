@@ -124,9 +124,10 @@ int main (void)
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(j = 0; j < BLOCK_SIZE; j++){
                 result_blks[n][i][j] = encoded_bitstream[8*i + j];
+                printf("boop\n");
             }
         }
-        printf("crash here:");
+        printf("crash here:\n");
         free(output_dct_coeffs);
         printf("check 4 =======================================\n");
             
