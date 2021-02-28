@@ -74,15 +74,13 @@ int main (void)
     for (int n = 0; n < num_chunks; n++){
         printf("fault?\n");
         int* input_image = (int*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
-        int i;
-        int j;
 
         printf("fault?\n");
 
         
         // store the pixel values
         printf("fault?\n");
-        for (j = 0; j < c_size; j++) {
+        for (int j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
                 printf("fault?\n");
                 input_image[8*j+k] = (int) chunks[n][j][k];
@@ -93,9 +91,9 @@ int main (void)
 
         float* output_dct_coeffs = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         compute_dct(input_image, output_dct_coeffs);
-        for (i = 0; i < BLOCK_SIZE; i++)
+        for (int i = 0; i < BLOCK_SIZE; i++)
         {
-            for (j = 0; j < BLOCK_SIZE; j++)
+            for (int j = 0; j < BLOCK_SIZE; j++)
             {    
                 printf ("DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
             }
@@ -113,17 +111,17 @@ int main (void)
         //     }
         // }
         float* inverse_quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
-        for (i = 0; i < BLOCK_SIZE; i++)
+        for (int i = 0; i < BLOCK_SIZE; i++)
         {
-            for (j = 0; j < BLOCK_SIZE; j++)
+            for (int j = 0; j < BLOCK_SIZE; j++)
             {    
                 inverse_quantization_table[8*i + j] = 0.5;
             }
         }
         quantizer(output_dct_coeffs, inverse_quantization_table);
-        for (i = 0; i < BLOCK_SIZE; i++)
+        for (int i = 0; i < BLOCK_SIZE; i++)
         {
-            for (j = 0; j < BLOCK_SIZE; j++)
+            for (int j = 0; j < BLOCK_SIZE; j++)
             {    
                 printf ("Quantized DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
             }
@@ -138,7 +136,7 @@ int main (void)
         zig_zag(output_dct_coeffs, output_bitstream);
         printf("zigzag results =======================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
-            for(j = 0; j < BLOCK_SIZE; j++){
+            for(int j = 0; j < BLOCK_SIZE; j++){
                 printf("%f ", output_bitstream[8*i + j]);
             }
         }
@@ -150,7 +148,7 @@ int main (void)
         run_length_encoder(output_bitstream, encoded_bitstream);
         printf("encoded results =======================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
-            for(j = 0; j < BLOCK_SIZE; j++){
+            for(int j = 0; j < BLOCK_SIZE; j++){
                 printf("%f ", encoded_bitstream[8*i + j]);
             }
         }
@@ -158,7 +156,7 @@ int main (void)
 
         printf("check 3 =======================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
-            for(j = 0; j < BLOCK_SIZE; j++){
+            for(int j = 0; j < BLOCK_SIZE; j++){
                 result_blks[n][i][j] = encoded_bitstream[8*i + j];
             }
         }
