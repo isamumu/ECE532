@@ -71,9 +71,7 @@ int main (void)
 
         printf("fault?\n");
 
-        float* output_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
-        float* encoded_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
-
+        
         // store the pixel values
         printf("fault?\n");
         for (j = 0; j < c_size; j++) {
@@ -124,6 +122,9 @@ int main (void)
 
         free(inverse_quantization_table);
         printf("check 5 =======================================\n");
+
+        float* output_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+        float* encoded_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
 
         zig_zag(output_dct_coeffs, output_bitstream);
         printf("zigzag results =======================================\n");
