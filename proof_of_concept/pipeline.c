@@ -114,24 +114,28 @@ int main (void)
         }
 
         zig_zag(output_dct_coeffs, output_bitstream);
-        printf("check 1 =======================================");
+        printf("check 1 =======================================\n");
         float* encoded_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
-        printf("check 2 =======================================");
+        printf("check 2 =======================================\n");
         run_length_encoder(output_bitstream, encoded_bitstream);
 
-        printf("check 3 =======================================");
+        printf("check 3 =======================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(j = 0; j < BLOCK_SIZE; j++){
                 result_blks[n][i][j] = encoded_bitstream[8*i + j];
             }
         }
 
-        printf("check 4 =======================================");
+        printf("check 4 =======================================\n");
             
         free(input_image);
+        printf("check 5 =======================================\n");
         free(output_dct_coeffs);
+        printf("check 6 =======================================\n");
         free(quantization_table);
+        printf("check 7 =======================================\n");
         free(encoded_bitstream);
+        printf("check 8 =======================================\n");
         free(output_bitstream);
         //free(inverse_quantization_table);
         //free(inverted_pixels);
