@@ -67,6 +67,8 @@ int main (void)
         int i;
         int j;
 
+        float* output_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+
         // store the pixel values
         for (j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
@@ -111,9 +113,13 @@ int main (void)
             }
         }
 
+        zig_zag(output_dct_coeffs, output_bitstream);
+        float* encoded_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+        run_length_encoder(output_bitstream, encoded_bitstream);
+
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(j = 0; j < BLOCK_SIZE; j++){
-                result_blks[n][i][j] = output_dct_coeffs[8*i + j];
+                result_blks[n][i][j] = encoded_bitstream[8*i + j];
             }
         }
 
@@ -121,6 +127,8 @@ int main (void)
         free(input_image);
         free(output_dct_coeffs);
         free(quantization_table);
+        free(encoded_bitstream);
+        free(output_bitstream);
         //free(inverse_quantization_table);
         //free(inverted_pixels);
         printf(" ###################### n = %d ###################### \n", n);
@@ -149,6 +157,9 @@ int main (void)
     // Dequantization followed by inverse DCT
     float results[num_chunks][8][8];
     float* quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+    float* output_bitstream = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+    float* zigzagged = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+
     for (int i = 0; i < BLOCK_SIZE; i++)
     {
         for (int j = 0; j < BLOCK_SIZE; j++)
@@ -165,8 +176,11 @@ int main (void)
                 input_image[8*j+k] = result_blks[n][j][k];
             }
         }
-        
-        dequantizer(input_image, quantization_table);
+
+        run_length_decoder(output_bitstream, input_image);
+        de_zig_zag(zigzagged, output_bitstream);
+
+        dequantizer(zigzagged, quantization_table);
         
         float* inverted_pixels = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         
