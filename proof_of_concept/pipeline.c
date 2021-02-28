@@ -98,6 +98,7 @@ int main (void)
             {    
                 printf ("DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
             }
+            printf("%d\n", i);
         }
 
         
