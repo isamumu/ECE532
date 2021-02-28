@@ -132,13 +132,14 @@ int main (void)
         free(input_image);
         free(inverse_quantization_table);
         printf("check 5 =======================================\n");
-        free(output_dct_coeffs);
+        
         printf("check 6 =======================================\n");
         free(quantization_table);
         printf("check 7 =======================================\n");
         free(encoded_bitstream);
         printf("check 8 =======================================\n");
         free(output_bitstream);
+        free(output_dct_coeffs);
         //free(inverse_quantization_table);
         //free(inverted_pixels);
         printf(" ###################### n = %d ###################### \n", n);
