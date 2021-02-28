@@ -149,7 +149,7 @@ int main (void)
         free(encoded_bitstream);
         printf("check 8 =======================================\n");
         free(output_bitstream);
-        //free(output_dct_coeffs);
+        free(output_dct_coeffs);
         printf("check 9 =======================================\n");
         free(inputStream);
         //free(inverse_quantization_table);
@@ -215,7 +215,8 @@ int main (void)
             }
         }
 
-        //free(zigzagged);
+        free(quantization_table);
+        free(zigzagged);
         free(output_bitstream);
         free(input_image);
     }
