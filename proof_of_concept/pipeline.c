@@ -61,6 +61,14 @@ int main (void)
         }
     }
 
+    for(int n = 0; n < num_chunks; n++){
+        for(int j = 0; j < dim_y; j++){
+            for(int k = 0; k < dim_x; k++){
+                printf("%f", chunks[n][j][k]);
+            }
+        }
+    }
+
     // ====================================================================
     
     for (int n = 0; n < num_chunks; n++){
