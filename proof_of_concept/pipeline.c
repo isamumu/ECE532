@@ -121,6 +121,7 @@ int main (void)
                 printf("%f", output_bitstream[8*i + j]);
             }
         }
+        printf("\n");
         printf("check 2 =======================================\n");
         run_length_encoder(output_bitstream, encoded_bitstream);
         printf("encoded results =======================================\n");
@@ -129,6 +130,7 @@ int main (void)
                 printf("%f", encoded_bitstream[8*i + j]);
             }
         }
+        printf("\n");
 
         printf("check 3 =======================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
