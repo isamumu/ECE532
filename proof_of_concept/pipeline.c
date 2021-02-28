@@ -120,7 +120,7 @@ int main (void)
         {
             for (j = 0; j < BLOCK_SIZE; j++)
             {    
-               inputStream[8*i + j] = output_dct_coeffs(8*i + j);
+               inputStream[8*i + j] = output_dct_coeffs[8*i + j];
             }
         }
 
