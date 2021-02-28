@@ -88,6 +88,7 @@ int main (void)
                 input_image[8*j+k] = (int) chunks[n][j][k];
                 printf("%d ", input_image[8*j+k]);
             }
+            printf("j = %d\n", j);
         }
 
         float* output_dct_coeffs = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
