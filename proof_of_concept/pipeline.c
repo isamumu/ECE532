@@ -122,6 +122,9 @@ int main (void)
             }
         }
         printf("\n");
+        printf("crash here:\n");
+        free(output_dct_coeffs);
+        
         printf("check 2 =======================================\n");
         run_length_encoder(output_bitstream, encoded_bitstream);
         printf("encoded results =======================================\n");
@@ -148,8 +151,7 @@ int main (void)
         printf("check 6 =======================================\n");
         free(quantization_table);
 
-        printf("crash here:\n");
-        free(output_dct_coeffs);
+        
         printf("check 7 =======================================\n");
         free(encoded_bitstream);
         printf("check 8 =======================================\n");
