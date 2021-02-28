@@ -91,6 +91,7 @@ int main (void)
         float* output_dct_coeffs = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         printf("computed DCT: \n");
         compute_dct(input_image, output_dct_coeffs);
+        printf("done");
         for (int i = 0; i < BLOCK_SIZE; i++)
         {
             for (int j = 0; j < BLOCK_SIZE; j++)
