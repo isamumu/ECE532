@@ -215,7 +215,7 @@ int main (void)
             }
         }
 
-        free(zigzagged);
+        //free(zigzagged);
         free(output_bitstream);
         free(input_image);
     }
