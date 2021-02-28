@@ -63,18 +63,22 @@ int main (void)
     // ====================================================================
     
     for (int n = 0; n < num_chunks; n++){
+        printf("fault?\n");
         int* input_image = (int*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
         int i;
         int j;
+
+        printf("fault?\n");
 
         float* output_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         float* encoded_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
 
         // store the pixel values
+        printf("fault?\n");
         for (j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
                 input_image[8*j+k] = (int) chunks[n][j][k];
-                printf("%d ", input_image[8*j+k]);
+                // printf("%d ", input_image[8*j+k]);
             }
         }
 
