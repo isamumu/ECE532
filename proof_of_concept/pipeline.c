@@ -78,6 +78,7 @@ int main (void)
         printf("fault?\n");
         for (j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
+                printf("fault?\n");
                 input_image[8*j+k] = (int) chunks[n][j][k];
                 // printf("%d ", input_image[8*j+k]);
             }
