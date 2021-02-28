@@ -139,7 +139,7 @@ int main (void)
         free(encoded_bitstream);
         printf("check 8 =======================================\n");
         free(output_bitstream);
-        //free(output_dct_coeffs);
+        free(output_dct_coeffs);
       
         //free(inverse_quantization_table);
         //free(inverted_pixels);
