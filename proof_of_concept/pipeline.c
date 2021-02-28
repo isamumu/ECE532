@@ -82,14 +82,14 @@ int main (void)
         printf("fault?\n");
         for (int j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
-                printf("fault?\n");
                 input_image[8*j+k] = (int) chunks[n][j][k];
-                printf("%d ", input_image[8*j+k]);
             }
-            printf("j = %d\n", j);
+            
         }
 
+        printf("hello?\n");
         float* output_dct_coeffs = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+        printf("computed DCT: \n");
         compute_dct(input_image, output_dct_coeffs);
         for (int i = 0; i < BLOCK_SIZE; i++)
         {
