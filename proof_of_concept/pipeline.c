@@ -73,7 +73,8 @@ int main (void)
     for (int n = 0; n < num_chunks; n++){
         printf("fault?\n");
         int* input_image = (int*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
-
+        
+        float* output_dct_coeffs = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         printf("fault?\n");
 
         
@@ -83,11 +84,10 @@ int main (void)
             for (int k = 0; k < c_size; k++) {
                 input_image[8*j+k] = (int) chunks[n][j][k];
             }
-            
+             
         }
 
         printf("hello?\n");
-        float* output_dct_coeffs = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         printf("computed DCT: \n");
         compute_dct(input_image, output_dct_coeffs);
         printf("done");
@@ -97,7 +97,7 @@ int main (void)
             {    
                 printf ("DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
             }
-            
+
         }
 
 
