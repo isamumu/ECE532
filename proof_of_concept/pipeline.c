@@ -114,7 +114,7 @@ int main (void)
         {
             for (int j = 0; j < BLOCK_SIZE; j++)
             {    
-                inverse_quantization_table[8*i + j] = 0.5;
+                inverse_quantization_table[8*i + j] = 2;
             }
         }
         quantizer(output_dct_coeffs, inverse_quantization_table);
@@ -186,7 +186,7 @@ int main (void)
     {
         for (int j = 0; j < BLOCK_SIZE; j++)
         {    
-            quantization_table[8*i + j] = 2;
+            quantization_table[8*i + j] = 0.5;
         }
     }
 
