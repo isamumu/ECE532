@@ -213,7 +213,7 @@ int main (void)
 
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
-                results[n][i][j] = (int) inverted_pixels[8*i + j];
+                results[n][i][j] = inverted_pixels[8*i + j];
             }
         }
 
