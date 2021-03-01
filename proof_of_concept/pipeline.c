@@ -83,15 +83,11 @@ int main (void)
     // ====================================================================
     
     for (int n = 0; n < num_chunks; n++){
-        printf("fault?\n");
+    
         int* input_image = (int*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
-        
         float* output_dct_coeffs = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
-        printf("fault?\n");
 
-        
         // store the pixel values
-        printf("fault?\n");
         for (int j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
                 input_image[8*j+k] = (int) chunks[n][j][k];
@@ -99,10 +95,8 @@ int main (void)
              
         }
 
-        printf("hello?\n");
-        printf("computed DCT: \n");
         compute_dct(input_image, output_dct_coeffs);
-        printf("done");
+    
         for (int i = 0; i < BLOCK_SIZE; i++)
         {
             for (int j = 0; j < BLOCK_SIZE; j++)
@@ -139,14 +133,10 @@ int main (void)
             }
         }
 
-        free(inverse_quantization_table);
-        printf("check 5 =======================================\n");
-
         float* output_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         float* encoded_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
 
         zig_zag(output_dct_coeffs, output_bitstream);
-        printf("zigzag results =======================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
                 printf("%f ", output_bitstream[8*i + j]);
@@ -154,9 +144,7 @@ int main (void)
         }
         printf("\n");
 
-        printf("check 2 =======================================\n");
         run_length_encoder(output_bitstream, encoded_bitstream);
-        printf("encoded results =======================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
                 printf("%f ", encoded_bitstream[8*i + j]);
@@ -164,32 +152,25 @@ int main (void)
         }
         printf("\n");
 
-        printf("check 3 =======================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
                 result_blks[n][i][j] = encoded_bitstream[8*i + j];
             }
         }
         
-        
-        printf("crash here:\n");
+        free(inverse_quantization_table);
         free(output_dct_coeffs);
-        printf("check 6 =======================================\n");
         //free(quantization_table);
         free(input_image);
-        
-        printf("check 7 =======================================\n");
         free(encoded_bitstream);
-        printf("check 8 =======================================\n");
         free(output_bitstream);
       
-        //free(inverse_quantization_table);
         //free(inverted_pixels);
         printf(" ###################### n = %d ###################### \n", n);
     }
 
     int newblk [dim_x][dim_y];
-       printf("==================== Quantized & DCT 8x8 blocks: ================================\n");
+    printf("==================== Quantized & DCT 8x8 blocks: ================================\n");
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < 8; j++){
             for(int k = 0; k < 8; k++){
