@@ -346,7 +346,7 @@ void run_length_encoder(float* bitstream, float* encoded_bitstream)
                 data_read += 1;
                 break;
         }
-        printf("Cycle %d: input=%.2f, i_temp=%.2f, i_counter=%d, output=%.2f, o_counter=%d, o_valid=%d\n", data_read, input, i_temp, i_counter, output, o_counter, o_valid);
+        // printf("Cycle %d: input=%.2f, i_temp=%.2f, i_counter=%d, output=%.2f, o_counter=%d, o_valid=%d\n", data_read, input, i_temp, i_counter, output, o_counter, o_valid);
         if (o_valid == 1)
         {
             encoded_bitstream[j] = output;
