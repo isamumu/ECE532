@@ -243,7 +243,7 @@ int main (void)
     }
 
     free(quantization_table);
-
+    // segs?
     printf("==================== Dequantized & IDCT 8x8 blocks: ================================\n");
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < 8; j++){
