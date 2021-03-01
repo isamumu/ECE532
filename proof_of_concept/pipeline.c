@@ -199,6 +199,7 @@ int main (void)
     // Dequantization followed by inverse DCT
     float results[num_chunks][8][8];
     
+    float* quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
 
     for (int i = 0; i < BLOCK_SIZE; i++)
     {
@@ -210,7 +211,7 @@ int main (void)
 
     for(int n = 0; n < num_chunks; n++){
         float* input_image = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
-        float* quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+        
         float* output_bitstream = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         float* zigzagged = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
 
@@ -235,11 +236,13 @@ int main (void)
             }
         }
 
-        free(quantization_table);
+        
         free(zigzagged);
         free(output_bitstream);
         free(input_image);
     }
+
+    free(quantization_table);
 
     printf("==================== Dequantized & IDCT 8x8 blocks: ================================\n");
     for(int n = 0; n < num_chunks; n++){
