@@ -101,27 +101,18 @@ int main (void)
         {
             for (int j = 0; j < BLOCK_SIZE; j++)
             {    
-                printf ("DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
+                // printf ("DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
             }
 
         }
 
-
-        // Quantize DCT Coeff's
-        //float* quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
-        // for (i = 0; i < BLOCK_SIZE; i++)
-        // {
-        //     for (j = 0; j < BLOCK_SIZE; j++)
-        //     {    
-        //         quantization_table[8*i + j] = 2;
-        //     }
-        // }
         float* inverse_quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         for (int i = 0; i < BLOCK_SIZE; i++)
         {
             for (int j = 0; j < BLOCK_SIZE; j++)
             {    
-                inverse_quantization_table[8*i + j] = 0.5;
+                // inverse_quantization_table[8*i + j] = 0.5;
+                inverse_quantization_table[8*i + j] = 2;
             }
         }
         quantizer(output_dct_coeffs, inverse_quantization_table);
@@ -129,7 +120,7 @@ int main (void)
         {
             for (int j = 0; j < BLOCK_SIZE; j++)
             {    
-                printf ("Quantized DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
+                // printf ("Quantized DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
             }
         }
 
@@ -170,7 +161,7 @@ int main (void)
     }
 
     int newblk [dim_x][dim_y];
-    printf("==================== Quantized & DCT 8x8 blocks: ================================\n");
+    printf("==================== Quantized & DCTc & encoded 8x8 blocks: ================================\n");
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < 8; j++){
             for(int k = 0; k < 8; k++){
@@ -182,12 +173,6 @@ int main (void)
         printf("------------------------------------------------------------\n");
     }
  
-    for(int j = 0; j < dim_y; j++){
-        for(int k = 0; k < dim_x; k++){
-            //printf("%d ", newblk[j][k]);
-        }
-        //printf("\n");
-    }
 
     // Dequantization followed by inverse DCT
     float results[num_chunks][8][8];
@@ -198,7 +183,8 @@ int main (void)
     {
         for (int j = 0; j < BLOCK_SIZE; j++)
         {    
-            quantization_table[8*i + j] = 2;
+            // quantization_table[8*i + j] = 2;
+            quantization_table[8*i + j] = 0.5;
         }
     }
 
