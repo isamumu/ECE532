@@ -62,7 +62,10 @@ int main (void)
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < c_size; j++){
             for(int k = 0; k < c_size; k++){
-                chunks[n][j][k] = 100;
+                if(j % 2 == 0)
+                    chunks[n][j][k] = 200;
+                else
+                    chunks[n][j][k] = 100;
                 
             }
         }
