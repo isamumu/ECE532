@@ -90,7 +90,7 @@ int main (void)
         float* output_dct_coeffs = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
 
         // store the pixel values
-        printf("################ input block ##################");
+        printf("################ input block ##################\n");
         for (int j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
                 input_image[8*j+k] = (int) chunks[n][j][k];
@@ -205,8 +205,8 @@ int main (void)
             }
         }
 
-        run_length_decoder(output_bitstream, input_image);
-        de_zig_zag(zigzagged, output_bitstream);
+        run_length_decoder(input_image, output_bitstream);
+        de_zig_zag(output_bitstream, zigzagged);
 
         dequantizer(zigzagged, quantization_table);
         
