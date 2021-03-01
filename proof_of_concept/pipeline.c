@@ -164,7 +164,6 @@ int main (void)
         printf(" ###################### n = %d ###################### \n", n);
     }
 
-    int newblk [dim_x][dim_y];
     printf("==================== Quantized & DCTc & encoded 8x8 blocks: ================================\n");
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < 8; j++){
@@ -210,7 +209,7 @@ int main (void)
         
         float* inverted_pixels = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         
-        compute_inverse_dct(input_image, inverted_pixels);
+        compute_inverse_dct(zigzagged, inverted_pixels);
 
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
