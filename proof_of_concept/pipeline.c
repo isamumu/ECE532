@@ -114,7 +114,7 @@ int main (void)
         {
             for (int j = 0; j < BLOCK_SIZE; j++)
             {    
-                inverse_quantization_table[8*i + j] = 2;
+                inverse_quantization_table[8*i + j] = 0.5;
             }
         }
         quantizer(output_dct_coeffs, inverse_quantization_table);
@@ -186,7 +186,7 @@ int main (void)
     {
         for (int j = 0; j < BLOCK_SIZE; j++)
         {    
-            quantization_table[8*i + j] = 0.5;
+            quantization_table[8*i + j] = 2;
         }
     }
 
@@ -221,6 +221,7 @@ int main (void)
         free(zigzagged);
         free(output_bitstream);
         free(input_image);
+        free(inverted_pixels);
     }
 
     free(quantization_table);
