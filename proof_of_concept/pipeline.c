@@ -93,9 +93,12 @@ int main (void)
         for (int j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
                 input_image[8*j+k] = (int) chunks[n][j][k];
+                printf("%d ", input_image[8*j+k]);
             }
-             
+            printf("\n");
         }
+
+
 
         compute_dct(input_image, output_dct_coeffs);
     
