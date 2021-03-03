@@ -58,9 +58,18 @@ int main (void)
     float chunks[num_chunks][8][8];
     float result_blks[num_chunks][8][8];
     
-    for(int j = 0; j < dim_y; j++){
-        for(int k = 0; k < dim_x; k++){
-            chunks[j/c_size][j][k] = imagePix[j][k];
+    
+    // for(int j = 0; j < dim_y; j++){
+    //     for(int k = 0; k < dim_x; k++){
+    //         chunks[j/c_size][j][k] = imagePix[j][k];
+    //     }
+    // }
+
+    for(int n = 0; n < num_chunks; n++){
+        for(int j = 0; j < c_size; j++){
+            for(int k = 0; k < c_size; k++){
+                chunks[n][j][k] = imagePix[n * c_size + j][n * c_size + k];
+            }
         }
     }
 
@@ -155,7 +164,6 @@ int main (void)
             }
         }
         printf("\n");
-        printf("nu");
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
                 result_blks[n][i][j] = encoded_bitstream[8*i + j];
