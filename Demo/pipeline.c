@@ -101,14 +101,14 @@ int main (void)
     
     for (int n = 0; n < num_chunks; n++){
     
-        int* input_image = (int*) malloc( 2 * BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
+        int* input_image = (int*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
         float* output_dct_coeffs = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
 
         // store the pixel values
         printf("################ input block ##################\n");
         for (int j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
-                *(input_image + 8*j+k) = (int) chunks[n][j][k];
+                input_image[8*j+k] = (int) chunks[n][j][k];
                 printf("%d ", input_image[8*j+k]);
             }
             printf("\n");
@@ -127,8 +127,6 @@ int main (void)
 
         }
 
-        free(input_image);
-
         float* inverse_quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         for (int i = 0; i < BLOCK_SIZE; i++)
         {
@@ -145,9 +143,6 @@ int main (void)
                 // printf ("Quantized DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
             }
         }
-        
-        free(output_dct_coeffs);
-        free(inverse_quantization_table);
 
         float* output_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         float* encoded_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
@@ -176,14 +171,18 @@ int main (void)
         }
         printf("look at me");
         
-        //free(quantization_table);
         
-        free(encoded_bitstream);
-        free(output_bitstream);
       
         //free(inverted_pixels);
         printf(" ###################### n = %d ###################### \n", n);
     }
+
+    free(inverse_quantization_table);
+    free(output_dct_coeffs);
+    //free(quantization_table);
+    free(input_image);
+    free(encoded_bitstream);
+    free(output_bitstream);
 
     printf("==================== Quantized & DCTc & encoded 8x8 blocks: ================================\n");
     for(int n = 0; n < num_chunks; n++){
