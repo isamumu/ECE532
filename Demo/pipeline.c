@@ -33,7 +33,7 @@ int main (void)
 
     while (fgets(str, 100000, fp) != NULL){
         //sscanf(str, );
-        imagePix[y][x] = atof(str);
+        imagePix[x][y] = atof(str);
         if(x == dim_x-1){
             x = 0;
             y++;
@@ -48,23 +48,23 @@ int main (void)
     float chunks[num_chunks][8][8];
     float result_blks[num_chunks][8][8];
     
-    // for(int j = 0; j < dim_y; j++){
-    //     for(int k = 0; k < dim_x; k++){
-    //         chunks[j/c_size][j][k] = imagePix[j][k];
-    //     }
-    // }
-
-    for(int n = 0; n < num_chunks; n++){
-        for(int j = 0; j < c_size; j++){
-            for(int k = 0; k < c_size; k++){
-                if(j % 2 == 0)
-                    chunks[n][j][k] = 200;
-                else
-                    chunks[n][j][k] = 100;
-                
-            }
+    for(int j = 0; j < dim_y; j++){
+        for(int k = 0; k < dim_x; k++){
+            chunks[j/c_size][j][k] = imagePix[j][k];
         }
     }
+
+    // for(int n = 0; n < num_chunks; n++){
+    //     for(int j = 0; j < c_size; j++){
+    //         for(int k = 0; k < c_size; k++){
+    //             if(j % 2 == 0)
+    //                 chunks[n][j][k] = 200;
+    //             else
+    //                 chunks[n][j][k] = 100;
+                
+    //         }
+    //     }
+    // }
 
     printf("---------------------- input chunks ----------------------\n");
     for(int n = 0; n < num_chunks; n++){
