@@ -54,7 +54,7 @@ int main (void)
     
 
     int c_size = 8;
-    int num_chunks = (dim_y*dim_x) / 64;
+    int num_chunks = (dim_y) / (c_size);
     float chunks[num_chunks][8][8];
     float result_blks[num_chunks][8][8];
     
