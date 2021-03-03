@@ -171,18 +171,16 @@ int main (void)
         }
         printf("look at me");
         
-        
+        free(inverse_quantization_table);
+        free(output_dct_coeffs);
+        //free(quantization_table);
+        free(input_image);
+        free(encoded_bitstream);
+        free(output_bitstream);
       
         //free(inverted_pixels);
         printf(" ###################### n = %d ###################### \n", n);
     }
-
-    free(inverse_quantization_table);
-    free(output_dct_coeffs);
-    //free(quantization_table);
-    free(input_image);
-    free(encoded_bitstream);
-    free(output_bitstream);
 
     printf("==================== Quantized & DCTc & encoded 8x8 blocks: ================================\n");
     for(int n = 0; n < num_chunks; n++){
