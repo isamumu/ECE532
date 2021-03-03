@@ -161,15 +161,14 @@ int main (void)
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
                 printf("%f ", encoded_bitstream[8*i + j]);
+            }
+        }
+        printf("\n");
+        for(int i = 0; i < BLOCK_SIZE; i++){
+            for(int j = 0; j < BLOCK_SIZE; j++){
                 result_blks[n][i][j] = encoded_bitstream[8*i + j];
             }
         }
-        // printf("\n");
-        // for(int i = 0; i < BLOCK_SIZE; i++){
-        //     for(int j = 0; j < BLOCK_SIZE; j++){
-        //         result_blks[n][i][j] = encoded_bitstream[8*i + j];
-        //     }
-        // }
         printf("look at me");
         
         free(inverse_quantization_table);
