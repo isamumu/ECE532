@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import os.path
 import sys
+import os
 
 np.set_printoptions(threshold=sys.maxsize)
 
@@ -12,8 +13,12 @@ def split(array, nrows, ncols):
     return (array.reshape(h//nrows, nrows, -1, ncols)
                  .swapaxes(1, 2)
                  .reshape(-1, nrows, ncols))
-                 
-image = cv2.imread("cat.jpeg", 0)
+
+
+myDir = input("which image do you want to compress: ")
+
+path = myDir.join("jpeg")
+image = cv2.imread(path, 0)
 print(image)
 
 # arr = split(image,8,8)
