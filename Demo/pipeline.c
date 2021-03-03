@@ -44,17 +44,17 @@ int main (void)
     fclose(fp);
     
     
-    for(int j = 0; j < dim_y; j++){
-        for(int k = 0; k < dim_x; k++){
-            printf("%f ", imagePix[j][k]);
-        }
-        printf("\n");
-    }
+    // for(int j = 0; j < dim_y; j++){
+    //     for(int k = 0; k < dim_x; k++){
+    //         printf("%f ", imagePix[j][k]);
+    //     }
+    //     printf("\n");
+    // }
         
     
 
     int c_size = 8;
-    int num_chunks = (dim_y) / (c_size);
+    int num_chunks = (dim_y*dim_x) / 64;
     float chunks[num_chunks][8][8];
     float result_blks[num_chunks][8][8];
     
