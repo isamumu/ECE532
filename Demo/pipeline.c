@@ -127,6 +127,8 @@ int main (void)
 
         }
 
+        free(input_image);
+
         float* inverse_quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         for (int i = 0; i < BLOCK_SIZE; i++)
         {
@@ -143,6 +145,9 @@ int main (void)
                 // printf ("Quantized DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
             }
         }
+        
+        free(output_dct_coeffs);
+        free(inverse_quantization_table);
 
         float* output_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         float* encoded_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
@@ -171,10 +176,8 @@ int main (void)
         }
         printf("look at me");
         
-        free(inverse_quantization_table);
-        free(output_dct_coeffs);
         //free(quantization_table);
-        free(input_image);
+        
         free(encoded_bitstream);
         free(output_bitstream);
       
