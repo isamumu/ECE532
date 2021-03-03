@@ -19,7 +19,7 @@ int main (void)
     char const *filename = "test.txt";
     char str[192*192];
 
-    float imagePix[dim_x][dim_y];
+    double imagePix[dim_x][dim_y];
  
     FILE *fp = fopen(filename, "r");
     if (fp == NULL){
