@@ -353,6 +353,12 @@ void run_length_encoder(float* bitstream, float* encoded_bitstream)
             encoded_bitstream[j+1] = o_counter;
             j += 2;
         }
+        // BELOW BY ISAMU
+        else{
+            encoded_bitstream[j] = 0;
+            encoded_bitstream[j+1] = 0;
+            j += 2;
+        }
         input = bitstream[i];
         i += 1;
         i_start = 0;
