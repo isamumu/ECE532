@@ -101,7 +101,7 @@ int main (void)
     
     for (int n = 0; n < num_chunks; n++){
     
-        int* input_image = (int*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
+        int* input_image = (int*) malloc( 2 * BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
         float* output_dct_coeffs = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
 
         // store the pixel values
