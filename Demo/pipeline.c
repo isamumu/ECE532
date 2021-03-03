@@ -45,13 +45,12 @@ int main (void)
 
     int c_size = 8;
     int num_chunks = (dim_y) / (c_size);
-    float chunks[num_chunks][8][8];
+    double chunks[num_chunks][8][8];
     float result_blks[num_chunks][8][8];
     
-    int n = 0;
     for(int j = 0; j < dim_y; j++){
         for(int k = 0; k < dim_x; k++){
-            chunks[n/j][j][k] = (int) imagePix[j][k];
+            chunks[j/c_size][j][k] = imagePix[j][k];
         }
     }
 
