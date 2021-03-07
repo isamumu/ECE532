@@ -166,6 +166,7 @@ int main (void)
         printf("\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
+                printf("starting now\n");
                 result_blks[n][i][j] = encoded_bitstream[8*i + j];
             }
         }
