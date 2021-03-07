@@ -171,12 +171,14 @@ int main (void)
         }
         printf("look at me");
         
-        free(inverse_quantization_table);
-        free(output_dct_coeffs);
-        //free(quantization_table);
         free(input_image);
-        free(encoded_bitstream);
+        free(output_dct_coeffs);
+        free(inverse_quantization_table);
+        
+        //free(quantization_table);
+        
         free(output_bitstream);
+        free(encoded_bitstream);
       
         //free(inverted_pixels);
         printf(" ###################### n = %d ###################### \n", n);
