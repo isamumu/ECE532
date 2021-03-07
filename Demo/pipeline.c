@@ -58,14 +58,23 @@ int main (void)
     //     }
     // }
 
+    // for(int n = 0; n < num_chunks; n++){
+    //     for(int j = 0; j < c_size; j++){
+    //         for(int k = 0; k < c_size; k++){
+    //             if(j % 2 == 0)
+    //                 chunks[n][j][k] = 200;
+    //             else
+    //                 chunks[n][j][k] = 100;
+                
+    //         }
+    //     }
+    // }
+
+    
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < c_size; j++){
             for(int k = 0; k < c_size; k++){
-                if(j % 2 == 0)
-                    chunks[n][j][k] = 200;
-                else
-                    chunks[n][j][k] = 100;
-                
+                chunks[n][j][k] = (int)imagePix[n * c_size + j][n * c_size + k];
             }
         }
     }
