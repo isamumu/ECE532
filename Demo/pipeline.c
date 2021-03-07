@@ -19,7 +19,7 @@ int main (void)
     char const *filename = "test.txt";
     char str[192*192];
 
-    float imagePix[dim_x][dim_y];
+    double imagePix[dim_x][dim_y];
  
     FILE *fp = fopen(filename, "r");
     if (fp == NULL){
@@ -33,7 +33,7 @@ int main (void)
 
     while (fgets(str, 100000, fp) != NULL){
         //sscanf(str, );
-        imagePix[x][y] = atof(str);
+        imagePix[y][x] = atof(str);
         if(x == dim_x-1){
             x = 0;
             y++;
@@ -42,34 +42,18 @@ int main (void)
         }
     }
     fclose(fp);
-    
-    
-    // for(int j = 0; j < dim_y; j++){
-    //     for(int k = 0; k < dim_x; k++){
-    //         printf("%f ", imagePix[j][k]);
-    //     }
-    //     printf("\n");
-    // }
-        
-    
 
     int c_size = 8;
     int num_chunks = (dim_y) / (c_size);
-    float chunks[num_chunks][8][8];
-    // float result_blks[num_chunks][8][8];
-    float* result_blks = (float*) malloc(num_chunks * BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+    int chunks[num_chunks][8][8];
+    float result_blks[num_chunks][8][8];
     
-    
+    // int n = 0;
     // for(int j = 0; j < dim_y; j++){
     //     for(int k = 0; k < dim_x; k++){
-    //         chunks[j/c_size][j][k] = imagePix[j][k];
-    //     }
-    // }
-
-    // for(int n = 0; n < num_chunks; n++){
-    //     for(int j = 0; j < c_size; j++){
-    //         for(int k = 0; k < c_size; k++){
-    //             chunks[n][j][k] = (int)imagePix[n * c_size + j][n * c_size + k];
+    //         chunks[n][j%c_size][k%c_size] = imagePix[j][k];
+    //         if(j*k % 64 == 0){
+    //             n++;
     //         }
     //     }
     // }
@@ -90,7 +74,7 @@ int main (void)
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < 8; j++){
             for(int k = 0; k < 8; k++){
-                printf("%f ", chunks[n][j][k]);
+                printf("%d ", chunks[n][j][k]);
             }
             printf("\n");
         }
@@ -103,9 +87,7 @@ int main (void)
     for (int n = 0; n < num_chunks; n++){
     
         int* input_image = (int*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
-        if(!input_image) printf("NULLLL");
         float* output_dct_coeffs = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
-        if(!output_dct_coeffs) printf("NULLLL");
 
         // store the pixel values
         printf("################ input block ##################\n");
@@ -116,6 +98,7 @@ int main (void)
             }
             printf("\n");
         }
+
 
 
         compute_dct(input_image, output_dct_coeffs);
@@ -148,11 +131,8 @@ int main (void)
 
         float* output_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         float* encoded_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
-        
-        if(!output_bitstream) printf("NULLLL");
-        if(!encoded_bitstream) printf("NULLLL");
 
-        printf("zigzag bitstream ==========================================\n");
+        printf("zigzag bitstream ==========================================");
         zig_zag(output_dct_coeffs, output_bitstream);
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
@@ -161,31 +141,27 @@ int main (void)
         }
         printf("\n");
 
-        printf("encoded bitstream ==========================================\n");
+        printf("encoded bitstream ==========================================");
         run_length_encoder(output_bitstream, encoded_bitstream);
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
                 printf("%f ", encoded_bitstream[8*i + j]);
             }
         }
+        printf("\n");
 
-        printf("storing to result ==========================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
-                // result_blks[n][i][j] = encoded_bitstream[8*i + j];
-                //result_blks[n + i * BLOCK_SIZE + j * BLOCK_SIZE] = encoded_bitstream[8*i + j];
-                printf("%d ", n + i * BLOCK_SIZE + j * BLOCK_SIZE);
+                result_blks[n][i][j] = encoded_bitstream[8*i + j];
             }
         }
         
-        free(input_image);
-        free(output_dct_coeffs);
         free(inverse_quantization_table);
-        
+        free(output_dct_coeffs);
         //free(quantization_table);
-        
-        free(output_bitstream);
+        free(input_image);
         free(encoded_bitstream);
+        free(output_bitstream);
       
         //free(inverted_pixels);
         printf(" ###################### n = %d ###################### \n", n);
@@ -195,7 +171,7 @@ int main (void)
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < 8; j++){
             for(int k = 0; k < 8; k++){
-                printf("%f ", result_blks[n + j * BLOCK_SIZE + k * BLOCK_SIZE]);
+                printf("%f ", result_blks[n][j][k]);
             }
             printf("\n");
         }
@@ -225,7 +201,7 @@ int main (void)
 
         for (int j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
-                input_image[8*j+k] =  result_blks[n + j * BLOCK_SIZE + k * BLOCK_SIZE];
+                input_image[8*j+k] = result_blks[n][j][k];
             }
         }
 
@@ -244,7 +220,7 @@ int main (void)
             }
         }
 
-        free(result_blks);
+        
         free(zigzagged);
         free(output_bitstream);
         free(input_image);
