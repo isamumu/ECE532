@@ -56,7 +56,8 @@ int main (void)
     int c_size = 8;
     int num_chunks = (dim_y) / (c_size);
     float chunks[num_chunks][8][8];
-    float result_blks[num_chunks][8][8];
+    // float result_blks[num_chunks][8][8];
+    float* result_blks = (float*) malloc(num_chunks * BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
     
     
     // for(int j = 0; j < dim_y; j++){
@@ -166,8 +167,9 @@ int main (void)
         printf("\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
-                result_blks[n][i][j] = encoded_bitstream[8*i + j];
-                printf("%d, %f ", i*j, result_blks[n][i][j]);
+                // result_blks[n][i][j] = encoded_bitstream[8*i + j];
+                result_blks[n + i * BLOCK_SIZE + j * BLOCK_SIZE] = encoded_bitstream[8*i + j];
+                printf("%d ", i*j);
             }
         }
         printf("look at me");
