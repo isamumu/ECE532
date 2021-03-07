@@ -109,7 +109,7 @@ int main (void)
         for (int j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
                 input_image[8*j+k] = (int) chunks[n][j][k];
-                printf("%d ", input_image[8*j+k]);
+                //printf("%d ", input_image[8*j+k]);
             }
             printf("\n");
         }
@@ -151,7 +151,7 @@ int main (void)
         zig_zag(output_dct_coeffs, output_bitstream);
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
-                printf("%f ", output_bitstream[8*i + j]);
+                //printf("%f ", output_bitstream[8*i + j]);
             }
         }
         printf("\n");
@@ -160,7 +160,7 @@ int main (void)
         run_length_encoder(output_bitstream, encoded_bitstream);
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
-                printf("%f ", encoded_bitstream[8*i + j]);
+                //printf("%f ", encoded_bitstream[8*i + j]);
             }
         }
         printf("\n");
