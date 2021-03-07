@@ -253,7 +253,7 @@ int main (void)
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < 8; j++){
             for(int k = 0; k < 8; k++){
-                printf("%f ", result_blks[n + i * BLOCK_SIZE + j * BLOCK_SIZE]);
+                printf("%f ", result_blks[n + j * BLOCK_SIZE + k * BLOCK_SIZE]);
             }
             printf("\n");
         }
