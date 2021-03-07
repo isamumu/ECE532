@@ -164,6 +164,7 @@ int main (void)
                 printf("%f ", encoded_bitstream[8*i + j]);
             }
         }
+        float x = encoded_bitstream[8];
         printf("\n");
         printf("storing to result ==========================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
@@ -173,7 +174,6 @@ int main (void)
                 printf("%d ", n + i * BLOCK_SIZE + j * BLOCK_SIZE);
             }
         }
-        printf("look at me");
         
         free(input_image);
         free(output_dct_coeffs);
