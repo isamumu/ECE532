@@ -164,7 +164,7 @@ int main (void)
                 printf("%f ", encoded_bitstream[8*i + j]);
             }
         }
-        float x = encoded_bitstream[8];
+
         printf("%f ooooooo \n", x);
         printf("storing to result ==========================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
@@ -241,7 +241,7 @@ int main (void)
             }
         }
 
-        
+        free(result_blks);
         free(zigzagged);
         free(output_bitstream);
         free(input_image);
@@ -254,7 +254,7 @@ int main (void)
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < 8; j++){
             for(int k = 0; k < 8; k++){
-                printf("%f ", result_blks[n + j * BLOCK_SIZE + k * BLOCK_SIZE]);
+                printf("%f ", results[n][i][j]);
             }
             printf("\n");
         }
