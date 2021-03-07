@@ -114,7 +114,7 @@ int main (void)
             printf("\n");
         }
 
-
+        
 
         compute_dct(input_image, output_dct_coeffs);
     
@@ -166,8 +166,8 @@ int main (void)
         printf("\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
-                printf("starting now\n");
                 result_blks[n][i][j] = encoded_bitstream[8*i + j];
+                printf("%d, %f ", i*j, result_blks[n][i][j]);
             }
         }
         printf("look at me");
