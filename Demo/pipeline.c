@@ -153,7 +153,7 @@ int main (void)
         if(!encoded_bitstream) printf("NULLLL");
 
         printf("zigzag bitstream ==========================================\n");
-        //zig_zag(output_dct_coeffs, output_bitstream);
+        zig_zag(output_dct_coeffs, output_bitstream);
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
                 printf("%f ", output_bitstream[8*i + j]);
