@@ -142,7 +142,7 @@ int main (void)
         float* encoded_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
 
         printf("zigzag bitstream ==========================================");
-        //zig_zag(output_dct_coeffs, output_bitstream);
+        zig_zag(output_dct_coeffs, output_bitstream);
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
                 printf("%f ", output_bitstream[8*i + j]);
@@ -151,7 +151,7 @@ int main (void)
         printf("\n");
 
         printf("encoded bitstream ==========================================");
-        run_length_encoder(output_bitstream, encoded_bitstream);
+        //run_length_encoder(output_bitstream, encoded_bitstream);
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
                 printf("%f ", encoded_bitstream[8*i + j]);
