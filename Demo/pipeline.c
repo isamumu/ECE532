@@ -165,7 +165,7 @@ int main (void)
             }
         }
         float x = encoded_bitstream[8];
-        printf("\n");
+        printf("%f ooooooo \n", x);
         printf("storing to result ==========================================\n");
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
