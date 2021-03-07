@@ -103,7 +103,9 @@ int main (void)
     for (int n = 0; n < num_chunks; n++){
     
         int* input_image = (int*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
+        if(!input_image) printf("NULLLL");
         float* output_dct_coeffs = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+        if(!output_dct_coeffs) printf("NULLLL");
 
         // store the pixel values
         printf("################ input block ##################\n");
@@ -115,7 +117,6 @@ int main (void)
             printf("\n");
         }
 
-        
 
         compute_dct(input_image, output_dct_coeffs);
     
@@ -147,6 +148,9 @@ int main (void)
 
         float* output_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         float* encoded_bitstream = (float*) malloc(BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
+        
+        if(!output_bitstream) printf("NULLLL");
+        if(!encoded_bitstream) printf("NULLLL");
 
         printf("zigzag bitstream ==========================================\n");
         zig_zag(output_dct_coeffs, output_bitstream);
