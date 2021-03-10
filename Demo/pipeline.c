@@ -44,7 +44,7 @@ int main (void)
     fclose(fp);
 
     int c_size = 8;
-    int num_chunks = ((dim_y) / (c_size)) * ((dim_y) / (c_size));
+    int num_chunks = (dim_y) / (c_size);
     int chunks[num_chunks][8][8];
     float result_blks[num_chunks][8][8];
     
@@ -250,7 +250,7 @@ int main (void)
         printf("------------------------------------------------------------\n");
     }
 
-
+    
 
     
 }
