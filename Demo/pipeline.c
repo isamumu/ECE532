@@ -150,18 +150,18 @@ int main (void)
         }
         printf("\n");
 
-        printf("encoded bitstream ==========================================");
-        run_length_encoder(output_bitstream, encoded_bitstream);
-        for(int i = 0; i < BLOCK_SIZE; i++){
-            for(int j = 0; j < BLOCK_SIZE; j++){
-                printf("%f ", encoded_bitstream[8*i + j]);
-            }
-        }
-        printf("\n");
+        // printf("encoded bitstream ==========================================");
+        // run_length_encoder(output_bitstream, encoded_bitstream);
+        // for(int i = 0; i < BLOCK_SIZE; i++){
+        //     for(int j = 0; j < BLOCK_SIZE; j++){
+        //         printf("%f ", encoded_bitstream[8*i + j]);
+        //     }
+        // }
+        // printf("\n");
 
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
-                result_blks[n][i][j] = encoded_bitstream[8*i + j];
+                result_blks[n][i][j] = output_bitstream[8*i + j];
             }
         }
         
@@ -169,7 +169,7 @@ int main (void)
         free(output_dct_coeffs);
         //free(quantization_table);
         free(input_image);
-        free(encoded_bitstream);
+        // free(encoded_bitstream);
         free(output_bitstream);
       
         //free(inverted_pixels);
@@ -214,8 +214,8 @@ int main (void)
             }
         }
 
-        run_length_decoder(input_image, output_bitstream);
-        de_zig_zag(output_bitstream, zigzagged);
+        // run_length_decoder(input_image, output_bitstream);
+        de_zig_zag(input_image, zigzagged);
 
         dequantizer(zigzagged, quantization_table);
         

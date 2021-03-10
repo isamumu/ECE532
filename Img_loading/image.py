@@ -4,6 +4,8 @@ import os.path
 import sys
 import os
 
+from pylab import *
+
 np.set_printoptions(threshold=sys.maxsize)
 
 def split(array, nrows, ncols):
@@ -17,9 +19,12 @@ def split(array, nrows, ncols):
 
 path = input("which image do you want to compress: ")
 
-
 image = cv2.imread(path, 0)
+
+        
 print(image)
+imshow(image)
+show()
 
 # arr = split(image,8,8)
 # print(arr)
