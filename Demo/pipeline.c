@@ -42,6 +42,8 @@ int main (void)
         }
     }
     fclose(fp);
+    printf("x = %d", x);
+    printf("y = %d", y);
 
     int c_size = 8;
     int num_chunks = (dim_y) / (c_size);
