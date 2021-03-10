@@ -31,6 +31,7 @@ int main (void)
     int x = 0;
     int y = 0;
 
+    printf("here??");
     while (fgets(str, 100000, fp) != NULL){
         //sscanf(str, );
         imagePix[y][x] = atof(str);
@@ -46,7 +47,7 @@ int main (void)
     printf("here??");
     int c_size = 8;
     // int num_chunks = (dim_y) / (c_size);
-    int num_chunks = 24;
+    int num_chunks = 24*24;
     int chunks[num_chunks][8][8];
     float result_blks[num_chunks][8][8];
     printf("here?");
