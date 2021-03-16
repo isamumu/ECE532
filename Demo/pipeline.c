@@ -65,9 +65,9 @@ int main (void)
         for(int j = 0; j < c_size; j++){
             for(int k = 0; k < c_size; k++){
                 if(j % 2 == 0)
-                    chunks[n][j][k] = floor(imagePix[j][k]);
+                    chunks[n][j][k] = 100;
                 else
-                    chunks[n][j][k] = floor(imagePix[j][k]);
+                    chunks[n][j][k] = 200;
                 
             }
         }
