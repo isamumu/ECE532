@@ -46,7 +46,7 @@ int main (void)
     int c_size = 8;
     int num_chunks = (dim_y) / (c_size);
     int chunks[num_chunks][8][8];
-    float result_blks[num_chunks][8][8];
+    int result_blks[num_chunks][8][8];
     
     // int n = 0;
     // for(int j = 0; j < dim_y; j++){
@@ -103,14 +103,14 @@ int main (void)
 
         compute_dct(input_image, output_dct_coeffs);
     
-        for (int i = 0; i < BLOCK_SIZE; i++)
-        {
-            for (int j = 0; j < BLOCK_SIZE; j++)
-            {    
-                // printf ("DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
-            }
+        // for (int i = 0; i < BLOCK_SIZE; i++)
+        // {
+        //     for (int j = 0; j < BLOCK_SIZE; j++)
+        //     {    
+        //         // printf ("DCT Coefficient %d %d: %.3f\n", i, j, output_dct_coeffs[8*i + j]);
+        //     }
 
-        }
+        // }
 
         float* inverse_quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         for (int i = 0; i < BLOCK_SIZE; i++)
@@ -152,7 +152,7 @@ int main (void)
 
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
-                result_blks[n][i][j] = encoded_bitstream[8*i + j];
+                result_blks[n][i][j] = floor(encoded_bitstream[8*i + j]);
             }
         }
         
@@ -181,7 +181,7 @@ int main (void)
  
 
     // Dequantization followed by inverse DCT
-    float results[num_chunks][8][8];
+    int results[num_chunks][8][8];
     
     float* quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
 
@@ -194,7 +194,7 @@ int main (void)
     }
 
     for(int n = 0; n < num_chunks; n++){
-        float* input_image = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
+        int* input_image = (int*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
         
         float* output_bitstream = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         float* zigzagged = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
@@ -216,7 +216,7 @@ int main (void)
 
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
-                results[n][i][j] = inverted_pixels[8*i + j];
+                results[n][i][j] = floor(inverted_pixels[8*i + j]);
             }
         }
 
