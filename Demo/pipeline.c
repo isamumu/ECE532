@@ -54,7 +54,7 @@ int main (void)
         for(int j = 0; j < dim_y; j++){
             for(int k = 0; k < dim_x; k++){
                 int var = floor(imagePix[j][k]);
-                chunks[n][j][k] = 100;
+                chunks[n][j][k] = floor(80.345);
             
             }
         }
