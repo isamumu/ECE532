@@ -70,70 +70,134 @@ module tb_one_dimension_dct();
 
     /*
         Expected Output:
-        DCT Coefficient 0 0: 12.728
-        DCT Coefficient 0 1: -6.442
-        DCT Coefficient 0 2: 0.000
-        DCT Coefficient 0 3: -0.673
-        DCT Coefficient 0 4: -0.000
-        DCT Coefficient 0 5: -0.201
-        DCT Coefficient 0 6: 0.000
-        DCT Coefficient 0 7: -0.051
-        DCT Coefficient 1 0: 35.355
-        DCT Coefficient 1 1: -6.442
-        DCT Coefficient 1 2: 0.000
-        DCT Coefficient 1 3: -0.673
-        DCT Coefficient 1 4: -0.000
-        DCT Coefficient 1 5: -0.201
-        DCT Coefficient 1 6: 0.000
-        DCT Coefficient 1 7: -0.051
-        DCT Coefficient 2 0: 57.983
-        DCT Coefficient 2 1: -6.442
-        DCT Coefficient 2 2: 0.000
-        DCT Coefficient 2 3: -0.673
-        DCT Coefficient 2 4: -0.000
-        DCT Coefficient 2 5: -0.201
-        DCT Coefficient 2 6: 0.000
-        DCT Coefficient 2 7: -0.051
-        DCT Coefficient 3 0: 80.610
-        DCT Coefficient 3 1: -6.442
-        DCT Coefficient 3 2: 0.000
-        DCT Coefficient 3 3: -0.673
-        DCT Coefficient 3 4: -0.000
-        DCT Coefficient 3 5: -0.201
-        DCT Coefficient 3 6: 0.000
-        DCT Coefficient 3 7: -0.051
-        DCT Coefficient 4 0: 103.238
-        DCT Coefficient 4 1: -6.442
-        DCT Coefficient 4 2: 0.000
-        DCT Coefficient 4 3: -0.673
-        DCT Coefficient 4 4: -0.000
-        DCT Coefficient 4 5: -0.201
-        DCT Coefficient 4 6: 0.000
-        DCT Coefficient 4 7: -0.051
-        DCT Coefficient 5 0: 125.865
-        DCT Coefficient 5 1: -6.442
-        DCT Coefficient 5 2: 0.000
-        DCT Coefficient 5 3: -0.673
-        DCT Coefficient 5 4: -0.000
-        DCT Coefficient 5 5: -0.201
-        DCT Coefficient 5 6: 0.000
-        DCT Coefficient 5 7: -0.051
-        DCT Coefficient 6 0: 148.492
-        DCT Coefficient 6 1: -6.442
-        DCT Coefficient 6 2: 0.000
-        DCT Coefficient 6 3: -0.673
-        DCT Coefficient 6 4: -0.000
-        DCT Coefficient 6 5: -0.201
-        DCT Coefficient 6 6: 0.000
-        DCT Coefficient 6 7: -0.051
-        DCT Coefficient 7 0: 171.120
-        DCT Coefficient 7 1: -6.442
-        DCT Coefficient 7 2: 0.000
-        DCT Coefficient 7 3: -0.673
-        DCT Coefficient 7 4: -0.000
-        DCT Coefficient 7 5: -0.201
-        DCT Coefficient 7 6: 0.000
-        DCT Coefficient 7 7: -0.051
+        Fixed Value 1: 32906.25
+        Fixed Value 2: -18585
+        Fixed Value 3: 0
+        Fixed Value 4: -1935
+        Fixed Value 5: 0
+        Fixed Value 6: -585
+        Fixed Value 7: 0
+        Fixed Value 8: 0
+        Fixed Value 9: -2323.125
+        Fixed Value 10: 0
+        Fixed Value 11: 0
+        Fixed Value 12: 0
+        Fixed Value 13: 0
+        Fixed Value 14: 0
+        Fixed Value 15: 0
+        Fixed Value 16: 0
+        Fixed Value 17: 0
+        Fixed Value 18: 0
+        Fixed Value 19: 0
+        Fixed Value 20: 0
+        Fixed Value 21: 0
+        Fixed Value 22: 0
+        Fixed Value 23: 0
+        Fixed Value 24: 0
+        Fixed Value 25: -241.875
+        Fixed Value 26: 0
+        Fixed Value 27: 0
+        Fixed Value 28: 0
+        Fixed Value 29: 0
+        Fixed Value 30: 0
+        Fixed Value 31: 0
+        Fixed Value 32: 0
+        Fixed Value 33: 0
+        Fixed Value 34: 0
+        Fixed Value 35: 0
+        Fixed Value 36: 0
+        Fixed Value 37: 0
+        Fixed Value 38: 0
+        Fixed Value 39: 0
+        Fixed Value 40: 0
+        Fixed Value 41: -73.125
+        Fixed Value 42: 0
+        Fixed Value 43: 0
+        Fixed Value 44: 0
+        Fixed Value 45: 0
+        Fixed Value 46: 0
+        Fixed Value 47: 0
+        Fixed Value 48: 0
+        Fixed Value 49: 0
+        Fixed Value 50: 0
+        Fixed Value 51: 0
+        Fixed Value 52: 0
+        Fixed Value 53: 0
+        Fixed Value 54: 0
+        Fixed Value 55: 0
+        Fixed Value 56: 0
+        Fixed Value 57: 0
+        Fixed Value 58: 0
+        Fixed Value 59: 0
+        Fixed Value 60: 0
+        Fixed Value 61: 0
+        Fixed Value 62: 0
+        Fixed Value 63: 0
+        Fixed Value 64: 0
+        DCT Coefficient 0 0: 257.080078125
+        DCT Coefficient 0 1: -145.1953125
+        DCT Coefficient 0 2: 0
+        DCT Coefficient 0 3: -15.1171875
+        DCT Coefficient 0 4: 0
+        DCT Coefficient 0 5: -4.5703125
+        DCT Coefficient 0 6: 0
+        DCT Coefficient 0 7: 0    
+        DCT Coefficient 1 0: -18.1494140625
+        DCT Coefficient 1 1: 0      
+        DCT Coefficient 1 2: 0
+        DCT Coefficient 1 3: 0 
+        DCT Coefficient 1 4: 0 
+        DCT Coefficient 1 5: 0 
+        DCT Coefficient 1 6: 0
+        DCT Coefficient 1 7: 0 
+        DCT Coefficient 2 0: 0 
+        DCT Coefficient 2 1: 0 
+        DCT Coefficient 2 2: 0
+        DCT Coefficient 2 3: 0 
+        DCT Coefficient 2 4: 0 
+        DCT Coefficient 2 5: 0 
+        DCT Coefficient 2 6: 0
+        DCT Coefficient 2 7: 0 
+        DCT Coefficient 3 0: -1.8896484375
+        DCT Coefficient 3 1: 0 
+        DCT Coefficient 3 2: 0
+        DCT Coefficient 3 3: 0 
+        DCT Coefficient 3 4: 0 
+        DCT Coefficient 3 5: 0 
+        DCT Coefficient 3 6: 0
+        DCT Coefficient 3 7: 0 
+        DCT Coefficient 4 0: 0 
+        DCT Coefficient 4 1: 0 
+        DCT Coefficient 4 2: 0
+        DCT Coefficient 4 3: 0 
+        DCT Coefficient 4 4: 0 
+        DCT Coefficient 4 5: 0 
+        DCT Coefficient 4 6: 0
+        DCT Coefficient 4 7: 0 
+        DCT Coefficient 5 0: -0.5712890625
+        DCT Coefficient 5 1: 0 
+        DCT Coefficient 5 2: 0
+        DCT Coefficient 5 3: 0 
+        DCT Coefficient 5 4: 0 
+        DCT Coefficient 5 5: 0 
+        DCT Coefficient 5 6: 0
+        DCT Coefficient 5 7: 0 
+        DCT Coefficient 6 0: 0 
+        DCT Coefficient 6 1: 0 
+        DCT Coefficient 6 2: 0
+        DCT Coefficient 6 3: 0 
+        DCT Coefficient 6 4: 0 
+        DCT Coefficient 6 5: 0 
+        DCT Coefficient 6 6: 0
+        DCT Coefficient 6 7: 0 
+        DCT Coefficient 7 0: 0 
+        DCT Coefficient 7 1: 0 
+        DCT Coefficient 7 2: 0
+        DCT Coefficient 7 3: 0 
+        DCT Coefficient 7 4: 0 
+        DCT Coefficient 7 5: 0 
+        DCT Coefficient 7 6: 0
+        DCT Coefficient 7 7: 0 
     */
     // Declarations
     parameter VALUE_WIDTH = 17;
@@ -157,7 +221,7 @@ module tb_one_dimension_dct();
     wire signed [AXIS_DATA_WIDTH-1:0] w_o_axis_tdata;
     wire w_o_axis_tlast;
 
-    one_dimension_dct #(.VALUE_WIDTH(VALUE_WIDTH), .SCALE(SCALE)) DUT 
+    two_dimension_dct #(.VALUE_WIDTH(VALUE_WIDTH), .SCALE(SCALE)) DUT 
     (
         .i_clk(aclk),
         .i_aresetn(aresetn),
