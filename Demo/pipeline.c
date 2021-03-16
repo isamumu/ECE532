@@ -171,7 +171,7 @@ int main (void)
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < 8; j++){
             for(int k = 0; k < 8; k++){
-                printf("%f ", result_blks[n][j][k]);
+                printf("%d ", result_blks[n][j][k]);
             }
             printf("\n");
         }
@@ -194,7 +194,7 @@ int main (void)
     }
 
     for(int n = 0; n < num_chunks; n++){
-        int* input_image = (int*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
+        float* input_image = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         
         float* output_bitstream = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
         float* zigzagged = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
@@ -233,7 +233,7 @@ int main (void)
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < 8; j++){
             for(int k = 0; k < 8; k++){
-                printf("%f ", results[n][j][k]);
+                printf("%d ", results[n][j][k]);
             }
             printf("\n");
         }
