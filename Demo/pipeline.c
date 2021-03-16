@@ -48,6 +48,7 @@ int main (void)
     int chunks[num_chunks][8][8];
     int result_blks[num_chunks][8][8];
     
+    printf("wtf");
     int n = 0;
     for(int j = 0; j < dim_y; j++){
         for(int k = 0; k < dim_x; k++){
