@@ -49,12 +49,14 @@ int main (void)
     int result_blks[num_chunks][8][8];
     
     printf("wtf");
-    int n = 0;
-    for(int j = 0; j < dim_y; j++){
-        for(int k = 0; k < dim_x; k++){
-            int var = floor(imagePix[j][k]);
-            chunks[n][j][k] = var;
-           
+
+    for(int n = 0; n < num_chunks; n++){
+        for(int j = 0; j < dim_y; j++){
+            for(int k = 0; k < dim_x; k++){
+                int var = floor(imagePix[j][k]);
+                chunks[n][j][k] = var;
+            
+            }
         }
     }
 
@@ -91,6 +93,7 @@ int main (void)
 
         // store the pixel values
         printf("################ input block ##################\n");
+        
         for (int j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
                 input_image[8*j+k] = (int) chunks[n][j][k];
