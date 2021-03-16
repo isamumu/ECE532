@@ -50,28 +50,28 @@ int main (void)
     
     printf("wtf");
 
-    int n = 0;
-    for(int j = 0; j < dim_y; j++){
-        for(int k = 0; k < dim_x; k++){
-            int var = floor(imagePix[j][k]);
-            chunks[n][j%c_size][k%c_size] = var;
-            if(j*k % 64 == 0){
-                n++;
-            }
-        }
-    }
-
-    // for(int n = 0; n < num_chunks; n++){
-    //     for(int j = 0; j < c_size; j++){
-    //         for(int k = 0; k < c_size; k++){
-    //             if(j % 2 == 0)
-    //                 chunks[n][j][k] = 200;
-    //             else
-    //                 chunks[n][j][k] = 100;
-                
+    // int n = 0;
+    // for(int j = 0; j < dim_y; j++){
+    //     for(int k = 0; k < dim_x; k++){
+    //         int var = floor(imagePix[j][k]);
+    //         chunks[n][j%c_size][k%c_size] = var;
+    //         if(j*k % 64 == 0){
+    //             n++;
     //         }
     //     }
     // }
+
+    for(int n = 0; n < num_chunks; n++){
+        for(int j = 0; j < c_size; j++){
+            for(int k = 0; k < c_size; k++){
+                if(j % 2 == 0)
+                    chunks[n][j][k] = floor(imagePix[j][k]);
+                else
+                    chunks[n][j][k] = floor(imagePix[j][k]);
+                
+            }
+        }
+    }
 
     printf("---------------------- input chunks ----------------------\n");
     for(int n = 0; n < num_chunks; n++){
