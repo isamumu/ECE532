@@ -32,17 +32,17 @@ int main (void)
     int y = 0;
 
     printf("here??");
-    while (fgets(str, 100000, fp) != NULL){
-        //sscanf(str, );
-        imagePix[y][x] = atof(str);
-        if(x == dim_x-1){
-            x = 0;
-            y++;
-        } else{
-            x++;
-        }
-    }
-    fclose(fp);
+    // while (fgets(str, 100000, fp) != NULL){
+    //     //sscanf(str, );
+    //     imagePix[y][x] = atof(str);
+    //     if(x == dim_x-1){
+    //         x = 0;
+    //         y++;
+    //     } else{
+    //         x++;
+    //     }
+    // }
+    // fclose(fp);
 
     printf("here??");
     int c_size = 8;
@@ -63,17 +63,17 @@ int main (void)
     //     }
     // }
 
-    // for(int n = 0; n < num_chunks; n++){
-    //     for(int j = 0; j < c_size; j++){
-    //         for(int k = 0; k < c_size; k++){
-    //             if(j % 2 == 0)
-    //                 chunks[n][j][k] = 200;
-    //             else
-    //                 chunks[n][j][k] = 100;
+    for(int n = 0; n < num_chunks; n++){
+        for(int j = 0; j < c_size; j++){
+            for(int k = 0; k < c_size; k++){
+                if(j % 2 == 0)
+                    chunks[n][j][k] = 200;
+                else
+                    chunks[n][j][k] = 100;
                 
-    //         }
-    //     }
-    // }
+            }
+        }
+    }
 
     
     for(int n = 0; n < num_chunks; n++){
@@ -156,7 +156,7 @@ int main (void)
         printf("\n");
 
         // printf("encoded bitstream ==========================================");
-        // run_length_encoder(output_bitstream, encoded_bitstream);
+        run_length_encoder(output_bitstream, encoded_bitstream);
         // for(int i = 0; i < BLOCK_SIZE; i++){
         //     for(int j = 0; j < BLOCK_SIZE; j++){
         //         printf("%f ", encoded_bitstream[8*i + j]);
@@ -166,7 +166,7 @@ int main (void)
 
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
-                result_blks[n + i * c_size + j * c_size] = output_bitstream[8*i + j];
+                result_blks[n + i * c_size + j * c_size] = encoded_bitstream[8*i + j];
             }
         }
         
@@ -219,8 +219,8 @@ int main (void)
             }
         }
 
-        // run_length_decoder(input_image, output_bitstream);
-        de_zig_zag(input_image, zigzagged);
+        run_length_decoder(input_image, output_bitstream);
+        de_zig_zag(output_bitstream, zigzagged);
 
         dequantizer(zigzagged, quantization_table);
         
