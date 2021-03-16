@@ -49,12 +49,13 @@ int main (void)
     int result_blks[num_chunks][8][8];
     
     printf("wtf");
-    int n = 0;
-    for(int j = 0; j < dim_y; j++){
-        for(int k = 0; k < dim_x; k++){
-            chunks[n][j][k] = imagePix[j][k];
-            if(j*k % 64 == 0){
-                n++;
+    for (int n = 0; n < num_chunks; n++){
+        for(int j = 0; j < dim_y; j++){
+            for(int k = 0; k < dim_x; k++){
+                chunks[n][j][k] = imagePix[j][k];
+                // if(j*k % 64 == 0){
+                //     n++;
+                // }
             }
         }
     }
