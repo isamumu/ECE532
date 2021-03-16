@@ -48,27 +48,27 @@ int main (void)
     int chunks[num_chunks][8][8];
     int result_blks[num_chunks][8][8];
     
-    // int n = 0;
-    // for(int j = 0; j < dim_y; j++){
-    //     for(int k = 0; k < dim_x; k++){
-    //         chunks[n][j%c_size][k%c_size] = imagePix[j][k];
-    //         if(j*k % 64 == 0){
-    //             n++;
-    //         }
-    //     }
-    // }
-
-    for(int n = 0; n < num_chunks; n++){
-        for(int j = 0; j < c_size; j++){
-            for(int k = 0; k < c_size; k++){
-                if(j % 2 == 0)
-                    chunks[n][j][k] = 200;
-                else
-                    chunks[n][j][k] = 100;
-                
+    int n = 0;
+    for(int j = 0; j < dim_y; j++){
+        for(int k = 0; k < dim_x; k++){
+            chunks[n][j%c_size][k%c_size] = imagePix[j][k];
+            if(j*k % 64 == 0){
+                n++;
             }
         }
     }
+
+    // for(int n = 0; n < num_chunks; n++){
+    //     for(int j = 0; j < c_size; j++){
+    //         for(int k = 0; k < c_size; k++){
+    //             if(j % 2 == 0)
+    //                 chunks[n][j][k] = 200;
+    //             else
+    //                 chunks[n][j][k] = 100;
+                
+    //         }
+    //     }
+    // }
 
     printf("---------------------- input chunks ----------------------\n");
     for(int n = 0; n < num_chunks; n++){
