@@ -53,7 +53,8 @@ int main (void)
     int n = 0;
     for(int j = 0; j < dim_y; j++){
         for(int k = 0; k < dim_x; k++){
-            chunks[n][j%c_size][k%c_size] = floor(imagePix[j][k]);
+            int var = floor(imagePix[j][k]);
+            chunks[n][j%c_size][k%c_size] = var;
             if(j*k % 64 == 0){
                 n++;
             }
