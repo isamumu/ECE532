@@ -46,7 +46,7 @@ int main (void)
     int c_size = 8;
     int num_chunks = (dim_y) / (c_size);
     int chunks[num_chunks][8][8];
-    int result_blks[num_chunks][8][8];
+    signed int result_blks[num_chunks][8][8];
     
     printf("wtf");
 
@@ -184,7 +184,7 @@ int main (void)
  
 
     // Dequantization followed by inverse DCT
-    int results[num_chunks][8][8];
+    signed int results[num_chunks][8][8];
     
     float* quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
 
