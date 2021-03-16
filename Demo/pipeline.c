@@ -19,7 +19,7 @@ int main (void)
     char const *filename = "test.txt";
     char str[192*192];
 
-    int imagePix[dim_x][dim_y];
+    float imagePix[dim_x][dim_y];
  
     FILE *fp = fopen(filename, "r");
     if (fp == NULL){
@@ -33,7 +33,7 @@ int main (void)
 
     while (fgets(str, 100000, fp) != NULL){
         //sscanf(str, );
-        imagePix[y][x] = floor(atof(str));
+        imagePix[y][x] = atof(str);
         if(x == dim_x-1){
             x = 0;
             y++;
@@ -49,14 +49,13 @@ int main (void)
     int result_blks[num_chunks][8][8];
     
     printf("wtf");
-    for (int n = 0; n < num_chunks; n++){
-        for(int j = 0; j < dim_y; j++){
-            for(int k = 0; k < dim_x; k++){
-                int var = imagePix[j][k];
-                chunks[n][j][k] = var;
-                // if(j*k % 64 == 0){
-                //     n++;
-                // }
+    int n = 0;
+    for(int j = 0; j < dim_y; j++){
+        for(int k = 0; k < dim_x; k++){
+            int var = floor(imagePix[j][k]);
+            chunks[n][j%c_size][k%c_size] = var;
+            if(j*k % 64 == 0){
+                n++;
             }
         }
     }
