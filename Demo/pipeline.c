@@ -31,28 +31,23 @@ int main (void)
     int x = 0;
     int y = 0;
 
-    printf("here??");
-    // while (fgets(str, 100000, fp) != NULL){
-    //     //sscanf(str, );
-    //     imagePix[y][x] = atof(str);
-    //     if(x == dim_x-1){
-    //         x = 0;
-    //         y++;
-    //     } else{
-    //         x++;
-    //     }
-    // }
-    // fclose(fp);
+    while (fgets(str, 100000, fp) != NULL){
+        //sscanf(str, );
+        imagePix[y][x] = atof(str);
+        if(x == dim_x-1){
+            x = 0;
+            y++;
+        } else{
+            x++;
+        }
+    }
+    fclose(fp);
 
-    printf("here??");
     int c_size = 8;
-    // int num_chunks = (dim_y) / (c_size);
-    int num_chunks = 24 * 24;
-    int* chunks = (int*) malloc(num_chunks * BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
-    //int chunks[num_chunks][8][8];
-    float* result_blks = (float*) malloc(num_chunks * BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
-    // float result_blks[num_chunks][8][8];
-    printf("here?");
+    int num_chunks = (dim_y) / (c_size);
+    int chunks[num_chunks][8][8];
+    float result_blks[num_chunks][8][8];
+    
     // int n = 0;
     // for(int j = 0; j < dim_y; j++){
     //     for(int k = 0; k < dim_x; k++){
@@ -67,28 +62,19 @@ int main (void)
         for(int j = 0; j < c_size; j++){
             for(int k = 0; k < c_size; k++){
                 if(j % 2 == 0)
-                    chunks[n + j * c_size + k * c_size] = 200;
+                    chunks[n][j][k] = 200;
                 else
-                    chunks[n + j * c_size + k * c_size] = 100;
+                    chunks[n][j][k] = 100;
                 
             }
         }
     }
 
-    
-    // for(int n = 0; n < num_chunks; n++){
-    //     for(int j = 0; j < c_size; j++){
-    //         for(int k = 0; k < c_size; k++){
-    //             chunks[n + j * c_size + k * c_size] = (int)imagePix[n * c_size + j][n * c_size + k];
-    //         }
-    //     }
-    // }
-
     printf("---------------------- input chunks ----------------------\n");
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < 8; j++){
             for(int k = 0; k < 8; k++){
-                printf("%d ", chunks[n + j * c_size + k * c_size]);
+                printf("%d ", chunks[n][j][k]);
             }
             printf("\n");
         }
@@ -107,7 +93,7 @@ int main (void)
         printf("################ input block ##################\n");
         for (int j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
-                input_image[8*j+k] = (int) chunks[n + j * c_size + k * c_size];
+                input_image[8*j+k] = (int) chunks[n][j][k];
                 printf("%d ", input_image[8*j+k]);
             }
             printf("\n");
@@ -155,18 +141,18 @@ int main (void)
         }
         printf("\n");
 
-        // printf("encoded bitstream ==========================================");
+        printf("encoded bitstream ==========================================");
         run_length_encoder(output_bitstream, encoded_bitstream);
-        // for(int i = 0; i < BLOCK_SIZE; i++){
-        //     for(int j = 0; j < BLOCK_SIZE; j++){
-        //         printf("%f ", encoded_bitstream[8*i + j]);
-        //     }
-        // }
-        // printf("\n");
+        for(int i = 0; i < BLOCK_SIZE; i++){
+            for(int j = 0; j < BLOCK_SIZE; j++){
+                printf("%f ", encoded_bitstream[8*i + j]);
+            }
+        }
+        printf("\n");
 
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
-                result_blks[n + i * c_size + j * c_size] = encoded_bitstream[8*i + j];
+                result_blks[n][i][j] = encoded_bitstream[8*i + j];
             }
         }
         
@@ -174,7 +160,7 @@ int main (void)
         free(output_dct_coeffs);
         //free(quantization_table);
         free(input_image);
-        // free(encoded_bitstream);
+        free(encoded_bitstream);
         free(output_bitstream);
       
         //free(inverted_pixels);
@@ -185,7 +171,7 @@ int main (void)
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < 8; j++){
             for(int k = 0; k < 8; k++){
-                printf("%f ", result_blks[n + j * c_size + k * c_size]);
+                printf("%f ", result_blks[n][j][k]);
             }
             printf("\n");
         }
@@ -195,7 +181,7 @@ int main (void)
  
 
     // Dequantization followed by inverse DCT
-    float* results = (float*) malloc(num_chunks * BLOCK_SIZE * BLOCK_SIZE * sizeof(int));
+    float results[num_chunks][8][8];
     
     float* quantization_table = (float*) malloc( BLOCK_SIZE * BLOCK_SIZE * sizeof(float));
 
@@ -215,7 +201,7 @@ int main (void)
 
         for (int j = 0; j < c_size; j++) {
             for (int k = 0; k < c_size; k++) {
-                input_image[8*j+k] = results[n + j * c_size + k * c_size];
+                input_image[8*j+k] = result_blks[n][j][k];
             }
         }
 
@@ -230,7 +216,7 @@ int main (void)
 
         for(int i = 0; i < BLOCK_SIZE; i++){
             for(int j = 0; j < BLOCK_SIZE; j++){
-                results[n + i * c_size + j * c_size] = inverted_pixels[8*i + j];
+                results[n][i][j] = inverted_pixels[8*i + j];
             }
         }
 
@@ -247,15 +233,12 @@ int main (void)
     for(int n = 0; n < num_chunks; n++){
         for(int j = 0; j < 8; j++){
             for(int k = 0; k < 8; k++){
-                printf("%f ", results[n + j * c_size + k * c_size]);
+                printf("%f ", results[n][j][k]);
             }
             printf("\n");
         }
         printf("\n");
         printf("------------------------------------------------------------\n");
     }
-
-    
-
     
 }
