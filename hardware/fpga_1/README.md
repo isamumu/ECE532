@@ -33,7 +33,7 @@ freq x Value
 1 x -1  
 57 x 0  
 The Exit interface sends the frequency and value of each DCT coefficient in a single 16-bit value:
-![interface_5_output_data_format](https://github.com/isamumu/ECE532/blob/main/hardware/fpga_1/doc/interface_5_output_data_format.PNG)  
+![interface_5_output_data_format](https://github.com/isamumu/ECE532/blob/main/hardware/fpga_1/doc/interface_5_output_data_format.png)  
 For instance, 1 x 16 will be transformed into 0b**000001***0000010000*.
 ![interface_7_output_transfer_zoomed](https://github.com/isamumu/ECE532/blob/main/hardware/fpga_1/doc/interface_7_output_transfer_zoomed.png)
 
