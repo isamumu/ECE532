@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_quantizer_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_quantizer" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="2109880000fs"></ZoomStartTime>
+      <ZoomEndTime time="2187480001fs"></ZoomEndTime>
+      <Cursor1Time time="2175000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="149"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="24" />
+   <wvobject type="logic" fp_name="/tb_quantizer/aclk">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_quantizer/aresetn">
+      <obj_property name="ElementShortName">aresetn</obj_property>
+      <obj_property name="ObjectShortName">aresetn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_quantizer/r_i_axis_tvalid">
+      <obj_property name="ElementShortName">r_i_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">r_i_axis_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_quantizer/r_num_data_sent">
+      <obj_property name="ElementShortName">r_num_data_sent[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_num_data_sent[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_quantizer/r_i_axis_tdata">
+      <obj_property name="ElementShortName">r_i_axis_tdata[23:0]</obj_property>
+      <obj_property name="ObjectShortName">r_i_axis_tdata[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_quantizer/r_i_axis_tlast">
+      <obj_property name="ElementShortName">r_i_axis_tlast</obj_property>
+      <obj_property name="ObjectShortName">r_i_axis_tlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_quantizer/w_o_axis_tready">
+      <obj_property name="ElementShortName">w_o_axis_tready</obj_property>
+      <obj_property name="ObjectShortName">w_o_axis_tready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_quantizer/r_i_axis_tready">
+      <obj_property name="ElementShortName">r_i_axis_tready</obj_property>
+      <obj_property name="ObjectShortName">r_i_axis_tready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_quantizer/w_o_axis_tvalid">
+      <obj_property name="ElementShortName">w_o_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">w_o_axis_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_quantizer/w_o_axis_tdata">
+      <obj_property name="ElementShortName">w_o_axis_tdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">w_o_axis_tdata[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_quantizer/w_o_axis_tlast">
+      <obj_property name="ElementShortName">w_o_axis_tlast</obj_property>
+      <obj_property name="ObjectShortName">w_o_axis_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider212" type="divider">
+      <obj_property name="label">DUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_quantizer/DUT/r_core_state">
+      <obj_property name="ElementShortName">r_core_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">r_core_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_quantizer/DUT/w_quantization_table">
+      <obj_property name="ElementShortName">w_quantization_table[0:7][0:7][16:0]</obj_property>
+      <obj_property name="ObjectShortName">w_quantization_table[0:7][0:7][16:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_quantizer/DUT/r_dsp_1_setup">
+      <obj_property name="ElementShortName">r_dsp_1_setup[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r_dsp_1_setup[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_quantizer/DUT/r_dsp_2_load">
+      <obj_property name="ElementShortName">r_dsp_2_load[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r_dsp_2_load[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_quantizer/DUT/r_dsp_3_process">
+      <obj_property name="ElementShortName">r_dsp_3_process[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r_dsp_3_process[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_quantizer/DUT/r_dsp_4_finished">
+      <obj_property name="ElementShortName">r_dsp_4_finished[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r_dsp_4_finished[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output">
+      <obj_property name="ElementShortName">w_dsp_output[0:7][34:0]</obj_property>
+      <obj_property name="ObjectShortName">w_dsp_output[0:7][34:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[0]">
+         <obj_property name="ElementShortName">[0][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[1]">
+         <obj_property name="ElementShortName">[1][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[2]">
+         <obj_property name="ElementShortName">[2][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[3]">
+         <obj_property name="ElementShortName">[3][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[4]">
+         <obj_property name="ElementShortName">[4][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[5]">
+         <obj_property name="ElementShortName">[5][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[6]">
+         <obj_property name="ElementShortName">[6][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[7]">
+         <obj_property name="ElementShortName">[7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[0]">
+         <obj_property name="ElementShortName">[0][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][34:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[1]">
+         <obj_property name="ElementShortName">[1][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][34:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[2]">
+         <obj_property name="ElementShortName">[2][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][34:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[3]">
+         <obj_property name="ElementShortName">[3][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][34:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[4]">
+         <obj_property name="ElementShortName">[4][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][34:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[5]">
+         <obj_property name="ElementShortName">[5][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][34:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[6]">
+         <obj_property name="ElementShortName">[6][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][34:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/w_dsp_output[7]">
+         <obj_property name="ElementShortName">[7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][34:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_quantizer/DUT/r_input_coeffs">
+      <obj_property name="ElementShortName">r_input_coeffs[0:7][0:7][16:0]</obj_property>
+      <obj_property name="ObjectShortName">r_input_coeffs[0:7][0:7][16:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs">
+      <obj_property name="ElementShortName">r_quantized_coeffs[0:7][0:7][34:0]</obj_property>
+      <obj_property name="ObjectShortName">r_quantized_coeffs[0:7][0:7][34:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[0]">
+         <obj_property name="ElementShortName">[0][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][0:7][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[1]">
+         <obj_property name="ElementShortName">[1][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][0:7][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[2]">
+         <obj_property name="ElementShortName">[2][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][0:7][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[3]">
+         <obj_property name="ElementShortName">[3][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][0:7][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[4]">
+         <obj_property name="ElementShortName">[4][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][0:7][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[5]">
+         <obj_property name="ElementShortName">[5][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][0:7][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[6]">
+         <obj_property name="ElementShortName">[6][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][0:7][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[7]">
+         <obj_property name="ElementShortName">[7][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][0:7][34:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[0]">
+         <obj_property name="ElementShortName">[0][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][0:7][34:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[1]">
+         <obj_property name="ElementShortName">[1][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][0:7][34:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[2]">
+         <obj_property name="ElementShortName">[2][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][0:7][34:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[3]">
+         <obj_property name="ElementShortName">[3][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][0:7][34:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[4]">
+         <obj_property name="ElementShortName">[4][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][0:7][34:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[5]">
+         <obj_property name="ElementShortName">[5][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][0:7][34:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[6]">
+         <obj_property name="ElementShortName">[6][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][0:7][34:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_quantizer/DUT/r_quantized_coeffs[7]">
+         <obj_property name="ElementShortName">[7][0:7][34:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][0:7][34:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_quantizer/DUT/o_axis_TVALID">
+      <obj_property name="ElementShortName">o_axis_TVALID</obj_property>
+      <obj_property name="ObjectShortName">o_axis_TVALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_quantizer/DUT/r_o_axis_TDATA">
+      <obj_property name="ElementShortName">r_o_axis_TDATA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">r_o_axis_TDATA[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_quantizer/DUT/r_o_axis_TLAST">
+      <obj_property name="ElementShortName">r_o_axis_TLAST</obj_property>
+      <obj_property name="ObjectShortName">r_o_axis_TLAST</obj_property>
+   </wvobject>
+</wave_config>

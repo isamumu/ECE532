@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2163333334fs"></ZoomStartTime>
-      <ZoomEndTime time="4633333335fs"></ZoomEndTime>
-      <Cursor1Time time="3073333000fs"></Cursor1Time>
+      <ZoomStartTime time="20000000fs"></ZoomStartTime>
+      <ZoomEndTime time="69800001fs"></ZoomEndTime>
+      <Cursor1Time time="55400000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="179"></NameColumnWidth>
-      <ValueColumnWidth column_width="181"></ValueColumnWidth>
+      <ValueColumnWidth column_width="177"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="37" />
    <wvobject type="logic" fp_name="/tb_one_dimension_dct/aclk">
@@ -35,6 +35,7 @@
    <wvobject type="array" fp_name="/tb_one_dimension_dct/r_test_data">
       <obj_property name="ElementShortName">r_test_data[16:0]</obj_property>
       <obj_property name="ObjectShortName">r_test_data[16:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/tb_one_dimension_dct/w_o_axis_tvalid">
       <obj_property name="ElementShortName">w_o_axis_tvalid</obj_property>
@@ -153,155 +154,11 @@
       <obj_property name="ElementShortName">r_input_coeffs[0:7][0:7][16:0]</obj_property>
       <obj_property name="ObjectShortName">r_input_coeffs[0:7][0:7][16:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[0]">
-         <obj_property name="ElementShortName">[0][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[1]">
-         <obj_property name="ElementShortName">[1][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[2]">
-         <obj_property name="ElementShortName">[2][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[3]">
-         <obj_property name="ElementShortName">[3][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[4]">
-         <obj_property name="ElementShortName">[4][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[5]">
-         <obj_property name="ElementShortName">[5][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[5][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[6]">
-         <obj_property name="ElementShortName">[6][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[6][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[7]">
-         <obj_property name="ElementShortName">[7][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[7][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[0]">
-         <obj_property name="ElementShortName">[0][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][0:7][16:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[1]">
-         <obj_property name="ElementShortName">[1][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][0:7][16:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[2]">
-         <obj_property name="ElementShortName">[2][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][0:7][16:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[3]">
-         <obj_property name="ElementShortName">[3][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][0:7][16:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[4]">
-         <obj_property name="ElementShortName">[4][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][0:7][16:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[5]">
-         <obj_property name="ElementShortName">[5][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[5][0:7][16:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[6]">
-         <obj_property name="ElementShortName">[6][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[6][0:7][16:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_input_coeffs[7]">
-         <obj_property name="ElementShortName">[7][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[7][0:7][16:0]</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs">
       <obj_property name="ElementShortName">r_output_coeffs[0:7][0:7][16:0]</obj_property>
       <obj_property name="ObjectShortName">r_output_coeffs[0:7][0:7][16:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[0]">
-         <obj_property name="ElementShortName">[0][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[1]">
-         <obj_property name="ElementShortName">[1][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[2]">
-         <obj_property name="ElementShortName">[2][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[3]">
-         <obj_property name="ElementShortName">[3][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[4]">
-         <obj_property name="ElementShortName">[4][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[5]">
-         <obj_property name="ElementShortName">[5][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[5][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[6]">
-         <obj_property name="ElementShortName">[6][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[6][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[7]">
-         <obj_property name="ElementShortName">[7][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[7][0:7][16:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[0]">
-         <obj_property name="ElementShortName">[0][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][0:7][16:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[1]">
-         <obj_property name="ElementShortName">[1][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][0:7][16:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[2]">
-         <obj_property name="ElementShortName">[2][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][0:7][16:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[3]">
-         <obj_property name="ElementShortName">[3][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][0:7][16:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[4]">
-         <obj_property name="ElementShortName">[4][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][0:7][16:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[5]">
-         <obj_property name="ElementShortName">[5][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[5][0:7][16:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[6]">
-         <obj_property name="ElementShortName">[6][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[6][0:7][16:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_one_dimension_dct/DUT/transpose_0/r_output_coeffs[7]">
-         <obj_property name="ElementShortName">[7][0:7][16:0]</obj_property>
-         <obj_property name="ObjectShortName">[7][0:7][16:0]</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject type="logic" fp_name="/tb_one_dimension_dct/DUT/transpose_0/o_axis_TVALID">
       <obj_property name="ElementShortName">o_axis_TVALID</obj_property>

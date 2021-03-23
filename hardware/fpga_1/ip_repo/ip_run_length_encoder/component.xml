@@ -2,8 +2,8 @@
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>user.org</spirit:vendor>
   <spirit:library>user</spirit:library>
-  <spirit:name>two_dimension_dct</spirit:name>
-  <spirit:version>1.1</spirit:version>
+  <spirit:name>run_length_encoder</spirit:name>
+  <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
       <spirit:name>i_axis</spirit:name>
@@ -141,14 +141,14 @@
         <spirit:displayName>Synthesis</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>Verilog</spirit:language>
-        <spirit:modelName>two_dimension_dct</spirit:modelName>
+        <spirit:modelName>run_length_encoder</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c2021272</spirit:value>
+            <spirit:value>751f0732</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -157,14 +157,14 @@
         <spirit:displayName>Simulation</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>Verilog</spirit:language>
-        <spirit:modelName>two_dimension_dct</spirit:modelName>
+        <spirit:modelName>run_length_encoder</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c2021272</spirit:value>
+            <spirit:value>751f0732</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -172,14 +172,14 @@
         <spirit:name>xilinx_testbench</spirit:name>
         <spirit:displayName>Test Bench</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:simulation.testbench</spirit:envIdentifier>
-        <spirit:modelName>tb_one_dimension_dct</spirit:modelName>
+        <spirit:modelName>tb_run_length_encoder</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_testbench_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>513e3268</spirit:value>
+            <spirit:value>c69c2cbf</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -193,7 +193,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f577e098</spirit:value>
+            <spirit:value>64fd8882</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -256,7 +256,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXIS_DATA_WIDTH&apos;)) - 1)">23</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.INPUT_AXIS_DATA_WIDTH&apos;)) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -321,7 +321,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXIS_DATA_WIDTH&apos;)) - 1)">23</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.OUTPUT_AXIS_DATA_WIDTH&apos;)) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -356,17 +356,32 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>VALUE_WIDTH</spirit:name>
         <spirit:displayName>Value Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VALUE_WIDTH">17</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VALUE_WIDTH">10</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>SCALE</spirit:name>
-        <spirit:displayName>Scale</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SCALE">7</spirit:value>
+        <spirit:name>COUNTER_WIDTH</spirit:name>
+        <spirit:displayName>Counter Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.COUNTER_WIDTH">6</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>AXIS_DATA_WIDTH</spirit:name>
-        <spirit:displayName>Axis Data Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXIS_DATA_WIDTH" spirit:dependency="(8 * (((spirit:decode(id(&apos;MODELPARAM_VALUE.VALUE_WIDTH&apos;)) - 1) / 8) + 1))">24</spirit:value>
+        <spirit:name>NUM_VALUES_PER_TRANSFER</spirit:name>
+        <spirit:displayName>Num Values Per Transfer</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NUM_VALUES_PER_TRANSFER">1</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>TRANSFER_WIDTH</spirit:name>
+        <spirit:displayName>Transfer Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TRANSFER_WIDTH" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.VALUE_WIDTH&apos;)) + spirit:decode(id(&apos;MODELPARAM_VALUE.COUNTER_WIDTH&apos;)))">16</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>INPUT_AXIS_DATA_WIDTH</spirit:name>
+        <spirit:displayName>Input Axis Data Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.INPUT_AXIS_DATA_WIDTH" spirit:dependency="(8 * ((((spirit:decode(id(&apos;MODELPARAM_VALUE.NUM_VALUES_PER_TRANSFER&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.VALUE_WIDTH&apos;))) - 1) / 8) + 1))">16</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>OUTPUT_AXIS_DATA_WIDTH</spirit:name>
+        <spirit:displayName>Output Axis Data Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.OUTPUT_AXIS_DATA_WIDTH" spirit:dependency="(8 * ((((spirit:decode(id(&apos;MODELPARAM_VALUE.NUM_VALUES_PER_TRANSFER&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSFER_WIDTH&apos;))) - 1) / 8) + 1))">16</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -381,96 +396,16 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/dsp_add.v</spirit:name>
+        <spirit:name>src/run_length_encoder.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/dsp_sub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/one_dimension_dct.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/path_switch.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/transpose.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/transpose_stage_one.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/transpose_stage_three.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/transpose_stage_two.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/two_dimension_dct.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_1137d23f</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_751f0732</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/dsp_add.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/dsp_sub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/one_dimension_dct.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/path_switch.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/transpose.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/transpose_stage_one.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/transpose_stage_three.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/transpose_stage_two.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/two_dimension_dct.v</spirit:name>
+        <spirit:name>src/run_length_encoder.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -478,7 +413,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_testbench_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/tb_two_dimension_dct.sv</spirit:name>
+        <spirit:name>src/tb_run_length_encoder.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
@@ -486,7 +421,7 @@
         <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/tb_one_dimension_dct_behav.wcfg</spirit:name>
+        <spirit:name>src/tb_run_length_encoder_behav.wcfg</spirit:name>
         <spirit:fileType>unknown</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
@@ -495,14 +430,14 @@
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/two_dimension_dct_v1_1.tcl</spirit:name>
+        <spirit:name>xgui/run_length_encoder_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f577e098</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_64fd8882</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>two_dimension_dct_v1_1</spirit:description>
+  <spirit:description>run_length_encoder_v1_0</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>BLOCK_SIZE</spirit:name>
@@ -512,21 +447,36 @@
     <spirit:parameter>
       <spirit:name>VALUE_WIDTH</spirit:name>
       <spirit:displayName>Value Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VALUE_WIDTH">17</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VALUE_WIDTH">10</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
-      <spirit:name>SCALE</spirit:name>
-      <spirit:displayName>Scale</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SCALE">7</spirit:value>
+      <spirit:name>COUNTER_WIDTH</spirit:name>
+      <spirit:displayName>Counter Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.COUNTER_WIDTH">6</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
-      <spirit:name>AXIS_DATA_WIDTH</spirit:name>
-      <spirit:displayName>Axis Data Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXIS_DATA_WIDTH">24</spirit:value>
+      <spirit:name>NUM_VALUES_PER_TRANSFER</spirit:name>
+      <spirit:displayName>Num Values Per Transfer</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUM_VALUES_PER_TRANSFER">1</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>TRANSFER_WIDTH</spirit:name>
+      <spirit:displayName>Transfer Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TRANSFER_WIDTH">16</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>INPUT_AXIS_DATA_WIDTH</spirit:name>
+      <spirit:displayName>Input Axis Data Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.INPUT_AXIS_DATA_WIDTH">16</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>OUTPUT_AXIS_DATA_WIDTH</spirit:name>
+      <spirit:displayName>Output Axis Data Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.OUTPUT_AXIS_DATA_WIDTH">16</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">two_dimension_dct_v1_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">run_length_encoder_v1_0</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -558,41 +508,33 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>two_dimension_dct_v1_1</xilinx:displayName>
+      <xilinx:displayName>run_length_encoder_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:upgrades>
-        <xilinx:canUpgradeFrom>user.org:user:two_dimension_dct:1.0</xilinx:canUpgradeFrom>
-      </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2021-03-23T00:45:18Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-03-18T04:13:36Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1abab1b6_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f6e5de7_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d654a1f_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6148f450_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@65b5b88_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cdf7eee_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cc2c4b1_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@46a46cf9_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@36e65531_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bf80513_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a61f3e0_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b52a54c_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f175187_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c8b64a_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dd4230a_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@544cef50_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@10bdc0e2_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@144cc79d_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/two_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2aefd214_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/ip_run_length_encoder</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e68c41f_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/ip_run_length_encoder</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2acb0a10_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/ip_run_length_encoder</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24e2e55a_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/ip_run_length_encoder</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7355f2b4_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/ip_run_length_encoder</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63ef3c6a_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/ip_run_length_encoder</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12584911_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/ip_run_length_encoder</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cfbefce_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/ip_run_length_encoder</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20fa46bb_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/ip_run_length_encoder</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7970771b_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/ip_run_length_encoder</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@603ba8f8_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/ip_run_length_encoder</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@662354a3_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/ip_run_length_encoder</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b236b39_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/ip_run_length_encoder</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="d957359a"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="41183cb5"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="c33b5d32"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="032dd106"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="f808bade"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d2a2c321"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="96d316a8"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="d81e6c6e"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="a678d1d4"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

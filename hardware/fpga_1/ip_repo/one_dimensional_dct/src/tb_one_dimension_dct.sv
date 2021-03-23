@@ -227,10 +227,10 @@ module tb_one_dimension_dct();
             begin
                 r_num_data_received <= r_num_data_received + 1;
                 $display("Output %d: %f", r_num_data_received, w_o_axis_tdata >>> SCALE);
-                if (w_o_axis_tlast)
-                begin
-                    $finish;
-                end
+//                if (w_o_axis_tlast)
+//                begin
+//                    $finish;
+//                end
             end
             
         end

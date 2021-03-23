@@ -3,8 +3,10 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
-  ipgui::add_param $IPINST -name "VALUE_WIDTH" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "AXIS_DATA_WIDTH" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "BLOCK_SIZE" -parent ${Page_0}
   ipgui::add_param $IPINST -name "SCALE" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "VALUE_WIDTH" -parent ${Page_0}
 
 
 }

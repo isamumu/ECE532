@@ -3,7 +3,7 @@
   <spirit:vendor>user.org</spirit:vendor>
   <spirit:library>user</spirit:library>
   <spirit:name>one_dimension_dct</spirit:name>
-  <spirit:version>1.1</spirit:version>
+  <spirit:version>1.6</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
       <spirit:name>i_axis</spirit:name>
@@ -148,7 +148,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9f0deb88</spirit:value>
+            <spirit:value>8cd717ca</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -164,7 +164,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9f0deb88</spirit:value>
+            <spirit:value>8cd717ca</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -179,7 +179,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>121748e2</spirit:value>
+            <spirit:value>c180fbd7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -366,7 +366,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>AXIS_DATA_WIDTH</spirit:name>
         <spirit:displayName>Axis Data Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.AXIS_DATA_WIDTH" spirit:dependency="(8 * (((spirit:decode(id(&apos;MODELPARAM_VALUE.VALUE_WIDTH&apos;)) - 1) / 8) + 1))">24</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXIS_DATA_WIDTH" spirit:dependency="(8 * (((spirit:decode(id(&apos;MODELPARAM_VALUE.VALUE_WIDTH&apos;)) - 1) / 8) + 1))">24</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -381,27 +381,38 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/one_dimension_dct.v</spirit:name>
+        <spirit:name>src/dsp_add.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_ef4940c2</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../src/one_dimension_dct.v</spirit:name>
+        <spirit:name>src/dsp_sub.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_cfa12213</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/one_dimension_dct.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_0934ab1c</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/one_dimension_dct.v</spirit:name>
+        <spirit:name>src/dsp_add.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../src/one_dimension_dct.v</spirit:name>
+        <spirit:name>src/dsp_sub.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/one_dimension_dct.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -420,30 +431,18 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
       </spirit:file>
-      <spirit:file>
-        <spirit:name>../../tb/tb_one_dimension_dct.sv</spirit:name>
-        <spirit:fileType>systemVerilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../one_dimension_dct/tb_one_dimension_dct_behav.wcfg</spirit:name>
-        <spirit:fileType>unknown</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-      </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/one_dimension_dct_v1_1.tcl</spirit:name>
+        <spirit:name>xgui/one_dimension_dct_v1_6.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_f577e098</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>one_dimension_dct_v1_1</spirit:description>
+  <spirit:description>one_dimension_dct_v1_6</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>BLOCK_SIZE</spirit:name>
@@ -452,7 +451,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>VALUE_WIDTH</spirit:name>
-      <spirit:displayName>Value Width (bits)</spirit:displayName>
+      <spirit:displayName>Value Width</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VALUE_WIDTH">17</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
@@ -499,49 +498,42 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>one_dimension_dct_v1_1</xilinx:displayName>
+      <xilinx:displayName>one_dimension_dct_v1_6</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>3</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-03-16T05:05:24Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>user.org:user:one_dimension_dct:1.0</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2021-03-22T18:24:55Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ad7e716_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@63e0349a_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a9370b3_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@34c4a8ee_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2450e65e_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ae1c48f_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@47e882a_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f9b788f_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@704a9c5_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@69fca966_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@28393a8c_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a91a13a_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@ea03c83_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@28056745_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e9f572c_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4697ed6b_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@d7e9683_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a2c0e77_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a9cea69_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d885f33_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c548ecc_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@33be2298_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b68e1fd_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dfa3aa2_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@22fd3927_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d8864ff_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ed67c13_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f60febf_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a00188a_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9b1dd82_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11018efc_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32bdfbb2_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cb2612b_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35f05590_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@297cc983_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3af34109_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34fe3bd_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47e4b44c_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4faae120_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@646f99f5_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58175735_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ae0cc6c_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10fe9ec5_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c29fe92_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ad8bdbd_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11790eeb_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@311b1223_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dcee58_ARCHIVE_LOCATION">/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo/one_dimensional_dct</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="d957359a"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b541d9f9"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5cdd9536"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="c33b5d32"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="43f42892"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="86adcec1"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="032dd106"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="3ad2190d"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
