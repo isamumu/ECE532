@@ -3,7 +3,7 @@ Here is what this directory contains:
 --> FIFOStream.xpr contains the vivado project that has the full pipeline with the microblaze. 
 ----> The source file called FIFOStream contains a C file called helloworld.c which contains code to transfer data from microblaze to core via AXIS FIFO
 
---> tea.xpr contains the vivado project that has the microblaze with UART implemented on the SDK
+--> tea.xpr contains the vivado project that has the microblaze with UART implemented on the SDK \br
 ----> The source file called vanilla contains the helloworld.c program which uses UART to read from the serial port
 ----> I included a sample python script called serial.py which contains code that repeatedly writes to the serial port and stops when the microblaze reads it
 ----> NOTE: before running the python, make sure to move the folder Serial (included in this repo) to your C drive. Otherwise it won't run
