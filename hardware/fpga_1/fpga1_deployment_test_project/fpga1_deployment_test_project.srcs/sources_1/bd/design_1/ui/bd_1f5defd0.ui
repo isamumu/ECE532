@@ -1,0 +1,33 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port sys_clock -pg 1 -y -350 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 1 -y 20 -defaultsOSRD
+preplace inst quantizer_0 -pg 1 -lvl 5 -y -130 -defaultsOSRD
+preplace inst fpga1_deployment_sou_0 -pg 1 -lvl 3 -y -150 -defaultsOSRD
+preplace inst two_dimension_dct_0 -pg 1 -lvl 4 -y -130 -defaultsOSRD
+preplace inst input_packet -pg 1 -lvl 1 -y -110 -defaultsOSRD
+preplace inst fpga1_deployment_rec_0 -pg 1 -lvl 8 -y -140 -defaultsOSRD
+preplace inst zig_zag_0 -pg 1 -lvl 6 -y -150 -defaultsOSRD
+preplace inst run_length_encoder_0 -pg 1 -lvl 7 -y -140 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 9 -y -130 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 3 -y -330 -defaultsOSRD
+preplace inst expected_output -pg 1 -lvl 7 -y 50 -defaultsOSRD
+preplace inst aresetn -pg 1 -lvl 2 -y -310 -defaultsOSRD
+preplace netloc fpga1_deployment_rec_0_o_result_axis 1 8 1 1360
+preplace netloc aresetn_dout 1 2 7 -250 -250 100 -50 340 -50 560 -60 760 -60 990 -50 1390
+preplace netloc expected_output_dout 1 7 1 1000
+preplace netloc sys_clock_1 1 0 3 -650 -370 NJ -370 -260J
+preplace netloc vio_0_probe_out0 1 1 2 N 20 -250
+preplace netloc zig_zag_0_o_axis 1 6 3 760 -260 N -260 1410
+preplace netloc fpga1_deployment_sou_0_o_test_axis 1 3 6 110 -270 N -270 N -270 N -270 N -270 1420
+preplace netloc two_dimension_dct_0_o_axis 1 4 5 340 -240 N -240 N -240 N -240 1390
+preplace netloc clk_wiz_0_clk_out1 1 2 7 -240 -240 120 -210 350 -210 560 -230 770 -220 1000 -280 1380
+preplace netloc quantizer_0_o_axis 1 5 4 550 -250 N -250 N -250 1400
+preplace netloc one_dimension_dct_0_o_axis 1 7 2 990 -230 1370
+preplace netloc input_packet_dout 1 1 2 N -110 -260
+levelinfo -pg 1 -670 -540 -340 -70 230 450 660 880 1190 1520 1630 -top -430 -bot 160
+"
+}
+0

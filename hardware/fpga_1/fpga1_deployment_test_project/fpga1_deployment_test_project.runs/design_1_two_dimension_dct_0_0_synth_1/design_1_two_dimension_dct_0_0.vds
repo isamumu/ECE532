@@ -1,0 +1,952 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 22 20:53:14 2021
+# Process ID: 140551
+# Current directory: /home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.runs/design_1_two_dimension_dct_0_0_synth_1
+# Command line: vivado -log design_1_two_dimension_dct_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_two_dimension_dct_0_0.tcl
+# Log file: /home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.runs/design_1_two_dimension_dct_0_0_synth_1/design_1_two_dimension_dct_0_0.vds
+# Journal file: /home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.runs/design_1_two_dimension_dct_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_two_dimension_dct_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/justin/jhai/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top design_1_two_dimension_dct_0_0 -part xc7a100tcsg324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 140576 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1435.465 ; gain = 89.898 ; free physical = 451 ; free virtual = 4553
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_two_dimension_dct_0_0' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ip/design_1_two_dimension_dct_0_0/synth/design_1_two_dimension_dct_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'two_dimension_dct' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/two_dimension_dct.v:2]
+	Parameter BLOCK_SIZE bound to: 8 - type: integer 
+	Parameter VALUE_WIDTH bound to: 17 - type: integer 
+	Parameter SCALE bound to: 7 - type: integer 
+	Parameter AXIS_DATA_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'one_dimension_dct' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:2]
+	Parameter BLOCK_SIZE bound to: 8 - type: integer 
+	Parameter VALUE_WIDTH bound to: 17 - type: integer 
+	Parameter SCALE bound to: 7 - type: integer 
+	Parameter AXIS_DATA_WIDTH bound to: 24 - type: integer 
+	Parameter STATE_INPUT_COLLECTION bound to: 2'b00 
+	Parameter STATE_COMPUTATION bound to: 2'b01 
+	Parameter STATE_OUTPUT_TRANSMISSION bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "registers" *) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:35]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "registers" *) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:47]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "registers" *) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:48]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "registers" *) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:49]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "registers" *) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:51]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "registers" *) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:52]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "registers" *) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:53]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "registers" *) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:55]
+INFO: [Synth 8-6157] synthesizing module 'dsp_add' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/dsp_add.v:1]
+	Parameter VALUE_WIDTH bound to: 17 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dsp_add' (1#1) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/dsp_add.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dsp_sub' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/dsp_sub.v:1]
+	Parameter VALUE_WIDTH bound to: 17 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dsp_sub' (2#1) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/dsp_sub.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:261]
+INFO: [Synth 8-6155] done synthesizing module 'one_dimension_dct' (3#1) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:2]
+INFO: [Synth 8-6157] synthesizing module 'transpose' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/transpose.v:2]
+	Parameter BLOCK_SIZE bound to: 8 - type: integer 
+	Parameter VALUE_WIDTH bound to: 17 - type: integer 
+	Parameter AXIS_DATA_WIDTH bound to: 24 - type: integer 
+	Parameter STATE_INPUT_COLLECTION bound to: 2'b00 
+	Parameter STATE_COMPUTATION bound to: 2'b01 
+	Parameter STATE_OUTPUT_TRANSMISSION bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "registers" *) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/transpose.v:34]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "registers" *) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/transpose.v:37]
+INFO: [Synth 8-6157] synthesizing module 'transpose_stage_one' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/transpose_stage_one.v:14]
+	Parameter VALUE_WIDTH bound to: 17 - type: integer 
+	Parameter STATE_UNSWITCHED bound to: 2'b01 
+	Parameter STATE_SWITCHED bound to: 2'b10 
+	Parameter DURATION bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'path_switch' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/path_switch.v:2]
+	Parameter VALUE_WIDTH bound to: 17 - type: integer 
+	Parameter STATE_CROSSED bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'path_switch' (4#1) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/path_switch.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/transpose_stage_one.v:81]
+INFO: [Synth 8-6155] done synthesizing module 'transpose_stage_one' (5#1) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/transpose_stage_one.v:14]
+INFO: [Synth 8-6157] synthesizing module 'transpose_stage_two' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/transpose_stage_two.v:13]
+	Parameter VALUE_WIDTH bound to: 17 - type: integer 
+	Parameter STATE_UNSWITCHED bound to: 2'b01 
+	Parameter STATE_SWITCHED bound to: 2'b10 
+	Parameter DURATION bound to: 2 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/transpose_stage_two.v:85]
+INFO: [Synth 8-6155] done synthesizing module 'transpose_stage_two' (6#1) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/transpose_stage_two.v:13]
+INFO: [Synth 8-6157] synthesizing module 'transpose_stage_three' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/transpose_stage_three.v:13]
+	Parameter VALUE_WIDTH bound to: 17 - type: integer 
+	Parameter STATE_UNSWITCHED bound to: 0 - type: integer 
+	Parameter STATE_SWITCHED bound to: 1 - type: integer 
+	Parameter DURATION bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'transpose_stage_three' (7#1) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/transpose_stage_three.v:13]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/transpose.v:224]
+WARNING: [Synth 8-5856] 3D RAM r_input_coeffs_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5856] 3D RAM r_output_coeffs_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-6155] done synthesizing module 'transpose' (8#1) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/transpose.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'two_dimension_dct' (9#1) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/two_dimension_dct.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_two_dimension_dct_0_0' (10#1) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ip/design_1_two_dimension_dct_0_0/synth/design_1_two_dimension_dct_0_0.v:57]
+WARNING: [Synth 8-3331] design one_dimension_dct has unconnected port i_axis_TDATA[23]
+WARNING: [Synth 8-3331] design one_dimension_dct has unconnected port i_axis_TDATA[22]
+WARNING: [Synth 8-3331] design one_dimension_dct has unconnected port i_axis_TDATA[21]
+WARNING: [Synth 8-3331] design one_dimension_dct has unconnected port i_axis_TDATA[20]
+WARNING: [Synth 8-3331] design one_dimension_dct has unconnected port i_axis_TDATA[19]
+WARNING: [Synth 8-3331] design one_dimension_dct has unconnected port i_axis_TDATA[18]
+WARNING: [Synth 8-3331] design one_dimension_dct has unconnected port i_axis_TDATA[17]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TDATA[23]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TDATA[22]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TDATA[21]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TDATA[20]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TDATA[19]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TDATA[18]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TDATA[17]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TLAST
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1497.215 ; gain = 151.648 ; free physical = 443 ; free virtual = 4545
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1497.215 ; gain = 151.648 ; free physical = 445 ; free virtual = 4549
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1497.215 ; gain = 151.648 ; free physical = 445 ; free virtual = 4549
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1832.195 ; gain = 0.000 ; free physical = 155 ; free virtual = 4261
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1832.195 ; gain = 0.000 ; free physical = 155 ; free virtual = 4261
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.28 . Memory (MB): peak = 1837.195 ; gain = 5.000 ; free physical = 150 ; free virtual = 4255
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1837.195 ; gain = 491.629 ; free physical = 233 ; free virtual = 4333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1837.195 ; gain = 491.629 ; free physical = 233 ; free virtual = 4333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1837.195 ; gain = 491.629 ; free physical = 235 ; free virtual = 4336
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'r_dsp_sub_input_pixel_a_reg[0][16:0]' into 'r_dsp_add_input_pixel_a_reg[0][16:0]' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:187]
+INFO: [Synth 8-4471] merging register 'r_dsp_sub_input_pixel_a_reg[1][16:0]' into 'r_dsp_add_input_pixel_a_reg[1][16:0]' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:187]
+INFO: [Synth 8-4471] merging register 'r_dsp_sub_input_pixel_a_reg[2][16:0]' into 'r_dsp_add_input_pixel_a_reg[2][16:0]' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:187]
+INFO: [Synth 8-4471] merging register 'r_dsp_sub_input_pixel_a_reg[3][16:0]' into 'r_dsp_add_input_pixel_a_reg[3][16:0]' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:187]
+INFO: [Synth 8-4471] merging register 'r_dsp_sub_input_pixel_b_reg[0][16:0]' into 'r_dsp_add_input_pixel_b_reg[0][16:0]' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:188]
+INFO: [Synth 8-4471] merging register 'r_dsp_sub_input_pixel_b_reg[1][16:0]' into 'r_dsp_add_input_pixel_b_reg[1][16:0]' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:188]
+INFO: [Synth 8-4471] merging register 'r_dsp_sub_input_pixel_b_reg[2][16:0]' into 'r_dsp_add_input_pixel_b_reg[2][16:0]' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:188]
+INFO: [Synth 8-4471] merging register 'r_dsp_sub_input_pixel_b_reg[3][16:0]' into 'r_dsp_add_input_pixel_b_reg[3][16:0]' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/4c36/src/one_dimension_dct.v:188]
+INFO: [Synth 8-802] inferred FSM for state register 'r_core_state_reg' in module 'one_dimension_dct'
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_pixels_reg[7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_output_coefficients_reg[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_output_coefficients_reg[1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_output_coefficients_reg[2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_output_coefficients_reg[3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_output_coefficients_reg[4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_output_coefficients_reg[5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_output_coefficients_reg[6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_output_coefficients_reg[7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_dsp_add_input_pixel_a" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_o_axis_TLAST" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_next_output_col" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_axis_TREADY" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_axis_TVALID" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_dsp_add_3_preadd" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_dsp_enable" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'r_core_state_reg' in module 'transpose_stage_one'
+INFO: [Synth 8-5544] ROM "w_select" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'r_core_state_reg' in module 'transpose_stage_two'
+INFO: [Synth 8-5544] ROM "w_select" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'r_core_state_reg' in module 'transpose'
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_curr_input_row" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_i_enable" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_o_axis_TDATA" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_next_output_row" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_next_output_col" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_axis_TREADY" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_axis_TVALID" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+  STATE_INPUT_COLLECTION |                              001 |                               00
+       STATE_COMPUTATION |                              010 |                               01
+STATE_OUTPUT_TRANSMISSION |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_core_state_reg' using encoding 'one-hot' in module 'one_dimension_dct'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+        STATE_UNSWITCHED |                               01 |                               01
+          STATE_SWITCHED |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'r_core_state_reg' in module 'transpose_stage_one'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+        STATE_UNSWITCHED |                               01 |                               01
+          STATE_SWITCHED |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'r_core_state_reg' in module 'transpose_stage_two'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+  STATE_INPUT_COLLECTION |                               00 |                               00
+       STATE_COMPUTATION |                               01 |                               01
+STATE_OUTPUT_TRANSMISSION |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_core_state_reg' using encoding 'sequential' in module 'transpose'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1837.195 ; gain = 491.629 ; free physical = 216 ; free virtual = 4319
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     35 Bit       Adders := 4     
+	   2 Input      3 Bit       Adders := 14    
+	   2 Input      2 Bit       Adders := 4     
+	   2 Input      1 Bit       Adders := 8     
++---Registers : 
+	               24 Bit    Registers := 19    
+	               17 Bit    Registers := 248   
+	                3 Bit    Registers := 30    
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 28    
++---Muxes : 
+	   2 Input     35 Bit        Muxes := 16    
+	   3 Input     35 Bit        Muxes := 16    
+	   2 Input     24 Bit        Muxes := 3     
+	   3 Input     24 Bit        Muxes := 3     
+	   2 Input     17 Bit        Muxes := 26    
+	   3 Input     17 Bit        Muxes := 91    
+	   8 Input      7 Bit        Muxes := 16    
+	   2 Input      3 Bit        Muxes := 46    
+	   3 Input      3 Bit        Muxes := 13    
+	   3 Input      2 Bit        Muxes := 9     
+	   2 Input      2 Bit        Muxes := 40    
+	   4 Input      1 Bit        Muxes := 16    
+	   2 Input      1 Bit        Muxes := 137   
+	   3 Input      1 Bit        Muxes := 170   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module dsp_add 
+Detailed RTL Component Info : 
++---Registers : 
+	               17 Bit    Registers := 1     
+Module dsp_sub 
+Detailed RTL Component Info : 
++---Registers : 
+	               17 Bit    Registers := 1     
+Module one_dimension_dct 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     35 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 4     
++---Registers : 
+	               24 Bit    Registers := 9     
+	               17 Bit    Registers := 24    
+	                3 Bit    Registers := 12    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     35 Bit        Muxes := 8     
+	   3 Input     35 Bit        Muxes := 8     
+	   2 Input     24 Bit        Muxes := 1     
+	   3 Input     24 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   3 Input     17 Bit        Muxes := 17    
+	   8 Input      7 Bit        Muxes := 8     
+	   2 Input      3 Bit        Muxes := 18    
+	   3 Input      3 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 32    
+Module path_switch 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 2     
+Module transpose_stage_one 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 3     
+Module transpose_stage_two 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 3     
+Module transpose_stage_three 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 8     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 1     
+Module transpose 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 6     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               17 Bit    Registers := 128   
+	                3 Bit    Registers := 6     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   3 Input     24 Bit        Muxes := 1     
+	   3 Input     17 Bit        Muxes := 57    
+	   2 Input      3 Bit        Muxes := 10    
+	   3 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 81    
+	   3 Input      1 Bit        Muxes := 78    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'+A2)*B'')'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_preadd_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_preadd_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'+A2)*B'')'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_preadd_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_preadd_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'+A2)*B'')'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_preadd_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_preadd_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'+A2)*B'')'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_preadd_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_preadd_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'-A2)*B'')'.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_presub_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_presub_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'-A2)*B'')'.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_presub_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_presub_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'-A2)*B'')'.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_presub_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_presub_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'-A2)*B'')'.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_presub_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_presub_reg0 is absorbed into DSP r_mul_reg_reg.
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_i_enable" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'+A2)*B'')'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_preadd_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_preadd_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'+A2)*B'')'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_preadd_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_preadd_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'+A2)*B'')'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_preadd_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_preadd_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'+A2)*B'')'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_preadd_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_preadd_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'-A2)*B'')'.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_presub_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_presub_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'-A2)*B'')'.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_presub_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_presub_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'-A2)*B'')'.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_presub_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_presub_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: ((D'-A2)*B'')'.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_0_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_c_reg_1_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_presub_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_presub_reg0 is absorbed into DSP r_mul_reg_reg.
+INFO: [Synth 8-5544] ROM "r_o_axis_TLAST" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-3331] design one_dimension_dct has unconnected port i_axis_TDATA[23]
+WARNING: [Synth 8-3331] design one_dimension_dct has unconnected port i_axis_TDATA[22]
+WARNING: [Synth 8-3331] design one_dimension_dct has unconnected port i_axis_TDATA[21]
+WARNING: [Synth 8-3331] design one_dimension_dct has unconnected port i_axis_TDATA[20]
+WARNING: [Synth 8-3331] design one_dimension_dct has unconnected port i_axis_TDATA[19]
+WARNING: [Synth 8-3331] design one_dimension_dct has unconnected port i_axis_TDATA[18]
+WARNING: [Synth 8-3331] design one_dimension_dct has unconnected port i_axis_TDATA[17]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TDATA[23]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TDATA[22]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TDATA[21]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TDATA[20]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TDATA[19]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TDATA[18]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TDATA[17]
+WARNING: [Synth 8-3331] design transpose has unconnected port i_axis_TLAST
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][1]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[3][1]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][6]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][7]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][8]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][8]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][9]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][10]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][10]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][11]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][11]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][12]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][12]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][13]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][13]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][14]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][14]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][15]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][15]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[3][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][6]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][7]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][8]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][9]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][10]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][11]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][12]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][13]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][14]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][15]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][6]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][7]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][8]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][8]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][9]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][10]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][11]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][11]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][12]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][12]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][13]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][13]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][14]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][14]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][15]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][15]' (FDRE) to 'inst/dct_0/r_dsp_sub_input_a_value_reg[1][16]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/dct_0/r_dsp_add_input_a_value_reg[3][1] )
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[3][6]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[3][7]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[3][8]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[3][8]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[3][9]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[3][10]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[3][10]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[3][11]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[3][11]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[3][12]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[3][12]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[3][13]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[3][13]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[3][14]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[3][14]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[3][15]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[3][15]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[3][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[2][6]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[2][7]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[2][8]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[2][9]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[2][10]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[2][11]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[2][12]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[2][13]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[2][14]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[2][15]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[1][6]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[1][7]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[1][8]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[1][8]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[1][9]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[1][10]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[1][11]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[1][11]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[1][12]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[1][12]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[1][13]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[1][13]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[1][14]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[1][14]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[1][15]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_0/r_dsp_add_input_a_value_reg[1][15]' (FDRE) to 'inst/dct_0/r_dsp_add_input_a_value_reg[1][16]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (transpose_stage_one:/r_state_duration_reg)
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][1]' (FDRE) to 'inst/dct_1/r_dsp_add_input_a_value_reg[3][1]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][6]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][7]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][8]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][8]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][9]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][10]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][10]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][11]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][11]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][12]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][12]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][13]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][13]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][14]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][14]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][15]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][15]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[3][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][6]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][7]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][8]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][9]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][10]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][11]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][12]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][13]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][14]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][15]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[2][16]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][6]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][7]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][8]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][8]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][9]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][10]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][11]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][11]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][12]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][12]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][13]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][13]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][14]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][14]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][15]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][15]' (FDRE) to 'inst/dct_1/r_dsp_sub_input_a_value_reg[1][16]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/dct_1/r_dsp_add_input_a_value_reg[3][1] )
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_add_input_a_value_reg[3][6]' (FDRE) to 'inst/dct_1/r_dsp_add_input_a_value_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_add_input_a_value_reg[3][7]' (FDRE) to 'inst/dct_1/r_dsp_add_input_a_value_reg[3][8]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_add_input_a_value_reg[3][8]' (FDRE) to 'inst/dct_1/r_dsp_add_input_a_value_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_add_input_a_value_reg[3][9]' (FDRE) to 'inst/dct_1/r_dsp_add_input_a_value_reg[3][10]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_add_input_a_value_reg[3][10]' (FDRE) to 'inst/dct_1/r_dsp_add_input_a_value_reg[3][11]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_add_input_a_value_reg[3][11]' (FDRE) to 'inst/dct_1/r_dsp_add_input_a_value_reg[3][12]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_add_input_a_value_reg[3][12]' (FDRE) to 'inst/dct_1/r_dsp_add_input_a_value_reg[3][13]'
+INFO: [Synth 8-3886] merging instance 'inst/dct_1/r_dsp_add_input_a_value_reg[3][13]' (FDRE) to 'inst/dct_1/r_dsp_add_input_a_value_reg[3][14]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/dct_0/r_dsp_add_2_load_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/dct_1/r_dsp_add_2_load_reg[0] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 1837.195 ; gain = 491.629 ; free physical = 421 ; free virtual = 4311
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp_add     | ((D'+A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_add     | ((D'+A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_add     | ((D'+A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_add     | ((D'+A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_sub     | ((D'-A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_sub     | ((D'-A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_sub     | ((D'-A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_sub     | ((D'-A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_add     | ((D'+A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_add     | ((D'+A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_add     | ((D'+A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_add     | ((D'+A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_sub     | ((D'-A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_sub     | ((D'-A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_sub     | ((D'-A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
+|dsp_sub     | ((D'-A2)*B'')' | 17     | 17     | -      | 17     | 35     | 1    | 2    | -    | 1    | 1     | 1    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:01:00 . Memory (MB): peak = 1853.195 ; gain = 507.629 ; free physical = 261 ; free virtual = 4152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:01 . Memory (MB): peak = 1857.195 ; gain = 511.629 ; free physical = 251 ; free virtual = 4143
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 1899.648 ; gain = 554.082 ; free physical = 246 ; free virtual = 4138
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 1899.648 ; gain = 554.082 ; free physical = 237 ; free virtual = 4130
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 1899.648 ; gain = 554.082 ; free physical = 236 ; free virtual = 4129
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 1899.648 ; gain = 554.082 ; free physical = 230 ; free virtual = 4123
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 1899.648 ; gain = 554.082 ; free physical = 230 ; free virtual = 4123
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 1899.648 ; gain = 554.082 ; free physical = 225 ; free virtual = 4118
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 1899.648 ; gain = 554.082 ; free physical = 225 ; free virtual = 4118
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------------------------+-----------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                    | RTL Name                                | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------------------------+-----------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|design_1_two_dimension_dct_0_0 | inst/transpose_0/s3_n0/r_reg1_3_reg[16] | 6      | 17    | YES          | NO                 | YES               | 17     | 0       | 
+|design_1_two_dimension_dct_0_0 | inst/transpose_0/s3_n0/r_reg0_3_reg[16] | 4      | 17    | YES          | NO                 | YES               | 17     | 0       | 
+|design_1_two_dimension_dct_0_0 | inst/transpose_0/s3_n1/r_reg1_3_reg[16] | 6      | 17    | YES          | NO                 | YES               | 17     | 0       | 
+|design_1_two_dimension_dct_0_0 | inst/transpose_0/s3_n1/r_reg0_3_reg[16] | 4      | 17    | YES          | NO                 | YES               | 17     | 0       | 
+|design_1_two_dimension_dct_0_0 | inst/transpose_0/s3_n2/r_reg1_3_reg[16] | 4      | 17    | YES          | NO                 | YES               | 17     | 0       | 
+|design_1_two_dimension_dct_0_0 | inst/transpose_0/s3_n2/r_reg0_3_reg[16] | 4      | 17    | YES          | NO                 | YES               | 17     | 0       | 
+|design_1_two_dimension_dct_0_0 | inst/transpose_0/s3_n3/r_reg1_3_reg[16] | 4      | 17    | YES          | NO                 | YES               | 17     | 0       | 
+|design_1_two_dimension_dct_0_0 | inst/transpose_0/s3_n3/r_reg0_3_reg[16] | 4      | 17    | YES          | NO                 | YES               | 17     | 0       | 
++-------------------------------+-----------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    28|
+|2     |DSP48E1_1 |    16|
+|3     |LUT1      |     4|
+|4     |LUT2      |   451|
+|5     |LUT3      |   205|
+|6     |LUT4      |   329|
+|7     |LUT5      |  1143|
+|8     |LUT6      |  1279|
+|9     |MUXF7     |    54|
+|10    |MUXF8     |     2|
+|11    |SRL16E    |   136|
+|12    |FDRE      |  3952|
+|13    |FDSE      |    16|
++------+----------+------+
+
+Report Instance Areas: 
++------+----------------------+------------------------+------+
+|      |Instance              |Module                  |Cells |
++------+----------------------+------------------------+------+
+|1     |top                   |                        |  7615|
+|2     |  inst                |two_dimension_dct       |  7615|
+|3     |    dct_0             |one_dimension_dct       |  1177|
+|4     |      dsp_add_0       |dsp_add_24              |     2|
+|5     |      dsp_add_1       |dsp_add_25              |     1|
+|6     |      dsp_add_2       |dsp_add_26              |     5|
+|7     |      dsp_add_3       |dsp_add_27              |    66|
+|8     |      dsp_sub_0       |dsp_sub_28              |     1|
+|9     |      dsp_sub_1       |dsp_sub_29              |     1|
+|10    |      dsp_sub_2       |dsp_sub_30              |     5|
+|11    |      dsp_sub_3       |dsp_sub_31              |    66|
+|12    |    dct_1             |one_dimension_dct_0     |  1364|
+|13    |      dsp_add_0       |dsp_add                 |     2|
+|14    |      dsp_add_1       |dsp_add_18              |     1|
+|15    |      dsp_add_2       |dsp_add_19              |     5|
+|16    |      dsp_add_3       |dsp_add_20              |    87|
+|17    |      dsp_sub_0       |dsp_sub                 |     1|
+|18    |      dsp_sub_1       |dsp_sub_21              |     1|
+|19    |      dsp_sub_2       |dsp_sub_22              |     5|
+|20    |      dsp_sub_3       |dsp_sub_23              |    87|
+|21    |    transpose_0       |transpose               |  5069|
+|22    |      s1_n0           |transpose_stage_one     |    91|
+|23    |        path_switcher |path_switch_17          |    51|
+|24    |      s1_n1           |transpose_stage_one_1   |    74|
+|25    |        path_switcher |path_switch_16          |    34|
+|26    |      s1_n2           |transpose_stage_one_2   |    91|
+|27    |        path_switcher |path_switch_15          |    51|
+|28    |      s1_n3           |transpose_stage_one_3   |    74|
+|29    |        path_switcher |path_switch_14          |    34|
+|30    |      s2_n0           |transpose_stage_two     |   127|
+|31    |        path_switcher |path_switch_13          |    51|
+|32    |      s2_n1           |transpose_stage_two_4   |   111|
+|33    |        path_switcher |path_switch_12          |    34|
+|34    |      s2_n2           |transpose_stage_two_5   |    78|
+|35    |        path_switcher |path_switch_11          |    34|
+|36    |      s2_n3           |transpose_stage_two_6   |    43|
+|37    |      s3_n0           |transpose_stage_three   |   203|
+|38    |        path_switcher |path_switch_10          |    34|
+|39    |      s3_n1           |transpose_stage_three_7 |   178|
+|40    |        path_switcher |path_switch             |    34|
+|41    |      s3_n2           |transpose_stage_three_8 |   144|
+|42    |      s3_n3           |transpose_stage_three_9 |   144|
++------+----------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 1899.648 ; gain = 554.082 ; free physical = 225 ; free virtual = 4118
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 1899.648 ; gain = 214.102 ; free physical = 282 ; free virtual = 4175
+Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 1899.656 ; gain = 554.082 ; free physical = 283 ; free virtual = 4176
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 100 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1899.656 ; gain = 0.000 ; free physical = 225 ; free virtual = 4118
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+245 Infos, 33 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:01:14 . Memory (MB): peak = 1899.656 ; gain = 565.645 ; free physical = 282 ; free virtual = 4175
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1899.656 ; gain = 0.000 ; free physical = 282 ; free virtual = 4175
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.runs/design_1_two_dimension_dct_0_0_synth_1/design_1_two_dimension_dct_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_two_dimension_dct_0_0, cache-ID = cc3e0075a834f3d6
+INFO: [Coretcl 2-1174] Renamed 41 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1923.660 ; gain = 0.000 ; free physical = 231 ; free virtual = 4133
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.runs/design_1_two_dimension_dct_0_0_synth_1/design_1_two_dimension_dct_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_two_dimension_dct_0_0_utilization_synth.rpt -pb design_1_two_dimension_dct_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 22 20:54:52 2021...

@@ -1,0 +1,575 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 22 20:55:49 2021
+# Process ID: 140946
+# Current directory: /home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.runs/design_1_quantizer_0_0_synth_1
+# Command line: vivado -log design_1_quantizer_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_quantizer_0_0.tcl
+# Log file: /home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.runs/design_1_quantizer_0_0_synth_1/design_1_quantizer_0_0.vds
+# Journal file: /home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.runs/design_1_quantizer_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_quantizer_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/justin/jhai/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top design_1_quantizer_0_0 -part xc7a100tcsg324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 140975 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1435.281 ; gain = 80.898 ; free physical = 475 ; free virtual = 4417
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_quantizer_0_0' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ip/design_1_quantizer_0_0/synth/design_1_quantizer_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'quantizer' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/f84f/src/quantizer.v:10]
+	Parameter BLOCK_SIZE bound to: 8 - type: integer 
+	Parameter INPUT_VALUE_WIDTH bound to: 17 - type: integer 
+	Parameter SCALE bound to: 7 - type: integer 
+	Parameter OUTPUT_VALUE_WIDTH bound to: 10 - type: integer 
+	Parameter INPUT_AXIS_DATA_WIDTH bound to: 24 - type: integer 
+	Parameter OUTPUT_AXIS_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter STATE_INPUT_COLLECTION bound to: 2'b00 
+	Parameter STATE_COMPUTATION bound to: 2'b01 
+	Parameter STATE_OUTPUT_TRANSMISSION bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "registers" *) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/f84f/src/quantizer.v:44]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "registers" *) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/f84f/src/quantizer.v:47]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "registers" *) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/f84f/src/quantizer.v:48]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "registers" *) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/f84f/src/quantizer.v:49]
+INFO: [Synth 8-6157] synthesizing module 'dsp_mul' [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/f84f/src/dsp_mul.v:1]
+	Parameter VALUE_WIDTH bound to: 17 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dsp_mul' (1#1) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/f84f/src/dsp_mul.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/f84f/src/quantizer.v:240]
+WARNING: [Synth 8-5856] 3D RAM r_input_coeffs_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5856] 3D RAM r_quantized_coeffs_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-6155] done synthesizing module 'quantizer' (2#1) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ipshared/f84f/src/quantizer.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_quantizer_0_0' (3#1) [/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.srcs/sources_1/bd/design_1/ip/design_1_quantizer_0_0/synth/design_1_quantizer_0_0.v:57]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TDATA[23]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TDATA[22]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TDATA[21]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TDATA[20]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TDATA[19]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TDATA[18]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TDATA[17]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TLAST
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1494.031 ; gain = 139.648 ; free physical = 454 ; free virtual = 4411
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1494.031 ; gain = 139.648 ; free physical = 460 ; free virtual = 4416
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1494.031 ; gain = 139.648 ; free physical = 460 ; free virtual = 4416
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1825.996 ; gain = 0.000 ; free physical = 965 ; free virtual = 4903
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1825.996 ; gain = 0.000 ; free physical = 964 ; free virtual = 4903
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.21 . Memory (MB): peak = 1829.996 ; gain = 4.000 ; free physical = 961 ; free virtual = 4900
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1829.996 ; gain = 475.613 ; free physical = 1051 ; free virtual = 4990
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1829.996 ; gain = 475.613 ; free physical = 1051 ; free virtual = 4990
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1829.996 ; gain = 475.613 ; free physical = 1051 ; free virtual = 4990
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'r_core_state_reg' in module 'quantizer'
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_curr_input_row" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_o_axis_TDATA" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_next_output_row" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_next_output_col" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_quantized_coeffs_reg[0][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_quantized_coeffs_reg[1][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_quantized_coeffs_reg[2][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_quantized_coeffs_reg[3][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_quantized_coeffs_reg[4][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_quantized_coeffs_reg[5][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_quantized_coeffs_reg[6][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_axis_TREADY" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_axis_TVALID" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_dsp_1_setup" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_dsp_enable" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_core_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+  STATE_INPUT_COLLECTION |                              001 |                               00
+       STATE_COMPUTATION |                              010 |                               01
+STATE_OUTPUT_TRANSMISSION |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_core_state_reg' using encoding 'one-hot' in module 'quantizer'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1829.996 ; gain = 475.613 ; free physical = 1039 ; free virtual = 4980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 5     
++---Registers : 
+	               35 Bit    Registers := 64    
+	               17 Bit    Registers := 88    
+	               16 Bit    Registers := 1     
+	                3 Bit    Registers := 8     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     35 Bit        Muxes := 8     
+	   3 Input     17 Bit        Muxes := 17    
+	   2 Input     16 Bit        Muxes := 3     
+	   3 Input     16 Bit        Muxes := 1     
+	   8 Input      5 Bit        Muxes := 4     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 15    
+	   8 Input      3 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 85    
+	   3 Input      1 Bit        Muxes := 82    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module dsp_mul 
+Detailed RTL Component Info : 
++---Registers : 
+	               17 Bit    Registers := 1     
+Module quantizer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 5     
++---Registers : 
+	               35 Bit    Registers := 64    
+	               17 Bit    Registers := 80    
+	               16 Bit    Registers := 1     
+	                3 Bit    Registers := 8     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     35 Bit        Muxes := 8     
+	   3 Input     17 Bit        Muxes := 17    
+	   2 Input     16 Bit        Muxes := 3     
+	   3 Input     16 Bit        Muxes := 1     
+	   8 Input      5 Bit        Muxes := 4     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 15    
+	   8 Input      3 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 85    
+	   3 Input      1 Bit        Muxes := 82    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+DSP Report: Generating DSP r_mul_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register r_b_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_a_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: register r_mul_reg_reg is absorbed into DSP r_mul_reg_reg.
+DSP Report: operator r_mul_reg0 is absorbed into DSP r_mul_reg_reg.
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_input_coeffs_reg[0][7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TDATA[23]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TDATA[22]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TDATA[21]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TDATA[20]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TDATA[19]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TDATA[18]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TDATA[17]
+WARNING: [Synth 8-3331] design quantizer has unconnected port i_axis_TLAST
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][2]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][3]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][4]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][5]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][6]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][7]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][8]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][9]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][10]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][11]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][12]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][13]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][14]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][15]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[7][16]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][2]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][3]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][4]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][5]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][6]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][7]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][8]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][9]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][10]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][11]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][12]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][13]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][14]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][15]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[6][16]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][2]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][3]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][4]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][5]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][6]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][7]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][8]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][9]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][10]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][11]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][12]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][13]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][14]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][15]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[5][16]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[4][3]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[4][4]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[4][5]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[4][6]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[4][7]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[4][8]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[4][9]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[4][10]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[4][11]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[4][12]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[4][13]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[4][14]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[4][15]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[4][16]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[3][4]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[3][5]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[3][6]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[3][7]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[3][8]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[3][9]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[3][10]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[3][11]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[3][12]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[3][13]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[3][14]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[3][15]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[3][16]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[2][4]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[2][5]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[2][6]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[2][7]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[2][8]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[2][9]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[2][10]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[2][11]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[2][12]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[2][13]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[2][14]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[2][15]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[2][16]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[1][4]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[1][5]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[1][6]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[1][7]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[1][8]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[1][9]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[1][10]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[1][11]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[1][12]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[1][13]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[1][14]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[1][15]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[1][16]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[0][4]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/r_dsp_input_quant_reg[0][5]' (FDRE) to 'inst/r_dsp_input_quant_reg[0][16]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/r_dsp_input_quant_reg[0][16] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1829.996 ; gain = 475.613 ; free physical = 992 ; free virtual = 4940
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp_mul     | (A2*B2)'    | 17     | 17     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|dsp_mul     | (A2*B2)'    | 17     | 17     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|dsp_mul     | (A2*B2)'    | 17     | 17     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|dsp_mul     | (A2*B2)'    | 17     | 17     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|dsp_mul     | (A2*B2)'    | 17     | 17     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|dsp_mul     | (A2*B2)'    | 17     | 17     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|dsp_mul     | (A2*B2)'    | 17     | 17     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|dsp_mul     | (A2*B2)'    | 17     | 17     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 1838.996 ; gain = 484.613 ; free physical = 850 ; free virtual = 4800
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1840.996 ; gain = 486.613 ; free physical = 847 ; free virtual = 4797
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 1862.832 ; gain = 508.449 ; free physical = 845 ; free virtual = 4795
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 1862.832 ; gain = 508.449 ; free physical = 845 ; free virtual = 4795
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 1862.832 ; gain = 508.449 ; free physical = 845 ; free virtual = 4794
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 1862.832 ; gain = 508.449 ; free physical = 845 ; free virtual = 4795
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 1862.832 ; gain = 508.449 ; free physical = 844 ; free virtual = 4794
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 1862.832 ; gain = 508.449 ; free physical = 845 ; free virtual = 4795
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 1862.832 ; gain = 508.449 ; free physical = 844 ; free virtual = 4794
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |DSP48E1_1 |     8|
+|2     |LUT1      |     2|
+|3     |LUT2      |   184|
+|4     |LUT3      |    29|
+|5     |LUT4      |    38|
+|6     |LUT5      |    27|
+|7     |LUT6      |   853|
+|8     |MUXF7     |   160|
+|9     |MUXF8     |    80|
+|10    |FDRE      |  2577|
+|11    |FDSE      |     7|
++------+----------+------+
+
+Report Instance Areas: 
++------+--------------+----------+------+
+|      |Instance      |Module    |Cells |
++------+--------------+----------+------+
+|1     |top           |          |  3965|
+|2     |  inst        |quantizer |  3965|
+|3     |    dsp_mul_0 |dsp_mul   |    22|
+|4     |    dsp_mul_1 |dsp_mul_0 |    21|
+|5     |    dsp_mul_2 |dsp_mul_1 |    21|
+|6     |    dsp_mul_3 |dsp_mul_2 |    21|
+|7     |    dsp_mul_4 |dsp_mul_3 |    21|
+|8     |    dsp_mul_5 |dsp_mul_4 |    21|
+|9     |    dsp_mul_6 |dsp_mul_5 |    21|
+|10    |    dsp_mul_7 |dsp_mul_6 |    21|
++------+--------------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 1862.832 ; gain = 508.449 ; free physical = 844 ; free virtual = 4794
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1862.832 ; gain = 172.484 ; free physical = 911 ; free virtual = 4860
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 1862.840 ; gain = 508.449 ; free physical = 910 ; free virtual = 4860
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 248 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'design_1_quantizer_0_0' is not ideal for floorplanning, since the cellview 'quantizer' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1862.840 ; gain = 0.000 ; free physical = 853 ; free virtual = 4803
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+162 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1862.840 ; gain = 508.559 ; free physical = 915 ; free virtual = 4864
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1862.840 ; gain = 0.000 ; free physical = 915 ; free virtual = 4864
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.runs/design_1_quantizer_0_0_synth_1/design_1_quantizer_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_quantizer_0_0, cache-ID = 070ab7320cdb9225
+INFO: [Coretcl 2-1174] Renamed 9 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1886.844 ; gain = 0.000 ; free physical = 908 ; free virtual = 4863
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/justin/jhai/universityoftoronto/ECE532/final_project/ECE532/hardware/fpga_1/fpga1_deployment_test_project/fpga1_deployment_test_project.runs/design_1_quantizer_0_0_synth_1/design_1_quantizer_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_quantizer_0_0_utilization_synth.rpt -pb design_1_quantizer_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 22 20:56:58 2021...
