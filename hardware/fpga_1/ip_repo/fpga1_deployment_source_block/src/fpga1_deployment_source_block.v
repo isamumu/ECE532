@@ -12,7 +12,8 @@ module fpga1_deployment_source_block
         input i_enable,
         output o_test_axis_TVALID,
         input i_test_axis_TREADY,
-        output [AXIS_DATA_WIDTH-1:0] o_test_axis_TDATA
+        output [AXIS_DATA_WIDTH-1:0] o_test_axis_TDATA,
+        output o_test_axis_TLAST
     );
 
     // Declarations
@@ -23,11 +24,13 @@ module fpga1_deployment_source_block
     reg r_core_state;
     reg r_test_axis_tvalid;
     reg [AXIS_DATA_WIDTH-1:0] r_test_axis_tdata;
+    reg r_test_axis_tlast;
     reg [31:0] r_num_transfers_sent;
 
     // Assignments
     assign o_test_axis_TVALID = r_test_axis_tvalid;
     assign o_test_axis_TDATA = r_test_axis_tdata;
+    assign o_test_axis_TLAST = r_test_axis_tlast;
 
     always @(posedge i_clk)
     begin
@@ -37,6 +40,7 @@ module fpga1_deployment_source_block
             r_core_state <= STATE_IDLE;
             r_test_axis_tvalid <= 1'b0;
             r_test_axis_tdata <= 0;
+            r_test_axis_tlast <= 0;
             r_num_transfers_sent <= 0;
         end
         else
@@ -48,6 +52,7 @@ module fpga1_deployment_source_block
                     begin
                         r_test_axis_tvalid <= 1'b1;
                         r_test_axis_tdata <= r_packet_to_send[NUM_BITS_PER_TRANSFER-1:0];
+                        r_test_axis_tlast <= (r_num_transfers_sent == NUM_TRANSFERS - 1) ? 1 : 0;
                         r_packet_to_send <= (r_packet_to_send >> NUM_BITS_PER_TRANSFER);
                         r_core_state <= STATE_TRANSMIT_DATA;
                     end
@@ -57,6 +62,7 @@ module fpga1_deployment_source_block
                         begin
                             r_test_axis_tvalid <= 1'b0;
                             r_test_axis_tdata <= 0;
+                            r_test_axis_tlast <= 0;
                             r_num_transfers_sent <= (r_num_transfers_sent + 1);
                             r_packet_to_send <= r_packet_to_send;
                             if (r_num_transfers_sent == NUM_TRANSFERS - 1)
@@ -72,6 +78,7 @@ module fpga1_deployment_source_block
                         begin
                             r_test_axis_tvalid <= r_test_axis_tvalid;
                             r_test_axis_tdata <= r_test_axis_tdata;
+                            r_test_axis_tlast <= r_test_axis_tlast;
                             r_num_transfers_sent <= r_num_transfers_sent;
                             r_packet_to_send <= r_packet_to_send;
                             r_core_state <= r_core_state;
@@ -90,6 +97,7 @@ module fpga1_deployment_source_block
                     end
                     r_test_axis_tvalid <= 1'b0;
                     r_test_axis_tdata <= 0;
+                    r_test_axis_tlast <= 0;
                     r_num_transfers_sent <= 0;
                     r_packet_to_send <= i_packet_to_send;
                 end
