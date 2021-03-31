@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="frame_generator_custom_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="frame_generator_custom_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1600000fs"></ZoomStartTime>
+      <ZoomEndTime time="1942501fs"></ZoomEndTime>
+      <Cursor1Time time="1770000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="120"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/frame_gen/i_clk">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/frame_gen/i_aresetn">
+      <obj_property name="ElementShortName">i_aresetn</obj_property>
+      <obj_property name="ObjectShortName">i_aresetn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/r_test_enable">
+      <obj_property name="ElementShortName">r_test_enable</obj_property>
+      <obj_property name="ObjectShortName">r_test_enable</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_generator_custom_tb/tx_mic_tdata">
+      <obj_property name="ElementShortName">tx_mic_tdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_mic_tdata[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/tx_mic_tlast">
+      <obj_property name="ElementShortName">tx_mic_tlast</obj_property>
+      <obj_property name="ObjectShortName">tx_mic_tlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/tx_mic_tready">
+      <obj_property name="ElementShortName">tx_mic_tready</obj_property>
+      <obj_property name="ObjectShortName">tx_mic_tready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/tx_mic_tvalid">
+      <obj_property name="ElementShortName">tx_mic_tvalid</obj_property>
+      <obj_property name="ObjectShortName">tx_mic_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider43" type="divider">
+      <obj_property name="label">DUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/frame_gen/rx_mic_TLAST">
+      <obj_property name="ElementShortName">rx_mic_TLAST</obj_property>
+      <obj_property name="ObjectShortName">rx_mic_TLAST</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/frame_gen/rx_mic_TREADY">
+      <obj_property name="ElementShortName">rx_mic_TREADY</obj_property>
+      <obj_property name="ObjectShortName">rx_mic_TREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/frame_gen/rx_mic_TVALID">
+      <obj_property name="ElementShortName">rx_mic_TVALID</obj_property>
+      <obj_property name="ObjectShortName">rx_mic_TVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/frame_gen/r_fifo_write_enable">
+      <obj_property name="ElementShortName">r_fifo_write_enable</obj_property>
+      <obj_property name="ObjectShortName">r_fifo_write_enable</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_generator_custom_tb/frame_gen/r_core_state">
+      <obj_property name="ElementShortName">r_core_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">r_core_state[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_generator_custom_tb/frame_gen/r_fifo_data_in">
+      <obj_property name="ElementShortName">r_fifo_data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_fifo_data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_generator_custom_tb/frame_gen/r_packet_size">
+      <obj_property name="ElementShortName">r_packet_size[15:0]</obj_property>
+      <obj_property name="ObjectShortName">r_packet_size[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_generator_custom_tb/frame_gen/rx_mic_TDATA">
+      <obj_property name="ElementShortName">rx_mic_TDATA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_mic_TDATA[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_generator_custom_tb/frame_gen/w_fifo_data_out">
+      <obj_property name="ElementShortName">w_fifo_data_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">w_fifo_data_out[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/tx_fifo_tvalid">
+      <obj_property name="ElementShortName">tx_fifo_tvalid</obj_property>
+      <obj_property name="ObjectShortName">tx_fifo_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/frame_gen/w_fifo_read_enable">
+      <obj_property name="ElementShortName">w_fifo_read_enable</obj_property>
+      <obj_property name="ObjectShortName">w_fifo_read_enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/tx_fifo_tready">
+      <obj_property name="ElementShortName">tx_fifo_tready</obj_property>
+      <obj_property name="ObjectShortName">tx_fifo_tready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/frame_generator_custom_tb/frame_gen/tx_fifo_TDATA">
+      <obj_property name="ElementShortName">tx_fifo_TDATA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_fifo_TDATA[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/frame_gen/w_fifo_empty">
+      <obj_property name="ElementShortName">w_fifo_empty</obj_property>
+      <obj_property name="ObjectShortName">w_fifo_empty</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/frame_generator_custom_tb/frame_gen/tx_fifo_TLAST">
+      <obj_property name="ElementShortName">tx_fifo_TLAST</obj_property>
+      <obj_property name="ObjectShortName">tx_fifo_TLAST</obj_property>
+   </wvobject>
+</wave_config>
