@@ -1,0 +1,845 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Sun Feb 21 20:25:00 2021
+# Process ID: 5456
+# Current directory: c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex
+# Command line: vivado.exe -notrace -source c:/Users/zhouyuf5/project_1/.Xil/tri_mode_ethernet_mac_0/tmp_tri_mode_ethernet_mac_0.srcs/sources_1/ip/tri_mode_ethernet_mac_0/tri_mode_ethernet_mac_0_ex.tcl
+# Log file: c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/vivado.log
+# Journal file: c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source c:/Users/zhouyuf5/project_1/.Xil/tri_mode_ethernet_mac_0/tmp_tri_mode_ethernet_mac_0.srcs/sources_1/ip/tri_mode_ethernet_mac_0/tri_mode_ethernet_mac_0_ex.tcl -notrace
+INFO: [open_example_project] Creating new example project...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/DESL/Xilinx/Vivado/2018.3/data/ip'.
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 796.902 ; gain = 171.824
+INFO: [open_example_project] Importing original IP ...
+INFO: [open_example_project] Generating the example project IP ...
+INFO: [open_example_project] Adding example synthesis HDL files ...
+INFO: [open_example_project] Adding example XDC files ...
+INFO: [open_example_project] Adding simulation HDL files ...
+INFO: [open_example_project] Rebuilding all the top level IPs ...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'tri_mode_ethernet_mac_0'...
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XSIM" (Xilinx Vivado Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/xsim/tri_mode_ethernet_mac_0.sh'
+INFO: [SIM-utils-43] Exported 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/xsim/tx_ptp_pkt_buff_init.mem'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "MODELSIM" (Mentor Graphics ModelSim Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/modelsim/tri_mode_ethernet_mac_0.sh'
+INFO: [SIM-utils-43] Exported 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/modelsim/tx_ptp_pkt_buff_init.mem'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "QUESTA" (Mentor Graphics Questa Advanced Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/questa/tri_mode_ethernet_mac_0.sh'
+INFO: [SIM-utils-43] Exported 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/questa/tx_ptp_pkt_buff_init.mem'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "IES" (Cadence Incisive Enterprise Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/ies/tri_mode_ethernet_mac_0.sh'
+INFO: [SIM-utils-43] Exported 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/ies/tx_ptp_pkt_buff_init.mem'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "VCS" (Synopsys Verilog Compiler Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/vcs/tri_mode_ethernet_mac_0.sh'
+INFO: [SIM-utils-43] Exported 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/vcs/tx_ptp_pkt_buff_init.mem'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "RIVIERA" (Aldec Riviera-PRO Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/riviera/tri_mode_ethernet_mac_0.sh'
+INFO: [SIM-utils-43] Exported 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/riviera/tx_ptp_pkt_buff_init.mem'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "ACTIVEHDL" (Aldec Active-HDL Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/activehdl/tri_mode_ethernet_mac_0.sh'
+INFO: [SIM-utils-43] Exported 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/activehdl/tx_ptp_pkt_buff_init.mem'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XCELIUM" (Cadence Xcelium Parallel Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/xcelium/tri_mode_ethernet_mac_0.sh'
+INFO: [SIM-utils-43] Exported 'C:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.ip_user_files/sim_scripts/tri_mode_ethernet_mac_0/xcelium/tx_ptp_pkt_buff_init.mem'
+INFO: [open_example_project] Open Example Project completed
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/DESL/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'demo_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim/tx_ptp_pkt_buff_init.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj demo_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_0/synth/physical/tri_mode_ethernet_mac_0_mii_if.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_mii_if
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_0/synth/tri_mode_ethernet_mac_0_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_0/synth/tri_mode_ethernet_mac_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_address_swap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_address_swap
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_axi_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_axi_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_axi_pat_check.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_axi_pat_check
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_axi_pat_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_axi_pat_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_axi_pipe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_axi_pipe
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_basic_pat_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_basic_pat_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_bram_tdp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_bram_tdp
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_clk_wiz
+INFO: [VRFC 10-2458] undeclared symbol clkout0, assumed default net type wire [c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_clk_wiz.v:126]
+INFO: [VRFC 10-2458] undeclared symbol clkout1, assumed default net type wire [c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_clk_wiz.v:128]
+INFO: [VRFC 10-2458] undeclared symbol clkout2, assumed default net type wire [c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_clk_wiz.v:130]
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_config_vector_sm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_config_vector_sm
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_example_design.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_example_design
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_example_design_clocks.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_example_design_clocks
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_example_design_resets.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_example_design_resets
+INFO: [VRFC 10-2458] undeclared symbol glbl_rst_int, assumed default net type wire [c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_example_design_resets.v:113]
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_fifo_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_fifo_block
+INFO: [VRFC 10-2458] undeclared symbol rx_mac_reset, assumed default net type wire [c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_fifo_block.v:260]
+INFO: [VRFC 10-2458] undeclared symbol tx_mac_reset, assumed default net type wire [c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_fifo_block.v:267]
+INFO: [VRFC 10-2458] undeclared symbol tx_mac_resetn, assumed default net type wire [c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_fifo_block.v:271]
+INFO: [VRFC 10-2458] undeclared symbol rx_mac_resetn, assumed default net type wire [c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_fifo_block.v:272]
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_frame_typ.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_frame_typ
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_reset_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_reset_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_rx_client_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_rx_client_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_support.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_support
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_sync_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_sync_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_ten_100_1g_eth_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_ten_100_1g_eth_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_tx_client_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_0_tx_client_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/demo_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj demo_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/DESL/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5246c45f407a42aab0cde10afc624e69 --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_9 -L xbip_pipe_v3_0_5 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L axi_lite_ipif_v3_0_4 -L tri_mode_ethernet_mac_v9_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot demo_tb_behav xil_defaultlib.demo_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package tri_mode_ethernet_mac_v9_0_13.tx_pack
+Compiling package tri_mode_ethernet_mac_v9_0_13.common_pack
+Compiling package tri_mode_ethernet_mac_v9_0_13.ptp_pack
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package tri_mode_ethernet_mac_v9_0_13.rx_pack
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_frame_ty...
+Compiling module unisims_ver.IBUFDS
+Compiling module unisims_ver.BUFGCE
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_sync_blo...
+Compiling module unisims_ver.FDPE_default
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_reset_sy...
+Compiling module unisims_ver.MMCME2_ADV(CLKIN1_PERIOD=5.0,CLK...
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_clk_wiz
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_example_...
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_example_...
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_config_v...
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.BUFR_default
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_mii_if_d...
+Compiling architecture rtl of entity tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_sync_reset [tri_mode_ethernet_mac_v9_0_13_sy...]
+Compiling architecture rtl of entity tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_sync_reset [\tri_mode_ethernet_mac_v9_0_13_s...]
+Compiling module tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_gm...
+Compiling module tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_gm...
+Compiling module tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_ip...
+Compiling module tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_tx...
+Compiling module tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_rx...
+Compiling module tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_rx...
+Compiling module unisims_ver.LUT4
+Compiling module tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_tx...
+Compiling module tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_pf...
+Compiling module tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_rx...
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture structural of entity tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_sync_block [tri_mode_ethernet_mac_v9_0_13_sy...]
+Compiling module tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_tx...
+Compiling module tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_co...
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture fdce_v of entity unisim.FDCE [fdce_default]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1000")(0,3)\]
+Compiling architecture vcc_v of entity unisim.VCC [vcc_default]
+Compiling architecture gnd_v of entity unisim.GND [gnd_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture schematic of entity tri_mode_ethernet_mac_v9_0_13.CC8CE [cc8ce_default]
+Compiling architecture schematic of entity tri_mode_ethernet_mac_v9_0_13.CC2CE [cc2ce_default]
+Compiling architecture rtl of entity tri_mode_ethernet_mac_v9_0_13.CRC_64_32 [crc_64_32_default]
+Compiling architecture rtl of entity tri_mode_ethernet_mac_v9_0_13.CRC32_8 [crc32_8_default]
+Compiling architecture rtl of entity tri_mode_ethernet_mac_v9_0_13.TX_STATE_MACH [\TX_STATE_MACH(c_half_duplex=fal...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E(0,15)\]
+Compiling architecture rtl of entity tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_tx [\tri_mode_ethernet_mac_v9_0_13_t...]
+Compiling architecture rtl of entity tri_mode_ethernet_mac_v9_0_13.STATE_MACHINES [state_machines_default]
+Compiling architecture rtl of entity tri_mode_ethernet_mac_v9_0_13.DECODE_FRAME [decode_frame_default]
+Compiling architecture rtl of entity tri_mode_ethernet_mac_v9_0_13.PARAM_CHECK [param_check_default]
+Compiling architecture rtl of entity tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_rx [\tri_mode_ethernet_mac_v9_0_13_r...]
+Compiling module unisims_ver.RAM64X1D
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.SRL16E_default
+Compiling module tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_ad...
+Compiling module tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13_ad...
+Compiling module tri_mode_ethernet_mac_v9_0_13.tri_mode_ethernet_mac_v9_0_13(C_...
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_block
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_support
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_bram_tdp...
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_tx_clien...
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_rx_clien...
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_ten_100_...
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_fifo_blo...
+Compiling module unisims_ver.LUT6
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_axi_pat_...
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_axi_pat_...
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_axi_mux
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_axi_pipe...
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_address_...
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_basic_pa...
+Compiling module xil_defaultlib.tri_mode_ethernet_mac_0_example_...
+Compiling module xil_defaultlib.demo_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot demo_tb_behav
+
+****** Webtalk v2018.3.1 (64-bit)
+  **** SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+  **** IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim/xsim.dir/demo_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Feb 21 20:30:53 2021...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 809.914 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "demo_tb_behav -key {Behavioral:sim_1:Functional:demo_tb} -tclbatch {demo_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source demo_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+** Note: Resetting core...
+** Note: Timing checks are valid
+** Note: Reseting MAC
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'demo_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 837.250 ; gain = 27.336
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/demo_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/imports/tri_mode_ethernet_mac_0_example_design.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+save_wave_config {c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/demo_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/demo_tb_behav.wcfg
+set_property xsim.view c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/demo_tb_behav.wcfg [get_filesets sim_1]
+set_property -name {xsim.simulate.runtime} -value {20000ns} -objects [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/DESL/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'demo_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim/tx_ptp_pkt_buff_init.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj demo_tb_vlog.prj"
+"xvhdl --incr --relax -prj demo_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/DESL/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5246c45f407a42aab0cde10afc624e69 --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_9 -L xbip_pipe_v3_0_5 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L axi_lite_ipif_v3_0_4 -L tri_mode_ethernet_mac_v9_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot demo_tb_behav xil_defaultlib.demo_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "demo_tb_behav -key {Behavioral:sim_1:Functional:demo_tb} -tclbatch {demo_tb.tcl} -view {c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/demo_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/demo_tb_behav.wcfg
+source demo_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 20000ns
+** Note: Resetting core...
+** Note: Timing checks are valid
+** Note: Reseting MAC
+Rx Stimulus: sending 4 frames at 100M ... 
+** Note: Comparing Transmitted Frame with Injected Frame
+** Note: Comparing Transmitted Frame with Injected Frame
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'demo_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 20000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 869.332 ; gain = 0.234
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/DESL/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'demo_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim/tx_ptp_pkt_buff_init.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj demo_tb_vlog.prj"
+"xvhdl --incr --relax -prj demo_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/DESL/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5246c45f407a42aab0cde10afc624e69 --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_9 -L xbip_pipe_v3_0_5 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L axi_lite_ipif_v3_0_4 -L tri_mode_ethernet_mac_v9_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot demo_tb_behav xil_defaultlib.demo_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "demo_tb_behav -key {Behavioral:sim_1:Functional:demo_tb} -tclbatch {demo_tb.tcl} -view {c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/demo_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/demo_tb_behav.wcfg
+source demo_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 20000ns
+** Note: Resetting core...
+** Note: Timing checks are valid
+** Note: Reseting MAC
+Rx Stimulus: sending 4 frames at 100M ... 
+** Note: Comparing Transmitted Frame with Injected Frame
+** Note: Comparing Transmitted Frame with Injected Frame
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'demo_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 20000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 967.715 ; gain = 0.000
+set_property -name {xsim.simulate.runtime} -value {50000ns} -objects [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/DESL/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'demo_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim/tx_ptp_pkt_buff_init.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj demo_tb_vlog.prj"
+"xvhdl --incr --relax -prj demo_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/DESL/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 5246c45f407a42aab0cde10afc624e69 --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_9 -L xbip_pipe_v3_0_5 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L axi_lite_ipif_v3_0_4 -L tri_mode_ethernet_mac_v9_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot demo_tb_behav xil_defaultlib.demo_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "demo_tb_behav -key {Behavioral:sim_1:Functional:demo_tb} -tclbatch {demo_tb.tcl} -view {c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/demo_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/demo_tb_behav.wcfg
+source demo_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 50000ns
+** Note: Resetting core...
+** Note: Timing checks are valid
+** Note: Reseting MAC
+Rx Stimulus: sending 4 frames at 100M ... 
+** Note: Comparing Transmitted Frame with Injected Frame
+** Note: Comparing Transmitted Frame with Injected Frame
+** Note: Comparing Transmitted Frame with Injected Frame
+** Note: Reseting MAC
+Rx Stimulus: sending 4 frames at 10M ... 
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'demo_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 50000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1561.734 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/DESL/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1692.875 ; gain = 0.000
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: tri_mode_ethernet_mac_4_example_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1692.875 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_example_design' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.v:133]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_example_design_clocks' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design_clocks.v:56]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20424]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (1#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20424]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:619]
+	Parameter CE_TYPE bound to: SYNC - type: string 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_I_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (2#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:619]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_sync_block' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_sync_block.v:63]
+	Parameter INITIALISE bound to: 1'b0 
+	Parameter DEPTH bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (3#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_sync_block' (4#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_sync_block.v:63]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_reset_sync' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_reset_sync.v:66]
+	Parameter INITIALISE bound to: 1'b1 
+	Parameter DEPTH bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FDPE' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3911]
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'FDPE' (5#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3911]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_reset_sync' (6#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_reset_sync.v:66]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_clk_wiz' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_clk_wiz.v:69]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26718]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 5.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 5.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 8.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 10 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 20 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (7#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26718]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_clk_wiz' (8#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_clk_wiz.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_example_design_clocks' (9#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design_clocks.v:56]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_example_design_resets' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design_resets.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_example_design_resets' (10#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design_resets.v:54]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_config_vector_sm' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_config_vector_sm.v:62]
+	Parameter RUN_HALF_DUPLEX bound to: 0 - type: integer 
+	Parameter STARTUP bound to: 0 - type: integer 
+	Parameter RESET_MAC bound to: 1 - type: integer 
+	Parameter CHECK_SPEED bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_config_vector_sm' (11#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_config_vector_sm.v:62]
+INFO: [Synth 8-6157] synthesizing module 'mii_to_rmii_0' [c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/.Xil/Vivado-5456-BA3155WS14/realtime/mii_to_rmii_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mii_to_rmii_0' (12#1) [c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/.Xil/Vivado-5456-BA3155WS14/realtime/mii_to_rmii_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'mii_to_rmii' of module 'mii_to_rmii_0' requires 17 connections, but only 15 given [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.v:488]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_fifo_block' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_fifo_block.v:89]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_support' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_support.v:66]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4' [c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/.Xil/Vivado-5456-BA3155WS14/realtime/tri_mode_ethernet_mac_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4' (13#1) [c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/.Xil/Vivado-5456-BA3155WS14/realtime/tri_mode_ethernet_mac_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_support' (14#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_support.v:66]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_ten_100_1g_eth_fifo' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_ten_100_1g_eth_fifo.v:71]
+	Parameter FULL_DUPLEX_ONLY bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_tx_client_fifo' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_tx_client_fifo.v:100]
+	Parameter FULL_DUPLEX_ONLY bound to: 1 - type: integer 
+	Parameter IDLE_s bound to: 4'b0000 
+	Parameter QUEUE1_s bound to: 4'b0001 
+	Parameter QUEUE2_s bound to: 4'b0010 
+	Parameter QUEUE3_s bound to: 4'b0011 
+	Parameter START_DATA1_s bound to: 4'b0100 
+	Parameter DATA_PRELOAD1_s bound to: 4'b0101 
+	Parameter DATA_PRELOAD2_s bound to: 4'b0110 
+	Parameter WAIT_HANDSHAKE_s bound to: 4'b0111 
+	Parameter FRAME_s bound to: 4'b1000 
+	Parameter HANDSHAKE_s bound to: 4'b1001 
+	Parameter FINISH_s bound to: 4'b1010 
+	Parameter DROP_ERR_s bound to: 4'b1011 
+	Parameter DROP_s bound to: 4'b1100 
+	Parameter RETRANSMIT_ERR_s bound to: 4'b1101 
+	Parameter RETRANSMIT_WAIT_s bound to: 4'b1110 
+	Parameter RETRANSMIT_s bound to: 4'b1111 
+	Parameter WAIT_s bound to: 2'b00 
+	Parameter DATA_s bound to: 2'b01 
+	Parameter EOF_s bound to: 2'b10 
+	Parameter OVFLOW_s bound to: 2'b11 
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_tx_client_fifo.v:248]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_tx_client_fifo.v:270]
+INFO: [Synth 8-226] default block is never used [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_tx_client_fifo.v:324]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_bram_tdp' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_bram_tdp.v:66]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter RAM_DEPTH bound to: 4096 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_bram_tdp' (15#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_bram_tdp.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_tx_client_fifo' (16#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_tx_client_fifo.v:100]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_rx_client_fifo' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_rx_client_fifo.v:111]
+	Parameter WAIT_s bound to: 3'b000 
+	Parameter QUEUE1_s bound to: 3'b001 
+	Parameter QUEUE2_s bound to: 3'b010 
+	Parameter QUEUE3_s bound to: 3'b011 
+	Parameter QUEUE_SOF_s bound to: 3'b100 
+	Parameter SOF_s bound to: 3'b101 
+	Parameter DATA_s bound to: 3'b110 
+	Parameter EOF_s bound to: 3'b111 
+	Parameter IDLE_s bound to: 3'b000 
+	Parameter FRAME_s bound to: 3'b001 
+	Parameter GF_s bound to: 3'b010 
+	Parameter BF_s bound to: 3'b011 
+	Parameter OVFLOW_s bound to: 3'b100 
+INFO: [Synth 8-226] default block is never used [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_rx_client_fifo.v:255]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_rx_client_fifo' (17#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_rx_client_fifo.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_ten_100_1g_eth_fifo' (18#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_ten_100_1g_eth_fifo.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_fifo_block' (19#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_fifo_block.v:89]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_basic_pat_gen' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_basic_pat_gen.v:67]
+	Parameter DEST_ADDR bound to: 48'b110110100000000100000010000000110000010000000101 
+	Parameter SRC_ADDR bound to: 48'b010110100000000100000010000000110000010000000101 
+	Parameter MAX_SIZE bound to: 16'b0000000111110100 
+	Parameter MIN_SIZE bound to: 16'b0000000001000000 
+	Parameter ENABLE_VLAN bound to: 1'b0 
+	Parameter VLAN_ID bound to: 12'b000000000010 
+	Parameter VLAN_PRIORITY bound to: 3'b010 
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_axi_pat_gen' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_axi_pat_gen.v:66]
+	Parameter DEST_ADDR bound to: 48'b110110100000000100000010000000110000010000000101 
+	Parameter SRC_ADDR bound to: 48'b010110100000000100000010000000110000010000000101 
+	Parameter MAX_SIZE bound to: 16'b0000000111110100 
+	Parameter MIN_SIZE bound to: 16'b0000000001000000 
+	Parameter ENABLE_VLAN bound to: 1'b0 
+	Parameter VLAN_ID bound to: 12'b000000000010 
+	Parameter VLAN_PRIORITY bound to: 3'b010 
+	Parameter IDLE bound to: 3'b000 
+	Parameter HEADER bound to: 3'b001 
+	Parameter SIZE bound to: 3'b010 
+	Parameter DATA bound to: 3'b011 
+	Parameter OVERHEAD bound to: 3'b100 
+	Parameter PKT_ADJUST bound to: 18 - type: integer 
+	Parameter VLAN_HEADER bound to: -2130690046 - type: integer 
+	Parameter HEADER_LENGTH bound to: 11 - type: integer 
+	Parameter BW_1G bound to: 230 - type: integer 
+	Parameter BW_100M bound to: 23 - type: integer 
+	Parameter BW_10M bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'LUT6' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000001101010101010 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6' (20#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized0' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000001000001101001101 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized0' (20#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized1' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000000110000110000 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized1' (20#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized2' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000000000001000001 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized2' (20#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized3' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized3' (20#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized4' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000100000001000001 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized4' (20#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized5' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000001000000000001 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized5' (20#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+WARNING: [Synth 8-567] referenced signal 'byte_count_eq_1' should be on the sensitivity list [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_axi_pat_gen.v:286]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_axi_pat_gen' (21#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_axi_pat_gen.v:66]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_axi_pat_check' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_axi_pat_check.v:61]
+	Parameter DEST_ADDR bound to: 48'b110110100000000100000010000000110000010000000101 
+	Parameter SRC_ADDR bound to: 48'b010110100000000100000010000000110000010000000101 
+	Parameter MAX_SIZE bound to: 16'b0000000111110100 
+	Parameter MIN_SIZE bound to: 16'b0000000001000000 
+	Parameter ENABLE_VLAN bound to: 1'b0 
+	Parameter VLAN_ID bound to: 12'b000000000010 
+	Parameter VLAN_PRIORITY bound to: 3'b010 
+	Parameter IDLE bound to: 2'b00 
+	Parameter INFO bound to: 2'b01 
+	Parameter LOOK bound to: 2'b10 
+	Parameter PKT bound to: 2'b11 
+	Parameter PKT_ADJUST bound to: 18 - type: integer 
+	Parameter VLAN_HEADER bound to: -2130690046 - type: integer 
+	Parameter HEADER_LENGTH bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized6' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000001000001000000 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized6' (21#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_axi_pat_check' (22#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_axi_pat_check.v:61]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_axi_mux' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_axi_mux.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_axi_mux' (23#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_axi_mux.v:57]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_axi_pipe' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_axi_pipe.v:58]
+INFO: [Synth 8-6157] synthesizing module 'RAM64X1D' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:45536]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter IS_WCLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'RAM64X1D' (24#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:45536]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_axi_pipe' (25#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_axi_pipe.v:58]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_4_address_swap' [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_address_swap.v:59]
+	Parameter IDLE bound to: 3'b000 
+	Parameter WAIT bound to: 3'b001 
+	Parameter READ_DEST bound to: 3'b010 
+	Parameter READ_SRC bound to: 3'b011 
+	Parameter READ_DEST2 bound to: 3'b100 
+	Parameter READ_SRC2 bound to: 3'b101 
+	Parameter READ bound to: 3'b110 
+	Parameter WRITE_SLOT1 bound to: 2'b01 
+	Parameter WRITE_SLOT2 bound to: 2'b10 
+	Parameter WRITE bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_address_swap.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_address_swap' (26#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_address_swap.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_basic_pat_gen' (27#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_basic_pat_gen.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_4_example_design' (28#1) [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.v:133]
+INFO: [Synth 8-3917] design tri_mode_ethernet_mac_4_example_design has port serial_response driven by constant 0
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_4_tx_client_fifo has unconnected port tx_collision
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_4_tx_client_fifo has unconnected port tx_retransmit
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_4_example_design_resets has unconnected port s_axi_aclk
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1692.875 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1692.875 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1692.875 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/mii_to_rmii_0/mii_to_rmii_0.dcp' for cell 'mii_to_rmii'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_4/tri_mode_ethernet_mac_4.dcp' for cell 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i'
+INFO: [Netlist 29-17] Analyzing 60 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3.1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/ibuf_data[0].mii_rxd_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/ibuf_data[1].mii_rxd_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/ibuf_data[2].mii_rxd_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/ibuf_data[3].mii_rxd_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_rx_clk_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_rx_dv_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_rx_er_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_tx_clk_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/obuf_data[3].mii_txd_obuf_i 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/obuf_data[2].mii_txd_obuf_i 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_tx_en_obuf_i 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_tx_er_obuf_i 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/obuf_data[0].mii_txd_obuf_i 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/obuf_data[1].mii_txd_obuf_i 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+INFO: [Opt 31-140] Inserted 6 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 5 OBUFs to IO ports without IO buffers.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rx_clk' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rx_dv' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rx_er' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rxd[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rxd[1]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rxd[2]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rxd[3]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_tx_clk' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_tx_en' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_tx_en' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_tx_er' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_tx_er' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[0]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[1]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[2]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[3]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_4/synth/tri_mode_ethernet_mac_4_board.xdc] for cell 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst'
+Finished Parsing XDC File [c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_4/synth/tri_mode_ethernet_mac_4_board.xdc] for cell 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst'
+Parsing XDC File [c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_4/synth/tri_mode_ethernet_mac_4.xdc] for cell 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst'
+Finished Parsing XDC File [c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_4/synth/tri_mode_ethernet_mac_4.xdc] for cell 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_4/synth/tri_mode_ethernet_mac_4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/tri_mode_ethernet_mac_4_example_design_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/tri_mode_ethernet_mac_4_example_design_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/mii_to_rmii_0/mii_to_rmii_0_board.xdc] for cell 'mii_to_rmii/U0'
+Finished Parsing XDC File [c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/mii_to_rmii_0/mii_to_rmii_0_board.xdc] for cell 'mii_to_rmii/U0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1692.875 ; gain = 0.000
+Parsing XDC File [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc]
+WARNING: [Vivado 12-584] No ports matched 'mii_rxd[3]'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'mii_rxd[2]'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'mii_rxd[1]'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'mii_rxd[0]'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'mii_txd[3]'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'mii_txd[2]'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'mii_txd[1]'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'mii_txd[0]'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'mii_tx_en'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'mii_tx_er'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'mii_rx_dv'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'mii_rx_er'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'mii_rx_clk'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'mii_tx_clk'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:61]
+INFO: [Timing 38-2] Deriving generated clocks [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc:92]
+Finished Parsing XDC File [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/tri_mode_ethernet_mac_4_example_design_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_example_design.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/tri_mode_ethernet_mac_4_example_design_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/tri_mode_ethernet_mac_4_example_design_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1692.875 ; gain = 0.000
+Parsing XDC File [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_user_phytiming.xdc]
+WARNING: [Vivado 12-584] No ports matched 'mii_rx_clk'. [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_user_phytiming.xdc:2]
+Finished Parsing XDC File [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_user_phytiming.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/imports/tri_mode_ethernet_mac_4_user_phytiming.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/tri_mode_ethernet_mac_4_example_design_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Parsing XDC File [c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_4/synth/tri_mode_ethernet_mac_4_clocks.xdc] for cell 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst'
+CRITICAL WARNING: [Constraints 18-602] set_input_delay: list contains '6' objects of types '(pin)' other than the types '(input port,internal pin)' supported by the constraint. These objects will not be used for this constraint. Please review the object list and ensure unsupported object types are removed. [c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_4/synth/tri_mode_ethernet_mac_4_clocks.xdc:26]
+CRITICAL WARNING: [Constraints 18-472] set_input_delay: list does not contain any object of type(s) '(input port,internal pin)' supported by the constraint. The constraint will not be applied. Please check to make sure that this is intended. [c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_4/synth/tri_mode_ethernet_mac_4_clocks.xdc:26]
+CRITICAL WARNING: [Constraints 18-602] set_input_delay: list contains '6' objects of types '(pin)' other than the types '(input port,internal pin)' supported by the constraint. These objects will not be used for this constraint. Please review the object list and ensure unsupported object types are removed. [c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_4/synth/tri_mode_ethernet_mac_4_clocks.xdc:27]
+CRITICAL WARNING: [Constraints 18-472] set_input_delay: list does not contain any object of type(s) '(input port,internal pin)' supported by the constraint. The constraint will not be applied. Please check to make sure that this is intended. [c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_4/synth/tri_mode_ethernet_mac_4_clocks.xdc:27]
+Finished Parsing XDC File [c:/Users/zhouyuf5/tri_mode_ethernet_mac_4_ex/tri_mode_ethernet_mac_4_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_4/synth/tri_mode_ethernet_mac_4_clocks.xdc] for cell 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1692.875 ; gain = 0.000
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1692.875 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 30 instances were transformed.
+  BUFGCE => BUFGCTRL: 4 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 26 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 1692.875 ; gain = 0.000
+90 Infos, 56 Warnings, 4 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 1692.875 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 21 21:10:32 2021...

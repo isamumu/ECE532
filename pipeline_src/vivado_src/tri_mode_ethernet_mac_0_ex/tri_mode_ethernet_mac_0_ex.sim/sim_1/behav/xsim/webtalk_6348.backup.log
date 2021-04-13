@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Thu Feb 18 13:38:39 2021
+# Process ID: 6348
+# Current directory: c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim/xsim.dir/demo_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source c:/Users/zhouyuf5/tri_mode_ethernet_mac_0_ex/tri_mode_ethernet_mac_0_ex.sim/sim_1/behav/xsim/xsim.dir/demo_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Feb 18 13:38:40 2021...

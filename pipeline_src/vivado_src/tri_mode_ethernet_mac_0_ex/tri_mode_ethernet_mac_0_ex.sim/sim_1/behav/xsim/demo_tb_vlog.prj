@@ -1,0 +1,32 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../tri_mode_ethernet_mac_0_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_0/synth/physical/tri_mode_ethernet_mac_0_mii_if.v" \
+"../../../../tri_mode_ethernet_mac_0_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_0/synth/tri_mode_ethernet_mac_0_block.v" \
+"../../../../tri_mode_ethernet_mac_0_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_0/synth/tri_mode_ethernet_mac_0.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_address_swap.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_axi_mux.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_axi_pat_check.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_axi_pat_gen.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_axi_pipe.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_basic_pat_gen.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_bram_tdp.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_clk_wiz.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_config_vector_sm.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_example_design.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_example_design_clocks.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_example_design_resets.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_fifo_block.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_frame_typ.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_reset_sync.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_rx_client_fifo.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_support.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_sync_block.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_ten_100_1g_eth_fifo.v" \
+"../../../../imports/tri_mode_ethernet_mac_0_tx_client_fifo.v" \
+"../../../../imports/demo_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
