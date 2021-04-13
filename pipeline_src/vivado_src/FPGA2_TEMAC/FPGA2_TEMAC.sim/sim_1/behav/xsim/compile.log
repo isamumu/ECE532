@@ -1,0 +1,59 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/tri_mode_ethernet_mac_2_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_2/synth/tri_mode_ethernet_mac_2_axi4_lite_ipif_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_axi4_lite_ipif_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/tri_mode_ethernet_mac_2_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_2/synth/physical/tri_mode_ethernet_mac_2_mii_if.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_mii_if
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/tri_mode_ethernet_mac_2_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_2/synth/statistics/tri_mode_ethernet_mac_2_vector_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_vector_decode
+INFO: [VRFC 10-2458] undeclared symbol multiple_attempt, assumed default net type wire [C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/tri_mode_ethernet_mac_2_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_2/synth/statistics/tri_mode_ethernet_mac_2_vector_decode.v:575]
+INFO: [VRFC 10-2458] undeclared symbol single_attempt, assumed default net type wire [C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/tri_mode_ethernet_mac_2_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_2/synth/statistics/tri_mode_ethernet_mac_2_vector_decode.v:581]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/tri_mode_ethernet_mac_2_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_2/synth/tri_mode_ethernet_mac_2_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/tri_mode_ethernet_mac_2_ex.srcs/sources_1/ip/tri_mode_ethernet_mac_2/synth/tri_mode_ethernet_mac_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/tri_mode_ethernet_mac_2_ex.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/tri_mode_ethernet_mac_2_ex.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_address_swap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_address_swap
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_axi_lite_sm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_axi_lite_sm
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_axi_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_axi_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_axi_pat_check.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_axi_pat_check
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_axi_pat_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_axi_pat_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_axi_pipe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_axi_pipe
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_basic_pat_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_basic_pat_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_bram_tdp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_bram_tdp
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_example_design.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_example_design
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_example_design_resets.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_example_design_resets
+INFO: [VRFC 10-2458] undeclared symbol glbl_rst_int, assumed default net type wire [C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_example_design_resets.v:113]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_fifo_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_fifo_block
+INFO: [VRFC 10-2458] undeclared symbol rx_mac_reset, assumed default net type wire [C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_fifo_block.v:314]
+INFO: [VRFC 10-2458] undeclared symbol tx_mac_reset, assumed default net type wire [C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_fifo_block.v:321]
+INFO: [VRFC 10-2458] undeclared symbol tx_mac_resetn, assumed default net type wire [C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_fifo_block.v:325]
+INFO: [VRFC 10-2458] undeclared symbol rx_mac_resetn, assumed default net type wire [C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_fifo_block.v:326]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_frame_typ.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_frame_typ
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_reset_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_reset_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_rx_client_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_rx_client_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_support.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_support
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_sync_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_sync_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_ten_100_1g_eth_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_ten_100_1g_eth_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/tri_mode_ethernet_mac_2_tx_client_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tri_mode_ethernet_mac_2_tx_client_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/xiand/Xilinx/tri_mode_ethernet_mac_2_ex/imports/demo_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo_tb

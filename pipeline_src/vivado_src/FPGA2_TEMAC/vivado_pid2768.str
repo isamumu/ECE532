@@ -1,0 +1,1009 @@
+/*
+
+Xilinx Vivado v2018.3.1 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2489853 on Tue Mar 26 04:20:25 MDT 2019
+IP Build: 2486929 on Tue Mar 26 06:44:21 MDT 2019
+
+Process ID (PID): 2768
+License: Customer
+
+Current time: 	Wed Mar 31 05:16:28 EDT 2021
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 243 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/DESL/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	C:/DESL/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	poyisamu
+User home directory: C:/Users/poyisamu
+User working directory: C:/Users/poyisamu/FPGA2_TEMAC
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/DESL/Xilinx/Vivado
+HDI_APPROOT: C:/DESL/Xilinx/Vivado/2018.3
+RDI_DATADIR: C:/DESL/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: C:/DESL/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/poyisamu/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/poyisamu/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/poyisamu/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	C:/DESL/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/poyisamu/FPGA2_TEMAC/vivado.log
+Vivado journal file location: 	C:/Users/poyisamu/FPGA2_TEMAC/vivado.jou
+Engine tmp dir: 	C:/Users/poyisamu/FPGA2_TEMAC/.Xil/Vivado-2768-BA3145WS01
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/DESL/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINXD_LICENSE_FILE: 40012@mlm.ece.utoronto.ca;27012@mlm.ece.utoronto.ca
+XILINX_DSP: C:/DESL/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: C:/DESL/Xilinx/Vivado/2018.3
+XILINX_SDK: C:/DESL/Xilinx/SDK/2018.3
+XILINX_VIVADO: C:/DESL/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: C:/DESL/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	156 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 684 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 80 MB (+81679kb) [00:00:05]
+// [Engine Memory]: 579 MB (+456014kb) [00:00:05]
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\poyisamu\FPGA2_TEMAC\FPGA2_TEMAC.xpr. Version: Vivado v2018.3.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 723 MB. GUI used memory: 47 MB. Current time: 3/31/21, 5:16:30 AM EDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 104 MB (+20627kb) [00:00:13]
+// [Engine Memory]: 749 MB (+147169kb) [00:00:13]
+// WARNING: HEventQueue.dispatchEvent() is taking  3514 ms.
+// Tcl Message: open_project C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/zhouyuf5/FPGA2_TEMAC' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/DESL/Xilinx/Vivado/2018.3/data/ip'. INFO: [IP_Flow 19-5177] IP tri_mode_ethernet_mac_2 will be generated with higher license level. 
+// [Engine Memory]: 815 MB (+30352kb) [00:00:16]
+// [GUI Memory]: 113 MB (+4103kb) [00:00:16]
+// WARNING: HEventQueue.dispatchEvent() is taking  1040 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 842.250 ; gain = 201.555 
+// Project name: FPGA2_TEMAC; location: C:/Users/poyisamu/FPGA2_TEMAC; part: xc7a100tcsg324-1
+// [Engine Memory]: 1,050 MB (+203691kb) [00:00:18]
+dismissDialog("Open Project"); // bx (cp)
+// Elapsed time: 13 seconds
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cp): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cp)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 4 seconds
+// [GUI Memory]: 122 MB (+3389kb) [00:00:37]
+// [Engine Memory]: 1,104 MB (+1715kb) [00:00:37]
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// bx (cp):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_LAUNCH
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Mar 31 05:16:58 2021] Launched synth_1... Run output will be captured here: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/runme.log [Wed Mar 31 05:16:58 2021] Launched impl_1... Run output will be captured here: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,111 MB. GUI used memory: 54 MB. Current time: 3/31/21, 5:17:00 AM EDT
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cp): Bitstream Generation Completed: addNotify
+// Elapsed time: 246 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bx (cp):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,217 MB. GUI used memory: 55 MB. Current time: 3/31/21, 5:21:15 AM EDT
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: MARK_DEBUG_NET
+// TclEventType: UNMARK_DEBUG_NET
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,736 MB. GUI used memory: 55 MB. Current time: 3/31/21, 5:21:25 AM EDT
+// [Engine Memory]: 1,736 MB (+604793kb) [00:05:04]
+// Xgd.load filename: C:/DESL/Xilinx/Vivado/2018.3/data/parts/xilinx/artix7/devint/artix7/xc7a100t/xc7a100t.xgd; ZipEntry: xc7a100t_detail.xgd elapsed time: 0.6s
+// [Engine Memory]: 1,870 MB (+48675kb) [00:05:06]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.8s
+// Device: addNotify
+// DeviceView Instantiated
+// [GUI Memory]: 129 MB (+1344kb) [00:05:08]
+// WARNING: HEventQueue.dispatchEvent() is taking  1804 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 486 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2018.3.1 INFO: [Device 21-403] Loading part xc7a100tcsg324-1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.913 . Memory (MB): peak = 1795.184 ; gain = 5.539 
+// Tcl Message: Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.914 . Memory (MB): peak = 1795.184 ; gain = 5.539 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1795.184 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 285 instances were transformed.   CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 112 instances   IOBUF => IOBUF (IBUF, OBUFT): 1 instances   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances   RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 155 instances   RAM64X1S => RAM64X1S (RAMS64E): 11 instances  
+// TclEventType: DRC_ADDED
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: open_run: Time (s): cpu = 00:00:30 ; elapsed = 00:00:23 . Memory (MB): peak = 1944.188 ; gain = 530.496 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// [GUI Memory]: 144 MB (+8880kb) [00:05:11]
+// [GUI Memory]: 152 MB (+600kb) [00:05:13]
+// [GUI Memory]: 160 MB (+504kb) [00:05:13]
+// WARNING: HEventQueue.dispatchEvent() is taking  3160 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  2653 ms.
+// 'dQ' command handler elapsed time: 32 seconds
+// aI (cp): Feedback Request: addNotify
+// S (cp): Critical Messages: addNotify
+// Elapsed time: 32 seconds
+dismissDialog("Open Implemented Design"); // bx (cp)
+// [GUI Memory]: 173 MB (+5147kb) [00:05:18]
+// Elapsed time: 30 seconds
+selectButton(PAResourceTtoZ.TouchpointSurveyDialog_NO, "No"); // a (aI)
+dismissDialog("Feedback Request"); // aI (cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 118 MB. Current time: 3/31/21, 5:22:10 AM EDT
+selectButton("PAResourceTtoZ.TouchpointSurveyDialog_USE_TOOLS_OPTIONS_WINDOWS_BEHAVIOR_OK", "OK"); // JButton (C, I)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (S)
+dismissDialog("Critical Messages"); // S (cp)
+// Elapsed time: 67 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, -309827, 174001); // D (I, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 91415, 122061); // D (I, cp)
+// Device select: 'Tile - DSP_R_X9Y170'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 540, 94, 1274, 587); // U (k, cp)
+// PAPropertyPanels.initPanels (Tile: DSP_R_X9Y170) elapsed time: 0.2s
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, -205945, 154524); // D (I, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 145953, 125956); // D (I, cp)
+// Device select: 'Tile - CLBLL_R_X17Y171'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 582, 97, 1274, 587); // U (k, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 134266, 140240); // D (I, cp)
+// Device select: 'Tile - CLBLL_R_X15Y167'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 573, 108, 1274, 587); // U (k, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,959 MB. GUI used memory: 121 MB. Current time: 3/31/21, 5:23:23 AM EDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 170625, 142837); // D (I, cp)
+// Device select: 'Tile - CLBLL_R_X21Y166'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 601, 110, 1274, 587); // U (k, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 183610, 161016); // D (I, cp)
+// Device select: 'Tile - CLBLL_R_X23Y160'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 611, 124, 1274, 587); // U (k, cp)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, -107258, 190882); // D (I, cp)
+// Elapsed time: 31 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 32, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (cp):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// [Engine Memory]: 1,966 MB (+3043kb) [00:07:36]
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bx (cp)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cQ, cp)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,968 MB. GUI used memory: 121 MB. Current time: 3/31/21, 5:24:00 AM EDT
+// bx (cp):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.3.1   **** Build date : Mar 26 2019-05:02:51     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2025.957 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  3635 ms.
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292646209A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.bit} [get_hw_devices xc7a100t_0] 
+// CommandFailedException: ERROR: [Common 17-48] File not found: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/FPGA2_TEMACample_design.ltx 
+dismissDialog("Auto Connect"); // bx (cp)
+// [Engine Memory]: 2,905 MB (+881569kb) [00:07:51]
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (1) ; Programmed", 2, "xc7a100t_0 (1)", 0, true, false, false, false, true, false); // t (Q, cp) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_PROGRAM_FPGA, "Program Device..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cp): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// CommandFailedException: ERROR: [Common 17-48] File not found: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/FPGA2_TEMACample_design.ltx 
+// bx (cp):  Program Device : addNotify
+// HOptionPane Error: 'ERROR: [Common 17-48] File not found: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/ impl_1/FPGA2_TEMACample_design.ltx  (Program Device)'
+dismissDialog("Program Device"); // bC (cp)
+// 'I' command handler elapsed time: 6 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (C, I)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cQ, cp)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cp): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// CommandFailedException: ERROR: [Common 17-48] File not found: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/FPGA2_TEMACample_design.ltx 
+// bx (cp):  Program Device : addNotify
+// HOptionPane Error: 'ERROR: [Common 17-48] File not found: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/ impl_1/FPGA2_TEMACample_design.ltx  (Program Device)'
+dismissDialog("Program Device"); // bC (cp)
+// 'I' command handler elapsed time: 5 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (C, I)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (1) ; Programmed", 2, "xc7a100t_0 (1)", 0, true, false, false, false, true, false); // t (Q, cp) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_PROGRAM_FPGA, "Program Device..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cp): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// CommandFailedException: ERROR: [Common 17-48] File not found: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/FPGA2_TEMACample_design.ltx 
+// bx (cp):  Program Device : addNotify
+// HOptionPane Error: 'ERROR: [Common 17-48] File not found: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/ impl_1/FPGA2_TEMACample_design.ltx  (Program Device)'
+dismissDialog("Program Device"); // bC (cp)
+// 'I' command handler elapsed time: 8 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (C, I)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (1) ; Programmed", 2, "xc7a100t_0 (1)", 0, true, false, false, false, true, false); // t (Q, cp) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_PROGRAM_FPGA, "Program Device..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cp): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// CommandFailedException: ERROR: [Common 17-48] File not found: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/FPGA2_TEMACample_design.ltx 
+// bx (cp):  Program Device : addNotify
+// HOptionPane Error: 'ERROR: [Common 17-48] File not found: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/ impl_1/FPGA2_TEMACample_design.ltx  (Program Device)'
+dismissDialog("Program Device"); // bC (cp)
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (C, I)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (1) ; Programmed", 2, "xc7a100t_0 (1)", 0, true, false, false, false, true, false); // t (Q, cp) - Popup Trigger - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,928 MB. GUI used memory: 122 MB. Current time: 3/31/21, 5:24:55 AM EDT
+selectMenuItem(PAResourceCommand.PACommandNames_PROGRAM_FPGA, "Program Device..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cp): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_DEBUG_PROBES_FILE, (String) null); // q (ak, bC)
+// Elapsed time: 10 seconds
+setFileChooser("C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/debug_nets.ltx");
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bx (cp):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cp)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_VIO_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  3070 ms.
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s). INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s). 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,948 MB. GUI used memory: 136 MB. Current time: 3/31/21, 5:25:27 AM EDT
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: HW_VIO_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_VIO_PROBE_VALUE_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_VIO_PROBE_VALUE_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// Tcl Message: display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]] 
+// 'I' command handler elapsed time: 27 seconds
+dismissDialog("Program Device"); // bx (cp)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [GUI Memory]: 185 MB (+3621kb) [00:09:07]
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Elapsed time: 44 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_ila_1", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_vios", 0); // k (j, cp)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "hw_vio_1 ; Outputs out-of-sync", 4, "hw_vio_1", 0, false, false, false, false, true, false); // t (Q, cp) - Popup Trigger
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "hw_vio_1 ; Outputs out-of-sync", 4, "hw_vio_1", 0, false); // t (Q, cp)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "hw_vio_1 ; Outputs out-of-sync", 4, "hw_vio_1", 0, false); // t (Q, cp)
+selectTreeTableHeader(PAResourceTtoZ.VioProbesTreeTablePanel_VIO_PROBES_TREE_TABLE, "Direction", 3); // g (Q, cp)
+selectTreeTable(PAResourceTtoZ.VioProbesTreeTablePanel_VIO_PROBES_TREE_TABLE, "glbl_rst ; [B] 1 ;  ; Output ; hw_vio_1", 0, (String) null, 2, false); // g (Q, cp)
+selectTreeTable(PAResourceTtoZ.VioProbesTreeTablePanel_VIO_PROBES_TREE_TABLE, "glbl_rst ; [B] 1 ;  ; Output ; hw_vio_1", 0, "[B] 1", 1, false); // g (Q, cp)
+// TclEventType: DEBUG_PROBE_CHANGE
+// Tcl Message: set_property OUTPUT_VALUE 0 [get_hw_probes glbl_rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"vio"}]] 
+// TclEventType: HW_VIO_CHANGE
+// Tcl Message: commit_hw_vio [get_hw_probes {glbl_rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"vio"}]] 
+// Elapsed time: 164 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_ila_1", 1); // k (j, cp)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 245 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (Q, cp) - Node
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 3); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tri_mode_ethernet_mac_2_example_design (tri_mode_ethernet_mac_2_example_design.v)]", 1); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tri_mode_ethernet_mac_2_example_design (tri_mode_ethernet_mac_2_example_design.v), axi_lite_controller : tri_mode_ethernet_mac_2_axi_lite_sm (tri_mode_ethernet_mac_2_axi_lite_sm.v)]", 8, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tri_mode_ethernet_mac_2_example_design (tri_mode_ethernet_mac_2_example_design.v), axi_lite_controller : tri_mode_ethernet_mac_2_axi_lite_sm (tri_mode_ethernet_mac_2_axi_lite_sm.v)]", 8, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+// [GUI Memory]: 195 MB (+282kb) [00:18:57]
+// Elapsed time: 120 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 31, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 439 seconds
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "hw_vio_1 ; OK", 4, "hw_vio_1", 0, false); // t (Q, cp)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xilinx_tcf/Digilent/210292646209A (1) ; Open", 1, "xilinx_tcf/Digilent/210292646209A (1)", 0, true); // t (Q, cp) - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_vios", 0); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_ila_1", 1); // k (j, cp)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (3) ; Programmed", 2, "xc7a100t_0 (3)", 0, true); // t (Q, cp) - Node
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (3) ; Programmed", 2, "Programmed", 1, true, false, false, false, true, false); // t (Q, cp) - Popup Trigger - Node
+// Elapsed time: 10 seconds
+selectMenuItem(PAResourceCommand.PACommandNames_PROGRAM_FPGA, "Program Device..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cp): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_DEBUG_PROBES_FILE, (String) null); // q (ak, bC)
+setFileChooser("C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx");
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bx (cp):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cp)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.bit} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,961 MB. GUI used memory: 144 MB. Current time: 3/31/21, 5:43:13 AM EDT
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_VIO_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: WAVEFORM_GLASSPANE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s). INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s). 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_GLASSPANE
+// TclEventType: HW_VIO_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_VIO_PROBE_VALUE_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// 'I' command handler elapsed time: 13 seconds
+dismissDialog("Program Device"); // bx (cp)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_ila_1", 0); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_vios", 1); // k (j, cp)
+// Waveform: addNotify
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_ila_1", 1); // k (j, cp)
+// Elapsed time: 16 seconds
+selectButton(PAResourceTtoZ.TriggerStatusPanel_RUN_TRIGGER_FOR_THIS_ILA_CORE, "ILA_run_trigger"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_TRIGGER
+// TclEventType: HW_ILA_CHANGE
+// Tcl Message: run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}] 
+// Tcl Message: INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-31 05:43:41 
+// Elapsed time: 39 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 13, true); // u (Q, cp) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tri_mode_ethernet_mac_2_example_design_clocks (tri_mode_ethernet_mac_2_example_design_clocks.v)]", 12, true); // B (D, cp) - Node
+selectCodeEditor("tri_mode_ethernet_mac_2_axi_lite_sm.v", 270, 124); // cl (w, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 13); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 14, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 14, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, tri_mode_ethernet_mac_2_example_design.xdc]", 15, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, tri_mode_ethernet_mac_2_example_design.xdc]", 15, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, tri_mode_ethernet_mac_2_example_design.xdc]", 15, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.xdc", 875, 185); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.xdc", 588, 180); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.xdc", 588, 180); // cl (w, cp)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tri_mode_ethernet_mac_2_axi_lite_sm.v", 1); // k (j, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tri_mode_ethernet_mac_2_example_design (tri_mode_ethernet_mac_2_example_design.v)]", 1, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tri_mode_ethernet_mac_2_example_design (tri_mode_ethernet_mac_2_example_design.v)]", 1, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+// Elapsed time: 35 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 136, 313); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 136, 313, false, false, false, false, true); // cl (w, cp) - Double Click
+// Elapsed time: 48 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 513, 221); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 197, 405); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 176, 400); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 160, 399); // cl (w, cp)
+// Elapsed time: 17 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 487, 176); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 107, 267); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 139, 260); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 180, 265); // cl (w, cp)
+// Elapsed time: 12 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 566, 408); // cl (w, cp)
+// Elapsed time: 42 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 26, 228); // cl (w, cp)
+// Elapsed time: 26 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 658, 296); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 154, 368); // cl (w, cp)
+// Elapsed time: 63 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 738, 309); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 143, 368); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 143, 368, false, false, false, false, true); // cl (w, cp) - Double Click
+// Elapsed time: 38 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 441, 313); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 158, 313); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 161, 67); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 161, 74); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 158, 75); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 163, 78); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 161, 78); // cl (w, cp)
+// Elapsed time: 19 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 207 MB (+2345kb) [00:35:27]
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 160, 74); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 159, 78); // cl (w, cp)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 28 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 421, 346); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 174, 175); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 154, 78); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 154, 78, false, false, false, false, true); // cl (w, cp) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 338, 106); // cl (w, cp)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 13); // u (Q, cp)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 13); // u (Q, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cp): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // A (cp)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date 
+// Tcl Message: [Wed Mar 31 05:53:01 2021] Launched synth_1... Run output will be captured here: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 11 seconds
+dismissDialog("Starting Design Runs"); // bx (cp)
+// Elapsed time: 36 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 619, 334); // cl (w, cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Synthesis Completed: addNotify
+// Elapsed time: 11 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date 
+// Tcl Message: [Wed Mar 31 05:53:52 2021] Launched impl_1... Run output will be captured here: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ah (cp): Implementation Completed: addNotify
+// Elapsed time: 181 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date 
+// Tcl Message: [Wed Mar 31 05:56:59 2021] Launched impl_1... Run output will be captured here: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// ah (cp): Bitstream Generation Completed: addNotify
+// Elapsed time: 67 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+dismissDialog("Bitstream Generation Completed"); // ah (cp)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (3) ; Programmed", 2, "Programmed", 1, true); // t (Q, cp) - Node
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (3) ; Programmed", 2, "Programmed", 1, true, false, false, false, true, false); // t (Q, cp) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_PROGRAM_FPGA, "Program Device..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cp): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bx (cp):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cp)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.bit} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_DEVICE_UPDATE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,961 MB. GUI used memory: 153 MB. Current time: 3/31/21, 5:58:18 AM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_VIO_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,961 MB. GUI used memory: 153 MB. Current time: 3/31/21, 5:58:21 AM EDT
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: WAVEFORM_GLASSPANE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s). INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s). 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_GLASSPANE
+// TclEventType: HW_VIO_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_VIO_PROBE_VALUE_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// Tcl Message: add_wave -into {hw_ila_data_1.wcfg} -radix hex { {example_clocks/refclk} } 
+// 'I' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // bx (cp)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_vios", 0); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_ila_1", 1); // k (j, cp)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,961 MB. GUI used memory: 152 MB. Current time: 3/31/21, 5:58:42 AM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,012 MB. GUI used memory: 151 MB. Current time: 3/31/21, 5:59:35 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,029 MB. GUI used memory: 153 MB. Current time: 3/31/21, 6:00:56 AM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 826 seconds
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (3) ; Programmed", 2, "xc7a100t_0 (3)", 0, true, false, false, false, true, false); // t (Q, cp) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_PROGRAM_FPGA, "Program Device..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cp): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bx (cp):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cp)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.bit} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,040 MB. GUI used memory: 150 MB. Current time: 3/31/21, 6:12:16 AM EDT
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_VIO_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: WAVEFORM_GLASSPANE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s). INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s). 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_GLASSPANE
+// TclEventType: HW_VIO_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_VIO_PROBE_VALUE_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// 'I' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // bx (cp)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Elapsed time: 347 seconds
+selectButton(PAResourceTtoZ.TriggerStatusPanel_RUN_TRIGGER_FOR_THIS_ILA_CORE, "ILA_run_trigger"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_TRIGGER
+// TclEventType: HW_ILA_CHANGE
+// Tcl Message: run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}] 
+// Tcl Message: INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-31 06:18:07 
+// Elapsed time: 13 seconds
+selectButton(PAResourceTtoZ.TriggerStatusPanel_STOP_TRIGGER_FOR_THIS_ILA_CORE, "ILA_stop_trigger"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_STOP_TRIGGER
+// Tcl Message: wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}] 
+// TclEventType: HW_ILA_CHANGE
+// Tcl Message: upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}] 
+// Tcl Message: INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Mar-31 06:18:21 
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tri_mode_ethernet_mac_2_axi_lite_sm.v", 1); // k (j, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_axi_lite_sm.v", 283, 126); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_axi_lite_sm.v", 283, 126, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("tri_mode_ethernet_mac_2_axi_lite_sm.v", 383, 134); // cl (w, cp)
+// Elapsed time: 520 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_axi_lite_sm.v", 449, 123); // cl (w, cp)
+// Elapsed time: 183 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_axi_lite_sm.v", 443, 175); // cl (w, cp)
+// Elapsed time: 186 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 31, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Elapsed time: 69 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_vios", 0); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_ila_1", 1); // k (j, cp)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (3) ; Programmed", 2, "Programmed", 1, true); // t (Q, cp) - Node
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (3) ; Programmed", 2, "Programmed", 1, true, false, false, false, true, false); // t (Q, cp) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_PROGRAM_FPGA, "Program Device..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cp): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bx (cp):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cp)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.bit} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_DEVICE_UPDATE
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_UPDATE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,040 MB. GUI used memory: 151 MB. Current time: 3/31/21, 6:35:00 AM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_VIO_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,040 MB. GUI used memory: 154 MB. Current time: 3/31/21, 6:35:02 AM EDT
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: WAVEFORM_GLASSPANE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s). INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s). 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_GLASSPANE
+// TclEventType: HW_VIO_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_VIO_PROBE_VALUE_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// 'I' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // bx (cp)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Elapsed time: 54 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 202, 233); // n (o, cp)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_vios", 0); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_ila_1", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tri_mode_ethernet_mac_2_example_design.xdc", 3); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tri_mode_ethernet_mac_2_example_design.v", 4); // k (j, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 490, 232); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tri_mode_ethernet_mac_2_axi_lite_sm.v", 2); // k (j, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_axi_lite_sm.v", 286, 124); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_axi_lite_sm.v", 286, 124, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("tri_mode_ethernet_mac_2_axi_lite_sm.v", 413, 134); // cl (w, cp)
+// Elapsed time: 433 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_axi_lite_sm.v", 467, 137); // cl (w, cp)
+// Elapsed time: 28 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tri_mode_ethernet_mac_2_axi_lite_sm.v", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tri_mode_ethernet_mac_2_example_design.xdc", 2); // k (j, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tri_mode_ethernet_mac_2_example_design (tri_mode_ethernet_mac_2_example_design.v)]", 1, true); // B (D, cp) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tri_mode_ethernet_mac_2_example_design (tri_mode_ethernet_mac_2_example_design.v)]", 1); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tri_mode_ethernet_mac_2_example_design (tri_mode_ethernet_mac_2_example_design.v)]", 1, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tri_mode_ethernet_mac_2_example_design (tri_mode_ethernet_mac_2_example_design.v)]", 1, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+// Elapsed time: 11 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 916, 231); // cl (w, cp)
+// Elapsed time: 17 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pat"); // l (aT, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 292, 468); // cl (w, cp)
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 292, 468, false, false, false, false, true); // cl (w, cp) - Double Click
+// Elapsed time: 28 seconds
+selectCodeEditor("tri_mode_ethernet_mac_2_example_design.v", 295, 281); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 31, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 202, 233); // n (o, cp)Waveform: addNotify
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 202, 233); // n (o, cp)Waveform: addNotify
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 202, 233); // n (o, cp)Waveform: addNotify
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_ila_1", 1); // k (j, cp)
+selectButton(PAResourceTtoZ.TriggerStatusPanel_RUN_TRIGGER_FOR_THIS_ILA_CORE, "ILA_run_trigger"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_TRIGGER
+// TclEventType: HW_ILA_CHANGE
+// Tcl Message: run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}] 
+// Tcl Message: INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-31 06:45:32 
+// Elapsed time: 65 seconds
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (3) ; Programmed", 2, "Programmed", 1, true); // t (Q, cp) - Node
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (3) ; Programmed", 2, "Programmed", 1, true, false, false, false, true, false); // t (Q, cp) - Popup Trigger - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_vios", 0); // k (j, cp)
+selectTreeTable(PAResourceTtoZ.VioProbesTreeTablePanel_VIO_PROBES_TREE_TABLE, "glbl_rst ; [B] 0 ;  ; Output ; hw_vio_1", 0, "[B] 0", 1, false); // g (Q, cp)
+// TclEventType: DEBUG_PROBE_CHANGE
+// Tcl Message: set_property OUTPUT_VALUE 1 [get_hw_probes glbl_rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"vio"}]] 
+// TclEventType: HW_VIO_CHANGE
+// Tcl Message: commit_hw_vio [get_hw_probes {glbl_rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"vio"}]] 
+// TclEventType: HW_ILA_CHANGE
+selectTreeTable(PAResourceTtoZ.VioProbesTreeTablePanel_VIO_PROBES_TREE_TABLE, "glbl_rst ; [B] 1 ;  ; Output ; hw_vio_1", 0, "[B] 1", 1, false); // g (Q, cp)
+// TclEventType: DEBUG_PROBE_CHANGE
+// Tcl Message: set_property OUTPUT_VALUE 0 [get_hw_probes glbl_rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"vio"}]] 
+// TclEventType: HW_VIO_CHANGE
+// Tcl Message: commit_hw_vio [get_hw_probes {glbl_rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"vio"}]] 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_ila_1", 1); // k (j, cp)
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // B (f, cp)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectButton(PAResourceTtoZ.TriggerStatusPanel_RUN_TRIGGER_FOR_THIS_ILA_CORE, "ILA_run_trigger"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_TRIGGER
+// Tcl Message: run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}] 
+// Tcl Message: ERROR: [Labtools 27-1395] Unable to arm ILA 'hw_ila_1'. The core clock is slow or no core clock connected for this ILA or the ILA core may not meet timing. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Labtools 27-1395] Unable to arm ILA 'hw_ila_1'. The core clock is slow or no core clock connected for this ILA or the ILA core may not meet timing.  
+// ar (cp): Run Trigger: addNotify
+// Run Command: PAResourceCommand.PACommandNames_STOP_TRIGGER
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (ar)
+dismissDialog("Run Trigger"); // ar (cp)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (3) ; Programmed", 2, "Programmed", 1, true); // t (Q, cp) - Node
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (3) ; Programmed", 2, "Programmed", 1, true, false, false, false, true, false); // t (Q, cp) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_PROGRAM_FPGA, "Program Device..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cp): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bx (cp):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cp)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.bit} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,040 MB. GUI used memory: 153 MB. Current time: 3/31/21, 6:47:12 AM EDT
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_VIO_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: WAVEFORM_GLASSPANE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s). INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s). 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_GLASSPANE
+// TclEventType: HW_VIO_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_VIO_PROBE_VALUE_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// 'I' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // bx (cp)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectButton(PAResourceTtoZ.TriggerStatusPanel_RUN_TRIGGER_FOR_THIS_ILA_CORE, "ILA_run_trigger"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_TRIGGER
+// TclEventType: HW_ILA_CHANGE
+// Tcl Message: run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}] 
+// Tcl Message: INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-31 06:47:17 
+// Elapsed time: 105 seconds
+selectTable(PAResourceTtoZ.TriggerSetupPanel_TABLE, "mii_txd[3:0] ; ==   ; [H]   ; D ; probe0[3:0] ; 1 of 1", 0, "mii_txd[3:0]", 0); // A (Q, cp)
+selectButton(PAResourceItoN.IlaProbeTablePanel_ADD_PROBE, "IlaProbeTablePanel_new"); // B (f, cp)
+selectTree(PAResourceOtoP.ProbesView_PROBES_TREE, "[root, mii_tx_en]", 8, false); // N (Q, ResizableWindow)
+selectButton(PAResourceAtoD.AddIlaProbesPopup_OK, "OK"); // a (C, ResizableWindow)
+selectTable(PAResourceTtoZ.TriggerSetupPanel_TABLE, "mii_tx_en ; ==   ; [B]   ; X ; probe12[0] ; ", 1, "==  ", 1); // A (Q, cp)
+editTable(PAResourceTtoZ.TriggerSetupPanel_TABLE, "==  ", 1, "Operator", 1); // A (Q, cp)
+selectTable(PAResourceTtoZ.TriggerSetupPanel_TABLE, "mii_tx_en ; ==   ; [B]   ; X ; probe12[0] ; ", 1, "X", 3); // A (Q, cp)
+editTable(PAResourceTtoZ.TriggerSetupPanel_TABLE, "X", 1, "Value", 3); // A (Q, cp)
+// TclEventType: DEBUG_PROBE_CHANGE
+// Tcl Message: set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes mii_tx_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]] 
+selectButton(PAResourceTtoZ.TriggerStatusPanel_STOP_TRIGGER_FOR_THIS_ILA_CORE, "ILA_stop_trigger"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_STOP_TRIGGER
+// Tcl Message: wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}] 
+// TclEventType: HW_ILA_CHANGE
+// Tcl Message: upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}] 
+// Tcl Message: INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Mar-31 06:49:19 
+selectButton(PAResourceTtoZ.TriggerStatusPanel_RUN_TRIGGER_FOR_THIS_ILA_CORE, "ILA_run_trigger"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_TRIGGER
+// TclEventType: HW_ILA_CHANGE
+// Tcl Message: run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}] 
+// Tcl Message: INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-31 06:49:20 
+// Elapsed time: 16 seconds
+selectButton(PAResourceTtoZ.TriggerStatusPanel_STOP_TRIGGER_FOR_THIS_ILA_CORE, "ILA_stop_trigger"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_STOP_TRIGGER
+// Tcl Message: wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}] 
+// TclEventType: HW_ILA_CHANGE
+// Tcl Message: upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}] 
+// Tcl Message: INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Mar-31 06:49:38 

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="demo_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="demo_tb" />
+            <top_module name="glbl" />
+            <top_module name="ipif_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1942000001fs"></ZoomEndTime>
+      <Cursor1Time time="320000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="236"></NameColumnWidth>
+      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="98" />
+   <wvobject fp_name="/demo_tb/gtx_clk" type="logic">
+      <obj_property name="ElementShortName">gtx_clk</obj_property>
+      <obj_property name="ObjectShortName">gtx_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mmcm_clk_in" type="logic">
+      <obj_property name="ElementShortName">mmcm_clk_in</obj_property>
+      <obj_property name="ObjectShortName">mmcm_clk_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/demo_mode_error" type="logic">
+      <obj_property name="ElementShortName">demo_mode_error</obj_property>
+      <obj_property name="ObjectShortName">demo_mode_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mdc" type="logic">
+      <obj_property name="ElementShortName">mdc</obj_property>
+      <obj_property name="ObjectShortName">mdc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mdio" type="logic">
+      <obj_property name="ElementShortName">mdio</obj_property>
+      <obj_property name="ObjectShortName">mdio</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mdio_count" type="array">
+      <obj_property name="ElementShortName">mdio_count[5:0]</obj_property>
+      <obj_property name="ObjectShortName">mdio_count[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/last_mdio" type="logic">
+      <obj_property name="ElementShortName">last_mdio</obj_property>
+      <obj_property name="ObjectShortName">last_mdio</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mdio_read" type="logic">
+      <obj_property name="ElementShortName">mdio_read</obj_property>
+      <obj_property name="ObjectShortName">mdio_read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mdio_addr" type="logic">
+      <obj_property name="ElementShortName">mdio_addr</obj_property>
+      <obj_property name="ObjectShortName">mdio_addr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mdio_fail" type="logic">
+      <obj_property name="ElementShortName">mdio_fail</obj_property>
+      <obj_property name="ObjectShortName">mdio_fail</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mii_tx_en" type="logic">
+      <obj_property name="ElementShortName">mii_tx_en</obj_property>
+      <obj_property name="ObjectShortName">mii_tx_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mii_tx_er" type="logic">
+      <obj_property name="ElementShortName">mii_tx_er</obj_property>
+      <obj_property name="ObjectShortName">mii_tx_er</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mii_txd" type="array">
+      <obj_property name="ElementShortName">mii_txd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mii_txd[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mii_rx_clk" type="logic">
+      <obj_property name="ElementShortName">mii_rx_clk</obj_property>
+      <obj_property name="ObjectShortName">mii_rx_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mii_rx_dv" type="logic">
+      <obj_property name="ElementShortName">mii_rx_dv</obj_property>
+      <obj_property name="ObjectShortName">mii_rx_dv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mii_rx_er" type="logic">
+      <obj_property name="ElementShortName">mii_rx_er</obj_property>
+      <obj_property name="ObjectShortName">mii_rx_er</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mii_rxd" type="array">
+      <obj_property name="ElementShortName">mii_rxd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mii_rxd[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mii_tx_clk100" type="logic">
+      <obj_property name="ElementShortName">mii_tx_clk100</obj_property>
+      <obj_property name="ObjectShortName">mii_tx_clk100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mii_tx_clk10" type="logic">
+      <obj_property name="ElementShortName">mii_tx_clk10</obj_property>
+      <obj_property name="ObjectShortName">mii_tx_clk10</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mii_tx_clk" type="logic">
+      <obj_property name="ElementShortName">mii_tx_clk</obj_property>
+      <obj_property name="ObjectShortName">mii_tx_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/tx_monitor_finished_10M" type="logic">
+      <obj_property name="ElementShortName">tx_monitor_finished_10M</obj_property>
+      <obj_property name="ObjectShortName">tx_monitor_finished_10M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/tx_monitor_finished_100M" type="logic">
+      <obj_property name="ElementShortName">tx_monitor_finished_100M</obj_property>
+      <obj_property name="ObjectShortName">tx_monitor_finished_100M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/management_config_finished" type="logic">
+      <obj_property name="ElementShortName">management_config_finished</obj_property>
+      <obj_property name="ObjectShortName">management_config_finished</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/phy_speed" type="array">
+      <obj_property name="ElementShortName">phy_speed[1:0]</obj_property>
+      <obj_property name="ObjectShortName">phy_speed[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mac_speed" type="array">
+      <obj_property name="ElementShortName">mac_speed[1:0]</obj_property>
+      <obj_property name="ObjectShortName">mac_speed[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/update_speed" type="logic">
+      <obj_property name="ElementShortName">update_speed</obj_property>
+      <obj_property name="ObjectShortName">update_speed</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mii_rxd_dut" type="array">
+      <obj_property name="ElementShortName">mii_rxd_dut[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mii_rxd_dut[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mii_rx_dv_dut" type="logic">
+      <obj_property name="ElementShortName">mii_rx_dv_dut</obj_property>
+      <obj_property name="ObjectShortName">mii_rx_dv_dut</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/mii_rx_er_dut" type="logic">
+      <obj_property name="ElementShortName">mii_rx_er_dut</obj_property>
+      <obj_property name="ObjectShortName">mii_rx_er_dut</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/gen_tx_data" type="logic">
+      <obj_property name="ElementShortName">gen_tx_data</obj_property>
+      <obj_property name="ObjectShortName">gen_tx_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/check_tx_data" type="logic">
+      <obj_property name="ElementShortName">check_tx_data</obj_property>
+      <obj_property name="ObjectShortName">check_tx_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/config_bist" type="logic">
+      <obj_property name="ElementShortName">config_bist</obj_property>
+      <obj_property name="ObjectShortName">config_bist</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/frame_error" type="logic">
+      <obj_property name="ElementShortName">frame_error</obj_property>
+      <obj_property name="ObjectShortName">frame_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/bist_mode_error" type="logic">
+      <obj_property name="ElementShortName">bist_mode_error</obj_property>
+      <obj_property name="ObjectShortName">bist_mode_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/serial_response" type="logic">
+      <obj_property name="ElementShortName">serial_response</obj_property>
+      <obj_property name="ObjectShortName">serial_response</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/TB_MODE" type="array">
+      <obj_property name="ElementShortName">TB_MODE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TB_MODE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/address_filter_value" type="array">
+      <obj_property name="ElementShortName">address_filter_value[95:0]</obj_property>
+      <obj_property name="ObjectShortName">address_filter_value[95:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dly" type="array">
+      <obj_property name="ElementShortName">dly[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dly[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/gtx_period" type="array">
+      <obj_property name="ElementShortName">gtx_period[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gtx_period[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/gtx_clk" type="logic">
+      <obj_property name="ElementShortName">gtx_clk</obj_property>
+      <obj_property name="ObjectShortName">gtx_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/glbl_rstn" type="logic">
+      <obj_property name="ElementShortName">glbl_rstn</obj_property>
+      <obj_property name="ObjectShortName">glbl_rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/rx_axi_rstn" type="logic">
+      <obj_property name="ElementShortName">rx_axi_rstn</obj_property>
+      <obj_property name="ObjectShortName">rx_axi_rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/tx_axi_rstn" type="logic">
+      <obj_property name="ElementShortName">tx_axi_rstn</obj_property>
+      <obj_property name="ObjectShortName">tx_axi_rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/rx_enable" type="logic">
+      <obj_property name="ElementShortName">rx_enable</obj_property>
+      <obj_property name="ObjectShortName">rx_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/rx_statistics_vector" type="array">
+      <obj_property name="ElementShortName">rx_statistics_vector[27:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_statistics_vector[27:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/rx_statistics_valid" type="logic">
+      <obj_property name="ElementShortName">rx_statistics_valid</obj_property>
+      <obj_property name="ObjectShortName">rx_statistics_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/rx_mac_aclk" type="logic">
+      <obj_property name="ElementShortName">rx_mac_aclk</obj_property>
+      <obj_property name="ObjectShortName">rx_mac_aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/rx_reset" type="logic">
+      <obj_property name="ElementShortName">rx_reset</obj_property>
+      <obj_property name="ObjectShortName">rx_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/rx_axis_mac_tdata" type="array">
+      <obj_property name="ElementShortName">rx_axis_mac_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_axis_mac_tdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/tx_axis_mac_tdata" type="array">
+      <obj_property name="ElementShortName">tx_axis_mac_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_axis_mac_tdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/rx_axis_mac_tvalid" type="logic">
+      <obj_property name="ElementShortName">rx_axis_mac_tvalid</obj_property>
+      <obj_property name="ObjectShortName">rx_axis_mac_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/rx_axis_mac_tlast" type="logic">
+      <obj_property name="ElementShortName">rx_axis_mac_tlast</obj_property>
+      <obj_property name="ObjectShortName">rx_axis_mac_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/rx_axis_mac_tuser" type="logic">
+      <obj_property name="ElementShortName">rx_axis_mac_tuser</obj_property>
+      <obj_property name="ObjectShortName">rx_axis_mac_tuser</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/rx_axis_filter_tuser" type="array">
+      <obj_property name="ElementShortName">rx_axis_filter_tuser[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_axis_filter_tuser[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/tx_enable" type="logic">
+      <obj_property name="ElementShortName">tx_enable</obj_property>
+      <obj_property name="ObjectShortName">tx_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/tx_ifg_delay" type="array">
+      <obj_property name="ElementShortName">tx_ifg_delay[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_ifg_delay[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/tx_statistics_vector" type="array">
+      <obj_property name="ElementShortName">tx_statistics_vector[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_statistics_vector[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/tx_statistics_valid" type="logic">
+      <obj_property name="ElementShortName">tx_statistics_valid</obj_property>
+      <obj_property name="ObjectShortName">tx_statistics_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/tx_mac_aclk" type="logic">
+      <obj_property name="ElementShortName">tx_mac_aclk</obj_property>
+      <obj_property name="ObjectShortName">tx_mac_aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/tx_reset" type="logic">
+      <obj_property name="ElementShortName">tx_reset</obj_property>
+      <obj_property name="ObjectShortName">tx_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/tx_axis_mac_tvalid" type="logic">
+      <obj_property name="ElementShortName">tx_axis_mac_tvalid</obj_property>
+      <obj_property name="ObjectShortName">tx_axis_mac_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/tx_axis_mac_tlast" type="logic">
+      <obj_property name="ElementShortName">tx_axis_mac_tlast</obj_property>
+      <obj_property name="ObjectShortName">tx_axis_mac_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/tx_axis_mac_tuser" type="logic">
+      <obj_property name="ElementShortName">tx_axis_mac_tuser</obj_property>
+      <obj_property name="ObjectShortName">tx_axis_mac_tuser</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/tx_axis_mac_tready" type="logic">
+      <obj_property name="ElementShortName">tx_axis_mac_tready</obj_property>
+      <obj_property name="ObjectShortName">tx_axis_mac_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/pause_req" type="logic">
+      <obj_property name="ElementShortName">pause_req</obj_property>
+      <obj_property name="ObjectShortName">pause_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/pause_val" type="array">
+      <obj_property name="ElementShortName">pause_val[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pause_val[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/speedis100" type="logic">
+      <obj_property name="ElementShortName">speedis100</obj_property>
+      <obj_property name="ObjectShortName">speedis100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/speedis10100" type="logic">
+      <obj_property name="ElementShortName">speedis10100</obj_property>
+      <obj_property name="ObjectShortName">speedis10100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd" type="array">
+      <obj_property name="ElementShortName">mii_txd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mii_txd[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_tx_en" type="logic">
+      <obj_property name="ElementShortName">mii_tx_en</obj_property>
+      <obj_property name="ObjectShortName">mii_tx_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_tx_er" type="logic">
+      <obj_property name="ElementShortName">mii_tx_er</obj_property>
+      <obj_property name="ObjectShortName">mii_tx_er</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rxd" type="array">
+      <obj_property name="ElementShortName">mii_rxd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mii_rxd[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rx_dv" type="logic">
+      <obj_property name="ElementShortName">mii_rx_dv</obj_property>
+      <obj_property name="ObjectShortName">mii_rx_dv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rx_er" type="logic">
+      <obj_property name="ElementShortName">mii_rx_er</obj_property>
+      <obj_property name="ObjectShortName">mii_rx_er</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rx_clk" type="logic">
+      <obj_property name="ElementShortName">mii_rx_clk</obj_property>
+      <obj_property name="ObjectShortName">mii_rx_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_tx_clk" type="logic">
+      <obj_property name="ElementShortName">mii_tx_clk</obj_property>
+      <obj_property name="ObjectShortName">mii_tx_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mdio" type="logic">
+      <obj_property name="ElementShortName">mdio</obj_property>
+      <obj_property name="ObjectShortName">mdio</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mdc" type="logic">
+      <obj_property name="ElementShortName">mdc</obj_property>
+      <obj_property name="ObjectShortName">mdc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_aclk" type="logic">
+      <obj_property name="ElementShortName">s_axi_aclk</obj_property>
+      <obj_property name="ObjectShortName">s_axi_aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_resetn" type="logic">
+      <obj_property name="ElementShortName">s_axi_resetn</obj_property>
+      <obj_property name="ObjectShortName">s_axi_resetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_awaddr" type="array">
+      <obj_property name="ElementShortName">s_axi_awaddr[11:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awaddr[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_awvalid" type="logic">
+      <obj_property name="ElementShortName">s_axi_awvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_awready" type="logic">
+      <obj_property name="ElementShortName">s_axi_awready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_wdata" type="array">
+      <obj_property name="ElementShortName">s_axi_wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_wvalid" type="logic">
+      <obj_property name="ElementShortName">s_axi_wvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_wvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_wready" type="logic">
+      <obj_property name="ElementShortName">s_axi_wready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_wready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_bresp" type="array">
+      <obj_property name="ElementShortName">s_axi_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_bvalid" type="logic">
+      <obj_property name="ElementShortName">s_axi_bvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_bvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_bready" type="logic">
+      <obj_property name="ElementShortName">s_axi_bready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_bready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_araddr" type="array">
+      <obj_property name="ElementShortName">s_axi_araddr[11:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_araddr[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_arvalid" type="logic">
+      <obj_property name="ElementShortName">s_axi_arvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_arready" type="logic">
+      <obj_property name="ElementShortName">s_axi_arready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_rdata" type="array">
+      <obj_property name="ElementShortName">s_axi_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_rresp" type="array">
+      <obj_property name="ElementShortName">s_axi_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_rvalid" type="logic">
+      <obj_property name="ElementShortName">s_axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/s_axi_rready" type="logic">
+      <obj_property name="ElementShortName">s_axi_rready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/demo_tb/dut/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mac_irq" type="logic">
+      <obj_property name="ElementShortName">mac_irq</obj_property>
+      <obj_property name="ObjectShortName">mac_irq</obj_property>
+   </wvobject>
+</wave_config>

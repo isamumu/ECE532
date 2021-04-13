@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1617175290">
+  <File Type="PA-TCL" Name="canteloupe_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="canteloupe_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="canteloupe_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="canteloupe_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="canteloupe_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="canteloupe_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="canteloupe_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="canteloupe_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="canteloupe_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/canteloupe/canteloupe.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/canteloupe/hdl/canteloupe_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/board.prj">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="ScopedToCell" Val="canteloupe_mig_7series_0_0"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="canteloupe_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/debug.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/new/constraints.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/debug.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="canteloupe_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="canteloupe_tri_mode_ethernet_ma_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="canteloupe_mii_to_rmii_0_0"/>
+</GenRun>

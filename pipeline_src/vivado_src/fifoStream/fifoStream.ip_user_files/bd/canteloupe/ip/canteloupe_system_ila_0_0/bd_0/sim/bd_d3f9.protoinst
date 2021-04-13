@@ -1,0 +1,64 @@
+{
+	"version": "1.0",
+	"modules": {
+		"bd_d3f9": {
+			"proto_instances": {
+				"/g_inst/slot_0_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "slot_0_axis_tdata"},
+						"TLAST": { "actual": "slot_0_axis_tlast"},
+						"TREADY": { "actual": "slot_0_axis_tready"},
+						"TVALID": { "actual": "slot_0_axis_tvalid"}
+					}
+				},
+				"/g_inst/slot_1_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "slot_1_axis_tdata"},
+						"TLAST": { "actual": "slot_1_axis_tlast"},
+						"TREADY": { "actual": "slot_1_axis_tready"},
+						"TVALID": { "actual": "slot_1_axis_tvalid"}
+					}
+				},
+				"/g_inst/slot_2_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "slot_2_axis_tdata"},
+						"TLAST": { "actual": "slot_2_axis_tlast"},
+						"TREADY": { "actual": "slot_2_axis_tready"},
+						"TVALID": { "actual": "slot_2_axis_tvalid"}
+					}
+				},
+				"/g_inst/slot_3_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "slot_3_axis_tdata"},
+						"TLAST": { "actual": "slot_3_axis_tlast"},
+						"TREADY": { "actual": "slot_3_axis_tready"},
+						"TVALID": { "actual": "slot_3_axis_tvalid"}
+					}
+				},
+				"/g_inst/slot_4_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "slot_4_axis_tdata"},
+						"TLAST": { "actual": "slot_4_axis_tlast"},
+						"TREADY": { "actual": "slot_4_axis_tready"},
+						"TVALID": { "actual": "slot_4_axis_tvalid"}
+					}
+				}
+			}
+		}
+	}
+}

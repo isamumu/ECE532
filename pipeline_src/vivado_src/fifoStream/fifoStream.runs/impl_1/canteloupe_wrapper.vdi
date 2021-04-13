@@ -1,0 +1,1139 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Wed Mar 31 03:22:36 2021
+# Process ID: 4812
+# Current directory: C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1
+# Command line: vivado.exe -log canteloupe_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source canteloupe_wrapper.tcl -notrace
+# Log file: C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper.vdi
+# Journal file: C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source canteloupe_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'w:/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'w:/TEMAC_FPGA1_no_xdc'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/DESL/Xilinx/Vivado/2018.3/data/ip'.
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:fpga1_deployment_receiving_block:1.0'. The one found in IP location 'w:/ip_repo/fpga1_deployment_receiving_block' will take precedence over the same IP in location w:/ip_repo/ip_repo/fpga1_deployment_receiving_block
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:path_switch:1.0'. The one found in IP location 'w:/ip_repo/ip_path_switch' will take precedence over the same IP in location w:/ip_repo/ip_repo/ip_path_switch
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:transpose:1.0'. The one found in IP location 'w:/ip_repo/ip_repo/ip_transpose' will take precedence over the same IP in location w:/ip_repo/ip_transpose
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 360.824 ; gain = 37.809
+add_files: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 486.109 ; gain = 121.277
+Command: link_design -top canteloupe_wrapper -part xc7a100tcsg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_axi_fifo_mm_s_0_0/canteloupe_axi_fifo_mm_s_0_0.dcp' for cell 'canteloupe_i/axi_fifo_mm_s_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_axi_uartlite_0_0/canteloupe_axi_uartlite_0_0.dcp' for cell 'canteloupe_i/axi_uartlite_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_clk_wiz_1_0/canteloupe_clk_wiz_1_0.dcp' for cell 'canteloupe_i/clk_wiz_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_frame_generator_cust_0_0/canteloupe_frame_generator_cust_0_0.dcp' for cell 'canteloupe_i/frame_generator_cust_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mdm_1_0/canteloupe_mdm_1_0.dcp' for cell 'canteloupe_i/mdm_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_0/canteloupe_microblaze_0_0.dcp' for cell 'canteloupe_i/microblaze_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_axi_intc_0/canteloupe_microblaze_0_axi_intc_0.dcp' for cell 'canteloupe_i/microblaze_0_axi_intc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0.dcp' for cell 'canteloupe_i/mig_7series_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mii_to_rmii_0_0/canteloupe_mii_to_rmii_0_0.dcp' for cell 'canteloupe_i/mii_to_rmii_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_quantizer_0_0/canteloupe_quantizer_0_0.dcp' for cell 'canteloupe_i/quantizer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_rst_clk_wiz_1_100M_0/canteloupe_rst_clk_wiz_1_100M_0.dcp' for cell 'canteloupe_i/rst_clk_wiz_1_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_rst_mig_7series_0_81M_0/canteloupe_rst_mig_7series_0_81M_0.dcp' for cell 'canteloupe_i/rst_mig_7series_0_81M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_run_length_encoder_0_0/canteloupe_run_length_encoder_0_0.dcp' for cell 'canteloupe_i/run_length_encoder_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_system_ila_0_0/canteloupe_system_ila_0_0.dcp' for cell 'canteloupe_i/system_ila_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/canteloupe_tri_mode_ethernet_ma_1_0.dcp' for cell 'canteloupe_i/tri_mode_ethernet_ma_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_two_dimension_dct_0_0/canteloupe_two_dimension_dct_0_0.dcp' for cell 'canteloupe_i/two_dimension_dct_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_zig_zag_0_0/canteloupe_zig_zag_0_0.dcp' for cell 'canteloupe_i/zig_zag_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_xbar_0/canteloupe_xbar_0.dcp' for cell 'canteloupe_i/microblaze_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_0/canteloupe_auto_ds_0.dcp' for cell 'canteloupe_i/microblaze_0_axi_periph/m00_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_1/canteloupe_auto_ds_1.dcp' for cell 'canteloupe_i/microblaze_0_axi_periph/m01_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_cc_0/canteloupe_auto_cc_0.dcp' for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_pc_0/canteloupe_auto_pc_0.dcp' for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_2/canteloupe_auto_ds_2.dcp' for cell 'canteloupe_i/microblaze_0_axi_periph/m03_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_us_0/canteloupe_auto_us_0.dcp' for cell 'canteloupe_i/microblaze_0_axi_periph/s00_couplers/auto_us'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_us_1/canteloupe_auto_us_1.dcp' for cell 'canteloupe_i/microblaze_0_axi_periph/s01_couplers/auto_us'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_dlmb_bram_if_cntlr_0/canteloupe_dlmb_bram_if_cntlr_0.dcp' for cell 'canteloupe_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_dlmb_v10_0/canteloupe_dlmb_v10_0.dcp' for cell 'canteloupe_i/microblaze_0_local_memory/dlmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_ilmb_bram_if_cntlr_0/canteloupe_ilmb_bram_if_cntlr_0.dcp' for cell 'canteloupe_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_ilmb_v10_0/canteloupe_ilmb_v10_0.dcp' for cell 'canteloupe_i/microblaze_0_local_memory/ilmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_lmb_bram_0/canteloupe_lmb_bram_0.dcp' for cell 'canteloupe_i/microblaze_0_local_memory/lmb_bram'
+INFO: [Netlist 29-17] Analyzing 1900 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3.1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/ibuf_data[0].mii_rxd_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/ibuf_data[1].mii_rxd_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/ibuf_data[2].mii_rxd_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/ibuf_data[3].mii_rxd_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_rx_clk_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_rx_dv_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_rx_er_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_tx_clk_ibuf_i 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/obuf_data[3].mii_txd_obuf_i 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/obuf_data[2].mii_txd_obuf_i 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_tx_en_obuf_i 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_tx_er_obuf_i 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/obuf_data[0].mii_txd_obuf_i 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/obuf_data[1].mii_txd_obuf_i 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rx_clk' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rx_dv' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rx_er' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rxd[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rxd[1]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rxd[2]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rxd[3]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_tx_clk' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_tx_en' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_tx_en' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_tx_er' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_tx_er' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[0]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[1]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[2]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[3]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Chipscope 16-324] Core: canteloupe_i/system_ila_0/inst/ila_lib UUID: 2d9e3a4d-27ad-5473-b19c-2c06af0be31d 
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_0/canteloupe_microblaze_0_0.xdc] for cell 'canteloupe_i/microblaze_0/U0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_0/canteloupe_microblaze_0_0.xdc] for cell 'canteloupe_i/microblaze_0/U0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_dlmb_v10_0/canteloupe_dlmb_v10_0.xdc] for cell 'canteloupe_i/microblaze_0_local_memory/dlmb_v10/U0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_dlmb_v10_0/canteloupe_dlmb_v10_0.xdc] for cell 'canteloupe_i/microblaze_0_local_memory/dlmb_v10/U0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_ilmb_v10_0/canteloupe_ilmb_v10_0.xdc] for cell 'canteloupe_i/microblaze_0_local_memory/ilmb_v10/U0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_ilmb_v10_0/canteloupe_ilmb_v10_0.xdc] for cell 'canteloupe_i/microblaze_0_local_memory/ilmb_v10/U0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_axi_intc_0/canteloupe_microblaze_0_axi_intc_0.xdc] for cell 'canteloupe_i/microblaze_0_axi_intc/U0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_axi_intc_0/canteloupe_microblaze_0_axi_intc_0.xdc] for cell 'canteloupe_i/microblaze_0_axi_intc/U0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mdm_1_0/canteloupe_mdm_1_0.xdc] for cell 'canteloupe_i/mdm_1/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mdm_1_0/canteloupe_mdm_1_0.xdc:50]
+get_clocks: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1588.715 ; gain = 604.180
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mdm_1_0/canteloupe_mdm_1_0.xdc] for cell 'canteloupe_i/mdm_1/U0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_clk_wiz_1_0/canteloupe_clk_wiz_1_0_board.xdc] for cell 'canteloupe_i/clk_wiz_1/inst'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_clk_wiz_1_0/canteloupe_clk_wiz_1_0_board.xdc] for cell 'canteloupe_i/clk_wiz_1/inst'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_clk_wiz_1_0/canteloupe_clk_wiz_1_0.xdc] for cell 'canteloupe_i/clk_wiz_1/inst'
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_clk_wiz_1_0/canteloupe_clk_wiz_1_0.xdc:57]
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_clk_wiz_1_0/canteloupe_clk_wiz_1_0.xdc] for cell 'canteloupe_i/clk_wiz_1/inst'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_rst_clk_wiz_1_100M_0/canteloupe_rst_clk_wiz_1_100M_0_board.xdc] for cell 'canteloupe_i/rst_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_rst_clk_wiz_1_100M_0/canteloupe_rst_clk_wiz_1_100M_0_board.xdc] for cell 'canteloupe_i/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_rst_clk_wiz_1_100M_0/canteloupe_rst_clk_wiz_1_100M_0.xdc] for cell 'canteloupe_i/rst_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_rst_clk_wiz_1_100M_0/canteloupe_rst_clk_wiz_1_100M_0.xdc] for cell 'canteloupe_i/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_axi_uartlite_0_0/canteloupe_axi_uartlite_0_0_board.xdc] for cell 'canteloupe_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_axi_uartlite_0_0/canteloupe_axi_uartlite_0_0_board.xdc] for cell 'canteloupe_i/axi_uartlite_0/U0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_axi_uartlite_0_0/canteloupe_axi_uartlite_0_0.xdc] for cell 'canteloupe_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_axi_uartlite_0_0/canteloupe_axi_uartlite_0_0.xdc] for cell 'canteloupe_i/axi_uartlite_0/U0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/user_design/constraints/canteloupe_mig_7series_0_0.xdc] for cell 'canteloupe_i/mig_7series_0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/user_design/constraints/canteloupe_mig_7series_0_0.xdc] for cell 'canteloupe_i/mig_7series_0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_board.xdc] for cell 'canteloupe_i/mig_7series_0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_board.xdc] for cell 'canteloupe_i/mig_7series_0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_rst_mig_7series_0_81M_0/canteloupe_rst_mig_7series_0_81M_0_board.xdc] for cell 'canteloupe_i/rst_mig_7series_0_81M/U0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_rst_mig_7series_0_81M_0/canteloupe_rst_mig_7series_0_81M_0_board.xdc] for cell 'canteloupe_i/rst_mig_7series_0_81M/U0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_rst_mig_7series_0_81M_0/canteloupe_rst_mig_7series_0_81M_0.xdc] for cell 'canteloupe_i/rst_mig_7series_0_81M/U0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_rst_mig_7series_0_81M_0/canteloupe_rst_mig_7series_0_81M_0.xdc] for cell 'canteloupe_i/rst_mig_7series_0_81M/U0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'canteloupe_i/system_ila_0/inst/ila_lib/inst'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'canteloupe_i/system_ila_0/inst/ila_lib/inst'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'canteloupe_i/system_ila_0/inst/ila_lib/inst'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'canteloupe_i/system_ila_0/inst/ila_lib/inst'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/src/tri_mode_ethernet_mac_2/synth/tri_mode_ethernet_mac_2_board.xdc] for cell 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/src/tri_mode_ethernet_mac_2/synth/tri_mode_ethernet_mac_2_board.xdc] for cell 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/src/tri_mode_ethernet_mac_2/synth/tri_mode_ethernet_mac_2.xdc] for cell 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/src/tri_mode_ethernet_mac_2/synth/tri_mode_ethernet_mac_2.xdc] for cell 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst'
+CRITICAL WARNING: [Designutils 20-1281] Could not find module 'vio_0'. The XDC file c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/src/vio_0/vio_0.xdc will not be read for this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'mii_to_rmii_0'. The XDC file c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/src/mii_to_rmii_0/mii_to_rmii_0_board.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'clk_wiz_0'. The XDC file c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/src/clk_wiz_0/clk_wiz_0_board.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'clk_wiz_0'. The XDC file c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/src/clk_wiz_0/clk_wiz_0.xdc will not be read for any cell of this module.
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mii_to_rmii_0_0/canteloupe_mii_to_rmii_0_0_board.xdc] for cell 'canteloupe_i/mii_to_rmii_0/U0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mii_to_rmii_0_0/canteloupe_mii_to_rmii_0_0_board.xdc] for cell 'canteloupe_i/mii_to_rmii_0/U0'
+Parsing XDC File [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_0/inst/example_clocks/inst/refclk'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:4]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:4]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_0/inst/gtx_clk_bufg'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:5]
+CRITICAL WARNING: [Common 17-162] Invalid option value specified for '-nets'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:5]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/example_clocks/inst/refclk'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:7]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:7]
+WARNING: [Vivado 12-507] No nets matched 'sys_clock_IBUF'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:8]
+CRITICAL WARNING: [Common 17-162] Invalid option value specified for '-nets'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:8]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_txd[0]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_txd[1]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_txd[2]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_txd[3]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_tx_en'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_tx_er'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_txd[0]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:94]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_txd[1]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:94]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_txd[2]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:94]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_txd[3]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:94]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:94]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_tx_en'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:95]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:95]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_tx_er'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:96]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:96]
+Finished Parsing XDC File [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc]
+Parsing XDC File [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/constraints.xdc]
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_axi_intc_0/canteloupe_microblaze_0_axi_intc_0_clocks.xdc] for cell 'canteloupe_i/microblaze_0_axi_intc/U0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_axi_intc_0/canteloupe_microblaze_0_axi_intc_0_clocks.xdc] for cell 'canteloupe_i/microblaze_0_axi_intc/U0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/src/tri_mode_ethernet_mac_2/synth/tri_mode_ethernet_mac_2_clocks.xdc] for cell 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst'
+CRITICAL WARNING: [Constraints 18-602] set_input_delay: list contains '6' objects of types '(pin)' other than the types '(input port,internal pin)' supported by the constraint. These objects will not be used for this constraint. Please review the object list and ensure unsupported object types are removed. [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/src/tri_mode_ethernet_mac_2/synth/tri_mode_ethernet_mac_2_clocks.xdc:27]
+CRITICAL WARNING: [Constraints 18-472] set_input_delay: list does not contain any object of type(s) '(input port,internal pin)' supported by the constraint. The constraint will not be applied. Please check to make sure that this is intended. [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/src/tri_mode_ethernet_mac_2/synth/tri_mode_ethernet_mac_2_clocks.xdc:27]
+CRITICAL WARNING: [Constraints 18-602] set_input_delay: list contains '6' objects of types '(pin)' other than the types '(input port,internal pin)' supported by the constraint. These objects will not be used for this constraint. Please review the object list and ensure unsupported object types are removed. [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/src/tri_mode_ethernet_mac_2/synth/tri_mode_ethernet_mac_2_clocks.xdc:28]
+CRITICAL WARNING: [Constraints 18-472] set_input_delay: list does not contain any object of type(s) '(input port,internal pin)' supported by the constraint. The constraint will not be applied. Please check to make sure that this is intended. [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/src/tri_mode_ethernet_mac_2/synth/tri_mode_ethernet_mac_2_clocks.xdc:28]
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/src/tri_mode_ethernet_mac_2/synth/tri_mode_ethernet_mac_2_clocks.xdc] for cell 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_us_0/canteloupe_auto_us_0_clocks.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/s00_couplers/auto_us/inst'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_us_0/canteloupe_auto_us_0_clocks.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/s00_couplers/auto_us/inst'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_us_1/canteloupe_auto_us_1_clocks.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/s01_couplers/auto_us/inst'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_us_1/canteloupe_auto_us_1_clocks.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/s01_couplers/auto_us/inst'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_0/canteloupe_auto_ds_0_clocks.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m00_couplers/auto_ds/inst'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_0/canteloupe_auto_ds_0_clocks.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m00_couplers/auto_ds/inst'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_1/canteloupe_auto_ds_1_clocks.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m01_couplers/auto_ds/inst'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_1/canteloupe_auto_ds_1_clocks.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m01_couplers/auto_ds/inst'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_cc_0/canteloupe_auto_cc_0_clocks.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_cc_0/canteloupe_auto_cc_0_clocks.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_2/canteloupe_auto_ds_2_clocks.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m03_couplers/auto_ds/inst'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_2/canteloupe_auto_ds_2_clocks.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m03_couplers/auto_ds/inst'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/grxd.COMP_RX_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/COMP_FIFO/gaxis_rst_sync.xpm_cdc_sync_rst_inst'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/grxd.COMP_RX_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/COMP_FIFO/gaxis_rst_sync.xpm_cdc_sync_rst_inst'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/gtxd.COMP_TXD_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/COMP_FIFO/gaxis_rst_sync.xpm_cdc_sync_rst_inst'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/gtxd.COMP_TXD_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/COMP_FIFO/gaxis_rst_sync.xpm_cdc_sync_rst_inst'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst_axis.tcl] for cell 'canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/gtxd.COMP_TXD_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/COMP_FIFO'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst_axis.tcl] for cell 'canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/gtxd.COMP_TXD_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/COMP_FIFO'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst_axis.tcl] for cell 'canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/grxd.COMP_RX_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/COMP_FIFO'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst_axis.tcl] for cell 'canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/grxd.COMP_RX_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/COMP_FIFO'
+Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/grxd.COMP_rx_len_fifo'
+Finished Sourcing Tcl File [C:/DESL/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/grxd.COMP_rx_len_fifo'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'canteloupe_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_0/data/mb_bootloop_le.elf 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1645.074 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 608 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 148 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT, IBUFDS_INTERMDISABLE_INT, INV, OBUFTDS, OBUFTDS): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 88 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 32 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 144 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 14 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 162 instances
+
+45 Infos, 50 Warnings, 24 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1645.074 ; gain = 1158.965
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1645.074 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 20abd0e37
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1645.074 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-329] Generating Script for core instance : u_ila_0 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_0_CV.
+INFO: [Chipscope 16-329] Generating Script for core instance : u_ila_1 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_1_CV.
+INFO: [Chipscope 16-329] Generating Script for core instance : u_ila_2 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_2_CV.
+INFO: [Chipscope 16-329] Generating Script for core instance : u_ila_3 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_3_CV.
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:xsdbm:3.0", from Vivado IP cache entry "fbb5a232c2232fff".
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:ila:6.2", from Vivado IP cache entry "34a9751ff8f04ec7".
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.202 . Memory (MB): peak = 1807.863 ; gain = 2.141
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 1b358d513
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:03:29 . Memory (MB): peak = 1808.195 ; gain = 135.797
+
+Phase 2 Retarget
+INFO: [Opt 31-138] Pushed 7 inverter(s) to 20 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 2 Retarget | Checksum: 2099a9902
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:03:32 . Memory (MB): peak = 1827.969 ; gain = 155.570
+INFO: [Opt 31-389] Phase Retarget created 314 cells and removed 520 cells
+INFO: [Opt 31-1021] In phase Retarget, 436 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Constant propagation
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 4 load pin(s).
+Phase 3 Constant propagation | Checksum: 1849d4ea4
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:03:33 . Memory (MB): peak = 1827.969 ; gain = 155.570
+INFO: [Opt 31-389] Phase Constant propagation created 247 cells and removed 814 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 390 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Sweep
+Phase 4 Sweep | Checksum: 22a24804b
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:03:37 . Memory (MB): peak = 1827.969 ; gain = 155.570
+INFO: [Opt 31-389] Phase Sweep created 12 cells and removed 1677 cells
+INFO: [Opt 31-1021] In phase Sweep, 2718 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG canteloupe_i/clk_wiz_1/inst/clk_out1_canteloupe_clk_wiz_1_0_BUFG_inst to drive 0 load(s) on clock net canteloupe_i/clk_wiz_1/inst/clk_out1_canteloupe_clk_wiz_1_0_BUFG
+INFO: [Opt 31-194] Inserted BUFG canteloupe_i/clk_wiz_1/inst/clk_out2_canteloupe_clk_wiz_1_0_BUFG_inst to drive 0 load(s) on clock net canteloupe_i/clk_wiz_1/inst/clk_out2_canteloupe_clk_wiz_1_0_BUFG
+INFO: [Opt 31-194] Inserted BUFG canteloupe_i/clk_wiz_1/inst/clk_out3_canteloupe_clk_wiz_1_0_BUFG_inst to drive 0 load(s) on clock net canteloupe_i/clk_wiz_1/inst/clk_out3_canteloupe_clk_wiz_1_0_BUFG
+INFO: [Opt 31-194] Inserted BUFG canteloupe_i/clk_wiz_1/inst/clk_out4_canteloupe_clk_wiz_1_0_BUFG_inst to drive 0 load(s) on clock net canteloupe_i/clk_wiz_1/inst/clk_out4_canteloupe_clk_wiz_1_0_BUFG
+INFO: [Opt 31-193] Inserted 4 BUFG(s) on clock nets
+Phase 5 BUFG optimization | Checksum: 236536ecd
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:03:38 . Memory (MB): peak = 1827.969 ; gain = 155.570
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 6 Shift Register Optimization
+Phase 6 Shift Register Optimization | Checksum: 2955c5ed1
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:03:42 . Memory (MB): peak = 1827.969 ; gain = 155.570
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 7 Post Processing Netlist
+Phase 7 Post Processing Netlist | Checksum: 26e426237
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:03:43 . Memory (MB): peak = 1827.969 ; gain = 155.570
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 76 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             314  |             520  |                                            436  |
+|  Constant propagation         |             247  |             814  |                                            390  |
+|  Sweep                        |              12  |            1677  |                                           2718  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             76  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.140 . Memory (MB): peak = 1827.969 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 283f29f50
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:03:43 . Memory (MB): peak = 1827.969 ; gain = 155.570
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.764 | TNS=-115.440 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 3 BRAM(s) out of a total of 38 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 12 newly gated: 0 Total Ports: 76
+Ending PowerOpt Patch Enables Task | Checksum: 1c996df58
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.433 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1c996df58
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:18 . Memory (MB): peak = 2503.453 ; gain = 675.484
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 12f78bf79
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 12f78bf79
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 12f78bf79
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2503.453 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+105 Infos, 50 Warnings, 24 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:16 ; elapsed = 00:04:13 . Memory (MB): peak = 2503.453 ; gain = 858.379
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2503.453 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.085 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 2503.453 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2503.453 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file canteloupe_wrapper_drc_opted.rpt -pb canteloupe_wrapper_drc_opted.pb -rpx canteloupe_wrapper_drc_opted.rpx
+Command: report_drc -file canteloupe_wrapper_drc_opted.rpt -pb canteloupe_wrapper_drc_opted.pb -rpx canteloupe_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[10] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[7]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[11] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[8]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[12] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[9]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[13] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[10]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[14] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[11]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[3] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[0]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[4] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[1]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[5] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[2]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[6] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[3]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[7] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[4]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[8] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[5]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[9] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[6]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[10] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[7]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[11] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[8]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[12] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[9]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[13] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[10]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[14] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[11]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[7] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[4]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[8] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[5]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[9] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[6]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 21 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: bd05e582
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_tx_en_obuf_reg'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_tx_er_obuf_reg'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_txd_obuf_reg[0]'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_txd_obuf_reg[1]'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_txd_obuf_reg[2]'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_txd_obuf_reg[3]'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/rx_dv_to_mac_reg'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/rx_er_to_mac_reg'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/rxd_to_mac_reg[0]'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/rxd_to_mac_reg[1]'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/rxd_to_mac_reg[2]'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/rxd_to_mac_reg[3]'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 10cfa7db7
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 9f49a253
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 9f49a253
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 9f49a253
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 132483fb2
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |            0  |              0  |                     0  |           0  |           5  |  00:00:00  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 167a0a198
+
+Time (s): cpu = 00:01:27 ; elapsed = 00:01:03 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 140fa5a7f
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:01:04 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 140fa5a7f
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:01:04 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 62900f03
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:11 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: e546e748
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:11 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1574face9
+
+Time (s): cpu = 00:01:40 ; elapsed = 00:01:11 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 112f65df5
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:16 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+
+Phase 3.6.1 Place Remaining
+Phase 3.6.1 Place Remaining | Checksum: 16c39081b
+
+Time (s): cpu = 00:02:05 ; elapsed = 00:01:34 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Phase 3.6 Small Shape Detail Placement | Checksum: 16c39081b
+
+Time (s): cpu = 00:02:05 ; elapsed = 00:01:34 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 10d41243a
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:01:37 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: c557deaf
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:01:37 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: f1981269
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:43 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: f1981269
+
+Time (s): cpu = 00:02:19 ; elapsed = 00:01:44 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 138ad6d7c
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-33] Processed net canteloupe_i/two_dimension_dct_0/inst/FSM_onehot_r_core_state[0]_i_1_n_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net canteloupe_i/quantizer_0/inst/FSM_onehot_r_core_state[0]_rep_i_1__0_n_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net canteloupe_i/two_dimension_dct_0/inst/transpose_0/s3_n0/r_o_enable_reg_0[0], BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-46] BUFG insertion identified 3 candidate nets, 0 success, 0 bufg driver replicated, 3 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
+Phase 4.1.1.1 BUFG Insertion | Checksum: 138ad6d7c
+
+Time (s): cpu = 00:02:33 ; elapsed = 00:01:54 . Memory (MB): peak = 2503.453 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-1.732. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1e5e9b61a
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:02:37 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1e5e9b61a
+
+Time (s): cpu = 00:03:20 ; elapsed = 00:02:37 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1e5e9b61a
+
+Time (s): cpu = 00:03:20 ; elapsed = 00:02:38 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1e5e9b61a
+
+Time (s): cpu = 00:03:21 ; elapsed = 00:02:38 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 244fa0b4c
+
+Time (s): cpu = 00:03:21 ; elapsed = 00:02:39 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 244fa0b4c
+
+Time (s): cpu = 00:03:21 ; elapsed = 00:02:39 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Ending Placer Task | Checksum: 181c5ac1f
+
+Time (s): cpu = 00:03:21 ; elapsed = 00:02:39 . Memory (MB): peak = 2503.453 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+140 Infos, 71 Warnings, 36 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:03:27 ; elapsed = 00:02:42 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2503.453 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:14 ; elapsed = 00:00:04 . Memory (MB): peak = 2503.453 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:21 ; elapsed = 00:00:10 . Memory (MB): peak = 2503.453 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_io -file canteloupe_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 2503.453 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file canteloupe_wrapper_utilization_placed.rpt -pb canteloupe_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file canteloupe_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.215 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC PLIO-6] Placement Constraints Check for IO constraints: Invalid constraint on register canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_tx_en_obuf_reg. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+WARNING: [DRC PLIO-6] Placement Constraints Check for IO constraints: Invalid constraint on register canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_tx_er_obuf_reg. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+WARNING: [DRC PLIO-6] Placement Constraints Check for IO constraints: Invalid constraint on register canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_txd_obuf_reg[0]. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+WARNING: [DRC PLIO-6] Placement Constraints Check for IO constraints: Invalid constraint on register canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_txd_obuf_reg[1]. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+WARNING: [DRC PLIO-6] Placement Constraints Check for IO constraints: Invalid constraint on register canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_txd_obuf_reg[2]. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+WARNING: [DRC PLIO-6] Placement Constraints Check for IO constraints: Invalid constraint on register canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/mii_txd_obuf_reg[3]. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+WARNING: [DRC PLIO-6] Placement Constraints Check for IO constraints: Invalid constraint on register canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/rx_dv_to_mac_reg. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+WARNING: [DRC PLIO-6] Placement Constraints Check for IO constraints: Invalid constraint on register canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/rx_er_to_mac_reg. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+WARNING: [DRC PLIO-6] Placement Constraints Check for IO constraints: Invalid constraint on register canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/rxd_to_mac_reg[0]. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+WARNING: [DRC PLIO-6] Placement Constraints Check for IO constraints: Invalid constraint on register canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/rxd_to_mac_reg[1]. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+WARNING: [DRC PLIO-6] Placement Constraints Check for IO constraints: Invalid constraint on register canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/rxd_to_mac_reg[2]. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+WARNING: [DRC PLIO-6] Placement Constraints Check for IO constraints: Invalid constraint on register canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_interface/rxd_to_mac_reg[3]. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 12 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: d396027b ConstDB: 0 ShapeSum: ae2fa9a4 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: f1a9d34b
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 31ef6382 NumContArr: bfba6fc9 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: f1a9d34b
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: f1a9d34b
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:34 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: f1a9d34b
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:35 . Memory (MB): peak = 2503.453 ; gain = 0.000
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1b3adfcb7
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:46 . Memory (MB): peak = 2503.453 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.595 | TNS=-66.912| WHS=-1.998 | THS=-880.722|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 22746015b
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:54 . Memory (MB): peak = 2503.453 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.595 | TNS=-66.760| WHS=N/A    | THS=N/A    |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: 1e7b7e3df
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:54 . Memory (MB): peak = 2503.453 ; gain = 0.000
+Phase 2 Router Initialization | Checksum: 18a59c898
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:54 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 175a7aa26
+
+Time (s): cpu = 00:01:27 ; elapsed = 00:01:01 . Memory (MB): peak = 2503.453 ; gain = 0.000
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 3890
+ Number of Nodes with overlaps = 255
+ Number of Nodes with overlaps = 16
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.545 | TNS=-85.377| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 149c16157
+
+Time (s): cpu = 00:02:32 ; elapsed = 00:01:52 . Memory (MB): peak = 2535.398 ; gain = 31.945
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 15
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.533 | TNS=-83.754| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 52624b49
+
+Time (s): cpu = 00:03:04 ; elapsed = 00:02:19 . Memory (MB): peak = 2544.316 ; gain = 40.863
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.725 | TNS=-90.013| WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 2143fb699
+
+Time (s): cpu = 00:03:26 ; elapsed = 00:02:41 . Memory (MB): peak = 2544.316 ; gain = 40.863
+Phase 4 Rip-up And Reroute | Checksum: 2143fb699
+
+Time (s): cpu = 00:03:26 ; elapsed = 00:02:41 . Memory (MB): peak = 2544.316 ; gain = 40.863
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 18ac47ac0
+
+Time (s): cpu = 00:03:28 ; elapsed = 00:02:43 . Memory (MB): peak = 2544.316 ; gain = 40.863
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.533 | TNS=-83.754| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 136e2dd3d
+
+Time (s): cpu = 00:03:29 ; elapsed = 00:02:43 . Memory (MB): peak = 2544.316 ; gain = 40.863
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 136e2dd3d
+
+Time (s): cpu = 00:03:29 ; elapsed = 00:02:43 . Memory (MB): peak = 2544.316 ; gain = 40.863
+Phase 5 Delay and Skew Optimization | Checksum: 136e2dd3d
+
+Time (s): cpu = 00:03:30 ; elapsed = 00:02:44 . Memory (MB): peak = 2544.316 ; gain = 40.863
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 14d562db8
+
+Time (s): cpu = 00:03:33 ; elapsed = 00:02:45 . Memory (MB): peak = 2544.316 ; gain = 40.863
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.533 | TNS=-83.754| WHS=-0.507 | THS=-5.762 |
+
+Phase 6.1 Hold Fix Iter | Checksum: 14b5b10bc
+
+Time (s): cpu = 00:03:33 ; elapsed = 00:02:46 . Memory (MB): peak = 2544.316 ; gain = 40.863
+
+Phase 6.2 Additional Hold Fix
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.533 | TNS=-83.754| WHS=0.049  | THS=0.000  |
+
+Phase 6.2 Additional Hold Fix | Checksum: 169371851
+
+Time (s): cpu = 00:03:36 ; elapsed = 00:02:48 . Memory (MB): peak = 2544.316 ; gain = 40.863
+WARNING: [Route 35-468] The router encountered 8 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
+	canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_axis_fifo_tready_INST_0/I2
+	canteloupe_i/frame_generator_cust_0/inst/tx_fifo_TVALID_INST_0/I2
+	canteloupe_i/frame_generator_cust_0/inst/r_tx_fifo_tdata[5]_i_4/I2
+	canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/wr_data_pipe_reg[0][2]/D
+	canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/wr_eof_pipe[0]_i_1/I1
+	canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/wr_ovflow_dst_rdy_i_1/I1
+	canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_axis_fifo_tready_INST_0/I3
+	canteloupe_i/frame_generator_cust_0/inst/r_tx_fifo_tdata_reg[2]/CE
+
+Phase 6 Post Hold Fix | Checksum: ee68a1d0
+
+Time (s): cpu = 00:03:37 ; elapsed = 00:02:49 . Memory (MB): peak = 2544.316 ; gain = 40.863
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 5.99473 %
+  Global Horizontal Routing Utilization  = 8.04469 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 50.4505%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 56.7568%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 66.1765%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 64.7059%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 173b0fb53
+
+Time (s): cpu = 00:03:37 ; elapsed = 00:02:49 . Memory (MB): peak = 2544.316 ; gain = 40.863
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 173b0fb53
+
+Time (s): cpu = 00:03:37 ; elapsed = 00:02:49 . Memory (MB): peak = 2544.316 ; gain = 40.863
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 193c90fbd
+
+Time (s): cpu = 00:03:41 ; elapsed = 00:02:54 . Memory (MB): peak = 2544.316 ; gain = 40.863
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-1.533 | TNS=-83.754| WHS=0.049  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 193c90fbd
+
+Time (s): cpu = 00:03:42 ; elapsed = 00:02:54 . Memory (MB): peak = 2544.316 ; gain = 40.863
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:03:42 ; elapsed = 00:02:54 . Memory (MB): peak = 2544.316 ; gain = 40.863
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+161 Infos, 85 Warnings, 36 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:49 ; elapsed = 00:02:58 . Memory (MB): peak = 2544.316 ; gain = 40.863
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 2544.316 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.042 . Memory (MB): peak = 2544.316 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:17 ; elapsed = 00:00:05 . Memory (MB): peak = 2544.316 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:22 ; elapsed = 00:00:10 . Memory (MB): peak = 2544.316 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file canteloupe_wrapper_drc_routed.rpt -pb canteloupe_wrapper_drc_routed.pb -rpx canteloupe_wrapper_drc_routed.rpx
+Command: report_drc -file canteloupe_wrapper_drc_routed.rpt -pb canteloupe_wrapper_drc_routed.pb -rpx canteloupe_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 2544.316 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_methodology -file canteloupe_wrapper_methodology_drc_routed.rpt -pb canteloupe_wrapper_methodology_drc_routed.pb -rpx canteloupe_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file canteloupe_wrapper_methodology_drc_routed.rpt -pb canteloupe_wrapper_methodology_drc_routed.pb -rpx canteloupe_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 2634.910 ; gain = 90.594
+INFO: [runtcl-4] Executing : report_power -file canteloupe_wrapper_power_routed.rpt -pb canteloupe_wrapper_power_summary_routed.pb -rpx canteloupe_wrapper_power_routed.rpx
+Command: report_power -file canteloupe_wrapper_power_routed.rpt -pb canteloupe_wrapper_power_summary_routed.pb -rpx canteloupe_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+173 Infos, 86 Warnings, 36 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2686.758 ; gain = 51.848
+INFO: [runtcl-4] Executing : report_route_status -file canteloupe_wrapper_route_status.rpt -pb canteloupe_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file canteloupe_wrapper_timing_summary_routed.rpt -pb canteloupe_wrapper_timing_summary_routed.pb -rpx canteloupe_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file canteloupe_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file canteloupe_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file canteloupe_wrapper_bus_skew_routed.rpt -pb canteloupe_wrapper_bus_skew_routed.pb -rpx canteloupe_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 31 03:34:45 2021...
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Wed Mar 31 03:35:19 2021
+# Process ID: 7820
+# Current directory: C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1
+# Command line: vivado.exe -log canteloupe_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source canteloupe_wrapper.tcl -notrace
+# Log file: C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper.vdi
+# Journal file: C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source canteloupe_wrapper.tcl -notrace
+Command: open_checkpoint canteloupe_wrapper_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 247.582 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2285 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3.1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rx_clk' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rx_dv' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rx_er' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rxd[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rxd[1]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rxd[2]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rxd[3]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_tx_clk' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_tx_en' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_tx_en' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_tx_er' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_tx_er' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[0]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[1]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[2]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[3]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'canteloupe_i/tri_mode_ethernet_ma_1/mii_txd[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1584.070 ; gain = 40.238
+Restored from archive | CPU: 5.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1584.070 ; gain = 40.238
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1584.070 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 822 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 380 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT, IBUFDS_INTERMDISABLE_INT, INV, OBUFTDS, OBUFTDS): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 74 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 32 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 150 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 14 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 139 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 11 instances
+  SRLC16E => SRL16E: 1 instances
+  SRLC32E => SRL16E: 1 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2018.3.1 (64-bit) build 2489853
+open_checkpoint: Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1584.070 ; gain = 1336.488
+INFO: [Memdata 28-208] The XPM instance: <canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/gtxd.COMP_TXD_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/COMP_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <canteloupe_i/axi_fifo_mm_s_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-167] Found XPM memory block canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/grxd.COMP_rx_len_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/grxd.COMP_rx_len_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+INFO: [Memdata 28-208] The XPM instance: <canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/grxd.COMP_RX_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/COMP_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <canteloupe_i/axi_fifo_mm_s_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+Command: write_bitstream -force canteloupe_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+CRITICAL WARNING: [Vivado 12-1790] Evaluation License Warning: This design contains one or more IP cores that use separately licensed features. If the design has been configured to make use of evaluation features, please note that these features will cease to function after a certain period of time. Please consult the core datasheet to determine whether the core which you have configured will be affected. Evaluation features should NOT be used in production systems.
+
+Evaluation cores found in this design:
+    IP core 'tri_mode_ethernet_mac_2' (tri_mode_ethernet_mac_2_block) was generated with multiple features:
+        IP feature 'eth_avb_endpoint@2015.04' was enabled using a design_linking license.
+        IP feature 'tri_mode_eth_mac@2015.04' was enabled using a bought license.
+
+Resolution: If a new IP Core license was added, in order for the new license to be picked up, the current netlist needs to be updated by resetting and re-generating the IP output products before bitstream generation.
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/DESL/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/quantizer_0/inst/dsp_mul_0/r_mul_reg_reg multiplier stage canteloupe_i/quantizer_0/inst/dsp_mul_0/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/quantizer_0/inst/dsp_mul_1/r_mul_reg_reg multiplier stage canteloupe_i/quantizer_0/inst/dsp_mul_1/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/quantizer_0/inst/dsp_mul_2/r_mul_reg_reg multiplier stage canteloupe_i/quantizer_0/inst/dsp_mul_2/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/quantizer_0/inst/dsp_mul_3/r_mul_reg_reg multiplier stage canteloupe_i/quantizer_0/inst/dsp_mul_3/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/quantizer_0/inst/dsp_mul_4/r_mul_reg_reg multiplier stage canteloupe_i/quantizer_0/inst/dsp_mul_4/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/quantizer_0/inst/dsp_mul_5/r_mul_reg_reg multiplier stage canteloupe_i/quantizer_0/inst/dsp_mul_5/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/quantizer_0/inst/dsp_mul_6/r_mul_reg_reg multiplier stage canteloupe_i/quantizer_0/inst/dsp_mul_6/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/quantizer_0/inst/dsp_mul_7/r_mul_reg_reg multiplier stage canteloupe_i/quantizer_0/inst/dsp_mul_7/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_add_0/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_add_0/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_add_1/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_add_1/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_add_2/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_add_2/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_add_3/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_add_3/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_sub_0/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_sub_0/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_sub_1/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_sub_1/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_sub_2/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_sub_2/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_sub_3/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_0/dsp_sub_3/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_add_0/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_add_0/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_add_1/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_add_1/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_add_2/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_add_2/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_add_3/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_add_3/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_sub_0/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_sub_0/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_sub_1/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_sub_1/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_sub_2/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_sub_2/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_sub_3/r_mul_reg_reg multiplier stage canteloupe_i/two_dimension_dct_0/inst/dct_1/dsp_sub_3/r_mul_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC REQP-1709] Clock output buffering: PLLE2_ADV connectivity violation. The signal canteloupe_i/mig_7series_0/u_canteloupe_mig_7series_0_0_mig/u_ddr2_infrastructure/pll_clk3_out on the canteloupe_i/mig_7series_0/u_canteloupe_mig_7series_0_0_mig/u_ddr2_infrastructure/plle2_i/CLKOUT3 pin of canteloupe_i/mig_7series_0/u_canteloupe_mig_7series_0_0_mig/u_ddr2_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[10] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[7]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[11] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[8]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[12] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[9]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[13] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[10]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[14] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[11]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[3] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[0]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[4] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[1]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[5] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[2]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[6] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[3]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[7] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[4]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[8] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[5]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRARDADDR[9] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/ADDRARDADDR[6]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top1/write_address_int_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[10] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[7]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[11] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[8]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[12] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[9]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[13] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[10]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[14] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[11]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[7] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[4]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[8] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[5]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg has an input control pin canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/mem_reg/ADDRBWRADDR[9] (net: canteloupe_i/frame_generator_cust_0/inst/mem/top3/tx_ramgen_i/out[6]) which is driven by a register (canteloupe_i/frame_generator_cust_0/inst/mem/top2/read_address_int_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC RTSTAT-10] No routable loads: 52 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], canteloupe_i/tri_mode_ethernet_ma_1/inst/tx_stats_sync/data_out, canteloupe_i/tri_mode_ethernet_ma_1/inst/rx_stats_sync/data_out, dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[0], canteloupe_i/tri_mode_ethernet_ma_1/inst/example_resets/chk_reset_gen/reset_out... and (the first 15 of 50 listed).
+INFO: [DRC REQP-181] writefirst: Synchronous clocking is detected for BRAM (canteloupe_i/axi_fifo_mm_s_0/U0/COMP_IPIC2AXI_S/grxd.COMP_RX_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/COMP_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 48 Warnings, 1 Advisories
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_0/data/mb_bootloop_le.elf 
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./canteloupe_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-83] Releasing license: Implementation
+27 Infos, 68 Warnings, 1 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:58 ; elapsed = 00:00:43 . Memory (MB): peak = 2160.715 ; gain = 576.645
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 31 03:36:41 2021...

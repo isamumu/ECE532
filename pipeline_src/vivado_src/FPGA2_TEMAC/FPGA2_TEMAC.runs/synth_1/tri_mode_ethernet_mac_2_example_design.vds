@@ -1,0 +1,1183 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Wed Mar 31 05:53:03 2021
+# Process ID: 8544
+# Current directory: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1
+# Command line: vivado.exe -log tri_mode_ethernet_mac_2_example_design.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tri_mode_ethernet_mac_2_example_design.tcl
+# Log file: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/tri_mode_ethernet_mac_2_example_design.vds
+# Journal file: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source tri_mode_ethernet_mac_2_example_design.tcl -notrace
+Command: synth_design -top tri_mode_ethernet_mac_2_example_design -part xc7a100tcsg324-1
+Starting synth_design
+INFO: [IP_Flow 19-5177] IP tri_mode_ethernet_mac_2 will be generated with higher license level.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6620 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 482.762 ; gain = 111.633
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_example_design' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:133]
+INFO: [Synth 8-6157] synthesizing module 'vio_0' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/.Xil/Vivado-8544-BA3145WS01/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vio_0' (1#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/.Xil/Vivado-8544-BA3145WS01/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/.Xil/Vivado-8544-BA3145WS01/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/.Xil/Vivado-8544-BA3145WS01/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mii_to_rmii_0' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/.Xil/Vivado-8544-BA3145WS01/realtime/mii_to_rmii_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mii_to_rmii_0' (3#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/.Xil/Vivado-8544-BA3145WS01/realtime/mii_to_rmii_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_example_design_resets' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design_resets.v:54]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_sync_block' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_sync_block.v:63]
+	Parameter INITIALISE bound to: 1'b0 
+	Parameter DEPTH bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (4#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_sync_block' (5#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_sync_block.v:63]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_reset_sync' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_reset_sync.v:66]
+	Parameter INITIALISE bound to: 1'b1 
+	Parameter DEPTH bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FDPE' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3911]
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'FDPE' (6#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3911]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_reset_sync' (7#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_reset_sync.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_example_design_resets' (8#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design_resets.v:54]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_axi_lite_sm' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_axi_lite_sm.v:64]
+	Parameter STARTUP bound to: 0 - type: integer 
+	Parameter UPDATE_SPEED bound to: 1 - type: integer 
+	Parameter MDIO_RD bound to: 2 - type: integer 
+	Parameter MDIO_POLL_CHECK bound to: 3 - type: integer 
+	Parameter MDIO_1G bound to: 4 - type: integer 
+	Parameter MDIO_10_100 bound to: 5 - type: integer 
+	Parameter MDIO_RESTART bound to: 12 - type: integer 
+	Parameter MDIO_LOOPBACK bound to: 13 - type: integer 
+	Parameter MDIO_STATS bound to: 14 - type: integer 
+	Parameter MDIO_STATS_POLL_CHECK bound to: 15 - type: integer 
+	Parameter RESET_MAC_TX bound to: 16 - type: integer 
+	Parameter RESET_MAC_RX bound to: 17 - type: integer 
+	Parameter CNFG_MDIO bound to: 18 - type: integer 
+	Parameter CNFG_FLOW bound to: 19 - type: integer 
+	Parameter CNFG_FILTER bound to: 22 - type: integer 
+	Parameter CNFG_FRM_FILTER_1 bound to: 31 - type: integer 
+	Parameter CNFG_FRM_FILTER_2 bound to: 32 - type: integer 
+	Parameter CNFG_FRM_FILTER_3 bound to: 33 - type: integer 
+	Parameter CNFG_FRM_FILTER_MASK_1 bound to: 34 - type: integer 
+	Parameter CNFG_FRM_FILTER_MASK_2 bound to: 35 - type: integer 
+	Parameter CNFG_FRM_FILTER_MASK_3 bound to: 36 - type: integer 
+	Parameter CHECK_SPEED bound to: 25 - type: integer 
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter SET_DATA bound to: 1 - type: integer 
+	Parameter INIT bound to: 32'sb00000000000000000000000000000010 
+	Parameter POLL bound to: 3 - type: integer 
+	Parameter READ bound to: 1 - type: integer 
+	Parameter WRITE bound to: 2 - type: integer 
+	Parameter DONE bound to: 3 - type: integer 
+	Parameter CONFIG_MANAGEMENT_ADD bound to: 17'b00000010100000000 
+	Parameter CONFIG_FLOW_CTRL_ADD bound to: 17'b00000010000001100 
+	Parameter RECEIVER_ADD bound to: 17'b00000010000000100 
+	Parameter TRANSMITTER_ADD bound to: 17'b00000010000001000 
+	Parameter SPEED_CONFIG_ADD bound to: 17'b00000010000010000 
+	Parameter CONFIG_UNI0_CTRL_ADD bound to: 17'b00000011100000000 
+	Parameter CONFIG_UNI1_CTRL_ADD bound to: 17'b00000011100000100 
+	Parameter CONFIG_ADDR_CTRL_ADD bound to: 17'b00000011100001000 
+	Parameter CONFIG_FRAME_FILTER_1 bound to: 17'b00000011100010000 
+	Parameter CONFIG_FRAME_FILTER_2 bound to: 17'b00000011100010100 
+	Parameter CONFIG_FRAME_FILTER_3 bound to: 17'b00000011100011000 
+	Parameter CONFIG_FRAME_FILTER_MASK_1 bound to: 17'b00000011101010000 
+	Parameter CONFIG_FRAME_FILTER_MASK_2 bound to: 17'b00000011101010100 
+	Parameter CONFIG_FRAME_FILTER_MASK_3 bound to: 17'b00000011101011000 
+	Parameter MDIO_CONTROL bound to: 17'b00000010100000100 
+	Parameter MDIO_TX_DATA bound to: 17'b00000010100001000 
+	Parameter MDIO_RX_DATA bound to: 17'b00000010100001100 
+	Parameter MDIO_OP_RD bound to: 2'b10 
+	Parameter MDIO_OP_WR bound to: 2'b01 
+	Parameter PHY_ADDR bound to: 8'b00000111 
+	Parameter PHY_CONTROL_REG bound to: 8'b00000000 
+	Parameter PHY_STATUS_REG bound to: 8'b00000001 
+	Parameter PHY_ABILITY_REG bound to: 8'b00000100 
+	Parameter PHY_1000BASET_CONTROL_REG bound to: 8'b00001001 
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_axi_lite_sm' (9#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_axi_lite_sm.v:64]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_fifo_block' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_fifo_block.v:89]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_support' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_support.v:66]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/.Xil/Vivado-8544-BA3145WS01/realtime/tri_mode_ethernet_mac_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2' (10#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/.Xil/Vivado-8544-BA3145WS01/realtime/tri_mode_ethernet_mac_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_support' (11#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_support.v:66]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_ten_100_1g_eth_fifo' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_ten_100_1g_eth_fifo.v:71]
+	Parameter FULL_DUPLEX_ONLY bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_tx_client_fifo' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_tx_client_fifo.v:100]
+	Parameter FULL_DUPLEX_ONLY bound to: 1 - type: integer 
+	Parameter IDLE_s bound to: 4'b0000 
+	Parameter QUEUE1_s bound to: 4'b0001 
+	Parameter QUEUE2_s bound to: 4'b0010 
+	Parameter QUEUE3_s bound to: 4'b0011 
+	Parameter START_DATA1_s bound to: 4'b0100 
+	Parameter DATA_PRELOAD1_s bound to: 4'b0101 
+	Parameter DATA_PRELOAD2_s bound to: 4'b0110 
+	Parameter WAIT_HANDSHAKE_s bound to: 4'b0111 
+	Parameter FRAME_s bound to: 4'b1000 
+	Parameter HANDSHAKE_s bound to: 4'b1001 
+	Parameter FINISH_s bound to: 4'b1010 
+	Parameter DROP_ERR_s bound to: 4'b1011 
+	Parameter DROP_s bound to: 4'b1100 
+	Parameter RETRANSMIT_ERR_s bound to: 4'b1101 
+	Parameter RETRANSMIT_WAIT_s bound to: 4'b1110 
+	Parameter RETRANSMIT_s bound to: 4'b1111 
+	Parameter WAIT_s bound to: 2'b00 
+	Parameter DATA_s bound to: 2'b01 
+	Parameter EOF_s bound to: 2'b10 
+	Parameter OVFLOW_s bound to: 2'b11 
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_tx_client_fifo.v:248]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_tx_client_fifo.v:270]
+INFO: [Synth 8-226] default block is never used [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_tx_client_fifo.v:324]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_bram_tdp' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_bram_tdp.v:66]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter RAM_DEPTH bound to: 4096 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_bram_tdp' (12#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_bram_tdp.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_tx_client_fifo' (13#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_tx_client_fifo.v:100]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_rx_client_fifo' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_rx_client_fifo.v:111]
+	Parameter WAIT_s bound to: 3'b000 
+	Parameter QUEUE1_s bound to: 3'b001 
+	Parameter QUEUE2_s bound to: 3'b010 
+	Parameter QUEUE3_s bound to: 3'b011 
+	Parameter QUEUE_SOF_s bound to: 3'b100 
+	Parameter SOF_s bound to: 3'b101 
+	Parameter DATA_s bound to: 3'b110 
+	Parameter EOF_s bound to: 3'b111 
+	Parameter IDLE_s bound to: 3'b000 
+	Parameter FRAME_s bound to: 3'b001 
+	Parameter GF_s bound to: 3'b010 
+	Parameter BF_s bound to: 3'b011 
+	Parameter OVFLOW_s bound to: 3'b100 
+INFO: [Synth 8-226] default block is never used [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_rx_client_fifo.v:255]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_rx_client_fifo' (14#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_rx_client_fifo.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_ten_100_1g_eth_fifo' (15#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_ten_100_1g_eth_fifo.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_fifo_block' (16#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_fifo_block.v:89]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_basic_pat_gen' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_basic_pat_gen.v:67]
+	Parameter DEST_ADDR bound to: 48'b010110100010001000110011010001000101010101100110 
+	Parameter SRC_ADDR bound to: 48'b110110100000001000000011000001000000010100000110 
+	Parameter MAX_SIZE bound to: 16'b0000000111110100 
+	Parameter MIN_SIZE bound to: 16'b0000000001000000 
+	Parameter ENABLE_VLAN bound to: 1'b0 
+	Parameter VLAN_ID bound to: 12'b000000000010 
+	Parameter VLAN_PRIORITY bound to: 3'b010 
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_axi_pat_gen' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_axi_pat_gen.v:66]
+	Parameter DEST_ADDR bound to: 48'b010110100010001000110011010001000101010101100110 
+	Parameter SRC_ADDR bound to: 48'b110110100000001000000011000001000000010100000110 
+	Parameter MAX_SIZE bound to: 16'b0000000111110100 
+	Parameter MIN_SIZE bound to: 16'b0000000001000000 
+	Parameter ENABLE_VLAN bound to: 1'b0 
+	Parameter VLAN_ID bound to: 12'b000000000010 
+	Parameter VLAN_PRIORITY bound to: 3'b010 
+	Parameter IDLE bound to: 3'b000 
+	Parameter HEADER bound to: 3'b001 
+	Parameter SIZE bound to: 3'b010 
+	Parameter DATA bound to: 3'b011 
+	Parameter OVERHEAD bound to: 3'b100 
+	Parameter PKT_ADJUST bound to: 18 - type: integer 
+	Parameter VLAN_HEADER bound to: -2130690046 - type: integer 
+	Parameter HEADER_LENGTH bound to: 11 - type: integer 
+	Parameter BW_1G bound to: 230 - type: integer 
+	Parameter BW_100M bound to: 23 - type: integer 
+	Parameter BW_10M bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'LUT6' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000001010100010100 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6' (17#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized0' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000001000100111100111 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized0' (17#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized1' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000000111000111000 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized1' (17#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized2' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000000000001000001 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized2' (17#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized3' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000000000001010101 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized3' (17#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized4' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000000000000100110 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized4' (17#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized5' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000100000001111001 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized5' (17#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized6' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000001000001000000 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized6' (17#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+WARNING: [Synth 8-567] referenced signal 'byte_count_eq_1' should be on the sensitivity list [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_axi_pat_gen.v:286]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_axi_pat_gen' (18#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_axi_pat_gen.v:66]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_axi_pat_check' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_axi_pat_check.v:61]
+	Parameter DEST_ADDR bound to: 48'b010110100010001000110011010001000101010101100110 
+	Parameter SRC_ADDR bound to: 48'b110110100000001000000011000001000000010100000110 
+	Parameter MAX_SIZE bound to: 16'b0000000111110100 
+	Parameter MIN_SIZE bound to: 16'b0000000001000000 
+	Parameter ENABLE_VLAN bound to: 1'b0 
+	Parameter VLAN_ID bound to: 12'b000000000010 
+	Parameter VLAN_PRIORITY bound to: 3'b010 
+	Parameter IDLE bound to: 2'b00 
+	Parameter INFO bound to: 2'b01 
+	Parameter LOOK bound to: 2'b10 
+	Parameter PKT bound to: 2'b11 
+	Parameter PKT_ADJUST bound to: 18 - type: integer 
+	Parameter VLAN_HEADER bound to: -2130690046 - type: integer 
+	Parameter HEADER_LENGTH bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized7' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000000010101000001 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized7' (18#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized8' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000000100110000000 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized8' (18#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized9' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000100111001000001 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized9' (18#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6157] synthesizing module 'LUT6__parameterized10' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000001000000000001 
+INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized10' (18#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26627]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_axi_pat_check' (19#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_axi_pat_check.v:61]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_axi_mux' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_axi_mux.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_axi_mux' (20#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_axi_mux.v:57]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_axi_pipe' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_axi_pipe.v:58]
+INFO: [Synth 8-6157] synthesizing module 'RAM64X1D' [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:45536]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter IS_WCLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'RAM64X1D' (21#1) [C:/DESL/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:45536]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_axi_pipe' (22#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_axi_pipe.v:58]
+INFO: [Synth 8-6157] synthesizing module 'tri_mode_ethernet_mac_2_address_swap' [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_address_swap.v:59]
+	Parameter IDLE bound to: 3'b000 
+	Parameter WAIT bound to: 3'b001 
+	Parameter READ_DEST bound to: 3'b010 
+	Parameter READ_SRC bound to: 3'b011 
+	Parameter READ_DEST2 bound to: 3'b100 
+	Parameter READ_SRC2 bound to: 3'b101 
+	Parameter READ bound to: 3'b110 
+	Parameter WRITE_SLOT1 bound to: 2'b01 
+	Parameter WRITE_SLOT2 bound to: 2'b10 
+	Parameter WRITE bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_address_swap.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_address_swap' (23#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_address_swap.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_basic_pat_gen' (24#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_basic_pat_gen.v:67]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio'. This will prevent further optimization [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:360]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'example_resets'. This will prevent further optimization [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:407]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'example_clocks'. This will prevent further optimization [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:362]
+WARNING: [Synth 8-6014] Unused sequential element rx_stats_reg was removed.  [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:453]
+WARNING: [Synth 8-6014] Unused sequential element rx_stats_toggle_sync_reg_reg was removed.  [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:466]
+WARNING: [Synth 8-6014] Unused sequential element rx_stats_shift_reg was removed.  [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:474]
+WARNING: [Synth 8-6014] Unused sequential element tx_stats_reg was removed.  [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:490]
+WARNING: [Synth 8-6014] Unused sequential element tx_stats_toggle_sync_reg_reg was removed.  [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:503]
+WARNING: [Synth 8-6014] Unused sequential element tx_stats_shift_reg was removed.  [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:511]
+INFO: [Synth 8-6155] done synthesizing module 'tri_mode_ethernet_mac_2_example_design' (25#1) [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:133]
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_2_tx_client_fifo has unconnected port tx_collision
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_2_tx_client_fifo has unconnected port tx_retransmit
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_2_axi_lite_sm has unconnected port s_axi_bresp[1]
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_2_axi_lite_sm has unconnected port s_axi_bresp[0]
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_2_axi_lite_sm has unconnected port s_axi_rresp[1]
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_2_axi_lite_sm has unconnected port s_axi_rresp[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 547.297 ; gain = 176.168
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 547.297 ; gain = 176.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 547.297 ; gain = 176.168
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'example_clocks'
+Finished Parsing XDC File [c:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'example_clocks'
+Parsing XDC File [c:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/tri_mode_ethernet_mac_2/tri_mode_ethernet_mac_2/tri_mode_ethernet_mac_2_in_context.xdc] for cell 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i'
+Finished Parsing XDC File [c:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/tri_mode_ethernet_mac_2/tri_mode_ethernet_mac_2/tri_mode_ethernet_mac_2_in_context.xdc] for cell 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i'
+Parsing XDC File [c:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'vio'
+Finished Parsing XDC File [c:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'vio'
+Parsing XDC File [c:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/mii_to_rmii_0/mii_to_rmii_0/mii_to_rmii_0_in_context.xdc] for cell 'mii_to_rmii'
+Finished Parsing XDC File [c:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/mii_to_rmii_0/mii_to_rmii_0/mii_to_rmii_0_in_context.xdc] for cell 'mii_to_rmii'
+Parsing XDC File [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc]
+WARNING: [Vivado 12-584] No ports matched 'config_board'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:112]
+WARNING: [Vivado 12-584] No ports matched 'pause_req_s'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:113]
+WARNING: [Vivado 12-584] No ports matched 'reset_error'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:114]
+WARNING: [Vivado 12-584] No ports matched 'mac_speed[0]'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:115]
+WARNING: [Vivado 12-584] No ports matched 'mac_speed[1]'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:116]
+WARNING: [Vivado 12-584] No ports matched 'gen_tx_data'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:117]
+WARNING: [Vivado 12-584] No ports matched 'chk_tx_data'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:118]
+WARNING: [Vivado 12-584] No ports matched 'pause_req*'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:125]
+WARNING: [Vivado 12-584] No ports matched 'frame_error'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:134]
+WARNING: [Vivado 12-584] No ports matched 'frame_errorn'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:135]
+WARNING: [Vivado 12-584] No ports matched 'serial_response'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:136]
+WARNING: [Vivado 12-584] No ports matched 'tx_statistics_s'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:137]
+WARNING: [Vivado 12-584] No ports matched 'rx_statistics_s'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:138]
+WARNING: [Vivado 12-508] No pins matched 'example_clocks/clock_generator/mmcm_adv_inst/CLKOUT1'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:139]
+WARNING: [Vivado 12-584] No ports matched 'phy_resetn'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:142]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name =~ tx_stats_reg[*]}'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:151]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name =~ tx_stats_shift_reg[*]}'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:151]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name =~ rx_stats_reg[*]}'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:152]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name =~ rx_stats_shift_reg[*]}'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:152]
+Finished Parsing XDC File [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/tri_mode_ethernet_mac_2_example_design_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/tri_mode_ethernet_mac_2_example_design_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/tri_mode_ethernet_mac_2_example_design_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/dont_touch.xdc]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 905.043 ; gain = 0.000
+Parsing XDC File [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc]
+WARNING: [Vivado 12-507] No nets matched 'example_clocks/gtx_clk'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc:39]
+WARNING: [Vivado 12-507] No nets matched 'example_clocks/refclk'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc:40]
+WARNING: [Vivado 12-507] No nets matched 'rmii2phy_txd_OBUF[0]'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc:42]
+WARNING: [Vivado 12-507] No nets matched 'rmii2phy_txd_OBUF[1]'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc:43]
+WARNING: [Vivado 12-507] No nets matched 'rmii2phy_tx_en_OBUF'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc:44]
+WARNING: [Vivado 12-507] No nets matched 'phy2rmii_rxd_IBUF[0]'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc:45]
+WARNING: [Vivado 12-507] No nets matched 'phy2rmii_rxd_IBUF[1]'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc:46]
+WARNING: [Vivado 12-507] No nets matched 'phy2rmii_crs_dv_IBUF'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc:47]
+WARNING: [Vivado 12-507] No nets matched 'example_clocks/saxi_aclk'. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc:56]
+Finished Parsing XDC File [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/tri_mode_ethernet_mac_2_example_design_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/tri_mode_ethernet_mac_2_example_design_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/tri_mode_ethernet_mac_2_example_design_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 905.043 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 905.043 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 18 instances were transformed.
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 18 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 905.043 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 905.043 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 905.043 ; gain = 533.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 905.043 ; gain = 533.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for mdc. (constraint file  c:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/tri_mode_ethernet_mac_2/tri_mode_ethernet_mac_2/tri_mode_ethernet_mac_2_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mdc. (constraint file  c:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/tri_mode_ethernet_mac_2/tri_mode_ethernet_mac_2/tri_mode_ethernet_mac_2_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for mdio. (constraint file  c:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/tri_mode_ethernet_mac_2/tri_mode_ethernet_mac_2/tri_mode_ethernet_mac_2_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mdio. (constraint file  c:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/tri_mode_ethernet_mac_2/tri_mode_ethernet_mac_2/tri_mode_ethernet_mac_2_in_context.xdc, line 8).
+Applied set_property MARK_DEBUG = true for mii_rxd[0]. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 13).
+Applied set_property MARK_DEBUG = true for mii_txd[0]. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 17).
+Applied set_property MARK_DEBUG = true for trimac_fifo_block/rx_axis_mac_tdata[0]. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 21).
+Applied set_property MARK_DEBUG = true for trimac_fifo_block/tx_axis_mac_tdata[0]. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 29).
+Applied set_property MARK_DEBUG = true for mii_tx_clk. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 48).
+Applied set_property MARK_DEBUG = true for mii_rx_clk. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 49).
+Applied set_property MARK_DEBUG = true for mii_rx_dv. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 50).
+Applied set_property MARK_DEBUG = true for mii_tx_en. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 51).
+Applied set_property MARK_DEBUG = true for refclk. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 54).
+Applied set_property MARK_DEBUG = true for gtx_clk_bufg. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 55).
+Applied set_property MARK_DEBUG = true for s_axi_aclk. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 58).
+Applied set_property MARK_DEBUG = true for chk_resetn. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 60).
+Applied set_property MARK_DEBUG = true for glbl_rst_intn. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 61).
+Applied set_property MARK_DEBUG = true for tx_fifo_resetn. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 62).
+Applied set_property MARK_DEBUG = true for s_axi_resetn. (constraint file  C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_user_phytiming.xdc, line 63).
+Applied set_property DONT_TOUCH = true for example_clocks. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vio. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mii_to_rmii. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 905.043 ; gain = 533.914
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'axi_state_reg' in module 'tri_mode_ethernet_mac_2_axi_lite_sm'
+INFO: [Synth 8-802] inferred FSM for state register 'mdio_access_sm_reg' in module 'tri_mode_ethernet_mac_2_axi_lite_sm'
+INFO: [Synth 8-5546] ROM "design_on_board" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "axi_access_sm" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "axi_access_sm" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_axi_arvalid" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "axi_status" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_axi_awvalid" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "axi_status" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5587] ROM size for "start_mdio" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "drive_mdio" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "design_on_board" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "axi_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "axi_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "axi_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_axi_awaddr" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mdio_access_sm" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_tx_client_fifo.v:1078]
+INFO: [Synth 8-802] inferred FSM for state register 'wr_state_reg' in module 'tri_mode_ethernet_mac_2_tx_client_fifo'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_state_reg' in module 'tri_mode_ethernet_mac_2_tx_client_fifo'
+INFO: [Synth 8-5544] ROM "tx_axis_mac_tdata_int0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tx_axis_mac_tvalid_int_finish" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tx_axis_mac_tvalid_int_droperr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tx_axis_mac_tvalid_int_retransmiterr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_txfer_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "wr_fifo_status" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "wr_addr_reload" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_eof_state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_rx_client_fifo.v:504]
+INFO: [Synth 8-802] inferred FSM for state register 'rd_state_reg' in module 'tri_mode_ethernet_mac_2_rx_client_fifo'
+INFO: [Synth 8-802] inferred FSM for state register 'wr_state_reg' in module 'tri_mode_ethernet_mac_2_rx_client_fifo'
+INFO: [Synth 8-5546] ROM "wr_fifo_status" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "rx_axis_fifo_tlast_int" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rx_axis_fifo_tvalid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_start_addr_load" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_store_frame_tog" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "fifo_overflow" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_nxt_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'trimac_sup_block'. This will prevent further optimization [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_fifo_block.v:219]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'user_side_FIFO'. This will prevent further optimization [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_fifo_block.v:335]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_axi_pat_gen.v:273]
+INFO: [Synth 8-802] inferred FSM for state register 'gen_state_reg' in module 'tri_mode_ethernet_mac_2_axi_pat_gen'
+INFO: [Synth 8-5544] ROM "byte_count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "overhead_count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "overhead_count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'tri_mode_ethernet_mac_2_axi_pat_check'
+INFO: [Synth 8-5544] ROM "sm_active" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_rx_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'wr_state_reg' in module 'tri_mode_ethernet_mac_2_address_swap'
+INFO: [Synth 8-5544] ROM "rd_count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_count_6" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_count_12" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "address_swap" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_count_6" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_count_12" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "address_swap" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_count" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_count" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_rd_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'mii_to_rmii'. This will prevent further optimization [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:376]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'trimac_fifo_block'. This will prevent further optimization [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:584]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'rx_stats_sync'. This will prevent further optimization [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:458]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'tx_stats_sync'. This will prevent further optimization [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:495]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'basic_pat_gen_inst'. This will prevent further optimization [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:683]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_lite_controller'. This will prevent further optimization [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design.v:548]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0010 |                               00
+                SET_DATA |                             1000 |                               01
+                    INIT |                             0100 |                               10
+                    POLL |                             0001 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mdio_access_sm_reg' using encoding 'one-hot' in module 'tri_mode_ethernet_mac_2_axi_lite_sm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 STARTUP |           0000000000000000000001 |                           000000
+            UPDATE_SPEED |           0000000000000000000010 |                           000001
+                 MDIO_RD |           0000000000000000000100 |                           000010
+         MDIO_POLL_CHECK |           0000000000000000001000 |                           000011
+                 MDIO_1G |           0000000000000000010000 |                           000100
+             MDIO_10_100 |           0000000000000000100000 |                           000101
+            MDIO_RESTART |           0000000000000001000000 |                           001100
+           MDIO_LOOPBACK |           0000000000000010000000 |                           001101
+              MDIO_STATS |           0000000000000100000000 |                           001110
+   MDIO_STATS_POLL_CHECK |           0000000000001000000000 |                           001111
+            RESET_MAC_RX |           0000000000010000000000 |                           010001
+            RESET_MAC_TX |           0000000000100000000000 |                           010000
+               CNFG_MDIO |           0000000001000000000000 |                           010010
+               CNFG_FLOW |           0000000010000000000000 |                           010011
+             CNFG_FILTER |           0000000100000000000000 |                           010110
+       CNFG_FRM_FILTER_1 |           0000001000000000000000 |                           011111
+  CNFG_FRM_FILTER_MASK_1 |           0000010000000000000000 |                           100010
+       CNFG_FRM_FILTER_2 |           0000100000000000000000 |                           100000
+  CNFG_FRM_FILTER_MASK_2 |           0001000000000000000000 |                           100011
+       CNFG_FRM_FILTER_3 |           0010000000000000000000 |                           100001
+  CNFG_FRM_FILTER_MASK_3 |           0100000000000000000000 |                           100100
+             CHECK_SPEED |           1000000000000000000000 |                           011001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'axi_state_reg' using encoding 'one-hot' in module 'tri_mode_ethernet_mac_2_axi_lite_sm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  IDLE_s |                             0000 |                             0000
+                QUEUE1_s |                             0001 |                             0001
+                QUEUE2_s |                             0010 |                             0010
+                QUEUE3_s |                             0011 |                             0011
+           START_DATA1_s |                             0100 |                             0100
+         DATA_PRELOAD1_s |                             0101 |                             0101
+                 FRAME_s |                             0110 |                             1000
+             HANDSHAKE_s |                             0111 |                             1001
+                FINISH_s |                             1000 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encoding 'sequential' in module 'tri_mode_ethernet_mac_2_tx_client_fifo'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  WAIT_s |                               01 |                               00
+                  DATA_s |                               11 |                               01
+                OVFLOW_s |                               00 |                               11
+                   EOF_s |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_state_reg' using encoding 'sequential' in module 'tri_mode_ethernet_mac_2_tx_client_fifo'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  WAIT_s |                         00000001 |                              000
+                QUEUE1_s |                         00000010 |                              001
+                QUEUE2_s |                         00000100 |                              010
+                QUEUE3_s |                         00001000 |                              011
+             QUEUE_SOF_s |                         00010000 |                              100
+                  DATA_s |                         00100000 |                              110
+                   EOF_s |                         01000000 |                              111
+                   SOF_s |                         10000000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encoding 'one-hot' in module 'tri_mode_ethernet_mac_2_rx_client_fifo'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  IDLE_s |                            00001 |                              000
+                 FRAME_s |                            00010 |                              001
+                OVFLOW_s |                            00100 |                              100
+                    GF_s |                            01000 |                              010
+                    BF_s |                            10000 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_state_reg' using encoding 'one-hot' in module 'tri_mode_ethernet_mac_2_rx_client_fifo'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                  HEADER |                              100 |                              001
+                    SIZE |                              011 |                              010
+                    DATA |                              010 |                              011
+                OVERHEAD |                              001 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_state_reg' using encoding 'sequential' in module 'tri_mode_ethernet_mac_2_axi_pat_gen'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               01 |                               00
+                    INFO |                               11 |                               01
+                    LOOK |                               10 |                               10
+                     PKT |                               00 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'sequential' in module 'tri_mode_ethernet_mac_2_axi_pat_check'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+           P_2A42C17C270 |                               00 |                               00
+           P_2A42C17CAE0 |                               01 |                               01
+           P_2A42C17C4E0 |                               10 |                               10
+           P_2A42C17C840 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_state_reg' using encoding 'sequential' in module 'tri_mode_ethernet_mac_2_address_swap'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 905.043 ; gain = 533.914
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 3     
+	   3 Input     12 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 5     
+	   2 Input      3 Bit       Adders := 4     
+	   3 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 5     
++---Registers : 
+	               37 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	               21 Bit    Registers := 1     
+	               19 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 11    
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 17    
+	                6 Bit    Registers := 4     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 7     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 109   
++---RAMs : 
+	              36K Bit         RAMs := 2     
++---Muxes : 
+	   2 Input     37 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 1     
+	  22 Input     32 Bit        Muxes := 1     
+	  22 Input     22 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 3     
+	  22 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 5     
+	   2 Input     12 Bit        Muxes := 11    
+	   5 Input     12 Bit        Muxes := 1     
+	  22 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 10    
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 8     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 22    
+	   3 Input      4 Bit        Muxes := 16    
+	   9 Input      4 Bit        Muxes := 12    
+	   2 Input      3 Bit        Muxes := 17    
+	   3 Input      3 Bit        Muxes := 3     
+	   8 Input      3 Bit        Muxes := 4     
+	   5 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 38    
+	   4 Input      2 Bit        Muxes := 14    
+	  22 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 108   
+	   4 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 4     
+	  22 Input      1 Bit        Muxes := 10    
+	   8 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 5     
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module tri_mode_ethernet_mac_2_example_design 
+Detailed RTL Component Info : 
++---Registers : 
+	               19 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
+Module tri_mode_ethernet_mac_2_example_design_resets 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
+Module tri_mode_ethernet_mac_2_axi_lite_sm 
+Detailed RTL Component Info : 
++---Registers : 
+	               37 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	               21 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 21    
++---Muxes : 
+	   2 Input     37 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 1     
+	  22 Input     32 Bit        Muxes := 1     
+	  22 Input     22 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 3     
+	  22 Input     17 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 10    
+	   5 Input     12 Bit        Muxes := 1     
+	  22 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	  22 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 29    
+	   4 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+	  22 Input      1 Bit        Muxes := 10    
+Module tri_mode_ethernet_mac_2_bram_tdp 
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 1     
++---RAMs : 
+	              36K Bit         RAMs := 1     
+Module tri_mode_ethernet_mac_2_tx_client_fifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 2     
+	   3 Input     12 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               12 Bit    Registers := 6     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 31    
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 21    
+	   3 Input      4 Bit        Muxes := 14    
+	   9 Input      4 Bit        Muxes := 12    
+	   2 Input      2 Bit        Muxes := 11    
+	   4 Input      2 Bit        Muxes := 7     
+	   3 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 31    
+	   4 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 3     
+Module tri_mode_ethernet_mac_2_rx_client_fifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               12 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 22    
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 5     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 3     
+	   8 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module tri_mode_ethernet_mac_2_axi_pat_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 12    
+	   5 Input      3 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 14    
+Module tri_mode_ethernet_mac_2_axi_pat_check 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 5     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   3 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 12    
+Module tri_mode_ethernet_mac_2_axi_mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module tri_mode_ethernet_mac_2_axi_pipe 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module tri_mode_ethernet_mac_2_address_swap 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 4     
+	   3 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 5     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   3 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 14    
+	   7 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "axi_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "design_on_board" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "address_swap_inst/rd_count_12" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "address_swap_inst/rd_count_6" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_2_ten_100_1g_eth_fifo has unconnected port tx_collision
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_2_ten_100_1g_eth_fifo has unconnected port tx_retransmit
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_2_axi_lite_sm has unconnected port s_axi_bresp[1]
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_2_axi_lite_sm has unconnected port s_axi_bresp[0]
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_2_axi_lite_sm has unconnected port s_axi_rresp[1]
+WARNING: [Synth 8-3331] design tri_mode_ethernet_mac_2_axi_lite_sm has unconnected port s_axi_rresp[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pause_shift_reg[0] )
+INFO: [Synth 8-3886] merging instance 'pause_shift_reg[1]' (FD) to 'pause_req_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pause_req_reg)
+INFO: [Synth 8-3886] merging instance 'axi_lite_controller/mdio_reg_addr_reg[1]' (FDRE) to 'axi_lite_controller/mdio_reg_addr_reg[4]'
+INFO: [Synth 8-3886] merging instance 'axi_lite_controller/mdio_reg_addr_reg[4]' (FDRE) to 'axi_lite_controller/mdio_reg_addr_reg[5]'
+INFO: [Synth 8-3886] merging instance 'axi_lite_controller/mdio_reg_addr_reg[5]' (FDRE) to 'axi_lite_controller/mdio_reg_addr_reg[6]'
+INFO: [Synth 8-3886] merging instance 'axi_lite_controller/mdio_reg_addr_reg[6]' (FDRE) to 'axi_lite_controller/mdio_reg_addr_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_lite_controller/\mdio_reg_addr_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (trimac_fifo_block/user_side_FIFO/\tx_fifo_i/tx_axis_mac_tuser_reg )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 905.043 ; gain = 533.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                       | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|tri_mode_ethernet_mac_2_bram_tdp: | mem_reg    | 4 K x 9(NO_CHANGE)     | W |   | 4 K x 9(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|tri_mode_ethernet_mac_2_bram_tdp: | mem_reg    | 4 K x 9(NO_CHANGE)     | W |   | 4 K x 9(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
+-------NONE-------
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'example_clocks/gtx_clk' to pin 'example_clocks/bbstub_gtx_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'example_clocks/refclk' to pin 'example_clocks/bbstub_refclk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'example_clocks/saxi_aclk' to pin 'example_clocks/bbstub_saxi_aclk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rx_clk' to pin 'mii_to_rmii/bbstub_rmii2mac_rx_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_tx_clk' to pin 'mii_to_rmii/bbstub_rmii2mac_tx_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/rx_mac_aclk' to pin 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/bbstub_rx_mac_aclk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/tx_mac_aclk' to pin 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/bbstub_tx_mac_aclk/O'
+WARNING: [Synth 8-3321] set_false_path : Empty from list for constraint at line 126 of C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:126]
+WARNING: [Synth 8-3321] set_false_path : Empty from list for constraint at line 127 of C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc. [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/constrs_1/imports/imports/tri_mode_ethernet_mac_2_example_design.xdc:127]
+INFO: [Synth 8-5819] Moved 7 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 905.043 ; gain = 533.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 905.043 ; gain = 533.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                       | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|tri_mode_ethernet_mac_2_bram_tdp: | mem_reg    | 4 K x 9(NO_CHANGE)     | W |   | 4 K x 9(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|tri_mode_ethernet_mac_2_bram_tdp: | mem_reg    | 4 K x 9(NO_CHANGE)     | W |   | 4 K x 9(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping  Report
+-------NONE-------
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 910.645 ; gain = 539.516
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_sync_block.v:84]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/imports/imports/tri_mode_ethernet_mac_2_example_design_resets.v:133]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 910.645 ; gain = 539.516
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 910.645 ; gain = 539.516
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 910.645 ; gain = 539.516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 910.645 ; gain = 539.516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 910.645 ; gain = 539.516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 910.645 ; gain = 539.516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------------------------------------+-------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                                 | RTL Name                      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------------------------------------+-------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|tri_mode_ethernet_mac_2_axi_lite_sm         | count_shift_reg[20]           | 21     | 1     | NO           | NO                 | YES               | 0      | 1       | 
+|tri_mode_ethernet_mac_2_ten_100_1g_eth_fifo | rx_fifo_i/wr_data_bram_reg[7] | 3      | 8     | NO           | NO                 | YES               | 8      | 0       | 
++--------------------------------------------+-------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------+----------+
+|      |BlackBox name           |Instances |
++------+------------------------+----------+
+|1     |tri_mode_ethernet_mac_2 |         1|
+|2     |vio_0                   |         1|
+|3     |clk_wiz_0               |         1|
+|4     |mii_to_rmii_0           |         1|
++------+------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------+------+
+|      |Cell                    |Count |
++------+------------------------+------+
+|1     |clk_wiz_0               |     1|
+|2     |mii_to_rmii_0           |     1|
+|3     |tri_mode_ethernet_mac_2 |     1|
+|4     |vio_0                   |     1|
+|5     |CARRY4                  |    46|
+|6     |LUT1                    |    58|
+|7     |LUT2                    |   127|
+|8     |LUT3                    |   172|
+|9     |LUT4                    |   139|
+|10    |LUT5                    |   104|
+|11    |LUT6                    |   223|
+|12    |RAM64X1D                |    18|
+|13    |RAMB36E1_1              |     2|
+|14    |SRL16E                  |     8|
+|15    |SRLC32E                 |     1|
+|16    |FDPE                    |    30|
+|17    |FDRE                    |   800|
+|18    |FDSE                    |    29|
+|19    |IBUF                    |     4|
+|20    |OBUF                    |     4|
++------+------------------------+------+
+
+Report Instance Areas: 
++------+----------------------------------+----------------------------------------------+------+
+|      |Instance                          |Module                                        |Cells |
++------+----------------------------------+----------------------------------------------+------+
+|1     |top                               |                                              |  1919|
+|2     |  example_resets                  |tri_mode_ethernet_mac_2_example_design_resets |    56|
+|3     |    dcm_sync                      |tri_mode_ethernet_mac_2_sync_block__1         |     5|
+|4     |    glbl_reset_gen                |tri_mode_ethernet_mac_2_reset_sync__1         |     5|
+|5     |    axi_lite_reset_gen            |tri_mode_ethernet_mac_2_reset_sync__2         |     5|
+|6     |    gtx_reset_gen                 |tri_mode_ethernet_mac_2_reset_sync__3         |     5|
+|7     |    chk_reset_gen                 |tri_mode_ethernet_mac_2_reset_sync__4         |     5|
+|8     |  rx_stats_sync                   |tri_mode_ethernet_mac_2_sync_block__2         |     5|
+|9     |  tx_stats_sync                   |tri_mode_ethernet_mac_2_sync_block__3         |     5|
+|10    |  axi_lite_controller             |tri_mode_ethernet_mac_2_axi_lite_sm           |   508|
+|11    |    update_speed_sync_inst        |tri_mode_ethernet_mac_2_sync_block__4         |     5|
+|12    |  trimac_fifo_block               |tri_mode_ethernet_mac_2_fifo_block            |   763|
+|13    |    trimac_sup_block              |tri_mode_ethernet_mac_2_support               |   136|
+|14    |    rx_mac_reset_gen              |tri_mode_ethernet_mac_2_reset_sync__5         |     5|
+|15    |    tx_mac_reset_gen              |tri_mode_ethernet_mac_2_reset_sync            |     5|
+|16    |    user_side_FIFO                |tri_mode_ethernet_mac_2_ten_100_1g_eth_fifo   |   615|
+|17    |      rx_fifo_i                   |tri_mode_ethernet_mac_2_rx_client_fifo        |   251|
+|18    |        resync_wr_store_frame_tog |tri_mode_ethernet_mac_2_sync_block__10        |     5|
+|19    |        sync_rd_addr_tog          |tri_mode_ethernet_mac_2_sync_block            |     5|
+|20    |        rx_ramgen_i               |tri_mode_ethernet_mac_2_bram_tdp_0            |     7|
+|21    |      tx_fifo_i                   |tri_mode_ethernet_mac_2_tx_client_fifo        |   364|
+|22    |        resync_rd_tran_frame_tog  |tri_mode_ethernet_mac_2_sync_block__5         |     5|
+|23    |        resync_wr_frame_in_fifo   |tri_mode_ethernet_mac_2_sync_block__6         |     5|
+|24    |        resync_wr_frames_in_fifo  |tri_mode_ethernet_mac_2_sync_block__7         |     5|
+|25    |        resync_fif_valid_tog      |tri_mode_ethernet_mac_2_sync_block__8         |     5|
+|26    |        resync_rd_txfer_tog       |tri_mode_ethernet_mac_2_sync_block__9         |     5|
+|27    |        tx_ramgen_i               |tri_mode_ethernet_mac_2_bram_tdp              |     6|
+|28    |  basic_pat_gen_inst              |tri_mode_ethernet_mac_2_basic_pat_gen         |   550|
+|29    |    address_swap_inst             |tri_mode_ethernet_mac_2_address_swap          |   119|
+|30    |    axi_pat_check_inst            |tri_mode_ethernet_mac_2_axi_pat_check         |   164|
+|31    |    axi_pat_gen_inst              |tri_mode_ethernet_mac_2_axi_pat_gen           |   223|
+|32    |    axi_pipe_inst                 |tri_mode_ethernet_mac_2_axi_pipe              |    44|
++------+----------------------------------+----------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 910.645 ; gain = 539.516
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 910.645 ; gain = 181.770
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 910.645 ; gain = 539.516
+INFO: [Project 1-571] Translating synthesized netlist
+WARNING: [Synth 37-28] Duplicate attribute 'INIT' found for instance 'rd_store_frame_delay_reg' of module 'FDRE'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'INIT' found for instance 'wr_store_frame_tog_reg' of module 'FDRE'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'INIT' found for instance 'wr_tran_frame_delay_reg' of module 'FDRE'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'INIT' found for instance 'wr_txfer_tog_delay_reg' of module 'FDRE'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'INIT' found for instance 'rd_tran_frame_tog_reg' of module 'FDRE'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'INIT' found for instance 'rd_txfer_tog_reg' of module 'FDRE'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'INIT' found for instance 'frame_in_fifo_valid_tog_reg' of module 'FDRE'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+INFO: [Netlist 29-17] Analyzing 66 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 910.668 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 18 instances were transformed.
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 18 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+205 Infos, 60 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 910.668 ; gain = 539.539
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 910.668 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/tri_mode_ethernet_mac_2_example_design.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file tri_mode_ethernet_mac_2_example_design_utilization_synth.rpt -pb tri_mode_ethernet_mac_2_example_design_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 31 05:53:46 2021...

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="tri_mode_ethernet_mac_2_synth_1" LaunchDir="C:/Users/zhouyuf5/FPGA2_TEMAC/FPGA2_TEMAC.runs/tri_mode_ethernet_mac_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vio_0_synth_1" LaunchDir="C:/Users/zhouyuf5/FPGA2_TEMAC/FPGA2_TEMAC.runs/vio_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mii_to_rmii_0_synth_1" LaunchDir="C:/Users/zhouyuf5/FPGA2_TEMAC/FPGA2_TEMAC.runs/mii_to_rmii_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/zhouyuf5/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="tri_mode_ethernet_mac_2_synth_1"/>
+		<Parent Id="vio_0_synth_1"/>
+		<Parent Id="mii_to_rmii_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

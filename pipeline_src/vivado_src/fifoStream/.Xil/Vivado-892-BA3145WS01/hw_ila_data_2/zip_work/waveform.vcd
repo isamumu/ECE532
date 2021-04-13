@@ -1,0 +1,241 @@
+$date
+        2021-Mar-31 02:58:57
+$end
+$version
+        Vivado v2018.3.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 8 " canteloupe_i/frame_generator_cust_0/tx_fifo_TDATA [7:0] $end
+$var reg 4 * canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_txd [3:0] $end
+$var reg 8 . canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tdata [7:0] $end
+$var reg 4 6 canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_txd [3:0] $end
+$var reg 8 : canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tdata [7:0] $end
+$var reg 1 B canteloupe_i/frame_generator_cust_0/inst/mem/fifo_we $end
+$var reg 1 C canteloupe_i/frame_generator_cust_0/inst/mem/mem_reg $end
+$var reg 1 D canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_tx_en $end
+$var reg 1 E canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_tx_en $end
+$var reg 1 F canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_tx_er $end
+$var reg 1 G canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_tx_er $end
+$var reg 1 H canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tlast $end
+$var reg 1 I canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tvalid $end
+$var reg 1 J canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tlast $end
+$var reg 1 K canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tready $end
+$var reg 1 L canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tvalid $end
+$var reg 1 M canteloupe_i/frame_generator_cust_0/tx_fifo_TLAST $end
+$var reg 1 N canteloupe_i/frame_generator_cust_0/tx_fifo_TVALID $end
+$var reg 1 O _TRIGGER $end
+$var reg 1 P _WINDOW $end
+$var reg 1 Q _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11111111 "
+b0 *
+b0 .
+b0 6
+b11111111 :
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+1P
+0Q
+$end
+#301
+1B
+1C
+#319
+0B
+0C
+#372
+1B
+1C
+#376
+0B
+0C
+#477
+b0 "
+b0 :
+1I
+1N
+#478
+b1010 "
+b1010 :
+#479
+b110101 "
+b110101 :
+#480
+b0 "
+b0 :
+#482
+b100 "
+b100 :
+#483
+b0 "
+b0 :
+#484
+b1010 "
+b1010 :
+#485
+b110101 "
+b110101 :
+#486
+b0 "
+b0 :
+#488
+b10010 "
+b10010 :
+#489
+b0 "
+b0 :
+#490
+b10110 "
+b10110 :
+#491
+b111 "
+b111 :
+#492
+b11111110 "
+b11111110 :
+#493
+b100 "
+b100 :
+#494
+b10001 "
+b10001 :
+#495
+b100 "
+b100 :
+#496
+b0 "
+b0 :
+#497
+b100 "
+b100 :
+#498
+b10 "
+b10 :
+#499
+b111 "
+b111 :
+#500
+b11111110 "
+b11111110 :
+#501
+b111 "
+b111 :
+#502
+b11111000 "
+b11111000 :
+#503
+b100 "
+b100 :
+#504
+b0 "
+b0 :
+#505
+b100 "
+b100 :
+#506
+b1 "
+b1 :
+#507
+b111 "
+b111 :
+#508
+b11111101 "
+b11111101 :
+#509
+b11011100 "
+b11011100 :
+#510
+b0 "
+b0 :
+#511
+b11 "
+b11 :
+#512
+b11111111 "
+b11111111 :
+1H
+1M
+1O
+#513
+0H
+0I
+0M
+0N
+#716
+1B
+1C
+#720
+0B
+0C
+#821
+b0 "
+b0 :
+1I
+1N
+#822
+b1010 "
+b1010 :
+#823
+b110101 "
+b110101 :
+#824
+b0 "
+b0 :
+#826
+b100 "
+b100 :
+#827
+b0 "
+b0 :
+#828
+b1010 "
+b1010 :
+#829
+b110101 "
+b110101 :
+#830
+b0 "
+b0 :
+#832
+b10010 "
+b10010 :
+#833
+b0 "
+b0 :
+#834
+b100 "
+b100 :
+#835
+b0 "
+b0 :
+#837
+b11 "
+b11 :
+#838
+b11111111 "
+b11111111 :
+1H
+1M
+#839
+0H
+0I
+0M
+0N

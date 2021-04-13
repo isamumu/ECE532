@@ -1,0 +1,96 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port mdio_0 -pg 1 -y 1310 -defaultsOSRD
+preplace port refclk_0 -pg 1 -y 1120 -defaultsOSRD
+preplace port sys_clock -pg 1 -y 480 -defaultsOSRD
+preplace port rmii2phy_tx_en_0 -pg 1 -y 1010 -defaultsOSRD
+preplace port usb_uart -pg 1 -y 620 -defaultsOSRD
+preplace port phy2rmii_rx_er_0 -pg 1 -y 970 -defaultsOSRD
+preplace port mdc_0 -pg 1 -y 1330 -defaultsOSRD
+preplace port phy2rmii_crs_dv_0 -pg 1 -y 950 -defaultsOSRD
+preplace port reset -pg 1 -y 460 -defaultsOSRD
+preplace port DDR2_0 -pg 1 -y 410 -defaultsOSRD
+preplace portBus phy2rmii_rxd_0 -pg 1 -y 990 -defaultsOSRD
+preplace portBus rmii2phy_txd_0 -pg 1 -y 1030 -defaultsOSRD
+preplace inst quantizer_0 -pg 1 -lvl 8 -y 570 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 5 -y 890 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 12 -y 460 -defaultsOSRD
+preplace inst two_dimension_dct_0 -pg 1 -lvl 7 -y 570 -defaultsOSRD
+preplace inst rst_mig_7series_0_81M -pg 1 -lvl 4 -y 100 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 5 -y 410 -defaultsOSRD
+preplace inst microblaze_0_xlconcat -pg 1 -lvl 2 -y 590 -defaultsOSRD
+preplace inst mii_to_rmii_0 -pg 1 -lvl 12 -y 980 -defaultsOSRD
+preplace inst zig_zag_0 -pg 1 -lvl 9 -y 750 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 3 -y 130 -defaultsOSRD
+preplace inst microblaze_0_axi_intc -pg 1 -lvl 3 -y 310 -defaultsOSRD
+preplace inst frame_generator_cust_0 -pg 1 -lvl 11 -y 920 -defaultsOSRD
+preplace inst run_length_encoder_0 -pg 1 -lvl 10 -y 570 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 11 -y 680 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 12 -y 630 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 4 -y 340 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -y 450 -defaultsOSRD
+preplace inst tri_mode_ethernet_ma_1 -pg 1 -lvl 12 -y 1340 -defaultsOSRD
+preplace inst axi_fifo_mm_s_0 -pg 1 -lvl 6 -y 580 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 1 -y 470 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -y 770 -defaultsOSRD
+preplace netloc mii_to_rmii_0_rmii2phy_tx_en 1 12 1 N
+preplace netloc mig_7series_0_mmcm_locked 1 3 10 940 200 1480J 190 NJ 190 NJ 190 NJ 190 NJ 190 NJ 190 NJ 190 NJ 190 3980
+preplace netloc mig_7series_0_DDR2 1 12 1 NJ
+preplace netloc axi_uartlite_0_interrupt 1 1 12 250 -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 4020
+preplace netloc microblaze_0_intr 1 2 1 660J
+preplace netloc microblaze_0_Clk 1 1 11 210 320 650 440 910 440 1490 200 1890 680 2280 670 2510 670 2710 630 2940 690 3200 560 3490J
+preplace netloc run_length_encoder_0_o_axis 1 10 1 3190
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 5 1 1880
+preplace netloc microblaze_0_intc_axi 1 2 4 600 0 NJ 0 NJ 0 1830
+preplace netloc microblaze_0_interrupt 1 3 1 N
+preplace netloc tri_mode_ethernet_ma_1_mdc 1 12 1 N
+preplace netloc microblaze_0_ilmb_1 1 4 1 1450
+preplace netloc mii_to_rmii_0_rmii2mac_rx_dv 1 11 1 3610
+preplace netloc sys_clock_1 1 0 1 NJ
+preplace netloc axi_fifo_mm_s_0_AXI_STR_TXD 1 6 5 2270 660 NJ 660 NJ 660 NJ 660 3170
+preplace netloc microblaze_0_axi_dp 1 4 1 1480
+preplace netloc mig_7series_0_ui_clk 1 3 10 930 460 1510 640 1840J 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 3970
+preplace netloc frame_generator_cust_0_tx_fifo 1 11 1 3510
+preplace netloc zig_zag_0_o_axis 1 9 2 2930 680 N
+preplace netloc mii_to_rmii_0_rmii2phy_txd 1 12 1 N
+preplace netloc mii_to_rmii_0_rmii2mac_rx_er 1 11 1 3620
+preplace netloc mii_to_rmii_0_rmii2mac_tx_clk 1 11 1 3630
+preplace netloc xlconstant_0_dout 1 5 1 1910J
+preplace netloc rst_mig_7series_0_81M_peripheral_aresetn 1 4 8 1530 180 NJ 180 NJ 180 NJ 180 NJ 180 NJ 180 NJ 180 3640J
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 3 610J 450 NJ 450 1420
+preplace netloc two_dimension_dct_0_o_axis 1 7 4 2500 650 NJ 650 NJ 650 3180J
+preplace netloc microblaze_0_M_AXI_IP 1 4 1 1510
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 5 7 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 3600
+preplace netloc phy2rmii_rx_er_0_1 1 0 13 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 2940J 810 NJ 810 3540J 770 3990
+preplace netloc phy2rmii_rxd_0_1 1 0 13 NJ 990 NJ 990 NJ 990 NJ 990 NJ 990 1870J 960 NJ 960 NJ 960 NJ 960 2950J 820 NJ 820 3550J 780 3980
+preplace netloc tri_mode_ethernet_ma_1_mii_tx_en 1 11 2 3580 750 4020
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 10 640 490 NJ 490 1520 680 1880 690 2290 650 2490 680 2730 640 2950 700 3160 550 3510J
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 2 670 420 920J
+preplace netloc clk_wiz_1_locked 1 1 11 230 330 620 500 N 500 1480 630 1860 480 N 480 N 480 N 480 N 480 N 480 3500
+preplace netloc axi_uartlite_0_UART 1 12 1 NJ
+preplace netloc mii_to_rmii_0_rmii2mac_rxd 1 11 1 3640
+preplace netloc clk_wiz_1_clk_out2 1 1 11 210 650 NJ 650 NJ 650 1440J 660 1870J 460 NJ 460 NJ 460 NJ 460 NJ 460 NJ 460 3590J
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 3 10 940 -20 NJ -20 NJ -20 NJ -20 NJ -20 NJ -20 NJ -20 NJ -20 NJ -20 4010
+preplace netloc microblaze_0_dlmb_1 1 4 1 1470
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 7 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 3630
+preplace netloc phy2rmii_crs_dv_0_1 1 0 13 NJ 950 NJ 950 NJ 950 NJ 950 NJ 950 NJ 950 NJ 950 NJ 950 NJ 950 2930J 800 NJ 800 3510J 760 4000
+preplace netloc Net 1 12 1 N
+preplace netloc clk_wiz_1_clk_out3 1 1 11 220J 340 630J 430 NJ 430 1500J 620 1830J 430 2270J 410 NJ 410 NJ 410 NJ 410 NJ 410 3530
+preplace netloc quantizer_0_o_axis 1 8 3 2720 670 NJ 670 3210J
+preplace netloc microblaze_0_debug 1 3 1 920
+preplace netloc clk_wiz_1_clk_out4 1 1 12 200J 660 N 660 N 660 1430 670 1900 470 N 470 N 470 N 470 N 470 N 470 3520 1160 4030
+preplace netloc reset_1 1 0 12 0 370 240 350 600J 510 NJ 510 1460J 650 1850J 450 NJ 450 NJ 450 NJ 450 NJ 450 NJ 450 3560J
+preplace netloc mdm_1_debug_sys_rst 1 1 3 260 200 NJ 200 910
+preplace netloc mii_to_rmii_0_rmii2mac_rx_clk 1 11 1 3570
+preplace netloc tri_mode_ethernet_ma_1_mii_tx_er 1 11 2 3590 790 4010
+preplace netloc tri_mode_ethernet_ma_1_mii_txd 1 11 2 3600 800 3970
+levelinfo -pg 1 -20 110 430 790 1180 1680 2090 2390 2610 2830 3060 3350 3810 4050 -top -80 -bot 1490
+"
+}
+{
+   "da_axi4_cnt":"3",
+   "da_board_cnt":"5",
+   "da_mb_cnt":"1"
+}

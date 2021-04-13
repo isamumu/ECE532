@@ -1,0 +1,621 @@
+{
+    "ltx_root": {
+        "version": 4,
+        "minor": 0,
+        "ltx_data": [
+            {
+                "name": "EDA_PROBESET",
+                "active": true,
+                "debug_cores": [
+                    {
+                        "type": "XSDB_V3",
+                        "name": "dbg_hub",
+                        "spec": "labtools_xsdbm_v3",
+                        "clk_input_freq_hz": "125000003"
+                    },
+                    {
+                        "type": "VIO_V2",
+                        "name": "vio",
+                        "spec": "labtools_vio_v3",
+                        "ipName": "vio",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 0,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "1BE27D511A4C50DC974F3E22D2C609B9",
+                        "pins": [
+                            {
+                                "name": "probe_out0",
+                                "id": 0,
+                                "type": "DATA",
+                                "direction": "OUT",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "glbl_rst",
+                                        "isBus": false
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ILA_V3",
+                        "name": "u_ila_0",
+                        "spec": "labtools_ila_v6",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 1,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "23E7D65A79BC59F7BC47406C1714DFAE",
+                        "pins": [
+                            {
+                                "name": "probe0",
+                                "id": 1,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "mii_txd",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "mii_txd[3]"
+                                            },
+                                            {
+                                                "name": "mii_txd[2]"
+                                            },
+                                            {
+                                                "name": "mii_txd[1]"
+                                            },
+                                            {
+                                                "name": "mii_txd[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe1",
+                                "id": 2,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "phy2rmii_rxd_IBUF",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "phy2rmii_rxd_IBUF[1]"
+                                            },
+                                            {
+                                                "name": "phy2rmii_rxd_IBUF[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe2",
+                                "id": 3,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 7,
+                                "portIndex": 2,
+                                "nets": [
+                                    {
+                                        "name": "trimac_fifo_block/tx_axis_mac_tdata",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "trimac_fifo_block/tx_axis_mac_tdata[7]"
+                                            },
+                                            {
+                                                "name": "trimac_fifo_block/tx_axis_mac_tdata[6]"
+                                            },
+                                            {
+                                                "name": "trimac_fifo_block/tx_axis_mac_tdata[5]"
+                                            },
+                                            {
+                                                "name": "trimac_fifo_block/tx_axis_mac_tdata[4]"
+                                            },
+                                            {
+                                                "name": "trimac_fifo_block/tx_axis_mac_tdata[3]"
+                                            },
+                                            {
+                                                "name": "trimac_fifo_block/tx_axis_mac_tdata[2]"
+                                            },
+                                            {
+                                                "name": "trimac_fifo_block/tx_axis_mac_tdata[1]"
+                                            },
+                                            {
+                                                "name": "trimac_fifo_block/tx_axis_mac_tdata[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe3",
+                                "id": 4,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "rmii2phy_txd_OBUF",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "rmii2phy_txd_OBUF[1]"
+                                            },
+                                            {
+                                                "name": "rmii2phy_txd_OBUF[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe4",
+                                "id": 5,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 7,
+                                "portIndex": 4,
+                                "nets": [
+                                    {
+                                        "name": "trimac_fifo_block/rx_axis_mac_tdata",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "trimac_fifo_block/rx_axis_mac_tdata[7]"
+                                            },
+                                            {
+                                                "name": "trimac_fifo_block/rx_axis_mac_tdata[6]"
+                                            },
+                                            {
+                                                "name": "trimac_fifo_block/rx_axis_mac_tdata[5]"
+                                            },
+                                            {
+                                                "name": "trimac_fifo_block/rx_axis_mac_tdata[4]"
+                                            },
+                                            {
+                                                "name": "trimac_fifo_block/rx_axis_mac_tdata[3]"
+                                            },
+                                            {
+                                                "name": "trimac_fifo_block/rx_axis_mac_tdata[2]"
+                                            },
+                                            {
+                                                "name": "trimac_fifo_block/rx_axis_mac_tdata[1]"
+                                            },
+                                            {
+                                                "name": "trimac_fifo_block/rx_axis_mac_tdata[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe5",
+                                "id": 6,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 5,
+                                "nets": [
+                                    {
+                                        "name": "mii_rxd",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "mii_rxd[3]"
+                                            },
+                                            {
+                                                "name": "mii_rxd[2]"
+                                            },
+                                            {
+                                                "name": "mii_rxd[1]"
+                                            },
+                                            {
+                                                "name": "mii_rxd[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe6",
+                                "id": 7,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 6,
+                                "nets": [
+                                    {
+                                        "name": "chk_resetn",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe7",
+                                "id": 8,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 7,
+                                "nets": [
+                                    {
+                                        "name": "glbl_rst_intn",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe8",
+                                "id": 9,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 8,
+                                "nets": [
+                                    {
+                                        "name": "gtx_clk_bufg",
+                                        "isBus": false,
+                                        "parentNetId": 31
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe9",
+                                "id": 10,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 9,
+                                "nets": [
+                                    {
+                                        "name": "mii_rx_clk",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe10",
+                                "id": 11,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 10,
+                                "nets": [
+                                    {
+                                        "name": "mii_rx_dv",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe11",
+                                "id": 12,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 11,
+                                "nets": [
+                                    {
+                                        "name": "mii_tx_clk",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe12",
+                                "id": 13,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 12,
+                                "nets": [
+                                    {
+                                        "name": "mii_tx_en",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe13",
+                                "id": 14,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 13,
+                                "nets": [
+                                    {
+                                        "name": "phy2rmii_crs_dv_IBUF",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe14",
+                                "id": 15,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 14,
+                                "nets": [
+                                    {
+                                        "name": "example_clocks/refclk",
+                                        "isBus": false,
+                                        "parentNetId": 37
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe15",
+                                "id": 16,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 15,
+                                "nets": [
+                                    {
+                                        "name": "rmii2phy_tx_en_OBUF",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe16",
+                                "id": 17,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 16,
+                                "nets": [
+                                    {
+                                        "name": "s_axi_aclk",
+                                        "isBus": false,
+                                        "parentNetId": 39
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe17",
+                                "id": 18,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 17,
+                                "nets": [
+                                    {
+                                        "name": "s_axi_resetn",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe18",
+                                "id": 19,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 18,
+                                "nets": [
+                                    {
+                                        "name": "tx_fifo_resetn",
+                                        "isBus": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "parent_nets": [
+                    {
+                        "id": 31,
+                        "name": "example_clocks/inst/gtx_clk",
+                        "state_reg": [
+                            {
+                                "name": "basic_pat_gen_inst/address_swap_inst/FSM_sequential_wr_state_reg[0]",
+                                "states": [
+                                    {
+                                        "name": "P_2A42C17CAE0",
+                                        "val": "01"
+                                    },
+                                    {
+                                        "name": "P_2A42C17C4E0",
+                                        "val": "10"
+                                    },
+                                    {
+                                        "name": "P_2A42C17C840",
+                                        "val": "11"
+                                    },
+                                    {
+                                        "name": "P_2A42C17C270",
+                                        "val": "00"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 37,
+                        "name": "example_clocks/inst/refclk",
+                        "state_reg": [
+                            {
+                                "name": "mii_to_rmii/U0/RMII_FIXED.I_RX/FSM_sequential_RX_100_MBPS.fifo_flshr_cs_reg[0]",
+                                "states": [
+                                    {
+                                        "name": "rx100_clk_h",
+                                        "val": "11"
+                                    },
+                                    {
+                                        "name": "flshr_idle_h",
+                                        "val": "01"
+                                    },
+                                    {
+                                        "name": "rx100_clk_l",
+                                        "val": "10"
+                                    },
+                                    {
+                                        "name": "flshr_idle_l",
+                                        "val": "00"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39,
+                        "name": "example_clocks/inst/saxi_aclk",
+                        "state_reg": [
+                            {
+                                "name": "axi_lite_controller/FSM_onehot_axi_state_reg[0]",
+                                "states": [
+                                    {
+                                        "name": "CNFG_FRM_FILTER_MASK_1",
+                                        "val": "0000010000000000000000"
+                                    },
+                                    {
+                                        "name": "MDIO_1G",
+                                        "val": "0000000000000000010000"
+                                    },
+                                    {
+                                        "name": "MDIO_STATS_POLL_CHECK",
+                                        "val": "0000000000001000000000"
+                                    },
+                                    {
+                                        "name": "MDIO_STATS",
+                                        "val": "0000000000000100000000"
+                                    },
+                                    {
+                                        "name": "CNFG_FRM_FILTER_3",
+                                        "val": "0010000000000000000000"
+                                    },
+                                    {
+                                        "name": "CNFG_FRM_FILTER_2",
+                                        "val": "0000100000000000000000"
+                                    },
+                                    {
+                                        "name": "MDIO_LOOPBACK",
+                                        "val": "0000000000000010000000"
+                                    },
+                                    {
+                                        "name": "MDIO_RESTART",
+                                        "val": "0000000000000001000000"
+                                    },
+                                    {
+                                        "name": "CNFG_FLOW",
+                                        "val": "0000000010000000000000"
+                                    },
+                                    {
+                                        "name": "CNFG_MDIO",
+                                        "val": "0000000001000000000000"
+                                    },
+                                    {
+                                        "name": "CNFG_FRM_FILTER_MASK_3",
+                                        "val": "0100000000000000000000"
+                                    },
+                                    {
+                                        "name": "MDIO_POLL_CHECK",
+                                        "val": "0000000000000000001000"
+                                    },
+                                    {
+                                        "name": "MDIO_RD",
+                                        "val": "0000000000000000000100"
+                                    },
+                                    {
+                                        "name": "RESET_MAC_RX",
+                                        "val": "0000000000010000000000"
+                                    },
+                                    {
+                                        "name": "RESET_MAC_TX",
+                                        "val": "0000000000100000000000"
+                                    },
+                                    {
+                                        "name": "UPDATE_SPEED",
+                                        "val": "0000000000000000000010"
+                                    },
+                                    {
+                                        "name": "STARTUP",
+                                        "val": "0000000000000000000001"
+                                    },
+                                    {
+                                        "name": "CNFG_FILTER",
+                                        "val": "0000000100000000000000"
+                                    },
+                                    {
+                                        "name": "CHECK_SPEED",
+                                        "val": "1000000000000000000000"
+                                    },
+                                    {
+                                        "name": "CNFG_FRM_FILTER_1",
+                                        "val": "0000001000000000000000"
+                                    },
+                                    {
+                                        "name": "CNFG_FRM_FILTER_MASK_2",
+                                        "val": "0001000000000000000000"
+                                    },
+                                    {
+                                        "name": "MDIO_10_100",
+                                        "val": "0000000000000000100000"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

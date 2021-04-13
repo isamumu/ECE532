@@ -1,0 +1,233 @@
+$date
+        2021-Mar-31 00:49:56
+$end
+$version
+        Vivado v2018.3.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 8 " canteloupe_i/frame_generator_cust_0/tx_fifo_TDATA [7:0] $end
+$var reg 8 * canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tdata [7:0] $end
+$var reg 1 2 canteloupe_i/frame_generator_cust_0/inst/mem/fifo_we $end
+$var reg 1 3 canteloupe_i/frame_generator_cust_0/inst/mem/mem_reg $end
+$var reg 1 4 canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tlast $end
+$var reg 1 5 canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tvalid $end
+$var reg 1 6 canteloupe_i/frame_generator_cust_0/tx_fifo_TLAST $end
+$var reg 1 7 canteloupe_i/frame_generator_cust_0/tx_fifo_TVALID $end
+$var reg 1 8 _TRIGGER $end
+$var reg 1 9 _WINDOW $end
+$var reg 1 : _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11111111 "
+b11111111 *
+02
+03
+04
+05
+06
+07
+08
+19
+0:
+$end
+#559
+12
+13
+#591
+02
+03
+#601
+12
+13
+#607
+02
+03
+#640
+12
+13
+#644
+02
+03
+#745
+b0 "
+b0 *
+15
+17
+#746
+b1010 "
+b1010 *
+#747
+b110101 "
+b110101 *
+#748
+b0 "
+b0 *
+#750
+b100 "
+b100 *
+#751
+b0 "
+b0 *
+#752
+b1010 "
+b1010 *
+#753
+b110101 "
+b110101 *
+#754
+b0 "
+b0 *
+#756
+b10010 "
+b10010 *
+#757
+b0 "
+b0 *
+#758
+b101010 "
+b101010 *
+#759
+b111 "
+b111 *
+#760
+b11100110 "
+b11100110 *
+#761
+b100 "
+b100 *
+#762
+b11000 "
+b11000 *
+#763
+b111 "
+b111 *
+#764
+b11111001 "
+b11111001 *
+#765
+b100 "
+b100 *
+#766
+b10 "
+b10 *
+#767
+b111 "
+b111 *
+#768
+b11110000 "
+b11110000 *
+#769
+b100 "
+b100 *
+#770
+b110000 "
+b110000 *
+#771
+b111 "
+b111 *
+#772
+b11101011 "
+b11101011 *
+#773
+b100 "
+b100 *
+#774
+b1 "
+b1 *
+#775
+b100 "
+b100 *
+#776
+b10 "
+b10 *
+#777
+b111 "
+b111 *
+#778
+b11111110 "
+b11111110 *
+#779
+b100 "
+b100 *
+#780
+b1 "
+b1 *
+#781
+b100 "
+b100 *
+#782
+b0 "
+b0 *
+#783
+b111 "
+b111 *
+#784
+b11111100 "
+b11111100 *
+#785
+b100 "
+b100 *
+#786
+b10 "
+b10 *
+#787
+b100 "
+b100 *
+#788
+b0 "
+b0 *
+#789
+b100 "
+b100 *
+#790
+b101 "
+b101 *
+#791
+b101100 "
+b101100 *
+#792
+b0 "
+b0 *
+#793
+b100 "
+b100 *
+#794
+b110 "
+b110 *
+#795
+b100 "
+b100 *
+#796
+b10 "
+b10 *
+#797
+b10001100 "
+b10001100 *
+#798
+b0 "
+b0 *
+#799
+b11 "
+b11 *
+#800
+b11111111 "
+b11111111 *
+14
+16
+18
+#801
+04
+05
+06
+07
+#974
+12
+13
+#978
+02
+03

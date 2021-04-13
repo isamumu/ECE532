@@ -23,6 +23,26 @@ image = cv2.imread(path, 0)
 
         
 print(image)
+split = split(image, 8,8)
+
+# print(split)
+lists = []
+
+for i in split:
+    arr = []
+    # print("===========================")
+    for j in i:
+        arr.extend(j)
+        # print(arr)
+    arr.extend([8])
+    lists.append(arr)
+
+count = 1
+for i in lists:
+    print("===========================")
+    print(i)
+
+
 imshow(image)
 show()
 

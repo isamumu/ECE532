@@ -1,0 +1,114 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Mon Mar 29 12:23:54 2021
+# Process ID: 4540
+# Current directory: C:/Users/poyisamu/fifoStream
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3076 C:\Users\poyisamu\fifoStream\fifoStream.xpr
+# Log file: C:/Users/poyisamu/fifoStream/vivado.log
+# Journal file: C:/Users/poyisamu/fifoStream\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/poyisamu/fifoStream/fifoStream.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/poyisamu/ip_repo'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/poyisamu/ip_repo'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/DESL/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'canteloupe.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+canteloupe_run_length_encoder_0_0
+canteloupe_zig_zag_0_0
+canteloupe_quantizer_0_0
+canteloupe_two_dimension_dct_0_0
+
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 981.316 ; gain = 362.117
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 12:24:44 2021] Launched impl_1...
+Run output will be captured here: C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/runme.log
+file copy -force C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper.sysdef C:/Users/poyisamu/fifoStream/fifoStream.sdk/canteloupe_wrapper.hdf
+
+launch_sdk -workspace C:/Users/poyisamu/fifoStream/fifoStream.sdk -hwspec C:/Users/poyisamu/fifoStream/fifoStream.sdk/canteloupe_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/poyisamu/fifoStream/fifoStream.sdk -hwspec C:/Users/poyisamu/fifoStream/fifoStream.sdk/canteloupe_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292646051A
+set_property PROGRAM.FILE {C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]]
+Processed interface axi_fifo_mm_s_0_AXI_STR_TXD_ila1_slot0
+Processed interface two_dimension_dct_0_o_axis_ila1_slot1
+Processed interface quantizer_0_o_axis_ila1_slot2
+Processed interface zig_zag_0_o_axis_ila1_slot3
+Processed interface run_length_encoder_0_o_axis_ila1_slot4
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-29 12:30:14
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Mar-29 12:32:29
+Processed interface axi_fifo_mm_s_0_AXI_STR_TXD_ila1_slot0
+Processed interface two_dimension_dct_0_o_axis_ila1_slot1
+Processed interface quantizer_0_o_axis_ila1_slot2
+Processed interface zig_zag_0_o_axis_ila1_slot3
+Processed interface run_length_encoder_0_o_axis_ila1_slot4
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/poyisamu/fifoStream/fifoStream.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-29 12:33:46
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Mar-29 12:33:54
+Processed interface axi_fifo_mm_s_0_AXI_STR_TXD_ila1_slot0
+Processed interface two_dimension_dct_0_o_axis_ila1_slot1
+Processed interface quantizer_0_o_axis_ila1_slot2
+Processed interface zig_zag_0_o_axis_ila1_slot3
+Processed interface run_length_encoder_0_o_axis_ila1_slot4
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/poyisamu/fifoStream/fifoStream.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-29 12:34:34
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Mar-29 12:34:42
+Processed interface axi_fifo_mm_s_0_AXI_STR_TXD_ila1_slot0
+Processed interface two_dimension_dct_0_o_axis_ila1_slot1
+Processed interface quantizer_0_o_axis_ila1_slot2
+Processed interface zig_zag_0_o_axis_ila1_slot3
+Processed interface run_length_encoder_0_o_axis_ila1_slot4
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/poyisamu/fifoStream/fifoStream.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-29 12:36:06
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Mar-29 12:36:19
+Processed interface axi_fifo_mm_s_0_AXI_STR_TXD_ila1_slot0
+Processed interface two_dimension_dct_0_o_axis_ila1_slot1
+Processed interface quantizer_0_o_axis_ila1_slot2
+Processed interface zig_zag_0_o_axis_ila1_slot3
+Processed interface run_length_encoder_0_o_axis_ila1_slot4
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/poyisamu/fifoStream/fifoStream.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-29 12:37:10
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Mar-29 12:37:23
+Processed interface axi_fifo_mm_s_0_AXI_STR_TXD_ila1_slot0
+Processed interface two_dimension_dct_0_o_axis_ila1_slot1
+Processed interface quantizer_0_o_axis_ila1_slot2
+Processed interface zig_zag_0_o_axis_ila1_slot3
+Processed interface run_length_encoder_0_o_axis_ila1_slot4
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/poyisamu/fifoStream/fifoStream.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+save_wave_config {C:/Users/poyisamu/fifoStream/fifoStream.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 29 12:47:47 2021...

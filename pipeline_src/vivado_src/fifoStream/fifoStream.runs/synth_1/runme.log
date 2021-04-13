@@ -1,0 +1,865 @@
+
+*** Running vivado
+    with args -log canteloupe_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source canteloupe_wrapper.tcl
+
+
+****** Vivado v2018.3.1 (64-bit)
+  **** SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+  **** IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source canteloupe_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'w:/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'w:/TEMAC_FPGA1_no_xdc'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/DESL/Xilinx/Vivado/2018.3/data/ip'.
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:fpga1_deployment_receiving_block:1.0'. The one found in IP location 'w:/ip_repo/fpga1_deployment_receiving_block' will take precedence over the same IP in location w:/ip_repo/ip_repo/fpga1_deployment_receiving_block
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:path_switch:1.0'. The one found in IP location 'w:/ip_repo/ip_path_switch' will take precedence over the same IP in location w:/ip_repo/ip_repo/ip_path_switch
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:transpose:1.0'. The one found in IP location 'w:/ip_repo/ip_repo/ip_transpose' will take precedence over the same IP in location w:/ip_repo/ip_transpose
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 359.359 ; gain = 36.438
+add_files: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 484.418 ; gain = 125.059
+Command: synth_design -top canteloupe_wrapper -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7732 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 588.961 ; gain = 104.543
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_wrapper' [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/hdl/canteloupe_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe' [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:13]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_axi_fifo_mm_s_0_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_axi_fifo_mm_s_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_axi_fifo_mm_s_0_0' (1#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_axi_fifo_mm_s_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_fifo_mm_s_0' of module 'canteloupe_axi_fifo_mm_s_0_0' requires 30 connections, but only 26 given [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:305]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_axi_uartlite_0_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_axi_uartlite_0_0' (2#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_clk_wiz_1_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_clk_wiz_1_0' (3#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_frame_generator_cust_0_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_frame_generator_cust_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_frame_generator_cust_0_0' (4#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_frame_generator_cust_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_mdm_1_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_mdm_1_0' (5#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_microblaze_0_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_microblaze_0_0' (6#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_microblaze_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'microblaze_0' of module 'canteloupe_microblaze_0_0' requires 71 connections, but only 64 given [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:387]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_microblaze_0_axi_intc_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_microblaze_0_axi_intc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_microblaze_0_axi_intc_0' (7#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_microblaze_0_axi_intc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_microblaze_0_axi_periph_0' [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:808]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1FM5A1E' [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:1701]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_auto_ds_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_auto_ds_0' (8#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_auto_ds_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_ds' of module 'canteloupe_auto_ds_0' requires 40 connections, but only 38 given [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:1860]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1FM5A1E' (9#1) [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:1701]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1PZAEL0' [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:1901]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_auto_ds_1' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_auto_ds_1' (10#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_auto_ds_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_ds' of module 'canteloupe_auto_ds_1' requires 40 connections, but only 38 given [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:2060]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1PZAEL0' (11#1) [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:1901]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_VAJQFY' [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:2101]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_auto_cc_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_auto_cc_0' (12#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_auto_pc_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_auto_pc_0' (13#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_auto_pc_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'canteloupe_auto_pc_0' requires 56 connections, but only 54 given [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:2390]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_VAJQFY' (14#1) [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:2101]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_60LCD4' [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:2447]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_auto_ds_2' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_auto_ds_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_auto_ds_2' (15#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_auto_ds_2_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_ds' of module 'canteloupe_auto_ds_2' requires 40 connections, but only 38 given [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:2606]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_60LCD4' (16#1) [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:2447]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1O071EB' [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:2881]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_auto_us_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_auto_us_0' (17#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1O071EB' (18#1) [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:2881]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1GHA8B9' [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:3091]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_auto_us_1' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_auto_us_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_auto_us_1' (19#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_auto_us_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1GHA8B9' (20#1) [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:3091]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_xbar_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_xbar_0' (21#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_awready' does not match port width (2) of module 'canteloupe_xbar_0' [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:1686]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_bresp' does not match port width (4) of module 'canteloupe_xbar_0' [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:1689]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_bvalid' does not match port width (2) of module 'canteloupe_xbar_0' [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:1690]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_wready' does not match port width (2) of module 'canteloupe_xbar_0' [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:1696]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_microblaze_0_axi_periph_0' (22#1) [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:808]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_13VZ7DK' [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:2647]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_dlmb_bram_if_cntlr_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_dlmb_bram_if_cntlr_0' (23#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_dlmb_v10_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_dlmb_v10_0' (24#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'canteloupe_dlmb_v10_0' requires 25 connections, but only 24 given [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:2793]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_ilmb_bram_if_cntlr_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_ilmb_bram_if_cntlr_0' (25#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_ilmb_v10_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_ilmb_v10_0' (26#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'canteloupe_ilmb_v10_0' requires 25 connections, but only 24 given [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:2839]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_lmb_bram_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_lmb_bram_0' (27#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_lmb_bram_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'lmb_bram' of module 'canteloupe_lmb_bram_0' requires 16 connections, but only 14 given [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_13VZ7DK' (28#1) [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:2647]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_microblaze_0_xlconcat_0' [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_xlconcat_0/synth/canteloupe_microblaze_0_xlconcat_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 1 - type: integer 
+	Parameter IN1_WIDTH bound to: 1 - type: integer 
+	Parameter IN2_WIDTH bound to: 1 - type: integer 
+	Parameter IN3_WIDTH bound to: 1 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 1 - type: integer 
+	Parameter NUM_PORTS bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (29#1) [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_microblaze_0_xlconcat_0' (30#1) [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_xlconcat_0/synth/canteloupe_microblaze_0_xlconcat_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_mig_7series_0_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_mig_7series_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_mig_7series_0_0' (31#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_mig_7series_0_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'mig_7series_0' of module 'canteloupe_mig_7series_0_0' requires 66 connections, but only 55 given [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:629]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_mii_to_rmii_0_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_mii_to_rmii_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_mii_to_rmii_0_0' (32#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_mii_to_rmii_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'mii_to_rmii_0' of module 'canteloupe_mii_to_rmii_0_0' requires 17 connections, but only 15 given [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:685]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_quantizer_0_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_quantizer_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_quantizer_0_0' (33#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_quantizer_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_rst_clk_wiz_1_100M_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_rst_clk_wiz_1_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_rst_clk_wiz_1_100M_0' (34#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_rst_clk_wiz_1_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_clk_wiz_1_100M' of module 'canteloupe_rst_clk_wiz_1_100M_0' requires 10 connections, but only 8 given [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:712]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_rst_mig_7series_0_81M_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_rst_mig_7series_0_81M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_rst_mig_7series_0_81M_0' (35#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_rst_mig_7series_0_81M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_mig_7series_0_81M' of module 'canteloupe_rst_mig_7series_0_81M_0' requires 10 connections, but only 6 given [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:721]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_run_length_encoder_0_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_run_length_encoder_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_run_length_encoder_0_0' (36#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_run_length_encoder_0_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:739]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_system_ila_0_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_system_ila_0_0' (37#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_tri_mode_ethernet_ma_1_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_tri_mode_ethernet_ma_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_tri_mode_ethernet_ma_1_0' (38#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_tri_mode_ethernet_ma_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'tri_mode_ethernet_ma_1' of module 'canteloupe_tri_mode_ethernet_ma_1_0' requires 22 connections, but only 19 given [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:762]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_two_dimension_dct_0_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_two_dimension_dct_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_two_dimension_dct_0_0' (39#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_two_dimension_dct_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_xlconstant_0_0' [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_xlconstant_0_0/synth/canteloupe_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_5_xlconstant' [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 0 - type: integer 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant' (40#1) [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_xlconstant_0_0' (41#1) [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_xlconstant_0_0/synth/canteloupe_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'canteloupe_zig_zag_0_0' [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_zig_zag_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_zig_zag_0_0' (42#1) [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/.Xil/Vivado-5392-BA3145WS01/realtime/canteloupe_zig_zag_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe' (43#1) [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'canteloupe_wrapper' (44#1) [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/hdl/canteloupe_wrapper.v:12]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In1[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In2[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In3[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In4[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In5[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In6[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In7[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In8[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In9[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In10[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In11[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In12[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In13[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In14[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In15[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In16[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In17[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In18[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In19[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In20[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In21[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In22[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In23[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In24[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In25[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In26[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In27[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In28[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In29[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In30[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In31[0]
+WARNING: [Synth 8-3331] design s01_couplers_imp_1GHA8B9 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s01_couplers_imp_1GHA8B9 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_1O071EB has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_1O071EB has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_60LCD4 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_60LCD4 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_VAJQFY has unconnected port S_AXI_araddr[31]
+WARNING: [Synth 8-3331] design m02_couplers_imp_VAJQFY has unconnected port S_AXI_araddr[30]
+WARNING: [Synth 8-3331] design m02_couplers_imp_VAJQFY has unconnected port S_AXI_araddr[29]
+WARNING: [Synth 8-3331] design m02_couplers_imp_VAJQFY has unconnected port S_AXI_araddr[28]
+WARNING: [Synth 8-3331] design m02_couplers_imp_VAJQFY has unconnected port S_AXI_araddr[27]
+WARNING: [Synth 8-3331] design m02_couplers_imp_VAJQFY has unconnected port S_AXI_awaddr[31]
+WARNING: [Synth 8-3331] design m02_couplers_imp_VAJQFY has unconnected port S_AXI_awaddr[30]
+WARNING: [Synth 8-3331] design m02_couplers_imp_VAJQFY has unconnected port S_AXI_awaddr[29]
+WARNING: [Synth 8-3331] design m02_couplers_imp_VAJQFY has unconnected port S_AXI_awaddr[28]
+WARNING: [Synth 8-3331] design m02_couplers_imp_VAJQFY has unconnected port S_AXI_awaddr[27]
+WARNING: [Synth 8-3331] design m01_couplers_imp_1PZAEL0 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1PZAEL0 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_1FM5A1E has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_1FM5A1E has unconnected port M_ARESETN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 646.398 ; gain = 161.980
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 646.398 ; gain = 161.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 646.398 ; gain = 161.980
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_0/canteloupe_microblaze_0_0/canteloupe_microblaze_0_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_0/canteloupe_microblaze_0_0/canteloupe_microblaze_0_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_dlmb_v10_0/canteloupe_dlmb_v10_0/canteloupe_ilmb_v10_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_dlmb_v10_0/canteloupe_dlmb_v10_0/canteloupe_ilmb_v10_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_ilmb_v10_0/canteloupe_ilmb_v10_0/canteloupe_ilmb_v10_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_ilmb_v10_0/canteloupe_ilmb_v10_0/canteloupe_ilmb_v10_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_dlmb_bram_if_cntlr_0/canteloupe_dlmb_bram_if_cntlr_0/canteloupe_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_dlmb_bram_if_cntlr_0/canteloupe_dlmb_bram_if_cntlr_0/canteloupe_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_ilmb_bram_if_cntlr_0/canteloupe_ilmb_bram_if_cntlr_0/canteloupe_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_ilmb_bram_if_cntlr_0/canteloupe_ilmb_bram_if_cntlr_0/canteloupe_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_lmb_bram_0/canteloupe_lmb_bram_0/canteloupe_lmb_bram_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_lmb_bram_0/canteloupe_lmb_bram_0/canteloupe_lmb_bram_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_xbar_0/canteloupe_xbar_0/canteloupe_xbar_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_xbar_0/canteloupe_xbar_0/canteloupe_xbar_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_axi_intc_0/canteloupe_microblaze_0_axi_intc_0/canteloupe_microblaze_0_axi_intc_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_intc'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_microblaze_0_axi_intc_0/canteloupe_microblaze_0_axi_intc_0/canteloupe_microblaze_0_axi_intc_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_intc'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mdm_1_0/canteloupe_mdm_1_0/canteloupe_mdm_1_0_in_context.xdc] for cell 'canteloupe_i/mdm_1'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mdm_1_0/canteloupe_mdm_1_0/canteloupe_mdm_1_0_in_context.xdc] for cell 'canteloupe_i/mdm_1'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_clk_wiz_1_0/canteloupe_clk_wiz_1_0/canteloupe_clk_wiz_1_0_in_context.xdc] for cell 'canteloupe_i/clk_wiz_1'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_clk_wiz_1_0/canteloupe_clk_wiz_1_0/canteloupe_clk_wiz_1_0_in_context.xdc] for cell 'canteloupe_i/clk_wiz_1'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_rst_clk_wiz_1_100M_0/canteloupe_rst_clk_wiz_1_100M_0/canteloupe_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'canteloupe_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_rst_clk_wiz_1_100M_0/canteloupe_rst_clk_wiz_1_100M_0/canteloupe_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'canteloupe_i/rst_clk_wiz_1_100M'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_axi_uartlite_0_0/canteloupe_axi_uartlite_0_0/canteloupe_axi_uartlite_0_0_in_context.xdc] for cell 'canteloupe_i/axi_uartlite_0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_axi_uartlite_0_0/canteloupe_axi_uartlite_0_0/canteloupe_axi_uartlite_0_0_in_context.xdc] for cell 'canteloupe_i/axi_uartlite_0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc] for cell 'canteloupe_i/mig_7series_0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc] for cell 'canteloupe_i/mig_7series_0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_rst_mig_7series_0_81M_0/canteloupe_rst_mig_7series_0_81M_0/canteloupe_rst_mig_7series_0_81M_0_in_context.xdc] for cell 'canteloupe_i/rst_mig_7series_0_81M'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_rst_mig_7series_0_81M_0/canteloupe_rst_mig_7series_0_81M_0/canteloupe_rst_mig_7series_0_81M_0_in_context.xdc] for cell 'canteloupe_i/rst_mig_7series_0_81M'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_axi_fifo_mm_s_0_0/canteloupe_axi_fifo_mm_s_0_0/canteloupe_axi_fifo_mm_s_0_0_in_context.xdc] for cell 'canteloupe_i/axi_fifo_mm_s_0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_axi_fifo_mm_s_0_0/canteloupe_axi_fifo_mm_s_0_0/canteloupe_axi_fifo_mm_s_0_0_in_context.xdc] for cell 'canteloupe_i/axi_fifo_mm_s_0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_system_ila_0_0/canteloupe_system_ila_0_0/canteloupe_system_ila_0_0_in_context.xdc] for cell 'canteloupe_i/system_ila_0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_system_ila_0_0/canteloupe_system_ila_0_0/canteloupe_system_ila_0_0_in_context.xdc] for cell 'canteloupe_i/system_ila_0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_two_dimension_dct_0_0/canteloupe_two_dimension_dct_0_0/canteloupe_two_dimension_dct_0_0_in_context.xdc] for cell 'canteloupe_i/two_dimension_dct_0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_two_dimension_dct_0_0/canteloupe_two_dimension_dct_0_0/canteloupe_two_dimension_dct_0_0_in_context.xdc] for cell 'canteloupe_i/two_dimension_dct_0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_quantizer_0_0/canteloupe_quantizer_0_0/canteloupe_quantizer_0_0_in_context.xdc] for cell 'canteloupe_i/quantizer_0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_quantizer_0_0/canteloupe_quantizer_0_0/canteloupe_quantizer_0_0_in_context.xdc] for cell 'canteloupe_i/quantizer_0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_zig_zag_0_0/canteloupe_zig_zag_0_0/canteloupe_zig_zag_0_0_in_context.xdc] for cell 'canteloupe_i/zig_zag_0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_zig_zag_0_0/canteloupe_zig_zag_0_0/canteloupe_zig_zag_0_0_in_context.xdc] for cell 'canteloupe_i/zig_zag_0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_run_length_encoder_0_0/canteloupe_run_length_encoder_0_0/canteloupe_run_length_encoder_0_0_in_context.xdc] for cell 'canteloupe_i/run_length_encoder_0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_run_length_encoder_0_0/canteloupe_run_length_encoder_0_0/canteloupe_run_length_encoder_0_0_in_context.xdc] for cell 'canteloupe_i/run_length_encoder_0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_frame_generator_cust_0_0/canteloupe_frame_generator_cust_0_0/canteloupe_frame_generator_cust_0_0_in_context.xdc] for cell 'canteloupe_i/frame_generator_cust_0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_frame_generator_cust_0_0/canteloupe_frame_generator_cust_0_0/canteloupe_frame_generator_cust_0_0_in_context.xdc] for cell 'canteloupe_i/frame_generator_cust_0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/canteloupe_tri_mode_ethernet_ma_1_0/canteloupe_tri_mode_ethernet_ma_1_0_in_context.xdc] for cell 'canteloupe_i/tri_mode_ethernet_ma_1'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/canteloupe_tri_mode_ethernet_ma_1_0/canteloupe_tri_mode_ethernet_ma_1_0_in_context.xdc] for cell 'canteloupe_i/tri_mode_ethernet_ma_1'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mii_to_rmii_0_0/canteloupe_mii_to_rmii_0_0/canteloupe_mii_to_rmii_0_0_in_context.xdc] for cell 'canteloupe_i/mii_to_rmii_0'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mii_to_rmii_0_0/canteloupe_mii_to_rmii_0_0/canteloupe_mii_to_rmii_0_0_in_context.xdc] for cell 'canteloupe_i/mii_to_rmii_0'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_us_0/canteloupe_auto_us_0/canteloupe_auto_us_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/s00_couplers/auto_us'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_us_0/canteloupe_auto_us_0/canteloupe_auto_us_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/s00_couplers/auto_us'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_us_1/canteloupe_auto_us_1/canteloupe_auto_us_1_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/s01_couplers/auto_us'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_us_1/canteloupe_auto_us_1/canteloupe_auto_us_1_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/s01_couplers/auto_us'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_0/canteloupe_auto_ds_0/canteloupe_auto_ds_1_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m00_couplers/auto_ds'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_0/canteloupe_auto_ds_0/canteloupe_auto_ds_1_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m00_couplers/auto_ds'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_1/canteloupe_auto_ds_1/canteloupe_auto_ds_1_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m01_couplers/auto_ds'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_1/canteloupe_auto_ds_1/canteloupe_auto_ds_1_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m01_couplers/auto_ds'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_cc_0/canteloupe_auto_cc_0/canteloupe_auto_cc_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_cc_0/canteloupe_auto_cc_0/canteloupe_auto_cc_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_pc_0/canteloupe_auto_pc_0/canteloupe_auto_pc_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_pc_0/canteloupe_auto_pc_0/canteloupe_auto_pc_0_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_pc'
+Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_2/canteloupe_auto_ds_2/canteloupe_auto_ds_1_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m03_couplers/auto_ds'
+Finished Parsing XDC File [c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_auto_ds_2/canteloupe_auto_ds_2/canteloupe_auto_ds_1_in_context.xdc] for cell 'canteloupe_i/microblaze_0_axi_periph/m03_couplers/auto_ds'
+Parsing XDC File [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc]
+WARNING: [Vivado 12-507] No nets matched 'rmii2phy_txd_0_OBUF[0]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:1]
+WARNING: [Vivado 12-507] No nets matched 'rmii2phy_txd_0_OBUF[1]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:2]
+WARNING: [Vivado 12-507] No nets matched 'rmii2phy_tx_en_0_OBUF'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:3]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[0]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:11]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[6]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:12]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[7]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:13]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[9]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:14]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[11]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:15]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[13]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:16]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[4]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:17]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[15]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[1]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:19]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[3]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:20]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[5]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:21]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[10]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:22]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[2]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:23]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[8]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:24]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[12]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:25]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TDATA[14]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:26]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/tx_fifo_TDATA[0]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:27]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/tx_fifo_TDATA[1]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:28]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/tx_fifo_TDATA[2]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:29]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/tx_fifo_TDATA[3]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:30]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/tx_fifo_TDATA[4]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:31]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/tx_fifo_TDATA[5]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:32]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/tx_fifo_TDATA[6]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:33]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/tx_fifo_TDATA[7]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:34]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TLAST'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:35]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/tx_fifo_TLAST'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:36]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TREADY'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:37]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/rx_mic_TVALID'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:38]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/tx_fifo_TREADY'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:39]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/tx_fifo_TVALID'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:40]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/inst/mem/fifo_we'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:41]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/frame_generator_cust_0/inst/mem/mem_reg'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:42]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tlast'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:43]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tready'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:44]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tvalid'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:45]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tdata[0]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:46]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tdata[1]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:47]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tdata[2]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:48]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tdata[3]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:49]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tdata[4]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:50]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tdata[5]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:51]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tdata[6]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tdata[7]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_txd[0]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_txd[1]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_txd[2]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:56]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_txd[3]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:57]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_tx_en'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:58]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_to_rmii/mac2rmii_tx_er'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:59]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_fifo_tdata[0]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_fifo_tdata[1]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_fifo_tdata[2]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:62]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_fifo_tdata[3]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:63]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_fifo_tdata[4]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:64]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_fifo_tdata[5]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:65]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_fifo_tdata[6]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:66]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_fifo_tdata[7]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:67]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tdata[0]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:68]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tdata[1]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:69]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tdata[2]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:70]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tdata[3]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:71]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tdata[4]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:72]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tdata[5]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:73]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tdata[6]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tdata[7]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_fifo_tlast'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_fifo_tready'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:77]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_fifo_tvalid'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tlast'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:79]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tready'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:80]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tvalid'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:81]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_txd[0]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:82]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_txd[1]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:83]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_txd[2]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:84]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_txd[3]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:85]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_tx_en'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:86]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_tx_er'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:87]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_tx_en'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:88]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_tx_er'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:89]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_txd[0]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:90]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_txd[1]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:91]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_txd[2]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:92]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_txd[3]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:93]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_ramgen_i/a_din[0]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:115]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_ramgen_i/a_din[2]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:116]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_ramgen_i/a_din[3]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:117]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_ramgen_i/a_din[6]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:118]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_ramgen_i/a_din[1]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:119]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_ramgen_i/a_din[4]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:120]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_ramgen_i/a_din[5]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:121]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_ramgen_i/a_din[7]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:122]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_ramgen_i/a_din[8]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:123]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_ramgen_i/b_dout[3]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:124]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_ramgen_i/b_dout[4]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:125]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_ramgen_i/b_dout[5]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:126]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_ramgen_i/b_dout[0]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:127]
+WARNING: [Vivado 12-507] No nets matched 'canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/user_side_FIFO/tx_fifo_i/tx_ramgen_i/b_dout[1]'. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:128]
+INFO: [Common 17-14] Message 'Vivado 12-507' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc:128]
+Finished Parsing XDC File [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/canteloupe_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/canteloupe_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/canteloupe_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/canteloupe_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/canteloupe_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/dont_touch.xdc]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 974.117 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 974.117 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 974.117 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 974.117 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'canteloupe_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 974.117 ; gain = 489.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 974.117 ; gain = 489.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_clk_wiz_1_0/canteloupe_clk_wiz_1_0/canteloupe_clk_wiz_1_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_clk_wiz_1_0/canteloupe_clk_wiz_1_0/canteloupe_clk_wiz_1_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_addr[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_addr[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_addr[10]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_addr[10]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_addr[11]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_addr[11]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_addr[12]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_addr[12]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_addr[1]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_addr[1]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_addr[2]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_addr[2]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_addr[3]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_addr[3]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_addr[4]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_addr[4]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_addr[5]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_addr[5]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_addr[6]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 25).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_addr[6]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_addr[7]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 27).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_addr[7]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_addr[8]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 29).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_addr[8]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_addr[9]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 31).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_addr[9]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 32).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_ba[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 33).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_ba[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 34).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_ba[1]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 35).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_ba[1]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 36).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_ba[2]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 37).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_ba[2]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 38).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_cas_n. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 39).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_cas_n. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 40).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_ck_n[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 41).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_ck_n[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 42).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_ck_p[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 43).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_ck_p[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 44).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_cke[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 45).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_cke[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 46).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_cs_n[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 47).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_cs_n[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 48).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dm[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 49).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dm[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 50).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dm[1]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 51).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dm[1]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 52).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 53).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 54).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[10]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 55).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[10]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 56).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[11]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 57).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[11]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 58).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[12]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 59).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[12]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 60).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[13]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 61).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[13]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 62).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[14]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 63).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[14]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 64).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[15]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 65).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[15]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 66).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[1]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 67).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[1]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 68).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[2]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 69).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[2]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 70).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[3]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 71).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[3]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 72).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[4]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 73).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[4]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 74).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[5]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 75).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[5]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 76).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[6]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 77).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[6]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 78).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[7]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 79).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[7]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 80).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[8]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 81).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[8]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 82).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dq[9]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 83).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dq[9]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 84).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dqs_n[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 85).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dqs_n[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 86).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dqs_n[1]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 87).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dqs_n[1]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 88).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dqs_p[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 89).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dqs_p[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 90).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_dqs_p[1]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 91).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_dqs_p[1]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 92).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_odt[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 93).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_odt[0]. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 94).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_ras_n. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 95).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_ras_n. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 96).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR2_0_we_n. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 97).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR2_0_we_n. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0/canteloupe_mig_7series_0_0_in_context.xdc, line 98).
+Applied set_property IO_BUFFER_TYPE = NONE for mdc_0. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/canteloupe_tri_mode_ethernet_ma_1_0/canteloupe_tri_mode_ethernet_ma_1_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mdc_0. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/canteloupe_tri_mode_ethernet_ma_1_0/canteloupe_tri_mode_ethernet_ma_1_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for mdio_0. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/canteloupe_tri_mode_ethernet_ma_1_0/canteloupe_tri_mode_ethernet_ma_1_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mdio_0. (constraint file  c:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/ip/canteloupe_tri_mode_ethernet_ma_1_0/canteloupe_tri_mode_ethernet_ma_1_0/canteloupe_tri_mode_ethernet_ma_1_0_in_context.xdc, line 6).
+Applied set_property MARK_DEBUG = true for canteloupe_i/frame_generator_cust_0_tx_fifo_TDATA[0]. (constraint file  C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc, line 98).
+Applied set_property MARK_DEBUG = true for canteloupe_i/frame_generator_cust_0_tx_fifo_TLAST. (constraint file  C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc, line 106).
+Applied set_property MARK_DEBUG = true for canteloupe_i/frame_generator_cust_0_tx_fifo_TVALID. (constraint file  C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc, line 107).
+Applied set_property MARK_DEBUG = true for canteloupe_i/tri_mode_ethernet_ma_1_mii_tx_en. (constraint file  C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc, line 108).
+Applied set_property MARK_DEBUG = true for canteloupe_i/tri_mode_ethernet_ma_1_mii_tx_er. (constraint file  C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc, line 109).
+Applied set_property MARK_DEBUG = true for canteloupe_i/tri_mode_ethernet_ma_1_mii_txd[0]. (constraint file  C:/Users/poyisamu/fifoStream/fifoStream.srcs/constrs_1/new/debug.xdc, line 110).
+Applied set_property DONT_TOUCH = true for canteloupe_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_axi_intc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_xlconcat. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/mdm_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/clk_wiz_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/axi_uartlite_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/mig_7series_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/rst_mig_7series_0_81M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/axi_fifo_mm_s_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/xlconstant_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/system_ila_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/two_dimension_dct_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/quantizer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/zig_zag_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/run_length_encoder_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/frame_generator_cust_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/tri_mode_ethernet_ma_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/mii_to_rmii_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_axi_periph/s00_couplers/auto_us. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_axi_periph/s01_couplers/auto_us. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_axi_periph/m00_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_axi_periph/m01_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_axi_periph/m02_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for canteloupe_i/microblaze_0_axi_periph/m03_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 974.117 ; gain = 489.699
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'frame_generator_cust_0'. This will prevent further optimization [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:363]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'tri_mode_ethernet_ma_1'. This will prevent further optimization [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:762]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'mii_to_rmii_0'. This will prevent further optimization [C:/Users/poyisamu/fifoStream/fifoStream.srcs/sources_1/bd/canteloupe/synth/canteloupe.v:685]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 974.117 ; gain = 489.699
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design canteloupe_microblaze_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design canteloupe_microblaze_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design canteloupe_microblaze_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design canteloupe_microblaze_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design canteloupe_microblaze_0_axi_periph_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design canteloupe_microblaze_0_axi_periph_0 has unconnected port M03_ARESETN
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 974.117 ; gain = 489.699
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/microblaze_0_local_memory/dlmb_bram_if_cntlr/BRAM_Clk_A' to pin 'canteloupe_i/microblaze_0_local_memory/dlmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/BRAM_Clk_A' to pin 'canteloupe_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/mdm_1/Dbg_Clk_0' to pin 'canteloupe_i/mdm_1/bbstub_Dbg_Clk_0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/mdm_1/Dbg_Update_0' to pin 'canteloupe_i/mdm_1/bbstub_Dbg_Update_0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/clk_wiz_1/clk_out1' to pin 'canteloupe_i/clk_wiz_1/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/clk_wiz_1/clk_out2' to pin 'canteloupe_i/clk_wiz_1/bbstub_clk_out2/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/clk_wiz_1/clk_out3' to pin 'canteloupe_i/clk_wiz_1/bbstub_clk_out3/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/clk_wiz_1/clk_out4' to pin 'canteloupe_i/clk_wiz_1/bbstub_clk_out4/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/mig_7series_0/ui_addn_clk_0' to pin 'canteloupe_i/mig_7series_0/bbstub_ui_addn_clk_0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/mig_7series_0/ui_addn_clk_1' to pin 'canteloupe_i/mig_7series_0/bbstub_ui_addn_clk_1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/mig_7series_0/ui_addn_clk_2' to pin 'canteloupe_i/mig_7series_0/bbstub_ui_addn_clk_2/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/mig_7series_0/ui_addn_clk_3' to pin 'canteloupe_i/mig_7series_0/bbstub_ui_addn_clk_3/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/mig_7series_0/ui_addn_clk_4' to pin 'canteloupe_i/mig_7series_0/bbstub_ui_addn_clk_4/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/mig_7series_0/ui_clk' to pin 'canteloupe_i/mig_7series_0/bbstub_ui_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/tri_mode_ethernet_ma_1/mii_rx_clk' to pin 'canteloupe_i/mii_to_rmii_0/bbstub_rmii2mac_rx_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'canteloupe_i/tri_mode_ethernet_ma_1/mii_tx_clk' to pin 'canteloupe_i/mii_to_rmii_0/bbstub_rmii2mac_tx_clk/O'
+INFO: [Synth 8-5819] Moved 16 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 974.117 ; gain = 489.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 974.117 ; gain = 489.699
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 981.828 ; gain = 497.410
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 981.828 ; gain = 497.410
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 981.828 ; gain = 497.410
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 981.828 ; gain = 497.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 981.828 ; gain = 497.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 981.828 ; gain = 497.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 981.828 ; gain = 497.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------------+----------+
+|      |BlackBox name                       |Instances |
++------+------------------------------------+----------+
+|1     |canteloupe_xbar_0                   |         1|
+|2     |canteloupe_auto_ds_0                |         1|
+|3     |canteloupe_auto_ds_1                |         1|
+|4     |canteloupe_auto_cc_0                |         1|
+|5     |canteloupe_auto_pc_0                |         1|
+|6     |canteloupe_auto_ds_2                |         1|
+|7     |canteloupe_auto_us_0                |         1|
+|8     |canteloupe_auto_us_1                |         1|
+|9     |canteloupe_axi_fifo_mm_s_0_0        |         1|
+|10    |canteloupe_axi_uartlite_0_0         |         1|
+|11    |canteloupe_clk_wiz_1_0              |         1|
+|12    |canteloupe_frame_generator_cust_0_0 |         1|
+|13    |canteloupe_mdm_1_0                  |         1|
+|14    |canteloupe_microblaze_0_0           |         1|
+|15    |canteloupe_microblaze_0_axi_intc_0  |         1|
+|16    |canteloupe_mig_7series_0_0          |         1|
+|17    |canteloupe_mii_to_rmii_0_0          |         1|
+|18    |canteloupe_quantizer_0_0            |         1|
+|19    |canteloupe_rst_clk_wiz_1_100M_0     |         1|
+|20    |canteloupe_rst_mig_7series_0_81M_0  |         1|
+|21    |canteloupe_run_length_encoder_0_0   |         1|
+|22    |canteloupe_system_ila_0_0           |         1|
+|23    |canteloupe_tri_mode_ethernet_ma_1_0 |         1|
+|24    |canteloupe_two_dimension_dct_0_0    |         1|
+|25    |canteloupe_zig_zag_0_0              |         1|
+|26    |canteloupe_dlmb_bram_if_cntlr_0     |         1|
+|27    |canteloupe_dlmb_v10_0               |         1|
+|28    |canteloupe_ilmb_bram_if_cntlr_0     |         1|
+|29    |canteloupe_ilmb_v10_0               |         1|
+|30    |canteloupe_lmb_bram_0               |         1|
++------+------------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------------+------+
+|      |Cell                                |Count |
++------+------------------------------------+------+
+|1     |canteloupe_auto_cc_0                |     1|
+|2     |canteloupe_auto_ds_0                |     1|
+|3     |canteloupe_auto_ds_1                |     1|
+|4     |canteloupe_auto_ds_2                |     1|
+|5     |canteloupe_auto_pc_0                |     1|
+|6     |canteloupe_auto_us_0                |     1|
+|7     |canteloupe_auto_us_1                |     1|
+|8     |canteloupe_axi_fifo_mm_s_0_0        |     1|
+|9     |canteloupe_axi_uartlite_0_0         |     1|
+|10    |canteloupe_clk_wiz_1_0              |     1|
+|11    |canteloupe_dlmb_bram_if_cntlr_0     |     1|
+|12    |canteloupe_dlmb_v10_0               |     1|
+|13    |canteloupe_frame_generator_cust_0_0 |     1|
+|14    |canteloupe_ilmb_bram_if_cntlr_0     |     1|
+|15    |canteloupe_ilmb_v10_0               |     1|
+|16    |canteloupe_lmb_bram_0               |     1|
+|17    |canteloupe_mdm_1_0                  |     1|
+|18    |canteloupe_microblaze_0_0           |     1|
+|19    |canteloupe_microblaze_0_axi_intc_0  |     1|
+|20    |canteloupe_mig_7series_0_0          |     1|
+|21    |canteloupe_mii_to_rmii_0_0          |     1|
+|22    |canteloupe_quantizer_0_0            |     1|
+|23    |canteloupe_rst_clk_wiz_1_100M_0     |     1|
+|24    |canteloupe_rst_mig_7series_0_81M_0  |     1|
+|25    |canteloupe_run_length_encoder_0_0   |     1|
+|26    |canteloupe_system_ila_0_0           |     1|
+|27    |canteloupe_tri_mode_ethernet_ma_1_0 |     1|
+|28    |canteloupe_two_dimension_dct_0_0    |     1|
+|29    |canteloupe_xbar_0                   |     1|
+|30    |canteloupe_zig_zag_0_0              |     1|
+|31    |IBUF                                |     6|
+|32    |OBUF                                |     5|
++------+------------------------------------+------+
+
+Report Instance Areas: 
++------+------------------------------+--------------------------------------+------+
+|      |Instance                      |Module                                |Cells |
++------+------------------------------+--------------------------------------+------+
+|1     |top                           |                                      |  3324|
+|2     |  canteloupe_i                |canteloupe                            |  3313|
+|3     |    microblaze_0_axi_periph   |canteloupe_microblaze_0_axi_periph_0  |  2020|
+|4     |      m00_couplers            |m00_couplers_imp_1FM5A1E              |   184|
+|5     |      m01_couplers            |m01_couplers_imp_1PZAEL0              |   184|
+|6     |      m02_couplers            |m02_couplers_imp_VAJQFY               |   473|
+|7     |      m03_couplers            |m03_couplers_imp_60LCD4               |   184|
+|8     |      s00_couplers            |s00_couplers_imp_1O071EB              |   188|
+|9     |      s01_couplers            |s01_couplers_imp_1GHA8B9              |    73|
+|10    |    microblaze_0_xlconcat     |canteloupe_microblaze_0_xlconcat_0    |     0|
+|11    |    xlconstant_0              |canteloupe_xlconstant_0_0             |     0|
+|12    |    microblaze_0_local_memory |microblaze_0_local_memory_imp_13VZ7DK |   496|
++------+------------------------------+--------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 981.828 ; gain = 497.410
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 981.828 ; gain = 169.691
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 981.828 ; gain = 497.410
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 997.664 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+124 Infos, 178 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 997.711 ; gain = 513.293
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 997.711 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1/canteloupe_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file canteloupe_wrapper_utilization_synth.rpt -pb canteloupe_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 31 03:22:20 2021...

@@ -1,0 +1,636 @@
+$date
+        2021-Mar-31 02:50:01
+$end
+$version
+        Vivado v2018.3.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 32 " canteloupe_i/system_ila_0/inst/net_slot_0_axis_tdata [31:0] $end
+$var reg 1 B canteloupe_i/system_ila_0/inst/net_slot_0_axis_tvalid $end
+$var reg 1 C canteloupe_i/system_ila_0/inst/net_slot_0_axis_tready $end
+$var reg 1 D canteloupe_i/system_ila_0/inst/net_slot_0_axis_tlast $end
+$var reg 24 E canteloupe_i/system_ila_0/inst/net_slot_1_axis_tdata [23:0] $end
+$var reg 1 ] canteloupe_i/system_ila_0/inst/net_slot_1_axis_tvalid $end
+$var reg 1 ^ canteloupe_i/system_ila_0/inst/net_slot_1_axis_tready $end
+$var reg 1 _ canteloupe_i/system_ila_0/inst/net_slot_1_axis_tlast $end
+$var reg 16 ` canteloupe_i/system_ila_0/inst/net_slot_2_axis_tdata [15:0] $end
+$var reg 1 p canteloupe_i/system_ila_0/inst/net_slot_2_axis_tvalid $end
+$var reg 1 q canteloupe_i/system_ila_0/inst/net_slot_2_axis_tready $end
+$var reg 1 r canteloupe_i/system_ila_0/inst/net_slot_2_axis_tlast $end
+$var reg 16 s canteloupe_i/system_ila_0/inst/net_slot_3_axis_tdata [15:0] $end
+$var reg 1 %" canteloupe_i/system_ila_0/inst/net_slot_3_axis_tvalid $end
+$var reg 1 &" canteloupe_i/system_ila_0/inst/net_slot_3_axis_tready $end
+$var reg 1 '" canteloupe_i/system_ila_0/inst/net_slot_3_axis_tlast $end
+$var reg 16 (" canteloupe_i/system_ila_0/inst/net_slot_4_axis_tdata [15:0] $end
+$var reg 1 8" canteloupe_i/system_ila_0/inst/net_slot_4_axis_tvalid $end
+$var reg 1 9" canteloupe_i/system_ila_0/inst/net_slot_4_axis_tready $end
+$var reg 1 :" canteloupe_i/system_ila_0/inst/net_slot_4_axis_tlast $end
+$var reg 3 ;" Interface__i1_s0___axi_fifo_mm_s_0_AXI_STR_TXD_ [2:0] $end
+$var reg 3 >" Interface__i1_s1___two_dimension_dct_0_o_axis_ [2:0] $end
+$var reg 3 A" Interface__i1_s2___quantizer_0_o_axis_ [2:0] $end
+$var reg 3 D" Interface__i1_s3___zig_zag_0_o_axis_ [2:0] $end
+$var reg 3 G" Interface__i1_s4___run_length_encoder_0_o_axis_ [2:0] $end
+$var reg 3 J" T_Channel__i1_s0___axi_fifo_mm_s_0_AXI_STR_TXD_ [2:0] $end
+$var reg 3 M" T_Channel__i1_s1___two_dimension_dct_0_o_axis_ [2:0] $end
+$var reg 3 P" T_Channel__i1_s2___quantizer_0_o_axis_ [2:0] $end
+$var reg 3 S" T_Channel__i1_s3___zig_zag_0_o_axis_ [2:0] $end
+$var reg 3 V" T_Channel__i1_s4___run_length_encoder_0_o_axis_ [2:0] $end
+$var reg 1 Y" _TRIGGER $end
+$var reg 1 Z" _WINDOW $end
+$var reg 1 [" _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b111111110000000 "
+1B
+0C
+0D
+b0 E
+0]
+1^
+0_
+b0 `
+0p
+1q
+0r
+b0 s
+0%"
+1&"
+0'"
+b0 ("
+08"
+19"
+0:"
+b0 ;"
+b0 >"
+b0 A"
+b0 D"
+b0 G"
+b0 J"
+b0 M"
+b0 P"
+b0 S"
+b0 V"
+0Y"
+1Z"
+0["
+$end
+#13
+1C
+b1 ;"
+b1 J"
+#21
+0C
+b0 ;"
+b0 J"
+#36
+1C
+b1 ;"
+b1 J"
+#44
+0C
+b0 ;"
+b0 J"
+#59
+1C
+b1 ;"
+b1 J"
+#67
+0C
+b0 ;"
+b0 J"
+#82
+1C
+b1 ;"
+b1 J"
+#90
+0C
+b0 ;"
+b0 J"
+#105
+1C
+b1 ;"
+b1 J"
+#113
+0C
+b0 ;"
+b0 J"
+#128
+1C
+b1 ;"
+b1 J"
+#136
+0C
+b0 ;"
+b0 J"
+#151
+1C
+b1 ;"
+b1 J"
+#159
+b0 "
+0C
+b0 ;"
+b0 J"
+#174
+1C
+b1 ;"
+b1 J"
+#182
+0C
+b0 ;"
+b0 J"
+#204
+b111111100101000010001011 E
+1]
+b1 >"
+b1 M"
+#205
+b0 E
+#211
+1_
+b10 M"
+#212
+0]
+0_
+b0 >"
+b0 M"
+#227
+1]
+b1 >"
+b1 M"
+#234
+1_
+b10 M"
+#235
+0]
+0_
+b0 >"
+b0 M"
+#250
+1]
+b1 >"
+b1 M"
+#257
+1_
+b10 M"
+#258
+0]
+0_
+b0 >"
+b0 M"
+#273
+1]
+b1 >"
+b1 M"
+#280
+1_
+b10 M"
+#281
+0]
+0_
+b0 >"
+b0 M"
+#296
+1]
+b1 >"
+b1 M"
+#303
+1_
+b10 M"
+#304
+0]
+0_
+b0 >"
+b0 M"
+#319
+1]
+b1 >"
+b1 M"
+#326
+1_
+b10 M"
+#327
+0]
+0_
+b0 >"
+b0 M"
+#342
+1]
+b1 >"
+b1 M"
+#349
+1_
+b10 M"
+#350
+0]
+0_
+b0 >"
+b0 M"
+#365
+1]
+b1 >"
+b1 M"
+#366
+1C
+b1 ;"
+b1 J"
+#372
+1_
+b10 M"
+#373
+0]
+0^
+0_
+b0 >"
+b0 M"
+#374
+0C
+b0 ;"
+b0 J"
+#383
+b1010 `
+1p
+b1 A"
+b1 P"
+#384
+b0 `
+#389
+1C
+b1 ;"
+b1 J"
+#397
+0C
+b0 ;"
+b0 J"
+#412
+1C
+b1 ;"
+b1 J"
+#420
+0C
+b0 ;"
+b0 J"
+#435
+1C
+b1 ;"
+b1 J"
+#443
+0C
+b0 ;"
+b0 J"
+#446
+1r
+b10 P"
+#447
+1^
+0p
+0q
+0r
+b1010 s
+1%"
+b0 A"
+b1 D"
+b0 P"
+b1 S"
+#448
+b0 s
+#458
+1C
+b1 ;"
+b1 J"
+#466
+0C
+b0 ;"
+b0 J"
+#481
+1C
+b1 ;"
+b1 J"
+#489
+0C
+b0 ;"
+b0 J"
+#504
+1C
+b1 ;"
+b1 J"
+#510
+1'"
+b10 S"
+#511
+1q
+0%"
+0&"
+0'"
+b0 D"
+b0 S"
+#512
+0C
+b10000001010 ("
+18"
+b0 ;"
+b1 G"
+b0 J"
+b1 V"
+1Y"
+#513
+08"
+09"
+b0 G"
+b0 V"
+#514
+19"
+#527
+1C
+b1 ;"
+b1 J"
+#535
+0C
+b0 ;"
+b0 J"
+#557
+1]
+b1 >"
+b1 M"
+#564
+1_
+b10 M"
+#565
+0]
+0_
+b0 >"
+b0 M"
+#575
+b1111110000000000 ("
+18"
+1:"
+b1 G"
+b10 V"
+#576
+1&"
+b0 ("
+08"
+09"
+0:"
+b0 G"
+b0 V"
+#579
+19"
+#580
+1]
+b1 >"
+b1 M"
+#587
+1_
+b10 M"
+#588
+0]
+0_
+b0 >"
+b0 M"
+#603
+1]
+b1 >"
+b1 M"
+#610
+1_
+b10 M"
+#611
+0]
+0_
+b0 >"
+b0 M"
+#626
+1]
+b1 >"
+b1 M"
+#633
+1_
+b10 M"
+#634
+0]
+0_
+b0 >"
+b0 M"
+#649
+1]
+b1 >"
+b1 M"
+#656
+1_
+b10 M"
+#657
+0]
+0_
+b0 >"
+b0 M"
+#672
+1]
+b1 >"
+b1 M"
+#679
+1_
+b10 M"
+#680
+0]
+0_
+09"
+b0 >"
+b0 M"
+#695
+1]
+b1 >"
+b1 M"
+#701
+19"
+#702
+1_
+b10 M"
+#703
+0]
+0_
+b0 >"
+b0 M"
+#718
+1]
+b1 >"
+b1 M"
+#719
+1C
+b1 ;"
+b1 J"
+#725
+1_
+b10 M"
+#726
+0]
+0^
+0_
+b0 >"
+b0 M"
+#727
+0C
+b0 ;"
+b0 J"
+#736
+1p
+b1 A"
+b1 P"
+#742
+1C
+b1 ;"
+b1 J"
+#750
+0C
+b0 ;"
+b0 J"
+#765
+1C
+b1 ;"
+b1 J"
+#773
+0C
+b0 ;"
+b0 J"
+#788
+1C
+b1 ;"
+b1 J"
+#796
+0C
+b0 ;"
+b0 J"
+#799
+1r
+b10 P"
+#800
+1^
+0p
+0q
+0r
+1%"
+b0 A"
+b1 D"
+b0 P"
+b1 S"
+#811
+1C
+b1 ;"
+b1 J"
+#819
+0C
+b0 ;"
+b0 J"
+#834
+1C
+b1 ;"
+b1 J"
+#842
+0C
+b0 ;"
+b0 J"
+#857
+1C
+b1 ;"
+b1 J"
+#863
+1'"
+b10 S"
+#864
+1q
+0%"
+0&"
+0'"
+b0 D"
+b0 S"
+#865
+0C
+b0 ;"
+b0 J"
+#880
+1C
+b1 ;"
+b1 J"
+#888
+0C
+b0 ;"
+b0 J"
+#910
+1]
+b1 >"
+b1 M"
+#917
+1_
+b10 M"
+#918
+0]
+0_
+b0 >"
+b0 M"
+#927
+18"
+1:"
+b1 G"
+b10 V"
+#928
+1&"
+08"
+09"
+0:"
+b0 G"
+b0 V"
+#931
+19"
+#933
+1]
+b1 >"
+b1 M"
+#940
+1_
+b10 M"
+#941
+0]
+0_
+b0 >"
+b0 M"
+#956
+1]
+b1 >"
+b1 M"
+#963
+1_
+b10 M"
+#964
+0]
+0_
+b0 >"
+b0 M"
+#979
+1]
+b1 >"
+b1 M"
+#986
+1_
+b10 M"
+#987
+0]
+0_
+b0 >"
+b0 M"
+#1002
+1]
+b1 >"
+b1 M"
+#1009
+1_
+b10 M"
+#1010
+0]
+0_
+b0 >"
+b0 M"

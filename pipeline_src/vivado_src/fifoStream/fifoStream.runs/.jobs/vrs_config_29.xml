@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="canteloupe_system_ila_0_0_synth_1" LaunchDir="C:/Users/poyisamu/fifoStream/fifoStream.runs/canteloupe_system_ila_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="canteloupe_two_dimension_dct_0_0_synth_1" LaunchDir="C:/Users/poyisamu/fifoStream/fifoStream.runs/canteloupe_two_dimension_dct_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="canteloupe_quantizer_0_0_synth_1" LaunchDir="C:/Users/poyisamu/fifoStream/fifoStream.runs/canteloupe_quantizer_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="canteloupe_zig_zag_0_0_synth_1" LaunchDir="C:/Users/poyisamu/fifoStream/fifoStream.runs/canteloupe_zig_zag_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="canteloupe_run_length_encoder_0_0_synth_1" LaunchDir="C:/Users/poyisamu/fifoStream/fifoStream.runs/canteloupe_run_length_encoder_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="canteloupe_tri_mode_ethernet_ma_0_1_synth_1" LaunchDir="C:/Users/poyisamu/fifoStream/fifoStream.runs/canteloupe_tri_mode_ethernet_ma_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="canteloupe_frame_generator_cust_0_0_synth_1" LaunchDir="C:/Users/poyisamu/fifoStream/fifoStream.runs/canteloupe_frame_generator_cust_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/poyisamu/fifoStream/fifoStream.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="canteloupe_system_ila_0_0_synth_1"/>
+		<Parent Id="canteloupe_two_dimension_dct_0_0_synth_1"/>
+		<Parent Id="canteloupe_quantizer_0_0_synth_1"/>
+		<Parent Id="canteloupe_zig_zag_0_0_synth_1"/>
+		<Parent Id="canteloupe_run_length_encoder_0_0_synth_1"/>
+		<Parent Id="canteloupe_tri_mode_ethernet_ma_0_1_synth_1"/>
+		<Parent Id="canteloupe_frame_generator_cust_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

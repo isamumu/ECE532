@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# updatemem v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# 
+# Start of session at: Wed Mar 31 00:10:43 2021
+# Process ID: 4536
+# Current directory: C:/Users/poyisamu/fifoStream
+# Command line: updatemem.exe -mode batch -source C:/DESL/Xilinx/SDK/2018.3/scripts/updatemem/main.tcl -notrace -tclargs -meminfo C:/Users/poyisamu/fifoStream/fifoStream.sdk/canteloupe_wrapper_hw_platform_0/canteloupe_wrapper.mmi -data C:/DESL/Xilinx/SDK/2018.3/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc canteloupe_i/microblaze_0 -bit C:/Users/poyisamu/fifoStream/fifoStream.sdk/canteloupe_wrapper_hw_platform_0/canteloupe_wrapper.bit -out C:/Users/poyisamu/fifoStream/fifoStream.sdk/canteloupe_wrapper_hw_platform_0/download.bit -force
+# Log file: C:/Users/poyisamu/fifoStream/updatemem.log
+# Journal file: C:/Users/poyisamu/fifoStream\updatemem.jou
+#-----------------------------------------------------------
+source C:/DESL/Xilinx/SDK/2018.3/scripts/updatemem/main.tcl -notrace
+ Loading bitfile C:/Users/poyisamu/fifoStream/fifoStream.sdk/canteloupe_wrapper_hw_platform_0/canteloupe_wrapper.bit
+Loading data files...
+Updating memory content...
+Creating bitstream...
+Writing bitstream C:/Users/poyisamu/fifoStream/fifoStream.sdk/canteloupe_wrapper_hw_platform_0/download.bit...
+  update_mem: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 524.848 ; gain = 439.051
+INFO: [Common 17-206] Exiting updatemem at Wed Mar 31 00:10:56 2021...

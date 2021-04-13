@@ -1,0 +1,1962 @@
+05:32:59 **** Build of project streamFIFO_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/llfifo_v5_2/src"
+make -C microblaze_0/libsrc/llfifo_v5_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/llfifo_v5_2/src"
+make -C microblaze_0/libsrc/llfifo_v5_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling llfifo"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+05:33:14 **** Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3132	    312	   3108	   6552	   1998	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+05:33:58 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:157:6: warning: unused variable 'Error' [-Wunused-variable]
+  int Error;
+      ^~~~~
+../src/helloworld.c:156:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9360	    336	  11408	  21104	   5270	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+05:35:41 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:157:6: warning: unused variable 'Error' [-Wunused-variable]
+  int Error;
+      ^~~~~
+../src/helloworld.c:156:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9392	    336	  11408	  21136	   5290	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+05:35:46 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+05:36:09 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+05:37:41 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+05:40:22 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+05:41:11 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:157:6: warning: unused variable 'Error' [-Wunused-variable]
+  int Error;
+      ^~~~~
+../src/helloworld.c:156:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9412	    336	  11412	  21160	   52a8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+05:41:17 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+05:42:11 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:157:6: warning: unused variable 'Error' [-Wunused-variable]
+  int Error;
+      ^~~~~
+../src/helloworld.c:156:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9456	    336	  11408	  21200	   52d0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+05:42:18 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+05:42:53 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:157:6: warning: unused variable 'Error' [-Wunused-variable]
+  int Error;
+      ^~~~~
+../src/helloworld.c:156:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9488	    336	  11408	  21232	   52f0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+05:42:58 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+05:44:35 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+05:45:06 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+05:52:50 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:157:6: warning: unused variable 'Error' [-Wunused-variable]
+  int Error;
+      ^~~~~
+../src/helloworld.c:156:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10056	    336	  11408	  21800	   5528	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+05:52:56 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+05:53:24 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:157:6: warning: unused variable 'Error' [-Wunused-variable]
+  int Error;
+      ^~~~~
+../src/helloworld.c:156:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9448	    336	  11408	  21192	   52c8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+05:53:28 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+05:54:17 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+05:56:50 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+05:57:25 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:157:6: warning: unused variable 'Error' [-Wunused-variable]
+  int Error;
+      ^~~~~
+../src/helloworld.c:156:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9448	    336	   4496	  14280	   37c8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+05:57:37 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:157:6: warning: unused variable 'Error' [-Wunused-variable]
+  int Error;
+      ^~~~~
+../src/helloworld.c:156:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9488	    336	   4496	  14320	   37f0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+05:57:43 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+06:59:47 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10096	    336	  11408	  21840	   5550	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+07:00:49 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:159:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9380	    336	  11412	  21128	   5288	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+07:03:11 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+21:19:26 **** Build of project streamFIFO_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/llfifo_v5_2/src"
+make -C microblaze_0/libsrc/llfifo_v5_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/llfifo_v5_2/src"
+make -C microblaze_0/libsrc/llfifo_v5_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling llfifo"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+21:19:42 **** Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:159:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9380	    336	  11412	  21128	   5288	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+21:21:12 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:53:10: fatal error: xil_exception.h: No such file or directory
+ #include "xil_exception.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+21:21:22 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:53:10: fatal error: xil_exception.h: No such file or directory
+ #include "xil_exception.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+21:21:37 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:54:10: fatal error: xstreamer.h: No such file or directory
+ #include "xstreamer.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+21:21:41 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:55:10: fatal error: xil_cache.h: No such file or directory
+ #include "xil_cache.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+21:21:46 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:56:10: fatal error: xllfifo.h: No such file or directory
+ #include "xllfifo.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+21:21:57 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:53:10: fatal error: xil_exception.h: No such file or directory
+ #include "xil_exception.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+21:23:00 **** Auto Build of project streamFIFO_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/llfifo_v5_2/src"
+make -C microblaze_0/libsrc/llfifo_v5_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/llfifo_v5_2/src"
+make -C microblaze_0/libsrc/llfifo_v5_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling llfifo"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+21:23:13 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:159:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9380	    336	   5268	  14984	   3a88	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+21:23:39 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+21:25:46 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+21:27:40 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:159:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9380	    336	  11412	  21128	   5288	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+21:27:57 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+21:30:15 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:159:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9416	    336	  11408	  21160	   52a8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+21:30:26 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+21:31:40 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:159:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:258:24: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+   *(SourceAddr + i) = i+1 << 7;
+                       ~^~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9420	    336	  11412	  21168	   52b0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+21:31:45 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:159:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9420	    336	  11412	  21168	   52b0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+21:31:56 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+21:48:10 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+21:50:00 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+21:51:07 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+12:27:23 **** Build of project streamFIFO_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/llfifo_v5_2/src"
+make -C microblaze_0/libsrc/llfifo_v5_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/llfifo_v5_2/src"
+make -C microblaze_0/libsrc/llfifo_v5_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling llfifo"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+12:27:38 **** Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:159:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9420	    336	  11412	  21168	   52b0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+12:30:23 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:53:10: fatal error: xil_exception.h: No such file or directory
+ #include "xil_exception.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+12:31:02 **** Auto Build of project streamFIFO_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/llfifo_v5_2/src"
+make -C microblaze_0/libsrc/llfifo_v5_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/llfifo_v5_2/src"
+make -C microblaze_0/libsrc/llfifo_v5_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling llfifo"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+12:31:16 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:159:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9420	    336	  11412	  21168	   52b0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+12:32:27 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+12:33:02 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:159:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9312	    336	  11408	  21056	   5240	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+12:33:32 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:159:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9420	    336	  11412	  21168	   52b0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+12:33:52 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+12:34:28 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:159:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9420	    336	  11412	  21168	   52b0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+12:34:41 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+12:35:48 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:159:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9456	    336	  11408	  21200	   52d0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+12:36:18 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+12:36:51 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:159:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9448	    336	  11408	  21192	   52c8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+12:37:21 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+13:32:12 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:128:6: error: redeclaration of 'Status' with no linkage
+  int Status;
+      ^~~~~~
+../src/helloworld.c:126:6: note: previous declaration of 'Status' was here
+  int Status;
+      ^~~~~~
+../src/helloworld.c:151:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:130:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:129:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:241:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+13:32:29 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:150:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:129:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:128:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:240:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11784	    352	  13480	  25616	   6410	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+13:44:28 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:150:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:129:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:128:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:242:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11712	    352	  13480	  25544	   63c8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+13:51:10 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:302:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:281:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:280:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11712	    352	  13480	  25544	   63c8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+13:55:09 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:368:3: error: expected ';' before '}' token
+   }
+   ^
+../src/helloworld.c:304:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:283:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:282:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c:273:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+13:55:24 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:304:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:283:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:282:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c:273:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11800	    352	  13480	  25632	   6420	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+13:55:35 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:304:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:283:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:282:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c:273:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11692	    352	  13484	  25528	   63b8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+13:57:07 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:304:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:283:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:282:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c:273:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11692	    352	  13484	  25528	   63b8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+13:57:13 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+13:59:30 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+14:00:37 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:305:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:298:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:297:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c:296:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/helloworld.c:288:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11692	    352	  13484	  25528	   63b8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+14:01:17 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:304:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:298:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:297:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c:296:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/helloworld.c:288:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11692	    352	  13484	  25528	   63b8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+14:01:23 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:304:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:298:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:297:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c:296:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/helloworld.c:288:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11720	    352	  13480	  25552	   63d0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+14:01:27 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+14:03:19 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:304:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:298:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:297:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c:296:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/helloworld.c:288:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11756	    352	  13484	  25592	   63f8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+14:04:29 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+14:06:45 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+14:09:24 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:304:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:298:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:297:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c:296:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/helloworld.c:288:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11684	    352	  13484	  25520	   63b0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+14:11:48 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:234:11: error: too few arguments to function 'TxSend'
+  Status = TxSend(InstancePtr);
+           ^~~~~~
+../src/helloworld.c:93:5: note: declared here
+ int TxSend(XLlFifo *InstancePtr, u32 *SourceAddr);
+     ^~~~~~
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: At top level:
+../src/helloworld.c:285:5: error: conflicting types for 'TxSend'
+ int TxSend(XLlFifo *InstancePtr)
+     ^~~~~~
+../src/helloworld.c:93:5: note: previous declaration of 'TxSend' was here
+ int TxSend(XLlFifo *InstancePtr, u32 *SourceAddr);
+     ^~~~~~
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:344:7: error: 'SourceAddr' undeclared (first use in this function); did you mean 'SourceBuffer'?
+     *(SourceAddr + i) = BUFFER[i] << 7;
+       ^~~~~~~~~~
+       SourceBuffer
+../src/helloworld.c:344:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:305:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:299:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:298:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c:297:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/helloworld.c:289:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+../src/helloworld.c:287:6: warning: unused variable 'SourceBuffer' [-Wunused-variable]
+  u32 SourceBuffer[MAX_DATA_BUFFER_SIZE * WORD_SIZE];
+      ^~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+14:12:19 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:233:31: error: 'SourceBuffer' undeclared (first use in this function); did you mean 'RecvBuffer'?
+  Status = TxSend(InstancePtr, SourceBuffer);
+                               ^~~~~~~~~~~~
+                               RecvBuffer
+../src/helloworld.c:233:31: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:304:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:298:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:297:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c:296:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/helloworld.c:288:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+14:12:26 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:304:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:298:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:297:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c:296:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/helloworld.c:288:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11684	    352	  13484	  25520	   63b0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+14:13:23 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:301:4: error: 'ReceivedCount' undeclared (first use in this function)
+    ReceivedCount += XUartLite_Recv(&UartLite,
+    ^~~~~~~~~~~~~
+../src/helloworld.c:301:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:288:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+14:13:27 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:300:4: error: 'ReceivedCount' undeclared (first use in this function)
+    ReceivedCount += XUartLite_Recv(&UartLite,
+    ^~~~~~~~~~~~~
+../src/helloworld.c:300:4: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+14:13:46 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:304:7: warning: unused variable 'm' [-Wunused-variable]
+   int m = 0;
+       ^
+../src/helloworld.c:298:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c:297:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+../src/helloworld.c:296:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/helloworld.c:288:6: warning: unused variable 'j' [-Wunused-variable]
+  int j;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11684	    352	  13484	  25520	   63b0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+14:13:53 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11680	    352	  13480	  25512	   63a8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+14:14:00 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11680	    352	  13480	  25512	   63a8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+14:17:47 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+14:18:28 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11684	    352	  13484	  25520	   63b0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+14:18:38 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+14:19:18 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11680	    352	  13480	  25512	   63a8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+14:20:13 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+15:01:14 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+15:10:54 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11724	    352	  13484	  25560	   63d8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+15:11:01 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11680	    352	  13480	  25512	   63a8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+15:11:23 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11696	    352	  13480	  25528	   63b8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+15:11:43 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+15:16:49 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11696	    352	  13480	  25528	   63b8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+15:19:57 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11696	    352	  13480	  25528	   63b8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+15:22:09 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11696	    352	  13480	  25528	   63b8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+15:22:53 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:287:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11696	    352	  13480	  25528	   63b8	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+15:23:00 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+15:23:40 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:287:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11684	    352	  13484	  25520	   63b0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+20:30:30 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+00:16:16 **** Auto Build of project streamFIFO_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/llfifo_v5_2/src"
+make -C microblaze_0/libsrc/llfifo_v5_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/llfifo_v5_2/src"
+make -C microblaze_0/libsrc/llfifo_v5_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling llfifo"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+00:16:31 **** Auto Build of configuration Debug for project streamFIFO ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XLlFifoPollingExample':
+../src/helloworld.c:170:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/helloworld.c: In function 'TxSend':
+../src/helloworld.c:287:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../streamFIFO_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: streamFIFO.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../streamFIFO_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "streamFIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: streamFIFO.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size streamFIFO.elf  |tee "streamFIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11684	    352	  13484	  25520	   63b0	streamFIFO.elf
+'Finished building: streamFIFO.elf.size'
+' '
+00:17:06 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+00:47:25 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+01:58:30 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+02:48:45 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+02:49:04 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+02:58:44 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.
+04:35:26 **** Incremental Build of configuration Debug for project streamFIFO ****
+make all 
+make: Nothing to be done for 'all'.

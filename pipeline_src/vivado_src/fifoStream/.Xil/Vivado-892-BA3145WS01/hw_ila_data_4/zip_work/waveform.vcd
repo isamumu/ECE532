@@ -1,0 +1,27 @@
+$date
+        2021-Mar-31 02:00:31
+$end
+$version
+        Vivado v2018.3.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tready $end
+$var reg 1 # canteloupe_i/frame_generator_cust_0/tx_fifo_TREADY $end
+$var reg 1 $ _TRIGGER $end
+$var reg 1 % _WINDOW $end
+$var reg 1 & _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1"
+1#
+0$
+1%
+0&
+$end
+#512
+1$

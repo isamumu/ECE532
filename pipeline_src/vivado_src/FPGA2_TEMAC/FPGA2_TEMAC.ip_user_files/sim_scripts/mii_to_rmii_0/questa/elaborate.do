@@ -1,0 +1,1 @@
+vopt -64 +acc -l elaborate.log -L xil_defaultlib -L xpm -L mii_to_rmii_v2_0_20 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.mii_to_rmii_0 xil_defaultlib.glbl -o mii_to_rmii_0_opt

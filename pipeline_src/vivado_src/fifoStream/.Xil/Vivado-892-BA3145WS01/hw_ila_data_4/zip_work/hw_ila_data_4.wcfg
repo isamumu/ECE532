@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/poyisamu/fifoStream/fifoStream.hw/hw_1/wave/hw_ila_data_4/hw_ila_data_4.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1024001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="405"></NameColumnWidth>
+      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="canteloupe_i/frame_generator_cust_0/tx_fifo_TREADY" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/frame_generator_cust_0/tx_fifo_TREADY</obj_property>
+      <obj_property name="ObjectShortName">tx_fifo_TREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tready" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/tri_mode_ethernet_ma_1/tx_axis_fifo_tready</obj_property>
+      <obj_property name="ObjectShortName">tx_axis_fifo_tready</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

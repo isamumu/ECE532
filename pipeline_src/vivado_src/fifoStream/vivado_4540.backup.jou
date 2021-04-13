@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Mon Mar 29 12:23:54 2021
+# Process ID: 4540
+# Current directory: C:/Users/poyisamu/fifoStream
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3076 C:\Users\poyisamu\fifoStream\fifoStream.xpr
+# Log file: C:/Users/poyisamu/fifoStream/vivado.log
+# Journal file: C:/Users/poyisamu/fifoStream\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/poyisamu/fifoStream/fifoStream.xpr
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper.sysdef C:/Users/poyisamu/fifoStream/fifoStream.sdk/canteloupe_wrapper.hdf
+
+launch_sdk -workspace C:/Users/poyisamu/fifoStream/fifoStream.sdk -hwspec C:/Users/poyisamu/fifoStream/fifoStream.sdk/canteloupe_wrapper.hdf
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/poyisamu/fifoStream/fifoStream.runs/impl_1/canteloupe_wrapper.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"canteloupe_i/system_ila_0/inst/ila_lib"}]]
+save_wave_config {C:/Users/poyisamu/fifoStream/fifoStream.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}

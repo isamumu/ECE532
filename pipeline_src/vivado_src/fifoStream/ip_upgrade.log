@@ -1,0 +1,131 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Wed Mar 31 02:05:56 2021
+| Host         : BA3145WS01 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'canteloupe_tri_mode_ethernet_ma_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of canteloupe_tri_mode_ethernet_ma_1_0 (utoronto.ca:user:tri_mode_ethernet_mac_2_example_design:1.0 (Rev. 2)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'canteloupe_tri_mode_ethernet_ma_1_0'.
+
+
+-Upgrade has added interface 'mii_rx_clk' (xilinx.com:signal:clock:1.0)
+
+-Upgrade has added interface 'mii_tx_clk' (xilinx.com:signal:clock:1.0)
+
+-Upgrade has added interface 'rx_axis_fifo' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'canteloupe_tri_mode_ethernet_ma_1_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'phy2rmii_crs_dv'
+
+-Upgrade has removed port 'phy2rmii_rx_er'
+
+-Upgrade has removed port 'phy2rmii_rxd'
+
+-Upgrade has removed port 'refclk'
+
+-Upgrade has removed port 'refclk_int'
+
+-Upgrade has removed port 'rmii2phy_tx_en'
+
+-Upgrade has removed port 'rmii2phy_txd'
+
+-Upgrade has added port 'mii_rx_clk'
+
+-Upgrade has added port 'mii_rx_dv'
+
+-Upgrade has added port 'mii_rx_er'
+
+-Upgrade has added port 'mii_rxd'
+
+-Upgrade has added port 'mii_tx_clk'
+
+-Upgrade has added port 'mii_tx_en'
+
+-Upgrade has added port 'mii_tx_er'
+
+-Upgrade has added port 'mii_txd'
+
+-Upgrade has added port 'rx_axis_fifo_tdata'
+
+-Upgrade has added port 'rx_axis_fifo_tlast'
+
+-Upgrade has added port 'rx_axis_fifo_tready'
+
+-Upgrade has added port 'rx_axis_fifo_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Tue Mar 30 23:43:10 2021
+| Host         : BA3145WS01 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'canteloupe_tri_mode_ethernet_ma_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of canteloupe_tri_mode_ethernet_ma_1_0 (utoronto.ca:user:tri_mode_ethernet_mac_2_example_design:1.0 (Rev. 2)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'canteloupe_tri_mode_ethernet_ma_1_0'.
+
+
+-Upgrade has removed interface 'sys_clock'
+
+-Upgrade has added interface 'glbl_rstn' (xilinx.com:signal:reset:1.0)
+
+-Upgrade has added interface 's_axi_aclk' (xilinx.com:signal:clock:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'canteloupe_tri_mode_ethernet_ma_1_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'sys_clock'
+
+-Upgrade has added port 'dcm_locked'
+
+-Upgrade has added port 'glbl_rstn'
+
+-Upgrade has added port 'gtx_clk_bufg'
+
+-Upgrade has added port 'refclk_int'
+
+-Upgrade has added port 's_axi_aclk'
+
+

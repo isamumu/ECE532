@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/poyisamu/fifoStream/fifoStream.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1024001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="547"></NameColumnWidth>
+      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_tx_en" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_tx_en</obj_property>
+      <obj_property name="ObjectShortName">mii_tx_en</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_tx_er" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_tx_er</obj_property>
+      <obj_property name="ObjectShortName">mii_tx_er</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_txd" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/tri_mode_ethernet_ma_1/inst/mii_txd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mii_txd[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_tx_en" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_tx_en</obj_property>
+      <obj_property name="ObjectShortName">mii_tx_en</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_tx_er" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_tx_er</obj_property>
+      <obj_property name="ObjectShortName">mii_tx_er</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_txd" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/trimac_sup_block/mii_txd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mii_txd[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tdata" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_axis_mac_tdata[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tlast" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tlast</obj_property>
+      <obj_property name="ObjectShortName">tx_axis_mac_tlast</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tready" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tready</obj_property>
+      <obj_property name="ObjectShortName">tx_axis_mac_tready</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tvalid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/tri_mode_ethernet_ma_1/inst/trimac_fifo_block/tx_axis_mac_tvalid</obj_property>
+      <obj_property name="ObjectShortName">tx_axis_mac_tvalid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/frame_generator_cust_0/inst/mem/fifo_we" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/frame_generator_cust_0/inst/mem/fifo_we</obj_property>
+      <obj_property name="ObjectShortName">fifo_we</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/frame_generator_cust_0/inst/mem/mem_reg" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/frame_generator_cust_0/inst/mem/mem_reg</obj_property>
+      <obj_property name="ObjectShortName">mem_reg</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/frame_generator_cust_0/tx_fifo_TDATA" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/frame_generator_cust_0/tx_fifo_TDATA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_fifo_TDATA[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/frame_generator_cust_0/tx_fifo_TLAST" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/frame_generator_cust_0/tx_fifo_TLAST</obj_property>
+      <obj_property name="ObjectShortName">tx_fifo_TLAST</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="canteloupe_i/frame_generator_cust_0/tx_fifo_TVALID" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">canteloupe_i/frame_generator_cust_0/tx_fifo_TVALID</obj_property>
+      <obj_property name="ObjectShortName">tx_fifo_TVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

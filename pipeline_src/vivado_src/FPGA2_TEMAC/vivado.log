@@ -1,0 +1,192 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Wed Mar 31 05:16:17 2021
+# Process ID: 2768
+# Current directory: C:/Users/poyisamu/FPGA2_TEMAC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8336 C:\Users\poyisamu\FPGA2_TEMAC\FPGA2_TEMAC.xpr
+# Log file: C:/Users/poyisamu/FPGA2_TEMAC/vivado.log
+# Journal file: C:/Users/poyisamu/FPGA2_TEMAC\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/zhouyuf5/FPGA2_TEMAC' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/DESL/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [IP_Flow 19-5177] IP tri_mode_ethernet_mac_2 will be generated with higher license level.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 842.250 ; gain = 201.555
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date
+[Wed Mar 31 05:16:58 2021] Launched synth_1...
+Run output will be captured here: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/runme.log
+[Wed Mar 31 05:16:58 2021] Launched impl_1...
+Run output will be captured here: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 486 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3.1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'example_clocks/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rx_clk' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rx_dv' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rx_er' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rxd[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rxd[1]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rxd[2]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_rxd[3]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_tx_clk' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_tx_en' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_tx_en' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_tx_er' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_tx_er' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[0]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[1]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[2]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[3]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/mii_txd[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.913 . Memory (MB): peak = 1795.184 ; gain = 5.539
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.914 . Memory (MB): peak = 1795.184 ; gain = 5.539
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1795.184 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 285 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 112 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 155 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 11 instances
+
+open_run: Time (s): cpu = 00:00:30 ; elapsed = 00:00:23 . Memory (MB): peak = 1944.188 ; gain = 530.496
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3.1
+  **** Build date : Mar 26 2019-05:02:51
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2025.957 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292646209A
+set_property PROGRAM.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-1952] VIO hw_probe OUTPUT_VALUE properties for hw_vio(s) [hw_vio_1] differ from output values in the VIO core(s).
+Resolution: 
+To synchronize the hw_probes properties and the VIO core outputs choose one of the following alternatives:
+  1) Execute the command 'Commit Output Values to VIO Core', to write down the hw_probe values to the core.
+  2) Execute the command 'Refresh Input and Output Values from VIO Core', to update the hw_probe properties with the core values.
+  3) First restore initial values in the core with the command 'Reset VIO Core Outputs', and then execute the command 'Refresh Input and Output Values from VIO Core'.
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes glbl_rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"vio"}]]
+commit_hw_vio [get_hw_probes {glbl_rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"vio"}]]
+set_property PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-31 05:43:41
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date
+[Wed Mar 31 05:53:01 2021] Launched synth_1...
+Run output will be captured here: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date
+[Wed Mar 31 05:53:52 2021] Launched impl_1...
+Run output will be captured here: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date
+[Wed Mar 31 05:56:59 2021] Launched impl_1...
+Run output will be captured here: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/runme.log
+set_property PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {example_clocks/refclk} }
+set_property PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-31 06:18:07
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Mar-31 06:18:21
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+set_property PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-31 06:45:32
+set_property OUTPUT_VALUE 1 [get_hw_probes glbl_rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"vio"}]]
+commit_hw_vio [get_hw_probes {glbl_rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"vio"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes glbl_rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"vio"}]]
+commit_hw_vio [get_hw_probes {glbl_rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"vio"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+ERROR: [Labtools 27-1395] Unable to arm ILA 'hw_ila_1'. The core clock is slow or no core clock connected for this ILA or the ILA core may not meet timing.
+set_property PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/impl_1/tri_mode_ethernet_mac_2_example_design.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-31 06:47:17
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes mii_tx_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Mar-31 06:49:19
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-31 06:49:20
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Mar-31 06:49:38
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.

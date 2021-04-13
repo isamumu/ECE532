@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../tri_mode_ethernet_mac_2_ex.srcs/sources_1/ip/mii_to_rmii_0/sim/mii_to_rmii_0.vhd" \
+
+nosort

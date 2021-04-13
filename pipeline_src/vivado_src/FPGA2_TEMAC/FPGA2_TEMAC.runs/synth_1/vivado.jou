@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Wed Mar 31 05:53:03 2021
+# Process ID: 8544
+# Current directory: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1
+# Command line: vivado.exe -log tri_mode_ethernet_mac_2_example_design.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tri_mode_ethernet_mac_2_example_design.tcl
+# Log file: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1/tri_mode_ethernet_mac_2_example_design.vds
+# Journal file: C:/Users/poyisamu/FPGA2_TEMAC/FPGA2_TEMAC.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source tri_mode_ethernet_mac_2_example_design.tcl -notrace

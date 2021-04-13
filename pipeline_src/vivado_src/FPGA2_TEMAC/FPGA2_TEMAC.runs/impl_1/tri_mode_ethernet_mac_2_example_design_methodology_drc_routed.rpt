@@ -1,0 +1,704 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Wed Mar 31 05:56:43 2021
+| Host         : BA3145WS01 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file tri_mode_ethernet_mac_2_example_design_methodology_drc_routed.rpt -pb tri_mode_ethernet_mac_2_example_design_methodology_drc_routed.pb -rpx tri_mode_ethernet_mac_2_example_design_methodology_drc_routed.rpx
+| Design       : tri_mode_ethernet_mac_2_example_design
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 132
++-----------+----------+------------------------------------------------------------------+------------+
+| Rule      | Severity | Description                                                      | Violations |
++-----------+----------+------------------------------------------------------------------+------------+
+| CKLD-2    | Warning  | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
+| LUTAR-1   | Warning  | LUT drives async reset alert                                     | 5          |
+| PDRC-190  | Warning  | Suboptimally placed synchronized register chain                  | 24         |
+| TIMING-4  | Warning  | Invalid primary clock redefinition on a clock tree               | 3          |
+| TIMING-6  | Warning  | No common primary clock between related clocks                   | 4          |
+| TIMING-7  | Warning  | No common node between related clocks                            | 4          |
+| TIMING-9  | Warning  | Unknown CDC Logic                                                | 1          |
+| TIMING-11 | Warning  | Inappropriate max delay with datapath only option                | 85         |
+| TIMING-18 | Warning  | Missing input or output delay                                    | 2          |
+| TIMING-27 | Warning  | Invalid primary clock on hierarchical pin                        | 3          |
++-----------+----------+------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CKLD-2#1 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net sys_clock_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): example_clocks/clk_in1, vio/clk, sys_clock_IBUF_inst/O
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell example_resets/gtx_reset_gen_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) example_resets/gtx_reset_gen/reset_sync0/PRE, example_resets/gtx_reset_gen/reset_sync1/PRE, example_resets/gtx_reset_gen/reset_sync2/PRE, example_resets/gtx_reset_gen/reset_sync3/PRE, example_resets/gtx_reset_gen/reset_sync4/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X44Y159 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X47Y160 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X46Y160 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X45Y160 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X41Y161 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X40Y161 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X44Y161 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#8 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[3] in site SLICE_X42Y160 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#9 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X54Y162 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#10 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X53Y162 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#11 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X52Y163 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#12 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/man_reset.sync_bus2ip_reset_bus2ip_clk/sync_rst0_reg in site SLICE_X26Y164 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/man_reset.sync_bus2ip_reset_bus2ip_clk/sync_rst1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#13 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/man_reset.sync_glbl_rstn_bus2ip_clk/sync_rst0_reg in site SLICE_X27Y164 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/man_reset.sync_glbl_rstn_bus2ip_clk/sync_rst1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#14 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rx_byte_counter/SYNC_STATS_RESET/sync_rst0_reg in site SLICE_X36Y167 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rx_byte_counter/SYNC_STATS_RESET/sync_rst1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#15 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rx_fragment_counter/SYNC_STATS_RESET/sync_rst0_reg in site SLICE_X51Y173 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rx_fragment_counter/SYNC_STATS_RESET/sync_rst1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#16 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rx_undersized_counter/SYNC_STATS_RESET/sync_rst0_reg in site SLICE_X44Y168 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rx_undersized_counter/SYNC_STATS_RESET/sync_rst1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#17 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/tx_byte_counter/SYNC_STATS_RESET/sync_rst0_reg in site SLICE_X41Y173 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/tx_byte_counter/SYNC_STATS_RESET/sync_rst1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#18 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/sync_axi_rx_rstn_rx_clk/sync_rst0_reg in site SLICE_X20Y168 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/sync_axi_rx_rstn_rx_clk/sync_rst1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#19 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/sync_glbl_rstn_rx_clk/sync_rst0_reg in site SLICE_X19Y167 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/sync_glbl_rstn_rx_clk/sync_rst1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#20 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/sync_glbl_rstn_tx_clk/sync_rst0_reg in site SLICE_X29Y166 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/sync_glbl_rstn_tx_clk/sync_rst1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#21 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/sync_int_rx_rst_mgmt_rx_clk/sync_rst0_reg in site SLICE_X20Y171 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/sync_int_rx_rst_mgmt_rx_clk/sync_rst1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#22 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/sync_int_tx_rst_mgmt_tx_clk/sync_rst0_reg in site SLICE_X21Y170 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/sync_int_tx_rst_mgmt_tx_clk/sync_rst1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#23 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/sync_stats_reset/sync_rst0_reg in site SLICE_X29Y163 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/sync_stats_reset/sync_rst1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#24 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/sync_tx_axi_rstn_tx_clk/sync_rst0_reg in site SLICE_X31Y167 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/sync_tx_axi_rstn_tx_clk/sync_rst1_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-4#1 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock example_clocks/inst/clk_in1 is defined downstream of clock sys_clk_pin and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-4#2 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_rx_clk is defined downstream of clock refclk_clk_wiz_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-4#3 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_tx_clk is defined downstream of clock refclk_clk_wiz_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Warning
+No common primary clock between related clocks  
+The clocks refclk_clk_wiz_0 and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_rx_clk are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks refclk_clk_wiz_0] -to [get_clocks trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_rx_clk]
+Related violations: <none>
+
+TIMING-6#2 Warning
+No common primary clock between related clocks  
+The clocks trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_rx_clk and gtx_clk_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_rx_clk] -to [get_clocks gtx_clk_clk_wiz_0]
+Related violations: <none>
+
+TIMING-6#3 Warning
+No common primary clock between related clocks  
+The clocks trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_tx_clk and gtx_clk_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_tx_clk] -to [get_clocks gtx_clk_clk_wiz_0]
+Related violations: <none>
+
+TIMING-6#4 Warning
+No common primary clock between related clocks  
+The clocks trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_tx_clk and refclk_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_tx_clk] -to [get_clocks refclk_clk_wiz_0]
+Related violations: <none>
+
+TIMING-7#1 Warning
+No common node between related clocks  
+The clocks refclk_clk_wiz_0 and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_rx_clk are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks refclk_clk_wiz_0] -to [get_clocks trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_rx_clk]
+Related violations: <none>
+
+TIMING-7#2 Warning
+No common node between related clocks  
+The clocks trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_rx_clk and gtx_clk_clk_wiz_0 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_rx_clk] -to [get_clocks gtx_clk_clk_wiz_0]
+Related violations: <none>
+
+TIMING-7#3 Warning
+No common node between related clocks  
+The clocks trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_tx_clk and gtx_clk_clk_wiz_0 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_tx_clk] -to [get_clocks gtx_clk_clk_wiz_0]
+Related violations: <none>
+
+TIMING-7#4 Warning
+No common node between related clocks  
+The clocks trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_tx_clk and refclk_clk_wiz_0 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_tx_clk] -to [get_clocks refclk_clk_wiz_0]
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-11#1 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[0]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[0]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#2 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[10]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[10]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#3 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[10]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[3]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#4 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[11]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[11]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#5 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[11]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[4]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#6 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[12]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[12]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#7 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[12]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[5]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#8 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[13]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[13]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#9 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[13]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[6]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#10 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[14]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[14]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#11 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[14]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[7]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#12 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[15]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[15]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#13 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[15]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[8]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#14 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[16]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[16]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#15 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[16]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[9]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#16 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[17]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[10]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#17 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[18]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[11]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#18 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[19]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[12]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#19 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[1]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[1]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#20 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[20]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[13]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#21 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[21]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[14]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#22 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[22]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[15]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#23 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[23]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[16]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#24 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[2]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[2]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#25 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[32]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[0]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#26 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[33]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[1]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#27 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[34]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[2]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#28 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[35]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[3]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#29 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[36]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[4]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#30 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[37]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[5]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#31 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[38]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[6]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#32 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[39]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[0]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#33 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[39]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[7]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#34 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[3]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[3]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#35 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[40]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[1]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#36 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[40]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[8]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#37 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[41]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[2]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#38 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[41]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[9]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#39 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[42]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[10]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#40 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[42]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[3]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#41 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[43]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[11]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#42 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[43]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[4]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#43 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[44]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[12]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#44 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[44]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[5]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#45 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[45]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[13]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#46 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[45]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[6]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#47 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[46]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[14]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#48 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[46]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[7]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#49 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[47]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[15]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#50 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[47]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[8]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#51 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[48]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[16]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#52 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[48]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[9]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#53 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[49]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[10]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#54 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[4]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[4]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#55 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[50]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[11]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#56 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[51]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[12]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#57 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[52]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[13]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#58 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[53]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[14]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#59 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[54]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[15]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#60 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[55]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[16]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#61 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[5]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[5]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#62 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[6]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[6]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#63 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[0]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#64 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[10]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#65 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[11]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#66 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[12]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#67 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[13]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#68 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[14]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#69 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[15]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#70 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[16]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#71 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[1]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#72 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[2]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#73 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[3]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#74 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[4]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#75 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[5]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#76 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[6]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#77 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[7]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#78 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[8]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#79 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[71]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[9]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#80 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[7]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[0]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#81 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[7]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[7]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#82 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[8]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[1]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#83 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[8]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[8]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#84 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[9]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[2]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-11#85 Warning
+Inappropriate max delay with datapath only option  
+A max delay constraint with -datapath_only has been applied between trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/rd_data_ref_reg[9]/C and trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/tri_mode_ethernet_mac_2_core/stats_block.statistics_counters/ip2bus_data_reg[9]/D. The startpoint(s) and endpoint(s) either belong to the same clock domain or belong to two clock domains that can safely be timed together (without valid synchronizer). It is only recommended to use the -datapath_only option on paths between clocks that do not have a known phase relationship. This DRC is waived when a synchronizer is found on the path endpoint
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on mdio relative to clock(s) example_clocks/inst/clk_in1
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on mdc relative to clock(s) example_clocks/inst/clk_in1
+Related violations: <none>
+
+TIMING-27#1 Warning
+Invalid primary clock on hierarchical pin  
+A primary clock example_clocks/inst/clk_in1 is created on an inappropriate internal pin example_clocks/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+TIMING-27#2 Warning
+Invalid primary clock on hierarchical pin  
+A primary clock trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_rx_clk is created on an inappropriate internal pin trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_rx_clk. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+TIMING-27#3 Warning
+Invalid primary clock on hierarchical pin  
+A primary clock trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_tx_clk is created on an inappropriate internal pin trimac_fifo_block/trimac_sup_block/tri_mode_ethernet_mac_i/inst/mii_tx_clk. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+
